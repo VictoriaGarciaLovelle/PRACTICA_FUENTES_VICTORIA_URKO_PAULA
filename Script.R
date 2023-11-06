@@ -12,8 +12,8 @@
 
 ## Esperanza de vida ----
 library(readr)
-EsperanzaVida <- read_delim("EsperanzaVida.csv", 
-                              delim = ";", escape_double = FALSE, trim_ws = TRUE)
+EsperanzaVida <- fromJSON(file = "EsperanzaVida.json")
+head(EsperanzaVida)
 
 ## Cantidad de agua consumida ----
 cantidadAgua <- fromJSON(file = "CantidadAgua.json")
