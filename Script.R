@@ -12,7 +12,7 @@ calidadAgua <- spread_all(calidadAgua)
 
 ## Calidad de vida
 library(readr)
-calidad_de_vida <- read_delim("calidad_de_vida.csv", 
+calidadVida <- read_delim("calidad_de_vida.csv", 
                               delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 ## Cantidad de agua consumida
