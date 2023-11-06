@@ -6,6 +6,10 @@ library(rjson)
 calidadAgua <- fromJSON(file = "calidad-de-las-aguas-de-consumo-humano.json")
 head (calidadAgua)
 
+library(tidyjson)
+calidadAgua <- spread_all(calidadAgua)
+head(calidadAgua)
+
 ## Calidad de vida
 library(readr)
 calidad_de_vida <- read_delim("calidad_de_vida.csv", 
