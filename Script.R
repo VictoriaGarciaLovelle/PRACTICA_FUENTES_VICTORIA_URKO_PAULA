@@ -8,7 +8,6 @@ head (calidadAgua)
 
 library(tidyjson)
 calidadAgua <- spread_all(calidadAgua)
-View(calidadAgua)
 
 ## Calidad de vida ----
 library(readr)
@@ -20,4 +19,3 @@ cantidadAgua <- fromJSON(file = "CantidadAgua.json")
 head(cantidadAgua)
 
 cantidadAgua <- spread_all(cantidadAgua)
-View(cantidadAgua)
