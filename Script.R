@@ -1,6 +1,6 @@
-# Importación de los datos
+# Importación de los datos ----
 
-## Calidad de las aguas de consumo humano
+## Calidad de las aguas de consumo humano ----
 library(rjson)
 
 calidadAgua <- fromJSON(file = "calidad-de-las-aguas-de-consumo-humano.json")
@@ -10,12 +10,12 @@ library(tidyjson)
 calidadAgua <- spread_all(calidadAgua)
 
 
-## Calidad de vida
+## Calidad de vida ----
 library(readr)
 calidadVida <- read_delim("calidad_de_vida.csv", 
                               delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
-## Cantidad de agua consumida
+## Cantidad de agua consumida ----
 cantidadAgua <- fromJSON(file = "CantidadAgua.json")
 head(cantidadAgua)
 
