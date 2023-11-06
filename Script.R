@@ -8,7 +8,7 @@ head (calidadAgua)
 
 library(tidyjson)
 calidadAgua <- spread_all(calidadAgua)
-head(calidadAgua)
+
 
 ## Calidad de vida
 library(readr)
@@ -18,3 +18,5 @@ calidad_de_vida <- read_delim("calidad_de_vida.csv",
 ## Cantidad de agua consumida
 cantidadAgua <- fromJSON(file = "CantidadAgua.json")
 head(cantidadAgua)
+
+cantidadAgua <- spread_all(cantidadAgua)
