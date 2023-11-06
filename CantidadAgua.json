@@ -1,0 +1,3326 @@
+[{"Nombre":"España, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+, "Nombre":"España", "Codigo":"00"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":3177815.0}
+,{"NombrePeriodo":"2018", "Valor":3188055.0}
+,{"NombrePeriodo":"2016", "Valor":3199910.0}
+,{"NombrePeriodo":"2014", "Valor":3214034.0}
+,{"NombrePeriodo":"2013", "Valor":3210843.0}
+,{"NombrePeriodo":"2012", "Valor":3338028.0}
+,{"NombrePeriodo":"2011", "Valor":3381318.0}
+,{"NombrePeriodo":"2010", "Valor":3393271.0}
+,{"NombrePeriodo":"2009", "Valor":3500578.0}
+,{"NombrePeriodo":"2008", "Valor":3731399.0}
+,{"NombrePeriodo":"2007", "Valor":3778036.0}
+,{"NombrePeriodo":"2006", "Valor":3913059.0}
+,{"NombrePeriodo":"2005", "Valor":4002180.0}
+,{"NombrePeriodo":"2004", "Valor":4042399.0}
+,{"NombrePeriodo":"2003", "Valor":4019615.0}
+,{"NombrePeriodo":"2002", "Valor":3855697.0}
+,{"NombrePeriodo":"2001", "Valor":3870650.0}
+,{"NombrePeriodo":"2000", "Valor":3781680.0}
+]
+}
+,{"Nombre":"España, - Sectores económicos", "MetaData":[{"Variable":{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+, "Nombre":"España", "Codigo":"00"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":616365.0}
+,{"NombrePeriodo":"2018", "Valor":629256.0}
+,{"NombrePeriodo":"2016", "Valor":632504.0}
+,{"NombrePeriodo":"2014", "Valor":684841.0}
+,{"NombrePeriodo":"2013", "Valor":694659.0}
+,{"NombrePeriodo":"2012", "Valor":711170.0}
+,{"NombrePeriodo":"2011", "Valor":693420.0}
+,{"NombrePeriodo":"2010", "Valor":675454.0}
+,{"NombrePeriodo":"2009", "Valor":701655.0}
+,{"NombrePeriodo":"2008", "Valor":832701.0}
+,{"NombrePeriodo":"2007", "Valor":852276.0}
+,{"NombrePeriodo":"2006", "Valor":911264.0}
+,{"NombrePeriodo":"2005", "Valor":947955.0}
+,{"NombrePeriodo":"2004", "Valor":969340.0}
+,{"NombrePeriodo":"2003", "Valor":933309.0}
+,{"NombrePeriodo":"2002", "Valor":891039.0}
+,{"NombrePeriodo":"2001", "Valor":920127.0}
+,{"NombrePeriodo":"2000", "Valor":840165.0}
+]
+}
+,{"Nombre":"España, - Hogares", "MetaData":[{"Variable":{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+, "Nombre":"España", "Codigo":"00"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":2290800.0}
+,{"NombrePeriodo":"2018", "Valor":2271205.0}
+,{"NombrePeriodo":"2016", "Valor":2297352.0}
+,{"NombrePeriodo":"2014", "Valor":2237746.0}
+,{"NombrePeriodo":"2013", "Valor":2217686.0}
+,{"NombrePeriodo":"2012", "Valor":2308872.0}
+,{"NombrePeriodo":"2011", "Valor":2384386.0}
+,{"NombrePeriodo":"2010", "Valor":2412708.0}
+,{"NombrePeriodo":"2009", "Valor":2493842.0}
+,{"NombrePeriodo":"2008", "Valor":2539891.0}
+,{"NombrePeriodo":"2007", "Valor":2543714.0}
+,{"NombrePeriodo":"2006", "Valor":2615751.0}
+,{"NombrePeriodo":"2005", "Valor":2673564.0}
+,{"NombrePeriodo":"2004", "Valor":2700928.0}
+,{"NombrePeriodo":"2003", "Valor":2602904.0}
+,{"NombrePeriodo":"2002", "Valor":2511810.0}
+,{"NombrePeriodo":"2001", "Valor":2459548.0}
+,{"NombrePeriodo":"2000", "Valor":2482085.0}
+]
+}
+,{"Nombre":"España, - Consumos municipales", "MetaData":[{"Variable":{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+, "Nombre":"España", "Codigo":"00"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":270650.0}
+,{"NombrePeriodo":"2018", "Valor":287594.0}
+,{"NombrePeriodo":"2016", "Valor":270054.0}
+,{"NombrePeriodo":"2014", "Valor":291447.0}
+,{"NombrePeriodo":"2013", "Valor":298498.0}
+,{"NombrePeriodo":"2012", "Valor":317986.0}
+,{"NombrePeriodo":"2011", "Valor":303512.0}
+,{"NombrePeriodo":"2010", "Valor":305109.0}
+,{"NombrePeriodo":"2009", "Valor":305081.0}
+,{"NombrePeriodo":"2008", "Valor":358807.0}
+,{"NombrePeriodo":"2007", "Valor":382046.0}
+,{"NombrePeriodo":"2006", "Valor":386044.0}
+,{"NombrePeriodo":"2005", "Valor":380661.0}
+,{"NombrePeriodo":"2004", "Valor":372131.0}
+,{"NombrePeriodo":"2003", "Valor":483402.0}
+,{"NombrePeriodo":"2002", "Valor":452848.0}
+,{"NombrePeriodo":"2001", "Valor":490975.0}
+,{"NombrePeriodo":"2000", "Valor":459430.0}
+]
+}
+,{"Nombre":"España, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+, "Nombre":"España", "Codigo":"00"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":3618646.0}
+,{"NombrePeriodo":"2018", "Valor":3612200.0}
+,{"NombrePeriodo":"2016", "Valor":3740419.0}
+,{"NombrePeriodo":"2014", "Valor":3537941.0}
+,{"NombrePeriodo":"2013", "Valor":3495177.0}
+,{"NombrePeriodo":"2012", "Valor":3445198.0}
+,{"NombrePeriodo":"2011", "Valor":3216849.0}
+,{"NombrePeriodo":"2010", "Valor":3121165.0}
+,{"NombrePeriodo":"2009", "Valor":3090535.0}
+,{"NombrePeriodo":"2008", "Valor":3027220.0}
+,{"NombrePeriodo":"2007", "Valor":2837747.0}
+,{"NombrePeriodo":"2006", "Valor":2775147.0}
+,{"NombrePeriodo":"2005", "Valor":2678425.0}
+,{"NombrePeriodo":"2004", "Valor":2647852.0}
+,{"NombrePeriodo":"2003", "Valor":2579287.0}
+,{"NombrePeriodo":"2002", "Valor":2352117.0}
+,{"NombrePeriodo":"2001", "Valor":2219838.0}
+,{"NombrePeriodo":"2000", "Valor":2121471.0}
+]
+}
+,{"Nombre":"España, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+, "Nombre":"España", "Codigo":"00"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":242825.0}
+,{"NombrePeriodo":"2018", "Valor":212460.0}
+,{"NombrePeriodo":"2016", "Valor":228873.0}
+,{"NombrePeriodo":"2014", "Valor":250756.0}
+,{"NombrePeriodo":"2013", "Valor":268842.0}
+,{"NombrePeriodo":"2012", "Valor":276530.0}
+,{"NombrePeriodo":"2011", "Valor":363377.0}
+,{"NombrePeriodo":"2010", "Valor":313558.0}
+,{"NombrePeriodo":"2009", "Valor":343623.0}
+,{"NombrePeriodo":"2008", "Valor":467184.0}
+,{"NombrePeriodo":"2007", "Valor":459410.0}
+,{"NombrePeriodo":"2006", "Valor":311233.0}
+,{"NombrePeriodo":"2005", "Valor":289671.0}
+,{"NombrePeriodo":"2004", "Valor":393655.0}
+,{"NombrePeriodo":"2003", "Valor":317921.0}
+,{"NombrePeriodo":"2002", "Valor":283997.0}
+,{"NombrePeriodo":"2001", "Valor":329458.0}
+,{"NombrePeriodo":"2000", "Valor":453499.0}
+]
+}
+,{"Nombre":"España, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+, "Nombre":"España", "Codigo":"00"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":266221.0}
+,{"NombrePeriodo":"2018", "Valor":264309.0}
+,{"NombrePeriodo":"2016", "Valor":256984.0}
+,{"NombrePeriodo":"2014", "Valor":260193.0}
+,{"NombrePeriodo":"2013", "Valor":272051.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Andalucía, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Andalucía", "Codigo":"01"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":571979.0}
+,{"NombrePeriodo":"2018", "Valor":544382.0}
+,{"NombrePeriodo":"2016", "Valor":540794.0}
+,{"NombrePeriodo":"2014", "Valor":557113.0}
+,{"NombrePeriodo":"2013", "Valor":547493.0}
+,{"NombrePeriodo":"2012", "Valor":576176.0}
+,{"NombrePeriodo":"2011", "Valor":577958.0}
+,{"NombrePeriodo":"2010", "Valor":586083.0}
+,{"NombrePeriodo":"2009", "Valor":634697.0}
+,{"NombrePeriodo":"2008", "Valor":664876.0}
+,{"NombrePeriodo":"2007", "Valor":674428.0}
+,{"NombrePeriodo":"2006", "Valor":765376.0}
+,{"NombrePeriodo":"2005", "Valor":839417.0}
+,{"NombrePeriodo":"2004", "Valor":784226.0}
+,{"NombrePeriodo":"2003", "Valor":737567.0}
+,{"NombrePeriodo":"2002", "Valor":702959.0}
+,{"NombrePeriodo":"2001", "Valor":694716.0}
+,{"NombrePeriodo":"2000", "Valor":667280.0}
+]
+}
+,{"Nombre":"Andalucía, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Andalucía", "Codigo":"01"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":103655.0}
+,{"NombrePeriodo":"2018", "Valor":109319.0}
+,{"NombrePeriodo":"2016", "Valor":98120.0}
+,{"NombrePeriodo":"2014", "Valor":115286.0}
+,{"NombrePeriodo":"2013", "Valor":125289.0}
+,{"NombrePeriodo":"2012", "Valor":126719.0}
+,{"NombrePeriodo":"2011", "Valor":95269.0}
+,{"NombrePeriodo":"2010", "Valor":97639.0}
+,{"NombrePeriodo":"2009", "Valor":102538.0}
+,{"NombrePeriodo":"2008", "Valor":139007.0}
+,{"NombrePeriodo":"2007", "Valor":148664.0}
+,{"NombrePeriodo":"2006", "Valor":175802.0}
+,{"NombrePeriodo":"2005", "Valor":189991.0}
+,{"NombrePeriodo":"2004", "Valor":172755.0}
+,{"NombrePeriodo":"2003", "Valor":149797.0}
+,{"NombrePeriodo":"2002", "Valor":120917.0}
+,{"NombrePeriodo":"2001", "Valor":119347.0}
+,{"NombrePeriodo":"2000", "Valor":105543.0}
+]
+}
+,{"Nombre":"Andalucía, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Andalucía", "Codigo":"01"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":427534.0}
+,{"NombrePeriodo":"2018", "Valor":392141.0}
+,{"NombrePeriodo":"2016", "Valor":395574.0}
+,{"NombrePeriodo":"2014", "Valor":386102.0}
+,{"NombrePeriodo":"2013", "Valor":366154.0}
+,{"NombrePeriodo":"2012", "Valor":389257.0}
+,{"NombrePeriodo":"2011", "Valor":423304.0}
+,{"NombrePeriodo":"2010", "Valor":429266.0}
+,{"NombrePeriodo":"2009", "Valor":464854.0}
+,{"NombrePeriodo":"2008", "Valor":460019.0}
+,{"NombrePeriodo":"2007", "Valor":457745.0}
+,{"NombrePeriodo":"2006", "Valor":513383.0}
+,{"NombrePeriodo":"2005", "Valor":558838.0}
+,{"NombrePeriodo":"2004", "Valor":530514.0}
+,{"NombrePeriodo":"2003", "Valor":509637.0}
+,{"NombrePeriodo":"2002", "Valor":501159.0}
+,{"NombrePeriodo":"2001", "Valor":486530.0}
+,{"NombrePeriodo":"2000", "Valor":490278.0}
+]
+}
+,{"Nombre":"Andalucía, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Andalucía", "Codigo":"01"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":40790.0}
+,{"NombrePeriodo":"2018", "Valor":42922.0}
+,{"NombrePeriodo":"2016", "Valor":47100.0}
+,{"NombrePeriodo":"2014", "Valor":55725.0}
+,{"NombrePeriodo":"2013", "Valor":56050.0}
+,{"NombrePeriodo":"2012", "Valor":60200.0}
+,{"NombrePeriodo":"2011", "Valor":59385.0}
+,{"NombrePeriodo":"2010", "Valor":59178.0}
+,{"NombrePeriodo":"2009", "Valor":67305.0}
+,{"NombrePeriodo":"2008", "Valor":65850.0}
+,{"NombrePeriodo":"2007", "Valor":68019.0}
+,{"NombrePeriodo":"2006", "Valor":76191.0}
+,{"NombrePeriodo":"2005", "Valor":90588.0}
+,{"NombrePeriodo":"2004", "Valor":80957.0}
+,{"NombrePeriodo":"2003", "Valor":78133.0}
+,{"NombrePeriodo":"2002", "Valor":80883.0}
+,{"NombrePeriodo":"2001", "Valor":88839.0}
+,{"NombrePeriodo":"2000", "Valor":71459.0}
+]
+}
+,{"Nombre":"Andalucía, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Andalucía", "Codigo":"01"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":606998.0}
+,{"NombrePeriodo":"2018", "Valor":569826.0}
+,{"NombrePeriodo":"2016", "Valor":585314.0}
+,{"NombrePeriodo":"2014", "Valor":588722.0}
+,{"NombrePeriodo":"2013", "Valor":568896.0}
+,{"NombrePeriodo":"2012", "Valor":556842.0}
+,{"NombrePeriodo":"2011", "Valor":516303.0}
+,{"NombrePeriodo":"2010", "Valor":497474.0}
+,{"NombrePeriodo":"2009", "Valor":507945.0}
+,{"NombrePeriodo":"2008", "Valor":479831.0}
+,{"NombrePeriodo":"2007", "Valor":466132.0}
+,{"NombrePeriodo":"2006", "Valor":487014.0}
+,{"NombrePeriodo":"2005", "Valor":496013.0}
+,{"NombrePeriodo":"2004", "Valor":490925.0}
+,{"NombrePeriodo":"2003", "Valor":415142.0}
+,{"NombrePeriodo":"2002", "Valor":335606.0}
+,{"NombrePeriodo":"2001", "Valor":307133.0}
+,{"NombrePeriodo":"2000", "Valor":257275.0}
+]
+}
+,{"Nombre":"Andalucía, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Andalucía", "Codigo":"01"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":43361.0}
+,{"NombrePeriodo":"2018", "Valor":24532.0}
+,{"NombrePeriodo":"2016", "Valor":24707.0}
+,{"NombrePeriodo":"2014", "Valor":40299.0}
+,{"NombrePeriodo":"2013", "Valor":31357.0}
+,{"NombrePeriodo":"2012", "Valor":42366.0}
+,{"NombrePeriodo":"2011", "Valor":152315.0}
+,{"NombrePeriodo":"2010", "Valor":49250.0}
+,{"NombrePeriodo":"2009", "Valor":47526.0}
+,{"NombrePeriodo":"2008", "Valor":68091.0}
+,{"NombrePeriodo":"2007", "Valor":53503.0}
+,{"NombrePeriodo":"2006", "Valor":64770.0}
+,{"NombrePeriodo":"2005", "Valor":73472.0}
+,{"NombrePeriodo":"2004", "Valor":62850.0}
+,{"NombrePeriodo":"2003", "Valor":50801.0}
+,{"NombrePeriodo":"2002", "Valor":57882.0}
+,{"NombrePeriodo":"2001", "Valor":95113.0}
+,{"NombrePeriodo":"2000", "Valor":116440.0}
+]
+}
+,{"Nombre":"Andalucía, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Andalucía", "Codigo":"01"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":45752.0}
+,{"NombrePeriodo":"2018", "Valor":45269.0}
+,{"NombrePeriodo":"2016", "Valor":44325.0}
+,{"NombrePeriodo":"2014", "Valor":46210.0}
+,{"NombrePeriodo":"2013", "Valor":44280.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Aragón, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Aragón", "Codigo":"02"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":97701.0}
+,{"NombrePeriodo":"2018", "Valor":101723.0}
+,{"NombrePeriodo":"2016", "Valor":102785.0}
+,{"NombrePeriodo":"2014", "Valor":97052.0}
+,{"NombrePeriodo":"2013", "Valor":95406.0}
+,{"NombrePeriodo":"2012", "Valor":106036.0}
+,{"NombrePeriodo":"2011", "Valor":97449.0}
+,{"NombrePeriodo":"2010", "Valor":104256.0}
+,{"NombrePeriodo":"2009", "Valor":108516.0}
+,{"NombrePeriodo":"2008", "Valor":113256.0}
+,{"NombrePeriodo":"2007", "Valor":101814.0}
+,{"NombrePeriodo":"2006", "Valor":111741.0}
+,{"NombrePeriodo":"2005", "Valor":115627.0}
+,{"NombrePeriodo":"2004", "Valor":113896.0}
+,{"NombrePeriodo":"2003", "Valor":125300.0}
+,{"NombrePeriodo":"2002", "Valor":116030.0}
+,{"NombrePeriodo":"2001", "Valor":108990.0}
+,{"NombrePeriodo":"2000", "Valor":110567.0}
+]
+}
+,{"Nombre":"Aragón, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Aragón", "Codigo":"02"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":25931.0}
+,{"NombrePeriodo":"2018", "Valor":28412.0}
+,{"NombrePeriodo":"2016", "Valor":27866.0}
+,{"NombrePeriodo":"2014", "Valor":25278.0}
+,{"NombrePeriodo":"2013", "Valor":24577.0}
+,{"NombrePeriodo":"2012", "Valor":28777.0}
+,{"NombrePeriodo":"2011", "Valor":28601.0}
+,{"NombrePeriodo":"2010", "Valor":28991.0}
+,{"NombrePeriodo":"2009", "Valor":30560.0}
+,{"NombrePeriodo":"2008", "Valor":31962.0}
+,{"NombrePeriodo":"2007", "Valor":26194.0}
+,{"NombrePeriodo":"2006", "Valor":28030.0}
+,{"NombrePeriodo":"2005", "Valor":31797.0}
+,{"NombrePeriodo":"2004", "Valor":26126.0}
+,{"NombrePeriodo":"2003", "Valor":30293.0}
+,{"NombrePeriodo":"2002", "Valor":35791.0}
+,{"NombrePeriodo":"2001", "Valor":23569.0}
+,{"NombrePeriodo":"2000", "Valor":26110.0}
+]
+}
+,{"Nombre":"Aragón, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Aragón", "Codigo":"02"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":64975.0}
+,{"NombrePeriodo":"2018", "Valor":62011.0}
+,{"NombrePeriodo":"2016", "Valor":65776.0}
+,{"NombrePeriodo":"2014", "Valor":62877.0}
+,{"NombrePeriodo":"2013", "Valor":62913.0}
+,{"NombrePeriodo":"2012", "Valor":66288.0}
+,{"NombrePeriodo":"2011", "Valor":63386.0}
+,{"NombrePeriodo":"2010", "Valor":69125.0}
+,{"NombrePeriodo":"2009", "Valor":71151.0}
+,{"NombrePeriodo":"2008", "Valor":71233.0}
+,{"NombrePeriodo":"2007", "Valor":66408.0}
+,{"NombrePeriodo":"2006", "Valor":69844.0}
+,{"NombrePeriodo":"2005", "Valor":70879.0}
+,{"NombrePeriodo":"2004", "Valor":73914.0}
+,{"NombrePeriodo":"2003", "Valor":75715.0}
+,{"NombrePeriodo":"2002", "Valor":75452.0}
+,{"NombrePeriodo":"2001", "Valor":76337.0}
+,{"NombrePeriodo":"2000", "Valor":76235.0}
+]
+}
+,{"Nombre":"Aragón, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Aragón", "Codigo":"02"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":6795.0}
+,{"NombrePeriodo":"2018", "Valor":11300.0}
+,{"NombrePeriodo":"2016", "Valor":9143.0}
+,{"NombrePeriodo":"2014", "Valor":8897.0}
+,{"NombrePeriodo":"2013", "Valor":7916.0}
+,{"NombrePeriodo":"2012", "Valor":10971.0}
+,{"NombrePeriodo":"2011", "Valor":5462.0}
+,{"NombrePeriodo":"2010", "Valor":6140.0}
+,{"NombrePeriodo":"2009", "Valor":6805.0}
+,{"NombrePeriodo":"2008", "Valor":10061.0}
+,{"NombrePeriodo":"2007", "Valor":9212.0}
+,{"NombrePeriodo":"2006", "Valor":13867.0}
+,{"NombrePeriodo":"2005", "Valor":12951.0}
+,{"NombrePeriodo":"2004", "Valor":13856.0}
+,{"NombrePeriodo":"2003", "Valor":19292.0}
+,{"NombrePeriodo":"2002", "Valor":4787.0}
+,{"NombrePeriodo":"2001", "Valor":9084.0}
+,{"NombrePeriodo":"2000", "Valor":8222.0}
+]
+}
+,{"Nombre":"Aragón, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Aragón", "Codigo":"02"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":69278.0}
+,{"NombrePeriodo":"2018", "Valor":69808.0}
+,{"NombrePeriodo":"2016", "Valor":76067.0}
+,{"NombrePeriodo":"2014", "Valor":66984.0}
+,{"NombrePeriodo":"2013", "Valor":66876.0}
+,{"NombrePeriodo":"2012", "Valor":70291.0}
+,{"NombrePeriodo":"2011", "Valor":57088.0}
+,{"NombrePeriodo":"2010", "Valor":64153.0}
+,{"NombrePeriodo":"2009", "Valor":65310.0}
+,{"NombrePeriodo":"2008", "Valor":63538.0}
+,{"NombrePeriodo":"2007", "Valor":56920.0}
+,{"NombrePeriodo":"2006", "Valor":52012.0}
+,{"NombrePeriodo":"2005", "Valor":46601.0}
+,{"NombrePeriodo":"2004", "Valor":46238.0}
+,{"NombrePeriodo":"2003", "Valor":52415.0}
+,{"NombrePeriodo":"2002", "Valor":43647.0}
+,{"NombrePeriodo":"2001", "Valor":40817.0}
+,{"NombrePeriodo":"2000", "Valor":40472.0}
+]
+}
+,{"Nombre":"Aragón, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Aragón", "Codigo":"02"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":691.0}
+,{"NombrePeriodo":"2018", "Valor":660.0}
+,{"NombrePeriodo":"2016", "Valor":885.0}
+,{"NombrePeriodo":"2014", "Valor":4960.0}
+,{"NombrePeriodo":"2013", "Valor":3543.0}
+,{"NombrePeriodo":"2012", "Valor":4708.0}
+,{"NombrePeriodo":"2011", "Valor":4259.0}
+,{"NombrePeriodo":"2010", "Valor":12902.0}
+,{"NombrePeriodo":"2009", "Valor":15186.0}
+,{"NombrePeriodo":"2008", "Valor":18014.0}
+,{"NombrePeriodo":"2007", "Valor":4569.0}
+,{"NombrePeriodo":"2006", "Valor":3312.0}
+,{"NombrePeriodo":"2005", "Valor":2311.0}
+,{"NombrePeriodo":"2004", "Valor":4081.0}
+,{"NombrePeriodo":"2003", "Valor":6735.0}
+,{"NombrePeriodo":"2002", "Valor":5897.0}
+,{"NombrePeriodo":"2001", "Valor":2648.0}
+,{"NombrePeriodo":"2000", "Valor":5770.0}
+]
+}
+,{"Nombre":"Aragón, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Aragón", "Codigo":"02"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":5451.0}
+,{"NombrePeriodo":"2018", "Valor":5143.0}
+,{"NombrePeriodo":"2016", "Valor":5360.0}
+,{"NombrePeriodo":"2014", "Valor":5239.0}
+,{"NombrePeriodo":"2013", "Valor":4971.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Asturias, Principado de, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":70895.0}
+,{"NombrePeriodo":"2018", "Valor":76093.0}
+,{"NombrePeriodo":"2016", "Valor":83733.0}
+,{"NombrePeriodo":"2014", "Valor":78790.0}
+,{"NombrePeriodo":"2013", "Valor":74885.0}
+,{"NombrePeriodo":"2012", "Valor":77558.0}
+,{"NombrePeriodo":"2011", "Valor":82647.0}
+,{"NombrePeriodo":"2010", "Valor":86698.0}
+,{"NombrePeriodo":"2009", "Valor":86457.0}
+,{"NombrePeriodo":"2008", "Valor":98830.0}
+,{"NombrePeriodo":"2007", "Valor":103151.0}
+,{"NombrePeriodo":"2006", "Valor":109556.0}
+,{"NombrePeriodo":"2005", "Valor":106063.0}
+,{"NombrePeriodo":"2004", "Valor":103528.0}
+,{"NombrePeriodo":"2003", "Valor":95943.0}
+,{"NombrePeriodo":"2002", "Valor":92108.0}
+,{"NombrePeriodo":"2001", "Valor":93788.0}
+,{"NombrePeriodo":"2000", "Valor":83173.0}
+]
+}
+,{"Nombre":"Asturias, Principado de, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":15157.0}
+,{"NombrePeriodo":"2018", "Valor":18334.0}
+,{"NombrePeriodo":"2016", "Valor":20631.0}
+,{"NombrePeriodo":"2014", "Valor":19466.0}
+,{"NombrePeriodo":"2013", "Valor":19013.0}
+,{"NombrePeriodo":"2012", "Valor":19708.0}
+,{"NombrePeriodo":"2011", "Valor":18415.0}
+,{"NombrePeriodo":"2010", "Valor":17879.0}
+,{"NombrePeriodo":"2009", "Valor":16592.0}
+,{"NombrePeriodo":"2008", "Valor":24423.0}
+,{"NombrePeriodo":"2007", "Valor":25962.0}
+,{"NombrePeriodo":"2006", "Valor":30032.0}
+,{"NombrePeriodo":"2005", "Valor":27453.0}
+,{"NombrePeriodo":"2004", "Valor":28287.0}
+,{"NombrePeriodo":"2003", "Valor":28029.0}
+,{"NombrePeriodo":"2002", "Valor":25648.0}
+,{"NombrePeriodo":"2001", "Valor":30666.0}
+,{"NombrePeriodo":"2000", "Valor":20908.0}
+]
+}
+,{"Nombre":"Asturias, Principado de, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":50363.0}
+,{"NombrePeriodo":"2018", "Valor":52402.0}
+,{"NombrePeriodo":"2016", "Valor":56898.0}
+,{"NombrePeriodo":"2014", "Valor":51503.0}
+,{"NombrePeriodo":"2013", "Valor":47317.0}
+,{"NombrePeriodo":"2012", "Valor":49974.0}
+,{"NombrePeriodo":"2011", "Valor":58760.0}
+,{"NombrePeriodo":"2010", "Valor":61337.0}
+,{"NombrePeriodo":"2009", "Valor":63915.0}
+,{"NombrePeriodo":"2008", "Valor":68449.0}
+,{"NombrePeriodo":"2007", "Valor":71313.0}
+,{"NombrePeriodo":"2006", "Valor":72450.0}
+,{"NombrePeriodo":"2005", "Valor":70926.0}
+,{"NombrePeriodo":"2004", "Valor":67435.0}
+,{"NombrePeriodo":"2003", "Valor":63320.0}
+,{"NombrePeriodo":"2002", "Valor":62094.0}
+,{"NombrePeriodo":"2001", "Valor":60018.0}
+,{"NombrePeriodo":"2000", "Valor":59276.0}
+]
+}
+,{"Nombre":"Asturias, Principado de, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":5375.0}
+,{"NombrePeriodo":"2018", "Valor":5357.0}
+,{"NombrePeriodo":"2016", "Valor":6204.0}
+,{"NombrePeriodo":"2014", "Valor":7821.0}
+,{"NombrePeriodo":"2013", "Valor":8555.0}
+,{"NombrePeriodo":"2012", "Valor":7876.0}
+,{"NombrePeriodo":"2011", "Valor":5472.0}
+,{"NombrePeriodo":"2010", "Valor":7482.0}
+,{"NombrePeriodo":"2009", "Valor":5950.0}
+,{"NombrePeriodo":"2008", "Valor":5958.0}
+,{"NombrePeriodo":"2007", "Valor":5876.0}
+,{"NombrePeriodo":"2006", "Valor":7074.0}
+,{"NombrePeriodo":"2005", "Valor":7684.0}
+,{"NombrePeriodo":"2004", "Valor":7806.0}
+,{"NombrePeriodo":"2003", "Valor":4594.0}
+,{"NombrePeriodo":"2002", "Valor":4366.0}
+,{"NombrePeriodo":"2001", "Valor":3104.0}
+,{"NombrePeriodo":"2000", "Valor":2989.0}
+]
+}
+,{"Nombre":"Asturias, Principado de, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":47120.0}
+,{"NombrePeriodo":"2018", "Valor":48811.0}
+,{"NombrePeriodo":"2016", "Valor":56977.0}
+,{"NombrePeriodo":"2014", "Valor":47094.0}
+,{"NombrePeriodo":"2013", "Valor":51294.0}
+,{"NombrePeriodo":"2012", "Valor":52124.0}
+,{"NombrePeriodo":"2011", "Valor":50834.0}
+,{"NombrePeriodo":"2010", "Valor":48817.0}
+,{"NombrePeriodo":"2009", "Valor":50008.0}
+,{"NombrePeriodo":"2008", "Valor":52248.0}
+,{"NombrePeriodo":"2007", "Valor":52864.0}
+,{"NombrePeriodo":"2006", "Valor":50798.0}
+,{"NombrePeriodo":"2005", "Valor":49559.0}
+,{"NombrePeriodo":"2004", "Valor":49416.0}
+,{"NombrePeriodo":"2003", "Valor":39337.0}
+,{"NombrePeriodo":"2002", "Valor":35825.0}
+,{"NombrePeriodo":"2001", "Valor":33366.0}
+,{"NombrePeriodo":"2000", "Valor":27514.0}
+]
+}
+,{"Nombre":"Asturias, Principado de, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":757.0}
+,{"NombrePeriodo":"2018", "Valor":7788.0}
+,{"NombrePeriodo":"2016", "Valor":6172.0}
+,{"NombrePeriodo":"2014", "Valor":3490.0}
+,{"NombrePeriodo":"2013", "Valor":3794.0}
+,{"NombrePeriodo":"2012", "Valor":3271.0}
+,{"NombrePeriodo":"2011", "Valor":3373.0}
+,{"NombrePeriodo":"2010", "Valor":2972.0}
+,{"NombrePeriodo":"2009", "Valor":6102.0}
+,{"NombrePeriodo":"2008", "Valor":5892.0}
+,{"NombrePeriodo":"2007", "Valor":9323.0}
+,{"NombrePeriodo":"2006", "Valor":10645.0}
+,{"NombrePeriodo":"2005", "Valor":6596.0}
+,{"NombrePeriodo":"2004", "Valor":11905.0}
+,{"NombrePeriodo":"2003", "Valor":5967.0}
+,{"NombrePeriodo":"2002", "Valor":6627.0}
+,{"NombrePeriodo":"2001", "Valor":12310.0}
+,{"NombrePeriodo":"2000", "Valor":6082.0}
+]
+}
+,{"Nombre":"Asturias, Principado de, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":8726.0}
+,{"NombrePeriodo":"2018", "Valor":8348.0}
+,{"NombrePeriodo":"2016", "Valor":8904.0}
+,{"NombrePeriodo":"2014", "Valor":8581.0}
+,{"NombrePeriodo":"2013", "Valor":9550.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Balears, Illes, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":82743.0}
+,{"NombrePeriodo":"2018", "Valor":87576.0}
+,{"NombrePeriodo":"2016", "Valor":94235.0}
+,{"NombrePeriodo":"2014", "Valor":85556.0}
+,{"NombrePeriodo":"2013", "Valor":84969.0}
+,{"NombrePeriodo":"2012", "Valor":81979.0}
+,{"NombrePeriodo":"2011", "Valor":74509.0}
+,{"NombrePeriodo":"2010", "Valor":73902.0}
+,{"NombrePeriodo":"2009", "Valor":81702.0}
+,{"NombrePeriodo":"2008", "Valor":88749.0}
+,{"NombrePeriodo":"2007", "Valor":86057.0}
+,{"NombrePeriodo":"2006", "Valor":95743.0}
+,{"NombrePeriodo":"2005", "Valor":91401.0}
+,{"NombrePeriodo":"2004", "Valor":92477.0}
+,{"NombrePeriodo":"2003", "Valor":77408.0}
+,{"NombrePeriodo":"2002", "Valor":71792.0}
+,{"NombrePeriodo":"2001", "Valor":65706.0}
+,{"NombrePeriodo":"2000", "Valor":67421.0}
+]
+}
+,{"Nombre":"Balears, Illes, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":26431.0}
+,{"NombrePeriodo":"2018", "Valor":30079.0}
+,{"NombrePeriodo":"2016", "Valor":32426.0}
+,{"NombrePeriodo":"2014", "Valor":30296.0}
+,{"NombrePeriodo":"2013", "Valor":23893.0}
+,{"NombrePeriodo":"2012", "Valor":24942.0}
+,{"NombrePeriodo":"2011", "Valor":21351.0}
+,{"NombrePeriodo":"2010", "Valor":22588.0}
+,{"NombrePeriodo":"2009", "Valor":27733.0}
+,{"NombrePeriodo":"2008", "Valor":30575.0}
+,{"NombrePeriodo":"2007", "Valor":29644.0}
+,{"NombrePeriodo":"2006", "Valor":35571.0}
+,{"NombrePeriodo":"2005", "Valor":36714.0}
+,{"NombrePeriodo":"2004", "Valor":38051.0}
+,{"NombrePeriodo":"2003", "Valor":29633.0}
+,{"NombrePeriodo":"2002", "Valor":26267.0}
+,{"NombrePeriodo":"2001", "Valor":24737.0}
+,{"NombrePeriodo":"2000", "Valor":23857.0}
+]
+}
+,{"Nombre":"Balears, Illes, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":51788.0}
+,{"NombrePeriodo":"2018", "Valor":52131.0}
+,{"NombrePeriodo":"2016", "Valor":55955.0}
+,{"NombrePeriodo":"2014", "Valor":50653.0}
+,{"NombrePeriodo":"2013", "Valor":57174.0}
+,{"NombrePeriodo":"2012", "Valor":53045.0}
+,{"NombrePeriodo":"2011", "Valor":49458.0}
+,{"NombrePeriodo":"2010", "Valor":47470.0}
+,{"NombrePeriodo":"2009", "Valor":49697.0}
+,{"NombrePeriodo":"2008", "Valor":52986.0}
+,{"NombrePeriodo":"2007", "Valor":50516.0}
+,{"NombrePeriodo":"2006", "Valor":54919.0}
+,{"NombrePeriodo":"2005", "Valor":49879.0}
+,{"NombrePeriodo":"2004", "Valor":49518.0}
+,{"NombrePeriodo":"2003", "Valor":44939.0}
+,{"NombrePeriodo":"2002", "Valor":42567.0}
+,{"NombrePeriodo":"2001", "Valor":38115.0}
+,{"NombrePeriodo":"2000", "Valor":39759.0}
+]
+}
+,{"Nombre":"Balears, Illes, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":4524.0}
+,{"NombrePeriodo":"2018", "Valor":5366.0}
+,{"NombrePeriodo":"2016", "Valor":5854.0}
+,{"NombrePeriodo":"2014", "Valor":4607.0}
+,{"NombrePeriodo":"2013", "Valor":3902.0}
+,{"NombrePeriodo":"2012", "Valor":3992.0}
+,{"NombrePeriodo":"2011", "Valor":3700.0}
+,{"NombrePeriodo":"2010", "Valor":3844.0}
+,{"NombrePeriodo":"2009", "Valor":4272.0}
+,{"NombrePeriodo":"2008", "Valor":5188.0}
+,{"NombrePeriodo":"2007", "Valor":5897.0}
+,{"NombrePeriodo":"2006", "Valor":5253.0}
+,{"NombrePeriodo":"2005", "Valor":4808.0}
+,{"NombrePeriodo":"2004", "Valor":4908.0}
+,{"NombrePeriodo":"2003", "Valor":2836.0}
+,{"NombrePeriodo":"2002", "Valor":2958.0}
+,{"NombrePeriodo":"2001", "Valor":2854.0}
+,{"NombrePeriodo":"2000", "Valor":3805.0}
+]
+}
+,{"Nombre":"Balears, Illes, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":110068.0}
+,{"NombrePeriodo":"2018", "Valor":120215.0}
+,{"NombrePeriodo":"2016", "Valor":120896.0}
+,{"NombrePeriodo":"2014", "Valor":92655.0}
+,{"NombrePeriodo":"2013", "Valor":94181.0}
+,{"NombrePeriodo":"2012", "Valor":107856.0}
+,{"NombrePeriodo":"2011", "Valor":94786.0}
+,{"NombrePeriodo":"2010", "Valor":94294.0}
+,{"NombrePeriodo":"2009", "Valor":93383.0}
+,{"NombrePeriodo":"2008", "Valor":89879.0}
+,{"NombrePeriodo":"2007", "Valor":84417.0}
+,{"NombrePeriodo":"2006", "Valor":90525.0}
+,{"NombrePeriodo":"2005", "Valor":94901.0}
+,{"NombrePeriodo":"2004", "Valor":85075.0}
+,{"NombrePeriodo":"2003", "Valor":71187.0}
+,{"NombrePeriodo":"2002", "Valor":64551.0}
+,{"NombrePeriodo":"2001", "Valor":53561.0}
+,{"NombrePeriodo":"2000", "Valor":54770.0}
+]
+}
+,{"Nombre":"Balears, Illes, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":14514.0}
+,{"NombrePeriodo":"2018", "Valor":4237.0}
+,{"NombrePeriodo":"2016", "Valor":2553.0}
+,{"NombrePeriodo":"2014", "Valor":4704.0}
+,{"NombrePeriodo":"2013", "Valor":34317.0}
+,{"NombrePeriodo":"2012", "Valor":29687.0}
+,{"NombrePeriodo":"2011", "Valor":8596.0}
+,{"NombrePeriodo":"2010", "Valor":13993.0}
+,{"NombrePeriodo":"2009", "Valor":14493.0}
+,{"NombrePeriodo":"2008", "Valor":23231.0}
+,{"NombrePeriodo":"2007", "Valor":17091.0}
+,{"NombrePeriodo":"2006", "Valor":34176.0}
+,{"NombrePeriodo":"2005", "Valor":20382.0}
+,{"NombrePeriodo":"2004", "Valor":21137.0}
+,{"NombrePeriodo":"2003", "Valor":19820.0}
+,{"NombrePeriodo":"2002", "Valor":11518.0}
+,{"NombrePeriodo":"2001", "Valor":12542.0}
+,{"NombrePeriodo":"2000", "Valor":83264.0}
+]
+}
+,{"Nombre":"Balears, Illes, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":4166.0}
+,{"NombrePeriodo":"2018", "Valor":4024.0}
+,{"NombrePeriodo":"2016", "Valor":4128.0}
+,{"NombrePeriodo":"2014", "Valor":4104.0}
+,{"NombrePeriodo":"2013", "Valor":4223.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Canarias, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Canarias", "Codigo":"05"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":141190.0}
+,{"NombrePeriodo":"2018", "Valor":147470.0}
+,{"NombrePeriodo":"2016", "Valor":157510.0}
+,{"NombrePeriodo":"2014", "Valor":144545.0}
+,{"NombrePeriodo":"2013", "Valor":158521.0}
+,{"NombrePeriodo":"2012", "Valor":162915.0}
+,{"NombrePeriodo":"2011", "Valor":159714.0}
+,{"NombrePeriodo":"2010", "Valor":154426.0}
+,{"NombrePeriodo":"2009", "Valor":153904.0}
+,{"NombrePeriodo":"2008", "Valor":180215.0}
+,{"NombrePeriodo":"2007", "Valor":178337.0}
+,{"NombrePeriodo":"2006", "Valor":154152.0}
+,{"NombrePeriodo":"2005", "Valor":186012.0}
+,{"NombrePeriodo":"2004", "Valor":177253.0}
+,{"NombrePeriodo":"2003", "Valor":155613.0}
+,{"NombrePeriodo":"2002", "Valor":150177.0}
+,{"NombrePeriodo":"2001", "Valor":132590.0}
+,{"NombrePeriodo":"2000", "Valor":138035.0}
+]
+}
+,{"Nombre":"Canarias, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Canarias", "Codigo":"05"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":29273.0}
+,{"NombrePeriodo":"2018", "Valor":30479.0}
+,{"NombrePeriodo":"2016", "Valor":28386.0}
+,{"NombrePeriodo":"2014", "Valor":23477.0}
+,{"NombrePeriodo":"2013", "Valor":27607.0}
+,{"NombrePeriodo":"2012", "Valor":27060.0}
+,{"NombrePeriodo":"2011", "Valor":31465.0}
+,{"NombrePeriodo":"2010", "Valor":28375.0}
+,{"NombrePeriodo":"2009", "Valor":33820.0}
+,{"NombrePeriodo":"2008", "Valor":48085.0}
+,{"NombrePeriodo":"2007", "Valor":47854.0}
+,{"NombrePeriodo":"2006", "Valor":36891.0}
+,{"NombrePeriodo":"2005", "Valor":59744.0}
+,{"NombrePeriodo":"2004", "Valor":56044.0}
+,{"NombrePeriodo":"2003", "Valor":44603.0}
+,{"NombrePeriodo":"2002", "Valor":41775.0}
+,{"NombrePeriodo":"2001", "Valor":36719.0}
+,{"NombrePeriodo":"2000", "Valor":38998.0}
+]
+}
+,{"Nombre":"Canarias, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Canarias", "Codigo":"05"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":102162.0}
+,{"NombrePeriodo":"2018", "Valor":108094.0}
+,{"NombrePeriodo":"2016", "Valor":117518.0}
+,{"NombrePeriodo":"2014", "Valor":110975.0}
+,{"NombrePeriodo":"2013", "Valor":109755.0}
+,{"NombrePeriodo":"2012", "Valor":115028.0}
+,{"NombrePeriodo":"2011", "Valor":115258.0}
+,{"NombrePeriodo":"2010", "Valor":113485.0}
+,{"NombrePeriodo":"2009", "Valor":106810.0}
+,{"NombrePeriodo":"2008", "Valor":116812.0}
+,{"NombrePeriodo":"2007", "Valor":111901.0}
+,{"NombrePeriodo":"2006", "Valor":102435.0}
+,{"NombrePeriodo":"2005", "Valor":104171.0}
+,{"NombrePeriodo":"2004", "Valor":102815.0}
+,{"NombrePeriodo":"2003", "Valor":93370.0}
+,{"NombrePeriodo":"2002", "Valor":90423.0}
+,{"NombrePeriodo":"2001", "Valor":83329.0}
+,{"NombrePeriodo":"2000", "Valor":86848.0}
+]
+}
+,{"Nombre":"Canarias, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Canarias", "Codigo":"05"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":9755.0}
+,{"NombrePeriodo":"2018", "Valor":8897.0}
+,{"NombrePeriodo":"2016", "Valor":11606.0}
+,{"NombrePeriodo":"2014", "Valor":10093.0}
+,{"NombrePeriodo":"2013", "Valor":21159.0}
+,{"NombrePeriodo":"2012", "Valor":20827.0}
+,{"NombrePeriodo":"2011", "Valor":12991.0}
+,{"NombrePeriodo":"2010", "Valor":12566.0}
+,{"NombrePeriodo":"2009", "Valor":13274.0}
+,{"NombrePeriodo":"2008", "Valor":15318.0}
+,{"NombrePeriodo":"2007", "Valor":18582.0}
+,{"NombrePeriodo":"2006", "Valor":14826.0}
+,{"NombrePeriodo":"2005", "Valor":22097.0}
+,{"NombrePeriodo":"2004", "Valor":18394.0}
+,{"NombrePeriodo":"2003", "Valor":17640.0}
+,{"NombrePeriodo":"2002", "Valor":17979.0}
+,{"NombrePeriodo":"2001", "Valor":12542.0}
+,{"NombrePeriodo":"2000", "Valor":12189.0}
+]
+}
+,{"Nombre":"Canarias, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Canarias", "Codigo":"05"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":256335.0}
+,{"NombrePeriodo":"2018", "Valor":253542.0}
+,{"NombrePeriodo":"2016", "Valor":299082.0}
+,{"NombrePeriodo":"2014", "Valor":248536.0}
+,{"NombrePeriodo":"2013", "Valor":262430.0}
+,{"NombrePeriodo":"2012", "Valor":257839.0}
+,{"NombrePeriodo":"2011", "Valor":256871.0}
+,{"NombrePeriodo":"2010", "Valor":238301.0}
+,{"NombrePeriodo":"2009", "Valor":234812.0}
+,{"NombrePeriodo":"2008", "Valor":256830.0}
+,{"NombrePeriodo":"2007", "Valor":244769.0}
+,{"NombrePeriodo":"2006", "Valor":220078.0}
+,{"NombrePeriodo":"2005", "Valor":262567.0}
+,{"NombrePeriodo":"2004", "Valor":242601.0}
+,{"NombrePeriodo":"2003", "Valor":224083.0}
+,{"NombrePeriodo":"2002", "Valor":218422.0}
+,{"NombrePeriodo":"2001", "Valor":190879.0}
+,{"NombrePeriodo":"2000", "Valor":191537.0}
+]
+}
+,{"Nombre":"Canarias, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Canarias", "Codigo":"05"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":4015.0}
+,{"NombrePeriodo":"2018", "Valor":13298.0}
+,{"NombrePeriodo":"2016", "Valor":6956.0}
+,{"NombrePeriodo":"2014", "Valor":9478.0}
+,{"NombrePeriodo":"2013", "Valor":6180.0}
+,{"NombrePeriodo":"2012", "Valor":3466.0}
+,{"NombrePeriodo":"2011", "Valor":2962.0}
+,{"NombrePeriodo":"2010", "Valor":9444.0}
+,{"NombrePeriodo":"2009", "Valor":2875.0}
+,{"NombrePeriodo":"2008", "Valor":4038.0}
+,{"NombrePeriodo":"2007", "Valor":10629.0}
+,{"NombrePeriodo":"2006", "Valor":5163.0}
+,{"NombrePeriodo":"2005", "Valor":3446.0}
+,{"NombrePeriodo":"2004", "Valor":3262.0}
+,{"NombrePeriodo":"2003", "Valor":2384.0}
+,{"NombrePeriodo":"2002", "Valor":5563.0}
+,{"NombrePeriodo":"2001", "Valor":23772.0}
+,{"NombrePeriodo":"2000", "Valor":35039.0}
+]
+}
+,{"Nombre":"Canarias, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Canarias", "Codigo":"05"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":16732.0}
+,{"NombrePeriodo":"2018", "Valor":17807.0}
+,{"NombrePeriodo":"2016", "Valor":16802.0}
+,{"NombrePeriodo":"2014", "Valor":15589.0}
+,{"NombrePeriodo":"2013", "Valor":16497.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Cantabria, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cantabria", "Codigo":"06"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":49457.0}
+,{"NombrePeriodo":"2018", "Valor":46548.0}
+,{"NombrePeriodo":"2016", "Valor":45482.0}
+,{"NombrePeriodo":"2014", "Valor":48087.0}
+,{"NombrePeriodo":"2013", "Valor":47767.0}
+,{"NombrePeriodo":"2012", "Valor":50748.0}
+,{"NombrePeriodo":"2011", "Valor":50029.0}
+,{"NombrePeriodo":"2010", "Valor":51180.0}
+,{"NombrePeriodo":"2009", "Valor":53233.0}
+,{"NombrePeriodo":"2008", "Valor":59603.0}
+,{"NombrePeriodo":"2007", "Valor":56060.0}
+,{"NombrePeriodo":"2006", "Valor":65550.0}
+,{"NombrePeriodo":"2005", "Valor":64232.0}
+,{"NombrePeriodo":"2004", "Valor":61406.0}
+,{"NombrePeriodo":"2003", "Valor":68854.0}
+,{"NombrePeriodo":"2002", "Valor":65713.0}
+,{"NombrePeriodo":"2001", "Valor":65920.0}
+,{"NombrePeriodo":"2000", "Valor":64026.0}
+]
+}
+,{"Nombre":"Cantabria, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cantabria", "Codigo":"06"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":12691.0}
+,{"NombrePeriodo":"2018", "Valor":9561.0}
+,{"NombrePeriodo":"2016", "Valor":11392.0}
+,{"NombrePeriodo":"2014", "Valor":14409.0}
+,{"NombrePeriodo":"2013", "Valor":11995.0}
+,{"NombrePeriodo":"2012", "Valor":12755.0}
+,{"NombrePeriodo":"2011", "Valor":12028.0}
+,{"NombrePeriodo":"2010", "Valor":11491.0}
+,{"NombrePeriodo":"2009", "Valor":12464.0}
+,{"NombrePeriodo":"2008", "Valor":16006.0}
+,{"NombrePeriodo":"2007", "Valor":13604.0}
+,{"NombrePeriodo":"2006", "Valor":16797.0}
+,{"NombrePeriodo":"2005", "Valor":13891.0}
+,{"NombrePeriodo":"2004", "Valor":13164.0}
+,{"NombrePeriodo":"2003", "Valor":24437.0}
+,{"NombrePeriodo":"2002", "Valor":22768.0}
+,{"NombrePeriodo":"2001", "Valor":23439.0}
+,{"NombrePeriodo":"2000", "Valor":19939.0}
+]
+}
+,{"Nombre":"Cantabria, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cantabria", "Codigo":"06"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":35176.0}
+,{"NombrePeriodo":"2018", "Valor":36437.0}
+,{"NombrePeriodo":"2016", "Valor":32789.0}
+,{"NombrePeriodo":"2014", "Valor":32441.0}
+,{"NombrePeriodo":"2013", "Valor":31010.0}
+,{"NombrePeriodo":"2012", "Valor":32660.0}
+,{"NombrePeriodo":"2011", "Valor":34045.0}
+,{"NombrePeriodo":"2010", "Valor":36505.0}
+,{"NombrePeriodo":"2009", "Valor":37837.0}
+,{"NombrePeriodo":"2008", "Valor":39128.0}
+,{"NombrePeriodo":"2007", "Valor":38809.0}
+,{"NombrePeriodo":"2006", "Valor":41682.0}
+,{"NombrePeriodo":"2005", "Valor":39225.0}
+,{"NombrePeriodo":"2004", "Valor":37880.0}
+,{"NombrePeriodo":"2003", "Valor":37118.0}
+,{"NombrePeriodo":"2002", "Valor":35980.0}
+,{"NombrePeriodo":"2001", "Valor":34023.0}
+,{"NombrePeriodo":"2000", "Valor":36358.0}
+]
+}
+,{"Nombre":"Cantabria, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cantabria", "Codigo":"06"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":1590.0}
+,{"NombrePeriodo":"2018", "Valor":550.0}
+,{"NombrePeriodo":"2016", "Valor":1301.0}
+,{"NombrePeriodo":"2014", "Valor":1237.0}
+,{"NombrePeriodo":"2013", "Valor":4762.0}
+,{"NombrePeriodo":"2012", "Valor":5333.0}
+,{"NombrePeriodo":"2011", "Valor":3956.0}
+,{"NombrePeriodo":"2010", "Valor":3184.0}
+,{"NombrePeriodo":"2009", "Valor":2932.0}
+,{"NombrePeriodo":"2008", "Valor":4469.0}
+,{"NombrePeriodo":"2007", "Valor":3647.0}
+,{"NombrePeriodo":"2006", "Valor":7071.0}
+,{"NombrePeriodo":"2005", "Valor":11116.0}
+,{"NombrePeriodo":"2004", "Valor":10362.0}
+,{"NombrePeriodo":"2003", "Valor":7299.0}
+,{"NombrePeriodo":"2002", "Valor":6965.0}
+,{"NombrePeriodo":"2001", "Valor":8458.0}
+,{"NombrePeriodo":"2000", "Valor":7729.0}
+]
+}
+,{"Nombre":"Cantabria, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cantabria", "Codigo":"06"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":39687.0}
+,{"NombrePeriodo":"2018", "Valor":42055.0}
+,{"NombrePeriodo":"2016", "Valor":41058.0}
+,{"NombrePeriodo":"2014", "Valor":47909.0}
+,{"NombrePeriodo":"2013", "Valor":43375.0}
+,{"NombrePeriodo":"2012", "Valor":42195.0}
+,{"NombrePeriodo":"2011", "Valor":36549.0}
+,{"NombrePeriodo":"2010", "Valor":34846.0}
+,{"NombrePeriodo":"2009", "Valor":41684.0}
+,{"NombrePeriodo":"2008", "Valor":32493.0}
+,{"NombrePeriodo":"2007", "Valor":32393.0}
+,{"NombrePeriodo":"2006", "Valor":32137.0}
+,{"NombrePeriodo":"2005", "Valor":29051.0}
+,{"NombrePeriodo":"2004", "Valor":28872.0}
+,{"NombrePeriodo":"2003", "Valor":27881.0}
+,{"NombrePeriodo":"2002", "Valor":23575.0}
+,{"NombrePeriodo":"2001", "Valor":22698.0}
+,{"NombrePeriodo":"2000", "Valor":21691.0}
+]
+}
+,{"Nombre":"Cantabria, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cantabria", "Codigo":"06"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":223.0}
+,{"NombrePeriodo":"2018", "Valor":329.0}
+,{"NombrePeriodo":"2016", "Valor":535.0}
+,{"NombrePeriodo":"2014", "Valor":912.0}
+,{"NombrePeriodo":"2013", "Valor":1064.0}
+,{"NombrePeriodo":"2012", "Valor":1169.0}
+,{"NombrePeriodo":"2011", "Valor":761.0}
+,{"NombrePeriodo":"2010", "Valor":519.0}
+,{"NombrePeriodo":"2009", "Valor":793.0}
+,{"NombrePeriodo":"2008", "Valor":2219.0}
+,{"NombrePeriodo":"2007", "Valor":1700.0}
+,{"NombrePeriodo":"2006", "Valor":1051.0}
+,{"NombrePeriodo":"2005", "Valor":492.0}
+,{"NombrePeriodo":"2004", "Valor":519.0}
+,{"NombrePeriodo":"2003", "Valor":3226.0}
+,{"NombrePeriodo":"2002", "Valor":2013.0}
+,{"NombrePeriodo":"2001", "Valor":2489.0}
+,{"NombrePeriodo":"2000", "Valor":2771.0}
+]
+}
+,{"Nombre":"Cantabria, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cantabria", "Codigo":"06"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":3742.0}
+,{"NombrePeriodo":"2018", "Valor":3925.0}
+,{"NombrePeriodo":"2016", "Valor":3772.0}
+,{"NombrePeriodo":"2014", "Valor":3916.0}
+,{"NombrePeriodo":"2013", "Valor":3614.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Castilla y León, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":187076.0}
+,{"NombrePeriodo":"2018", "Valor":185204.0}
+,{"NombrePeriodo":"2016", "Valor":192215.0}
+,{"NombrePeriodo":"2014", "Valor":228279.0}
+,{"NombrePeriodo":"2013", "Valor":213035.0}
+,{"NombrePeriodo":"2012", "Valor":212398.0}
+,{"NombrePeriodo":"2011", "Valor":227831.0}
+,{"NombrePeriodo":"2010", "Valor":221573.0}
+,{"NombrePeriodo":"2009", "Valor":200351.0}
+,{"NombrePeriodo":"2008", "Valor":207324.0}
+,{"NombrePeriodo":"2007", "Valor":198864.0}
+,{"NombrePeriodo":"2006", "Valor":230402.0}
+,{"NombrePeriodo":"2005", "Valor":239186.0}
+,{"NombrePeriodo":"2004", "Valor":254701.0}
+,{"NombrePeriodo":"2003", "Valor":286555.0}
+,{"NombrePeriodo":"2002", "Valor":260522.0}
+,{"NombrePeriodo":"2001", "Valor":247080.0}
+,{"NombrePeriodo":"2000", "Valor":264330.0}
+]
+}
+,{"Nombre":"Castilla y León, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":41284.0}
+,{"NombrePeriodo":"2018", "Valor":36540.0}
+,{"NombrePeriodo":"2016", "Valor":40294.0}
+,{"NombrePeriodo":"2014", "Valor":56359.0}
+,{"NombrePeriodo":"2013", "Valor":50374.0}
+,{"NombrePeriodo":"2012", "Valor":53602.0}
+,{"NombrePeriodo":"2011", "Valor":48845.0}
+,{"NombrePeriodo":"2010", "Valor":49577.0}
+,{"NombrePeriodo":"2009", "Valor":37123.0}
+,{"NombrePeriodo":"2008", "Valor":43521.0}
+,{"NombrePeriodo":"2007", "Valor":30724.0}
+,{"NombrePeriodo":"2006", "Valor":56471.0}
+,{"NombrePeriodo":"2005", "Valor":69721.0}
+,{"NombrePeriodo":"2004", "Valor":68922.0}
+,{"NombrePeriodo":"2003", "Valor":81892.0}
+,{"NombrePeriodo":"2002", "Valor":73307.0}
+,{"NombrePeriodo":"2001", "Valor":67086.0}
+,{"NombrePeriodo":"2000", "Valor":65589.0}
+]
+}
+,{"Nombre":"Castilla y León, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":126081.0}
+,{"NombrePeriodo":"2018", "Valor":130224.0}
+,{"NombrePeriodo":"2016", "Valor":135634.0}
+,{"NombrePeriodo":"2014", "Valor":150370.0}
+,{"NombrePeriodo":"2013", "Valor":144047.0}
+,{"NombrePeriodo":"2012", "Valor":137251.0}
+,{"NombrePeriodo":"2011", "Valor":154606.0}
+,{"NombrePeriodo":"2010", "Valor":152316.0}
+,{"NombrePeriodo":"2009", "Valor":148000.0}
+,{"NombrePeriodo":"2008", "Valor":139558.0}
+,{"NombrePeriodo":"2007", "Valor":139873.0}
+,{"NombrePeriodo":"2006", "Valor":135312.0}
+,{"NombrePeriodo":"2005", "Valor":146634.0}
+,{"NombrePeriodo":"2004", "Valor":156624.0}
+,{"NombrePeriodo":"2003", "Valor":152305.0}
+,{"NombrePeriodo":"2002", "Valor":140703.0}
+,{"NombrePeriodo":"2001", "Valor":130634.0}
+,{"NombrePeriodo":"2000", "Valor":138730.0}
+]
+}
+,{"Nombre":"Castilla y León, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":19711.0}
+,{"NombrePeriodo":"2018", "Valor":18440.0}
+,{"NombrePeriodo":"2016", "Valor":16287.0}
+,{"NombrePeriodo":"2014", "Valor":21550.0}
+,{"NombrePeriodo":"2013", "Valor":18614.0}
+,{"NombrePeriodo":"2012", "Valor":21545.0}
+,{"NombrePeriodo":"2011", "Valor":24380.0}
+,{"NombrePeriodo":"2010", "Valor":19680.0}
+,{"NombrePeriodo":"2009", "Valor":15228.0}
+,{"NombrePeriodo":"2008", "Valor":24245.0}
+,{"NombrePeriodo":"2007", "Valor":28267.0}
+,{"NombrePeriodo":"2006", "Valor":38619.0}
+,{"NombrePeriodo":"2005", "Valor":22831.0}
+,{"NombrePeriodo":"2004", "Valor":29155.0}
+,{"NombrePeriodo":"2003", "Valor":52358.0}
+,{"NombrePeriodo":"2002", "Valor":46512.0}
+,{"NombrePeriodo":"2001", "Valor":49360.0}
+,{"NombrePeriodo":"2000", "Valor":60011.0}
+]
+}
+,{"Nombre":"Castilla y León, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":114333.0}
+,{"NombrePeriodo":"2018", "Valor":112922.0}
+,{"NombrePeriodo":"2016", "Valor":124949.0}
+,{"NombrePeriodo":"2014", "Valor":124262.0}
+,{"NombrePeriodo":"2013", "Valor":113987.0}
+,{"NombrePeriodo":"2012", "Valor":105249.0}
+,{"NombrePeriodo":"2011", "Valor":111779.0}
+,{"NombrePeriodo":"2010", "Valor":107216.0}
+,{"NombrePeriodo":"2009", "Valor":104336.0}
+,{"NombrePeriodo":"2008", "Valor":90408.0}
+,{"NombrePeriodo":"2007", "Valor":91396.0}
+,{"NombrePeriodo":"2006", "Valor":93417.0}
+,{"NombrePeriodo":"2005", "Valor":92470.0}
+,{"NombrePeriodo":"2004", "Valor":108575.0}
+,{"NombrePeriodo":"2003", "Valor":117488.0}
+,{"NombrePeriodo":"2002", "Valor":108064.0}
+,{"NombrePeriodo":"2001", "Valor":92383.0}
+,{"NombrePeriodo":"2000", "Valor":95080.0}
+]
+}
+,{"Nombre":"Castilla y León, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":8083.0}
+,{"NombrePeriodo":"2018", "Valor":4651.0}
+,{"NombrePeriodo":"2016", "Valor":13113.0}
+,{"NombrePeriodo":"2014", "Valor":19669.0}
+,{"NombrePeriodo":"2013", "Valor":19153.0}
+,{"NombrePeriodo":"2012", "Valor":17343.0}
+,{"NombrePeriodo":"2011", "Valor":33652.0}
+,{"NombrePeriodo":"2010", "Valor":42266.0}
+,{"NombrePeriodo":"2009", "Valor":62178.0}
+,{"NombrePeriodo":"2008", "Valor":67240.0}
+,{"NombrePeriodo":"2007", "Valor":78352.0}
+,{"NombrePeriodo":"2006", "Valor":22120.0}
+,{"NombrePeriodo":"2005", "Valor":6417.0}
+,{"NombrePeriodo":"2004", "Valor":9052.0}
+,{"NombrePeriodo":"2003", "Valor":17464.0}
+,{"NombrePeriodo":"2002", "Valor":7969.0}
+,{"NombrePeriodo":"2001", "Valor":11687.0}
+,{"NombrePeriodo":"2000", "Valor":18265.0}
+]
+}
+,{"Nombre":"Castilla y León, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":16333.0}
+,{"NombrePeriodo":"2018", "Valor":16011.0}
+,{"NombrePeriodo":"2016", "Valor":16532.0}
+,{"NombrePeriodo":"2014", "Valor":16458.0}
+,{"NombrePeriodo":"2013", "Valor":18296.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Castilla-La Mancha, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla-La Mancha", "Codigo":"08"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":143427.0}
+,{"NombrePeriodo":"2018", "Valor":143020.0}
+,{"NombrePeriodo":"2016", "Valor":149899.0}
+,{"NombrePeriodo":"2014", "Valor":147301.0}
+,{"NombrePeriodo":"2013", "Valor":160503.0}
+,{"NombrePeriodo":"2012", "Valor":150879.0}
+,{"NombrePeriodo":"2011", "Valor":156224.0}
+,{"NombrePeriodo":"2010", "Valor":142725.0}
+,{"NombrePeriodo":"2009", "Valor":149213.0}
+,{"NombrePeriodo":"2008", "Valor":158675.0}
+,{"NombrePeriodo":"2007", "Valor":163626.0}
+,{"NombrePeriodo":"2006", "Valor":168806.0}
+,{"NombrePeriodo":"2005", "Valor":173256.0}
+,{"NombrePeriodo":"2004", "Valor":168897.0}
+,{"NombrePeriodo":"2003", "Valor":175685.0}
+,{"NombrePeriodo":"2002", "Valor":159438.0}
+,{"NombrePeriodo":"2001", "Valor":172358.0}
+,{"NombrePeriodo":"2000", "Valor":172367.0}
+]
+}
+,{"Nombre":"Castilla-La Mancha, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla-La Mancha", "Codigo":"08"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":34868.0}
+,{"NombrePeriodo":"2018", "Valor":25640.0}
+,{"NombrePeriodo":"2016", "Valor":31402.0}
+,{"NombrePeriodo":"2014", "Valor":35120.0}
+,{"NombrePeriodo":"2013", "Valor":35319.0}
+,{"NombrePeriodo":"2012", "Valor":24977.0}
+,{"NombrePeriodo":"2011", "Valor":26344.0}
+,{"NombrePeriodo":"2010", "Valor":18869.0}
+,{"NombrePeriodo":"2009", "Valor":29380.0}
+,{"NombrePeriodo":"2008", "Valor":30055.0}
+,{"NombrePeriodo":"2007", "Valor":30900.0}
+,{"NombrePeriodo":"2006", "Valor":32738.0}
+,{"NombrePeriodo":"2005", "Valor":28614.0}
+,{"NombrePeriodo":"2004", "Valor":26659.0}
+,{"NombrePeriodo":"2003", "Valor":30188.0}
+,{"NombrePeriodo":"2002", "Valor":21890.0}
+,{"NombrePeriodo":"2001", "Valor":17367.0}
+,{"NombrePeriodo":"2000", "Valor":26240.0}
+]
+}
+,{"Nombre":"Castilla-La Mancha, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla-La Mancha", "Codigo":"08"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":93902.0}
+,{"NombrePeriodo":"2018", "Valor":99940.0}
+,{"NombrePeriodo":"2016", "Valor":95378.0}
+,{"NombrePeriodo":"2014", "Valor":94482.0}
+,{"NombrePeriodo":"2013", "Valor":106503.0}
+,{"NombrePeriodo":"2012", "Valor":108939.0}
+,{"NombrePeriodo":"2011", "Valor":116529.0}
+,{"NombrePeriodo":"2010", "Valor":113038.0}
+,{"NombrePeriodo":"2009", "Valor":107545.0}
+,{"NombrePeriodo":"2008", "Valor":111701.0}
+,{"NombrePeriodo":"2007", "Valor":114730.0}
+,{"NombrePeriodo":"2006", "Valor":117099.0}
+,{"NombrePeriodo":"2005", "Valor":120222.0}
+,{"NombrePeriodo":"2004", "Valor":120840.0}
+,{"NombrePeriodo":"2003", "Valor":121778.0}
+,{"NombrePeriodo":"2002", "Valor":120259.0}
+,{"NombrePeriodo":"2001", "Valor":128203.0}
+,{"NombrePeriodo":"2000", "Valor":118712.0}
+]
+}
+,{"Nombre":"Castilla-La Mancha, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla-La Mancha", "Codigo":"08"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":14657.0}
+,{"NombrePeriodo":"2018", "Valor":17440.0}
+,{"NombrePeriodo":"2016", "Valor":23119.0}
+,{"NombrePeriodo":"2014", "Valor":17699.0}
+,{"NombrePeriodo":"2013", "Valor":18681.0}
+,{"NombrePeriodo":"2012", "Valor":16963.0}
+,{"NombrePeriodo":"2011", "Valor":13351.0}
+,{"NombrePeriodo":"2010", "Valor":10818.0}
+,{"NombrePeriodo":"2009", "Valor":12288.0}
+,{"NombrePeriodo":"2008", "Valor":16919.0}
+,{"NombrePeriodo":"2007", "Valor":17996.0}
+,{"NombrePeriodo":"2006", "Valor":18969.0}
+,{"NombrePeriodo":"2005", "Valor":24420.0}
+,{"NombrePeriodo":"2004", "Valor":21398.0}
+,{"NombrePeriodo":"2003", "Valor":23719.0}
+,{"NombrePeriodo":"2002", "Valor":17289.0}
+,{"NombrePeriodo":"2001", "Valor":26788.0}
+,{"NombrePeriodo":"2000", "Valor":27415.0}
+]
+}
+,{"Nombre":"Castilla-La Mancha, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla-La Mancha", "Codigo":"08"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":123243.0}
+,{"NombrePeriodo":"2018", "Valor":112312.0}
+,{"NombrePeriodo":"2016", "Valor":119582.0}
+,{"NombrePeriodo":"2014", "Valor":120677.0}
+,{"NombrePeriodo":"2013", "Valor":126227.0}
+,{"NombrePeriodo":"2012", "Valor":128757.0}
+,{"NombrePeriodo":"2011", "Valor":121092.0}
+,{"NombrePeriodo":"2010", "Valor":120066.0}
+,{"NombrePeriodo":"2009", "Valor":109479.0}
+,{"NombrePeriodo":"2008", "Valor":101983.0}
+,{"NombrePeriodo":"2007", "Valor":94891.0}
+,{"NombrePeriodo":"2006", "Valor":89115.0}
+,{"NombrePeriodo":"2005", "Valor":84836.0}
+,{"NombrePeriodo":"2004", "Valor":80015.0}
+,{"NombrePeriodo":"2003", "Valor":73788.0}
+,{"NombrePeriodo":"2002", "Valor":62016.0}
+,{"NombrePeriodo":"2001", "Valor":63309.0}
+,{"NombrePeriodo":"2000", "Valor":60931.0}
+]
+}
+,{"Nombre":"Castilla-La Mancha, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla-La Mancha", "Codigo":"08"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":2397.0}
+,{"NombrePeriodo":"2018", "Valor":2041.0}
+,{"NombrePeriodo":"2016", "Valor":4693.0}
+,{"NombrePeriodo":"2014", "Valor":7196.0}
+,{"NombrePeriodo":"2013", "Valor":5124.0}
+,{"NombrePeriodo":"2012", "Valor":5856.0}
+,{"NombrePeriodo":"2011", "Valor":4553.0}
+,{"NombrePeriodo":"2010", "Valor":11090.0}
+,{"NombrePeriodo":"2009", "Valor":8728.0}
+,{"NombrePeriodo":"2008", "Valor":8283.0}
+,{"NombrePeriodo":"2007", "Valor":16905.0}
+,{"NombrePeriodo":"2006", "Valor":5440.0}
+,{"NombrePeriodo":"2005", "Valor":4898.0}
+,{"NombrePeriodo":"2004", "Valor":4267.0}
+,{"NombrePeriodo":"2003", "Valor":3905.0}
+,{"NombrePeriodo":"2002", "Valor":3981.0}
+,{"NombrePeriodo":"2001", "Valor":7321.0}
+,{"NombrePeriodo":"2000", "Valor":13631.0}
+]
+}
+,{"Nombre":"Castilla-La Mancha, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Castilla-La Mancha", "Codigo":"08"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":13944.0}
+,{"NombrePeriodo":"2018", "Valor":14584.0}
+,{"NombrePeriodo":"2016", "Valor":13697.0}
+,{"NombrePeriodo":"2014", "Valor":13895.0}
+,{"NombrePeriodo":"2013", "Valor":15190.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Cataluña, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cataluña", "Codigo":"09"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":454227.0}
+,{"NombrePeriodo":"2018", "Valor":467324.0}
+,{"NombrePeriodo":"2016", "Valor":465434.0}
+,{"NombrePeriodo":"2014", "Valor":457383.0}
+,{"NombrePeriodo":"2013", "Valor":461504.0}
+,{"NombrePeriodo":"2012", "Valor":504301.0}
+,{"NombrePeriodo":"2011", "Valor":509837.0}
+,{"NombrePeriodo":"2010", "Valor":514872.0}
+,{"NombrePeriodo":"2009", "Valor":510990.0}
+,{"NombrePeriodo":"2008", "Valor":547907.0}
+,{"NombrePeriodo":"2007", "Valor":613298.0}
+,{"NombrePeriodo":"2006", "Valor":591939.0}
+,{"NombrePeriodo":"2005", "Valor":541377.0}
+,{"NombrePeriodo":"2004", "Valor":576186.0}
+,{"NombrePeriodo":"2003", "Valor":618368.0}
+,{"NombrePeriodo":"2002", "Valor":632718.0}
+,{"NombrePeriodo":"2001", "Valor":661254.0}
+,{"NombrePeriodo":"2000", "Valor":657130.0}
+]
+}
+,{"Nombre":"Cataluña, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cataluña", "Codigo":"09"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":84462.0}
+,{"NombrePeriodo":"2018", "Valor":92942.0}
+,{"NombrePeriodo":"2016", "Valor":85764.0}
+,{"NombrePeriodo":"2014", "Valor":107734.0}
+,{"NombrePeriodo":"2013", "Valor":112303.0}
+,{"NombrePeriodo":"2012", "Valor":125554.0}
+,{"NombrePeriodo":"2011", "Valor":125823.0}
+,{"NombrePeriodo":"2010", "Valor":131573.0}
+,{"NombrePeriodo":"2009", "Valor":131289.0}
+,{"NombrePeriodo":"2008", "Valor":151915.0}
+,{"NombrePeriodo":"2007", "Valor":186075.0}
+,{"NombrePeriodo":"2006", "Valor":157633.0}
+,{"NombrePeriodo":"2005", "Valor":103477.0}
+,{"NombrePeriodo":"2004", "Valor":116259.0}
+,{"NombrePeriodo":"2003", "Valor":114764.0}
+,{"NombrePeriodo":"2002", "Valor":152184.0}
+,{"NombrePeriodo":"2001", "Valor":170314.0}
+,{"NombrePeriodo":"2000", "Valor":167327.0}
+]
+}
+,{"Nombre":"Cataluña, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cataluña", "Codigo":"09"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":346443.0}
+,{"NombrePeriodo":"2018", "Valor":337996.0}
+,{"NombrePeriodo":"2016", "Valor":344628.0}
+,{"NombrePeriodo":"2014", "Valor":318709.0}
+,{"NombrePeriodo":"2013", "Valor":316533.0}
+,{"NombrePeriodo":"2012", "Valor":337621.0}
+,{"NombrePeriodo":"2011", "Valor":347007.0}
+,{"NombrePeriodo":"2010", "Valor":354396.0}
+,{"NombrePeriodo":"2009", "Valor":352091.0}
+,{"NombrePeriodo":"2008", "Valor":367529.0}
+,{"NombrePeriodo":"2007", "Valor":390880.0}
+,{"NombrePeriodo":"2006", "Valor":390921.0}
+,{"NombrePeriodo":"2005", "Valor":413627.0}
+,{"NombrePeriodo":"2004", "Valor":432869.0}
+,{"NombrePeriodo":"2003", "Valor":448967.0}
+,{"NombrePeriodo":"2002", "Valor":432952.0}
+,{"NombrePeriodo":"2001", "Valor":426217.0}
+,{"NombrePeriodo":"2000", "Valor":426161.0}
+]
+}
+,{"Nombre":"Cataluña, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cataluña", "Codigo":"09"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":23322.0}
+,{"NombrePeriodo":"2018", "Valor":36386.0}
+,{"NombrePeriodo":"2016", "Valor":35042.0}
+,{"NombrePeriodo":"2014", "Valor":30940.0}
+,{"NombrePeriodo":"2013", "Valor":32668.0}
+,{"NombrePeriodo":"2012", "Valor":41126.0}
+,{"NombrePeriodo":"2011", "Valor":37007.0}
+,{"NombrePeriodo":"2010", "Valor":28903.0}
+,{"NombrePeriodo":"2009", "Valor":27610.0}
+,{"NombrePeriodo":"2008", "Valor":28463.0}
+,{"NombrePeriodo":"2007", "Valor":36343.0}
+,{"NombrePeriodo":"2006", "Valor":43385.0}
+,{"NombrePeriodo":"2005", "Valor":24273.0}
+,{"NombrePeriodo":"2004", "Valor":27058.0}
+,{"NombrePeriodo":"2003", "Valor":54637.0}
+,{"NombrePeriodo":"2002", "Valor":47582.0}
+,{"NombrePeriodo":"2001", "Valor":64723.0}
+,{"NombrePeriodo":"2000", "Valor":63642.0}
+]
+}
+,{"Nombre":"Cataluña, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cataluña", "Codigo":"09"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":700799.0}
+,{"NombrePeriodo":"2018", "Valor":708519.0}
+,{"NombrePeriodo":"2016", "Valor":694914.0}
+,{"NombrePeriodo":"2014", "Valor":647195.0}
+,{"NombrePeriodo":"2013", "Valor":616650.0}
+,{"NombrePeriodo":"2012", "Valor":576754.0}
+,{"NombrePeriodo":"2011", "Valor":571690.0}
+,{"NombrePeriodo":"2010", "Valor":570306.0}
+,{"NombrePeriodo":"2009", "Valor":538916.0}
+,{"NombrePeriodo":"2008", "Valor":507651.0}
+,{"NombrePeriodo":"2007", "Valor":519367.0}
+,{"NombrePeriodo":"2006", "Valor":512201.0}
+,{"NombrePeriodo":"2005", "Valor":450062.0}
+,{"NombrePeriodo":"2004", "Valor":445838.0}
+,{"NombrePeriodo":"2003", "Valor":505903.0}
+,{"NombrePeriodo":"2002", "Valor":501422.0}
+,{"NombrePeriodo":"2001", "Valor":501668.0}
+,{"NombrePeriodo":"2000", "Valor":508552.0}
+]
+}
+,{"Nombre":"Cataluña, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cataluña", "Codigo":"09"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":30222.0}
+,{"NombrePeriodo":"2018", "Valor":61965.0}
+,{"NombrePeriodo":"2016", "Valor":39733.0}
+,{"NombrePeriodo":"2014", "Valor":60119.0}
+,{"NombrePeriodo":"2013", "Valor":52378.0}
+,{"NombrePeriodo":"2012", "Valor":65131.0}
+,{"NombrePeriodo":"2011", "Valor":56409.0}
+,{"NombrePeriodo":"2010", "Valor":66155.0}
+,{"NombrePeriodo":"2009", "Valor":62552.0}
+,{"NombrePeriodo":"2008", "Valor":95941.0}
+,{"NombrePeriodo":"2007", "Valor":74165.0}
+,{"NombrePeriodo":"2006", "Valor":61214.0}
+,{"NombrePeriodo":"2005", "Valor":60287.0}
+,{"NombrePeriodo":"2004", "Valor":49064.0}
+,{"NombrePeriodo":"2003", "Valor":78478.0}
+,{"NombrePeriodo":"2002", "Valor":63945.0}
+,{"NombrePeriodo":"2001", "Valor":47824.0}
+,{"NombrePeriodo":"2000", "Valor":57475.0}
+]
+}
+,{"Nombre":"Cataluña, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Cataluña", "Codigo":"09"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":38893.0}
+,{"NombrePeriodo":"2018", "Valor":38844.0}
+,{"NombrePeriodo":"2016", "Valor":39439.0}
+,{"NombrePeriodo":"2014", "Valor":39867.0}
+,{"NombrePeriodo":"2013", "Valor":41385.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Comunitat Valenciana, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":389668.0}
+,{"NombrePeriodo":"2018", "Valor":407669.0}
+,{"NombrePeriodo":"2016", "Valor":368952.0}
+,{"NombrePeriodo":"2014", "Valor":381995.0}
+,{"NombrePeriodo":"2013", "Valor":364059.0}
+,{"NombrePeriodo":"2012", "Valor":369422.0}
+,{"NombrePeriodo":"2011", "Valor":356403.0}
+,{"NombrePeriodo":"2010", "Valor":363797.0}
+,{"NombrePeriodo":"2009", "Valor":395768.0}
+,{"NombrePeriodo":"2008", "Valor":438975.0}
+,{"NombrePeriodo":"2007", "Valor":421075.0}
+,{"NombrePeriodo":"2006", "Valor":421497.0}
+,{"NombrePeriodo":"2005", "Valor":393009.0}
+,{"NombrePeriodo":"2004", "Valor":422820.0}
+,{"NombrePeriodo":"2003", "Valor":389367.0}
+,{"NombrePeriodo":"2002", "Valor":351382.0}
+,{"NombrePeriodo":"2001", "Valor":363360.0}
+,{"NombrePeriodo":"2000", "Valor":368606.0}
+]
+}
+,{"Nombre":"Comunitat Valenciana, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":57296.0}
+,{"NombrePeriodo":"2018", "Valor":52749.0}
+,{"NombrePeriodo":"2016", "Valor":44401.0}
+,{"NombrePeriodo":"2014", "Valor":44282.0}
+,{"NombrePeriodo":"2013", "Valor":44553.0}
+,{"NombrePeriodo":"2012", "Valor":49096.0}
+,{"NombrePeriodo":"2011", "Valor":54961.0}
+,{"NombrePeriodo":"2010", "Valor":50449.0}
+,{"NombrePeriodo":"2009", "Valor":52942.0}
+,{"NombrePeriodo":"2008", "Valor":69759.0}
+,{"NombrePeriodo":"2007", "Valor":69664.0}
+,{"NombrePeriodo":"2006", "Valor":66110.0}
+,{"NombrePeriodo":"2005", "Valor":66515.0}
+,{"NombrePeriodo":"2004", "Valor":93247.0}
+,{"NombrePeriodo":"2003", "Valor":93047.0}
+,{"NombrePeriodo":"2002", "Valor":76441.0}
+,{"NombrePeriodo":"2001", "Valor":102860.0}
+,{"NombrePeriodo":"2000", "Valor":92948.0}
+]
+}
+,{"Nombre":"Comunitat Valenciana, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":289555.0}
+,{"NombrePeriodo":"2018", "Valor":315744.0}
+,{"NombrePeriodo":"2016", "Valor":292572.0}
+,{"NombrePeriodo":"2014", "Valor":292516.0}
+,{"NombrePeriodo":"2013", "Valor":285743.0}
+,{"NombrePeriodo":"2012", "Valor":293361.0}
+,{"NombrePeriodo":"2011", "Valor":277013.0}
+,{"NombrePeriodo":"2010", "Valor":286121.0}
+,{"NombrePeriodo":"2009", "Valor":317668.0}
+,{"NombrePeriodo":"2008", "Valor":336757.0}
+,{"NombrePeriodo":"2007", "Valor":323864.0}
+,{"NombrePeriodo":"2006", "Valor":324894.0}
+,{"NombrePeriodo":"2005", "Valor":293036.0}
+,{"NombrePeriodo":"2004", "Valor":295284.0}
+,{"NombrePeriodo":"2003", "Valor":265304.0}
+,{"NombrePeriodo":"2002", "Valor":249908.0}
+,{"NombrePeriodo":"2001", "Valor":237245.0}
+,{"NombrePeriodo":"2000", "Valor":249685.0}
+]
+}
+,{"Nombre":"Comunitat Valenciana, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":42817.0}
+,{"NombrePeriodo":"2018", "Valor":39176.0}
+,{"NombrePeriodo":"2016", "Valor":31979.0}
+,{"NombrePeriodo":"2014", "Valor":45197.0}
+,{"NombrePeriodo":"2013", "Valor":33763.0}
+,{"NombrePeriodo":"2012", "Valor":26965.0}
+,{"NombrePeriodo":"2011", "Valor":24429.0}
+,{"NombrePeriodo":"2010", "Valor":27227.0}
+,{"NombrePeriodo":"2009", "Valor":25158.0}
+,{"NombrePeriodo":"2008", "Valor":32459.0}
+,{"NombrePeriodo":"2007", "Valor":27547.0}
+,{"NombrePeriodo":"2006", "Valor":30493.0}
+,{"NombrePeriodo":"2005", "Valor":33458.0}
+,{"NombrePeriodo":"2004", "Valor":34289.0}
+,{"NombrePeriodo":"2003", "Valor":31016.0}
+,{"NombrePeriodo":"2002", "Valor":25033.0}
+,{"NombrePeriodo":"2001", "Valor":23255.0}
+,{"NombrePeriodo":"2000", "Valor":25973.0}
+]
+}
+,{"Nombre":"Comunitat Valenciana, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":463503.0}
+,{"NombrePeriodo":"2018", "Valor":492676.0}
+,{"NombrePeriodo":"2016", "Valor":483866.0}
+,{"NombrePeriodo":"2014", "Valor":460963.0}
+,{"NombrePeriodo":"2013", "Valor":448695.0}
+,{"NombrePeriodo":"2012", "Valor":450286.0}
+,{"NombrePeriodo":"2011", "Valor":396173.0}
+,{"NombrePeriodo":"2010", "Valor":374919.0}
+,{"NombrePeriodo":"2009", "Valor":374632.0}
+,{"NombrePeriodo":"2008", "Valor":425691.0}
+,{"NombrePeriodo":"2007", "Valor":372308.0}
+,{"NombrePeriodo":"2006", "Valor":327874.0}
+,{"NombrePeriodo":"2005", "Valor":275921.0}
+,{"NombrePeriodo":"2004", "Valor":297070.0}
+,{"NombrePeriodo":"2003", "Valor":249449.0}
+,{"NombrePeriodo":"2002", "Valor":206077.0}
+,{"NombrePeriodo":"2001", "Valor":199498.0}
+,{"NombrePeriodo":"2000", "Valor":202655.0}
+]
+}
+,{"Nombre":"Comunitat Valenciana, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":39274.0}
+,{"NombrePeriodo":"2018", "Valor":17207.0}
+,{"NombrePeriodo":"2016", "Valor":20264.0}
+,{"NombrePeriodo":"2014", "Valor":26192.0}
+,{"NombrePeriodo":"2013", "Valor":42230.0}
+,{"NombrePeriodo":"2012", "Valor":26004.0}
+,{"NombrePeriodo":"2011", "Valor":30875.0}
+,{"NombrePeriodo":"2010", "Valor":25950.0}
+,{"NombrePeriodo":"2009", "Valor":31266.0}
+,{"NombrePeriodo":"2008", "Valor":36053.0}
+,{"NombrePeriodo":"2007", "Valor":46532.0}
+,{"NombrePeriodo":"2006", "Valor":28145.0}
+,{"NombrePeriodo":"2005", "Valor":28523.0}
+,{"NombrePeriodo":"2004", "Valor":29653.0}
+,{"NombrePeriodo":"2003", "Valor":40637.0}
+,{"NombrePeriodo":"2002", "Valor":25089.0}
+,{"NombrePeriodo":"2001", "Valor":17524.0}
+,{"NombrePeriodo":"2000", "Valor":17453.0}
+]
+}
+,{"Nombre":"Comunitat Valenciana, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":39867.0}
+,{"NombrePeriodo":"2018", "Valor":39484.0}
+,{"NombrePeriodo":"2016", "Valor":33792.0}
+,{"NombrePeriodo":"2014", "Valor":37743.0}
+,{"NombrePeriodo":"2013", "Valor":42791.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Extremadura, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Extremadura", "Codigo":"11"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":61740.0}
+,{"NombrePeriodo":"2018", "Valor":67141.0}
+,{"NombrePeriodo":"2016", "Valor":73179.0}
+,{"NombrePeriodo":"2014", "Valor":67890.0}
+,{"NombrePeriodo":"2013", "Valor":69626.0}
+,{"NombrePeriodo":"2012", "Valor":75522.0}
+,{"NombrePeriodo":"2011", "Valor":74042.0}
+,{"NombrePeriodo":"2010", "Valor":78298.0}
+,{"NombrePeriodo":"2009", "Valor":79683.0}
+,{"NombrePeriodo":"2008", "Valor":90963.0}
+,{"NombrePeriodo":"2007", "Valor":98774.0}
+,{"NombrePeriodo":"2006", "Valor":111253.0}
+,{"NombrePeriodo":"2005", "Valor":108617.0}
+,{"NombrePeriodo":"2004", "Valor":114719.0}
+,{"NombrePeriodo":"2003", "Valor":114108.0}
+,{"NombrePeriodo":"2002", "Valor":97182.0}
+,{"NombrePeriodo":"2001", "Valor":95105.0}
+,{"NombrePeriodo":"2000", "Valor":81855.0}
+]
+}
+,{"Nombre":"Extremadura, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Extremadura", "Codigo":"11"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":6489.0}
+,{"NombrePeriodo":"2018", "Valor":7973.0}
+,{"NombrePeriodo":"2016", "Valor":11144.0}
+,{"NombrePeriodo":"2014", "Valor":6524.0}
+,{"NombrePeriodo":"2013", "Valor":5026.0}
+,{"NombrePeriodo":"2012", "Valor":6859.0}
+,{"NombrePeriodo":"2011", "Valor":7540.0}
+,{"NombrePeriodo":"2010", "Valor":5971.0}
+,{"NombrePeriodo":"2009", "Valor":6949.0}
+,{"NombrePeriodo":"2008", "Valor":18392.0}
+,{"NombrePeriodo":"2007", "Valor":14655.0}
+,{"NombrePeriodo":"2006", "Valor":26586.0}
+,{"NombrePeriodo":"2005", "Valor":26160.0}
+,{"NombrePeriodo":"2004", "Valor":26742.0}
+,{"NombrePeriodo":"2003", "Valor":28674.0}
+,{"NombrePeriodo":"2002", "Valor":18577.0}
+,{"NombrePeriodo":"2001", "Valor":18461.0}
+,{"NombrePeriodo":"2000", "Valor":12570.0}
+]
+}
+,{"Nombre":"Extremadura, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Extremadura", "Codigo":"11"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":46317.0}
+,{"NombrePeriodo":"2018", "Valor":49199.0}
+,{"NombrePeriodo":"2016", "Valor":50996.0}
+,{"NombrePeriodo":"2014", "Valor":49882.0}
+,{"NombrePeriodo":"2013", "Valor":56230.0}
+,{"NombrePeriodo":"2012", "Valor":55277.0}
+,{"NombrePeriodo":"2011", "Valor":56978.0}
+,{"NombrePeriodo":"2010", "Valor":63359.0}
+,{"NombrePeriodo":"2009", "Valor":64433.0}
+,{"NombrePeriodo":"2008", "Valor":62185.0}
+,{"NombrePeriodo":"2007", "Valor":73287.0}
+,{"NombrePeriodo":"2006", "Valor":72462.0}
+,{"NombrePeriodo":"2005", "Valor":68442.0}
+,{"NombrePeriodo":"2004", "Valor":69886.0}
+,{"NombrePeriodo":"2003", "Valor":63802.0}
+,{"NombrePeriodo":"2002", "Valor":64754.0}
+,{"NombrePeriodo":"2001", "Valor":65284.0}
+,{"NombrePeriodo":"2000", "Valor":61080.0}
+]
+}
+,{"Nombre":"Extremadura, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Extremadura", "Codigo":"11"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":8934.0}
+,{"NombrePeriodo":"2018", "Valor":9969.0}
+,{"NombrePeriodo":"2016", "Valor":11039.0}
+,{"NombrePeriodo":"2014", "Valor":11484.0}
+,{"NombrePeriodo":"2013", "Valor":8370.0}
+,{"NombrePeriodo":"2012", "Valor":13386.0}
+,{"NombrePeriodo":"2011", "Valor":9524.0}
+,{"NombrePeriodo":"2010", "Valor":8968.0}
+,{"NombrePeriodo":"2009", "Valor":8301.0}
+,{"NombrePeriodo":"2008", "Valor":10386.0}
+,{"NombrePeriodo":"2007", "Valor":10832.0}
+,{"NombrePeriodo":"2006", "Valor":12205.0}
+,{"NombrePeriodo":"2005", "Valor":14015.0}
+,{"NombrePeriodo":"2004", "Valor":18091.0}
+,{"NombrePeriodo":"2003", "Valor":21632.0}
+,{"NombrePeriodo":"2002", "Valor":13851.0}
+,{"NombrePeriodo":"2001", "Valor":11360.0}
+,{"NombrePeriodo":"2000", "Valor":8205.0}
+]
+}
+,{"Nombre":"Extremadura, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Extremadura", "Codigo":"11"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":62392.0}
+,{"NombrePeriodo":"2018", "Valor":67116.0}
+,{"NombrePeriodo":"2016", "Valor":68195.0}
+,{"NombrePeriodo":"2014", "Valor":67670.0}
+,{"NombrePeriodo":"2013", "Valor":72610.0}
+,{"NombrePeriodo":"2012", "Valor":73152.0}
+,{"NombrePeriodo":"2011", "Valor":62941.0}
+,{"NombrePeriodo":"2010", "Valor":63248.0}
+,{"NombrePeriodo":"2009", "Valor":61946.0}
+,{"NombrePeriodo":"2008", "Valor":59922.0}
+,{"NombrePeriodo":"2007", "Valor":67157.0}
+,{"NombrePeriodo":"2006", "Valor":66043.0}
+,{"NombrePeriodo":"2005", "Valor":62172.0}
+,{"NombrePeriodo":"2004", "Valor":64535.0}
+,{"NombrePeriodo":"2003", "Valor":61618.0}
+,{"NombrePeriodo":"2002", "Valor":54241.0}
+,{"NombrePeriodo":"2001", "Valor":51333.0}
+,{"NombrePeriodo":"2000", "Valor":45539.0}
+]
+}
+,{"Nombre":"Extremadura, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Extremadura", "Codigo":"11"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":2263.0}
+,{"NombrePeriodo":"2018", "Valor":356.0}
+,{"NombrePeriodo":"2016", "Valor":547.0}
+,{"NombrePeriodo":"2014", "Valor":1957.0}
+,{"NombrePeriodo":"2013", "Valor":2075.0}
+,{"NombrePeriodo":"2012", "Valor":3240.0}
+,{"NombrePeriodo":"2011", "Valor":470.0}
+,{"NombrePeriodo":"2010", "Valor":1288.0}
+,{"NombrePeriodo":"2009", "Valor":1906.0}
+,{"NombrePeriodo":"2008", "Valor":6494.0}
+,{"NombrePeriodo":"2007", "Valor":4012.0}
+,{"NombrePeriodo":"2006", "Valor":4063.0}
+,{"NombrePeriodo":"2005", "Valor":3072.0}
+,{"NombrePeriodo":"2004", "Valor":2201.0}
+,{"NombrePeriodo":"2003", "Valor":3878.0}
+,{"NombrePeriodo":"2002", "Valor":2630.0}
+,{"NombrePeriodo":"2001", "Valor":4301.0}
+,{"NombrePeriodo":"2000", "Valor":1214.0}
+]
+}
+,{"Nombre":"Extremadura, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Extremadura", "Codigo":"11"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":8310.0}
+,{"NombrePeriodo":"2018", "Valor":8276.0}
+,{"NombrePeriodo":"2016", "Valor":8001.0}
+,{"NombrePeriodo":"2014", "Valor":6996.0}
+,{"NombrePeriodo":"2013", "Valor":7633.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Galicia, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Galicia", "Codigo":"12"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":177892.0}
+,{"NombrePeriodo":"2018", "Valor":176868.0}
+,{"NombrePeriodo":"2016", "Valor":187900.0}
+,{"NombrePeriodo":"2014", "Valor":186405.0}
+,{"NombrePeriodo":"2013", "Valor":184559.0}
+,{"NombrePeriodo":"2012", "Valor":189873.0}
+,{"NombrePeriodo":"2011", "Valor":182743.0}
+,{"NombrePeriodo":"2010", "Valor":188948.0}
+,{"NombrePeriodo":"2009", "Valor":197023.0}
+,{"NombrePeriodo":"2008", "Valor":206568.0}
+,{"NombrePeriodo":"2007", "Valor":213865.0}
+,{"NombrePeriodo":"2006", "Valor":229631.0}
+,{"NombrePeriodo":"2005", "Valor":235015.0}
+,{"NombrePeriodo":"2004", "Valor":239245.0}
+,{"NombrePeriodo":"2003", "Valor":236681.0}
+,{"NombrePeriodo":"2002", "Valor":261066.0}
+,{"NombrePeriodo":"2001", "Valor":270868.0}
+,{"NombrePeriodo":"2000", "Valor":255670.0}
+]
+}
+,{"Nombre":"Galicia, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Galicia", "Codigo":"12"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":40084.0}
+,{"NombrePeriodo":"2018", "Valor":42574.0}
+,{"NombrePeriodo":"2016", "Valor":39474.0}
+,{"NombrePeriodo":"2014", "Valor":41160.0}
+,{"NombrePeriodo":"2013", "Valor":40021.0}
+,{"NombrePeriodo":"2012", "Valor":38448.0}
+,{"NombrePeriodo":"2011", "Valor":32572.0}
+,{"NombrePeriodo":"2010", "Valor":32679.0}
+,{"NombrePeriodo":"2009", "Valor":34690.0}
+,{"NombrePeriodo":"2008", "Valor":30918.0}
+,{"NombrePeriodo":"2007", "Valor":34737.0}
+,{"NombrePeriodo":"2006", "Valor":42128.0}
+,{"NombrePeriodo":"2005", "Valor":43718.0}
+,{"NombrePeriodo":"2004", "Valor":58464.0}
+,{"NombrePeriodo":"2003", "Valor":44865.0}
+,{"NombrePeriodo":"2002", "Valor":62532.0}
+,{"NombrePeriodo":"2001", "Valor":65821.0}
+,{"NombrePeriodo":"2000", "Valor":60598.0}
+]
+}
+,{"Nombre":"Galicia, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Galicia", "Codigo":"12"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":128276.0}
+,{"NombrePeriodo":"2018", "Valor":123318.0}
+,{"NombrePeriodo":"2016", "Valor":136274.0}
+,{"NombrePeriodo":"2014", "Valor":128722.0}
+,{"NombrePeriodo":"2013", "Valor":119906.0}
+,{"NombrePeriodo":"2012", "Valor":133745.0}
+,{"NombrePeriodo":"2011", "Valor":133212.0}
+,{"NombrePeriodo":"2010", "Valor":132094.0}
+,{"NombrePeriodo":"2009", "Valor":139027.0}
+,{"NombrePeriodo":"2008", "Valor":145691.0}
+,{"NombrePeriodo":"2007", "Valor":142479.0}
+,{"NombrePeriodo":"2006", "Valor":160223.0}
+,{"NombrePeriodo":"2005", "Valor":152756.0}
+,{"NombrePeriodo":"2004", "Valor":155693.0}
+,{"NombrePeriodo":"2003", "Valor":143213.0}
+,{"NombrePeriodo":"2002", "Valor":130504.0}
+,{"NombrePeriodo":"2001", "Valor":122460.0}
+,{"NombrePeriodo":"2000", "Valor":127933.0}
+]
+}
+,{"Nombre":"Galicia, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Galicia", "Codigo":"12"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":9532.0}
+,{"NombrePeriodo":"2018", "Valor":10976.0}
+,{"NombrePeriodo":"2016", "Valor":12152.0}
+,{"NombrePeriodo":"2014", "Valor":16523.0}
+,{"NombrePeriodo":"2013", "Valor":24632.0}
+,{"NombrePeriodo":"2012", "Valor":17680.0}
+,{"NombrePeriodo":"2011", "Valor":16959.0}
+,{"NombrePeriodo":"2010", "Valor":24175.0}
+,{"NombrePeriodo":"2009", "Valor":23306.0}
+,{"NombrePeriodo":"2008", "Valor":29959.0}
+,{"NombrePeriodo":"2007", "Valor":36649.0}
+,{"NombrePeriodo":"2006", "Valor":27280.0}
+,{"NombrePeriodo":"2005", "Valor":38541.0}
+,{"NombrePeriodo":"2004", "Valor":25088.0}
+,{"NombrePeriodo":"2003", "Valor":48603.0}
+,{"NombrePeriodo":"2002", "Valor":68030.0}
+,{"NombrePeriodo":"2001", "Valor":82587.0}
+,{"NombrePeriodo":"2000", "Valor":67139.0}
+]
+}
+,{"Nombre":"Galicia, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Galicia", "Codigo":"12"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":123253.0}
+,{"NombrePeriodo":"2018", "Valor":122478.0}
+,{"NombrePeriodo":"2016", "Valor":142352.0}
+,{"NombrePeriodo":"2014", "Valor":124767.0}
+,{"NombrePeriodo":"2013", "Valor":142733.0}
+,{"NombrePeriodo":"2012", "Valor":136156.0}
+,{"NombrePeriodo":"2011", "Valor":116452.0}
+,{"NombrePeriodo":"2010", "Valor":114511.0}
+,{"NombrePeriodo":"2009", "Valor":115757.0}
+,{"NombrePeriodo":"2008", "Valor":95658.0}
+,{"NombrePeriodo":"2007", "Valor":89965.0}
+,{"NombrePeriodo":"2006", "Valor":115060.0}
+,{"NombrePeriodo":"2005", "Valor":109598.0}
+,{"NombrePeriodo":"2004", "Valor":122106.0}
+,{"NombrePeriodo":"2003", "Valor":119515.0}
+,{"NombrePeriodo":"2002", "Valor":134228.0}
+,{"NombrePeriodo":"2001", "Valor":134023.0}
+,{"NombrePeriodo":"2000", "Valor":114661.0}
+]
+}
+,{"Nombre":"Galicia, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Galicia", "Codigo":"12"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":2594.0}
+,{"NombrePeriodo":"2018", "Valor":1493.0}
+,{"NombrePeriodo":"2016", "Valor":8314.0}
+,{"NombrePeriodo":"2014", "Valor":13472.0}
+,{"NombrePeriodo":"2013", "Valor":10238.0}
+,{"NombrePeriodo":"2012", "Valor":9305.0}
+,{"NombrePeriodo":"2011", "Valor":676.0}
+,{"NombrePeriodo":"2010", "Valor":6121.0}
+,{"NombrePeriodo":"2009", "Valor":3336.0}
+,{"NombrePeriodo":"2008", "Valor":7282.0}
+,{"NombrePeriodo":"2007", "Valor":4287.0}
+,{"NombrePeriodo":"2006", "Valor":5111.0}
+,{"NombrePeriodo":"2005", "Valor":5485.0}
+,{"NombrePeriodo":"2004", "Valor":3143.0}
+,{"NombrePeriodo":"2003", "Valor":7531.0}
+,{"NombrePeriodo":"2002", "Valor":4932.0}
+,{"NombrePeriodo":"2001", "Valor":7677.0}
+,{"NombrePeriodo":"2000", "Valor":18.0}
+]
+}
+,{"Nombre":"Galicia, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Galicia", "Codigo":"12"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":16412.0}
+,{"NombrePeriodo":"2018", "Valor":15242.0}
+,{"NombrePeriodo":"2016", "Valor":15649.0}
+,{"NombrePeriodo":"2014", "Valor":15883.0}
+,{"NombrePeriodo":"2013", "Valor":17647.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Madrid, Comunidad de, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":436216.0}
+,{"NombrePeriodo":"2018", "Valor":421750.0}
+,{"NombrePeriodo":"2016", "Valor":418022.0}
+,{"NombrePeriodo":"2014", "Valor":406951.0}
+,{"NombrePeriodo":"2013", "Valor":414258.0}
+,{"NombrePeriodo":"2012", "Valor":429556.0}
+,{"NombrePeriodo":"2011", "Valor":446421.0}
+,{"NombrePeriodo":"2010", "Valor":440375.0}
+,{"NombrePeriodo":"2009", "Valor":450493.0}
+,{"NombrePeriodo":"2008", "Valor":460768.0}
+,{"NombrePeriodo":"2007", "Valor":465111.0}
+,{"NombrePeriodo":"2006", "Valor":450694.0}
+,{"NombrePeriodo":"2005", "Valor":489181.0}
+,{"NombrePeriodo":"2004", "Valor":510612.0}
+,{"NombrePeriodo":"2003", "Valor":522697.0}
+,{"NombrePeriodo":"2002", "Valor":487808.0}
+,{"NombrePeriodo":"2001", "Valor":495169.0}
+,{"NombrePeriodo":"2000", "Valor":482722.0}
+]
+}
+,{"Nombre":"Madrid, Comunidad de, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":63615.0}
+,{"NombrePeriodo":"2018", "Valor":67964.0}
+,{"NombrePeriodo":"2016", "Valor":77304.0}
+,{"NombrePeriodo":"2014", "Valor":73898.0}
+,{"NombrePeriodo":"2013", "Valor":78846.0}
+,{"NombrePeriodo":"2012", "Valor":85034.0}
+,{"NombrePeriodo":"2011", "Valor":88826.0}
+,{"NombrePeriodo":"2010", "Valor":82585.0}
+,{"NombrePeriodo":"2009", "Valor":80484.0}
+,{"NombrePeriodo":"2008", "Valor":83971.0}
+,{"NombrePeriodo":"2007", "Valor":87494.0}
+,{"NombrePeriodo":"2006", "Valor":90545.0}
+,{"NombrePeriodo":"2005", "Valor":119732.0}
+,{"NombrePeriodo":"2004", "Valor":124020.0}
+,{"NombrePeriodo":"2003", "Valor":109541.0}
+,{"NombrePeriodo":"2002", "Valor":94818.0}
+,{"NombrePeriodo":"2001", "Valor":95936.0}
+,{"NombrePeriodo":"2000", "Valor":87196.0}
+]
+}
+,{"Nombre":"Madrid, Comunidad de, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":317737.0}
+,{"NombrePeriodo":"2018", "Valor":301111.0}
+,{"NombrePeriodo":"2016", "Valor":312768.0}
+,{"NombrePeriodo":"2014", "Valor":304840.0}
+,{"NombrePeriodo":"2013", "Valor":304968.0}
+,{"NombrePeriodo":"2012", "Valor":315483.0}
+,{"NombrePeriodo":"2011", "Valor":327883.0}
+,{"NombrePeriodo":"2010", "Valor":322800.0}
+,{"NombrePeriodo":"2009", "Valor":333616.0}
+,{"NombrePeriodo":"2008", "Valor":324291.0}
+,{"NombrePeriodo":"2007", "Valor":331174.0}
+,{"NombrePeriodo":"2006", "Valor":325035.0}
+,{"NombrePeriodo":"2005", "Valor":345347.0}
+,{"NombrePeriodo":"2004", "Valor":362438.0}
+,{"NombrePeriodo":"2003", "Valor":346018.0}
+,{"NombrePeriodo":"2002", "Valor":334134.0}
+,{"NombrePeriodo":"2001", "Valor":338263.0}
+,{"NombrePeriodo":"2000", "Valor":334798.0}
+]
+}
+,{"Nombre":"Madrid, Comunidad de, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":54864.0}
+,{"NombrePeriodo":"2018", "Valor":52675.0}
+,{"NombrePeriodo":"2016", "Valor":27950.0}
+,{"NombrePeriodo":"2014", "Valor":28213.0}
+,{"NombrePeriodo":"2013", "Valor":30444.0}
+,{"NombrePeriodo":"2012", "Valor":29039.0}
+,{"NombrePeriodo":"2011", "Valor":29712.0}
+,{"NombrePeriodo":"2010", "Valor":34990.0}
+,{"NombrePeriodo":"2009", "Valor":36393.0}
+,{"NombrePeriodo":"2008", "Valor":52506.0}
+,{"NombrePeriodo":"2007", "Valor":46443.0}
+,{"NombrePeriodo":"2006", "Valor":35114.0}
+,{"NombrePeriodo":"2005", "Valor":24102.0}
+,{"NombrePeriodo":"2004", "Valor":24154.0}
+,{"NombrePeriodo":"2003", "Valor":67138.0}
+,{"NombrePeriodo":"2002", "Valor":58856.0}
+,{"NombrePeriodo":"2001", "Valor":60970.0}
+,{"NombrePeriodo":"2000", "Valor":60728.0}
+]
+}
+,{"Nombre":"Madrid, Comunidad de, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":542393.0}
+,{"NombrePeriodo":"2018", "Valor":523861.0}
+,{"NombrePeriodo":"2016", "Valor":553132.0}
+,{"NombrePeriodo":"2014", "Valor":531721.0}
+,{"NombrePeriodo":"2013", "Valor":528363.0}
+,{"NombrePeriodo":"2012", "Valor":525474.0}
+,{"NombrePeriodo":"2011", "Valor":471687.0}
+,{"NombrePeriodo":"2010", "Valor":459560.0}
+,{"NombrePeriodo":"2009", "Valor":481402.0}
+,{"NombrePeriodo":"2008", "Valor":464376.0}
+,{"NombrePeriodo":"2007", "Valor":380957.0}
+,{"NombrePeriodo":"2006", "Valor":378298.0}
+,{"NombrePeriodo":"2005", "Valor":369212.0}
+,{"NombrePeriodo":"2004", "Valor":353148.0}
+,{"NombrePeriodo":"2003", "Valor":341540.0}
+,{"NombrePeriodo":"2002", "Valor":298201.0}
+,{"NombrePeriodo":"2001", "Valor":283335.0}
+,{"NombrePeriodo":"2000", "Valor":282680.0}
+]
+}
+,{"Nombre":"Madrid, Comunidad de, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":80532.0}
+,{"NombrePeriodo":"2018", "Valor":44759.0}
+,{"NombrePeriodo":"2016", "Valor":80711.0}
+,{"NombrePeriodo":"2014", "Valor":39448.0}
+,{"NombrePeriodo":"2013", "Valor":37741.0}
+,{"NombrePeriodo":"2012", "Valor":43288.0}
+,{"NombrePeriodo":"2011", "Valor":45130.0}
+,{"NombrePeriodo":"2010", "Valor":45245.0}
+,{"NombrePeriodo":"2009", "Valor":56597.0}
+,{"NombrePeriodo":"2008", "Valor":99579.0}
+,{"NombrePeriodo":"2007", "Valor":100760.0}
+,{"NombrePeriodo":"2006", "Valor":39955.0}
+,{"NombrePeriodo":"2005", "Valor":30609.0}
+,{"NombrePeriodo":"2004", "Valor":30613.0}
+,{"NombrePeriodo":"2003", "Valor":34840.0}
+,{"NombrePeriodo":"2002", "Valor":65246.0}
+,{"NombrePeriodo":"2001", "Valor":47342.0}
+,{"NombrePeriodo":"2000", "Valor":42840.0}
+]
+}
+,{"Nombre":"Madrid, Comunidad de, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":18268.0}
+,{"NombrePeriodo":"2018", "Valor":18170.0}
+,{"NombrePeriodo":"2016", "Valor":17943.0}
+,{"NombrePeriodo":"2014", "Valor":17915.0}
+,{"NombrePeriodo":"2013", "Valor":17732.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Murcia, Región de, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":105007.0}
+,{"NombrePeriodo":"2018", "Valor":103322.0}
+,{"NombrePeriodo":"2016", "Valor":103973.0}
+,{"NombrePeriodo":"2014", "Valor":100916.0}
+,{"NombrePeriodo":"2013", "Valor":99241.0}
+,{"NombrePeriodo":"2012", "Valor":106673.0}
+,{"NombrePeriodo":"2011", "Valor":107581.0}
+,{"NombrePeriodo":"2010", "Valor":106829.0}
+,{"NombrePeriodo":"2009", "Valor":113497.0}
+,{"NombrePeriodo":"2008", "Valor":112893.0}
+,{"NombrePeriodo":"2007", "Valor":114106.0}
+,{"NombrePeriodo":"2006", "Valor":120262.0}
+,{"NombrePeriodo":"2005", "Valor":123073.0}
+,{"NombrePeriodo":"2004", "Valor":117347.0}
+,{"NombrePeriodo":"2003", "Valor":102649.0}
+,{"NombrePeriodo":"2002", "Valor":102426.0}
+,{"NombrePeriodo":"2001", "Valor":100637.0}
+,{"NombrePeriodo":"2000", "Valor":73847.0}
+]
+}
+,{"Nombre":"Murcia, Región de, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":16840.0}
+,{"NombrePeriodo":"2018", "Valor":17254.0}
+,{"NombrePeriodo":"2016", "Valor":24450.0}
+,{"NombrePeriodo":"2014", "Valor":24253.0}
+,{"NombrePeriodo":"2013", "Valor":26810.0}
+,{"NombrePeriodo":"2012", "Valor":21542.0}
+,{"NombrePeriodo":"2011", "Valor":18851.0}
+,{"NombrePeriodo":"2010", "Valor":14881.0}
+,{"NombrePeriodo":"2009", "Valor":17377.0}
+,{"NombrePeriodo":"2008", "Valor":22335.0}
+,{"NombrePeriodo":"2007", "Valor":22730.0}
+,{"NombrePeriodo":"2006", "Valor":28123.0}
+,{"NombrePeriodo":"2005", "Valor":35274.0}
+,{"NombrePeriodo":"2004", "Valor":30289.0}
+,{"NombrePeriodo":"2003", "Valor":19211.0}
+,{"NombrePeriodo":"2002", "Valor":21349.0}
+,{"NombrePeriodo":"2001", "Valor":25316.0}
+,{"NombrePeriodo":"2000", "Valor":7910.0}
+]
+}
+,{"Nombre":"Murcia, Región de, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":82356.0}
+,{"NombrePeriodo":"2018", "Valor":80697.0}
+,{"NombrePeriodo":"2016", "Valor":70513.0}
+,{"NombrePeriodo":"2014", "Valor":67354.0}
+,{"NombrePeriodo":"2013", "Valor":66088.0}
+,{"NombrePeriodo":"2012", "Valor":77271.0}
+,{"NombrePeriodo":"2011", "Valor":81208.0}
+,{"NombrePeriodo":"2010", "Valor":84266.0}
+,{"NombrePeriodo":"2009", "Valor":87384.0}
+,{"NombrePeriodo":"2008", "Valor":81921.0}
+,{"NombrePeriodo":"2007", "Valor":82897.0}
+,{"NombrePeriodo":"2006", "Valor":82941.0}
+,{"NombrePeriodo":"2005", "Valor":78941.0}
+,{"NombrePeriodo":"2004", "Valor":76110.0}
+,{"NombrePeriodo":"2003", "Valor":68947.0}
+,{"NombrePeriodo":"2002", "Valor":65186.0}
+,{"NombrePeriodo":"2001", "Valor":66127.0}
+,{"NombrePeriodo":"2000", "Valor":61007.0}
+]
+}
+,{"Nombre":"Murcia, Región de, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":5811.0}
+,{"NombrePeriodo":"2018", "Valor":5371.0}
+,{"NombrePeriodo":"2016", "Valor":9010.0}
+,{"NombrePeriodo":"2014", "Valor":9309.0}
+,{"NombrePeriodo":"2013", "Valor":6343.0}
+,{"NombrePeriodo":"2012", "Valor":7860.0}
+,{"NombrePeriodo":"2011", "Valor":7522.0}
+,{"NombrePeriodo":"2010", "Valor":7682.0}
+,{"NombrePeriodo":"2009", "Valor":8736.0}
+,{"NombrePeriodo":"2008", "Valor":8637.0}
+,{"NombrePeriodo":"2007", "Valor":8479.0}
+,{"NombrePeriodo":"2006", "Valor":9198.0}
+,{"NombrePeriodo":"2005", "Valor":8858.0}
+,{"NombrePeriodo":"2004", "Valor":10948.0}
+,{"NombrePeriodo":"2003", "Valor":14491.0}
+,{"NombrePeriodo":"2002", "Valor":15891.0}
+,{"NombrePeriodo":"2001", "Valor":9194.0}
+,{"NombrePeriodo":"2000", "Valor":4930.0}
+]
+}
+,{"Nombre":"Murcia, Región de, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":174421.0}
+,{"NombrePeriodo":"2018", "Valor":177265.0}
+,{"NombrePeriodo":"2016", "Valor":185760.0}
+,{"NombrePeriodo":"2014", "Valor":185266.0}
+,{"NombrePeriodo":"2013", "Valor":184097.0}
+,{"NombrePeriodo":"2012", "Valor":184226.0}
+,{"NombrePeriodo":"2011", "Valor":173669.0}
+,{"NombrePeriodo":"2010", "Valor":163357.0}
+,{"NombrePeriodo":"2009", "Valor":142265.0}
+,{"NombrePeriodo":"2008", "Valor":134970.0}
+,{"NombrePeriodo":"2007", "Valor":132889.0}
+,{"NombrePeriodo":"2006", "Valor":120395.0}
+,{"NombrePeriodo":"2005", "Valor":118965.0}
+,{"NombrePeriodo":"2004", "Valor":105441.0}
+,{"NombrePeriodo":"2003", "Valor":89305.0}
+,{"NombrePeriodo":"2002", "Valor":90093.0}
+,{"NombrePeriodo":"2001", "Valor":84382.0}
+,{"NombrePeriodo":"2000", "Valor":58827.0}
+]
+}
+,{"Nombre":"Murcia, Región de, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":3170.0}
+,{"NombrePeriodo":"2018", "Valor":13196.0}
+,{"NombrePeriodo":"2016", "Valor":9600.0}
+,{"NombrePeriodo":"2014", "Valor":5354.0}
+,{"NombrePeriodo":"2013", "Valor":9077.0}
+,{"NombrePeriodo":"2012", "Valor":4623.0}
+,{"NombrePeriodo":"2011", "Valor":12552.0}
+,{"NombrePeriodo":"2010", "Valor":4899.0}
+,{"NombrePeriodo":"2009", "Valor":7846.0}
+,{"NombrePeriodo":"2008", "Valor":10604.0}
+,{"NombrePeriodo":"2007", "Valor":19205.0}
+,{"NombrePeriodo":"2006", "Valor":6275.0}
+,{"NombrePeriodo":"2005", "Valor":6024.0}
+,{"NombrePeriodo":"2004", "Valor":23850.0}
+,{"NombrePeriodo":"2003", "Valor":6309.0}
+,{"NombrePeriodo":"2002", "Valor":3752.0}
+,{"NombrePeriodo":"2001", "Valor":4437.0}
+,{"NombrePeriodo":"2000", "Valor":6755.0}
+]
+}
+,{"Nombre":"Murcia, Región de, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":11392.0}
+,{"NombrePeriodo":"2018", "Valor":11339.0}
+,{"NombrePeriodo":"2016", "Valor":11229.0}
+,{"NombrePeriodo":"2014", "Valor":11043.0}
+,{"NombrePeriodo":"2013", "Valor":10861.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Navarra, Comunidad Foral de, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":55632.0}
+,{"NombrePeriodo":"2018", "Valor":51586.0}
+,{"NombrePeriodo":"2016", "Valor":49495.0}
+,{"NombrePeriodo":"2014", "Valor":48367.0}
+,{"NombrePeriodo":"2013", "Valor":48260.0}
+,{"NombrePeriodo":"2012", "Valor":55849.0}
+,{"NombrePeriodo":"2011", "Valor":60083.0}
+,{"NombrePeriodo":"2010", "Valor":55605.0}
+,{"NombrePeriodo":"2009", "Valor":58411.0}
+,{"NombrePeriodo":"2008", "Valor":56060.0}
+,{"NombrePeriodo":"2007", "Valor":53535.0}
+,{"NombrePeriodo":"2006", "Valor":57292.0}
+,{"NombrePeriodo":"2005", "Valor":55298.0}
+,{"NombrePeriodo":"2004", "Valor":52128.0}
+,{"NombrePeriodo":"2003", "Valor":63801.0}
+,{"NombrePeriodo":"2002", "Valor":59694.0}
+,{"NombrePeriodo":"2001", "Valor":55870.0}
+,{"NombrePeriodo":"2000", "Valor":57124.0}
+]
+}
+,{"Nombre":"Navarra, Comunidad Foral de, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":16390.0}
+,{"NombrePeriodo":"2018", "Valor":15793.0}
+,{"NombrePeriodo":"2016", "Valor":14822.0}
+,{"NombrePeriodo":"2014", "Valor":14085.0}
+,{"NombrePeriodo":"2013", "Valor":13851.0}
+,{"NombrePeriodo":"2012", "Valor":16174.0}
+,{"NombrePeriodo":"2011", "Valor":16825.0}
+,{"NombrePeriodo":"2010", "Valor":16624.0}
+,{"NombrePeriodo":"2009", "Valor":17403.0}
+,{"NombrePeriodo":"2008", "Valor":17551.0}
+,{"NombrePeriodo":"2007", "Valor":16498.0}
+,{"NombrePeriodo":"2006", "Valor":17532.0}
+,{"NombrePeriodo":"2005", "Valor":17328.0}
+,{"NombrePeriodo":"2004", "Valor":14815.0}
+,{"NombrePeriodo":"2003", "Valor":21733.0}
+,{"NombrePeriodo":"2002", "Valor":20012.0}
+,{"NombrePeriodo":"2001", "Valor":17996.0}
+,{"NombrePeriodo":"2000", "Valor":19605.0}
+]
+}
+,{"Nombre":"Navarra, Comunidad Foral de, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":28750.0}
+,{"NombrePeriodo":"2018", "Valor":26798.0}
+,{"NombrePeriodo":"2016", "Valor":25986.0}
+,{"NombrePeriodo":"2014", "Valor":25757.0}
+,{"NombrePeriodo":"2013", "Valor":26088.0}
+,{"NombrePeriodo":"2012", "Valor":29374.0}
+,{"NombrePeriodo":"2011", "Valor":30672.0}
+,{"NombrePeriodo":"2010", "Valor":28889.0}
+,{"NombrePeriodo":"2009", "Valor":30289.0}
+,{"NombrePeriodo":"2008", "Valor":28878.0}
+,{"NombrePeriodo":"2007", "Valor":27361.0}
+,{"NombrePeriodo":"2006", "Valor":28079.0}
+,{"NombrePeriodo":"2005", "Valor":28982.0}
+,{"NombrePeriodo":"2004", "Valor":30745.0}
+,{"NombrePeriodo":"2003", "Valor":32303.0}
+,{"NombrePeriodo":"2002", "Valor":30798.0}
+,{"NombrePeriodo":"2001", "Valor":29849.0}
+,{"NombrePeriodo":"2000", "Valor":31599.0}
+]
+}
+,{"Nombre":"Navarra, Comunidad Foral de, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":10492.0}
+,{"NombrePeriodo":"2018", "Valor":8995.0}
+,{"NombrePeriodo":"2016", "Valor":8687.0}
+,{"NombrePeriodo":"2014", "Valor":8525.0}
+,{"NombrePeriodo":"2013", "Valor":8321.0}
+,{"NombrePeriodo":"2012", "Valor":10301.0}
+,{"NombrePeriodo":"2011", "Valor":12586.0}
+,{"NombrePeriodo":"2010", "Valor":10092.0}
+,{"NombrePeriodo":"2009", "Valor":10719.0}
+,{"NombrePeriodo":"2008", "Valor":9631.0}
+,{"NombrePeriodo":"2007", "Valor":9676.0}
+,{"NombrePeriodo":"2006", "Valor":11681.0}
+,{"NombrePeriodo":"2005", "Valor":8988.0}
+,{"NombrePeriodo":"2004", "Valor":6568.0}
+,{"NombrePeriodo":"2003", "Valor":9765.0}
+,{"NombrePeriodo":"2002", "Valor":8884.0}
+,{"NombrePeriodo":"2001", "Valor":8025.0}
+,{"NombrePeriodo":"2000", "Valor":5920.0}
+]
+}
+,{"Nombre":"Navarra, Comunidad Foral de, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":37225.0}
+,{"NombrePeriodo":"2018", "Valor":39488.0}
+,{"NombrePeriodo":"2016", "Valor":35516.0}
+,{"NombrePeriodo":"2014", "Valor":35613.0}
+,{"NombrePeriodo":"2013", "Valor":35222.0}
+,{"NombrePeriodo":"2012", "Valor":38918.0}
+,{"NombrePeriodo":"2011", "Valor":38095.0}
+,{"NombrePeriodo":"2010", "Valor":38085.0}
+,{"NombrePeriodo":"2009", "Valor":37321.0}
+,{"NombrePeriodo":"2008", "Valor":32830.0}
+,{"NombrePeriodo":"2007", "Valor":34462.0}
+,{"NombrePeriodo":"2006", "Valor":34195.0}
+,{"NombrePeriodo":"2005", "Valor":30477.0}
+,{"NombrePeriodo":"2004", "Valor":27828.0}
+,{"NombrePeriodo":"2003", "Valor":28072.0}
+,{"NombrePeriodo":"2002", "Valor":22554.0}
+,{"NombrePeriodo":"2001", "Valor":18821.0}
+,{"NombrePeriodo":"2000", "Valor":18547.0}
+]
+}
+,{"Nombre":"Navarra, Comunidad Foral de, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":5704.0}
+,{"NombrePeriodo":"2018", "Valor":8636.0}
+,{"NombrePeriodo":"2016", "Valor":2733.0}
+,{"NombrePeriodo":"2014", "Valor":2426.0}
+,{"NombrePeriodo":"2013", "Valor":1494.0}
+,{"NombrePeriodo":"2012", "Valor":5429.0}
+,{"NombrePeriodo":"2011", "Valor":2712.0}
+,{"NombrePeriodo":"2010", "Valor":3720.0}
+,{"NombrePeriodo":"2009", "Valor":4540.0}
+,{"NombrePeriodo":"2008", "Valor":4206.0}
+,{"NombrePeriodo":"2007", "Valor":8354.0}
+,{"NombrePeriodo":"2006", "Valor":13267.0}
+,{"NombrePeriodo":"2005", "Valor":31244.0}
+,{"NombrePeriodo":"2004", "Valor":125624.0}
+,{"NombrePeriodo":"2003", "Valor":27337.0}
+,{"NombrePeriodo":"2002", "Valor":11010.0}
+,{"NombrePeriodo":"2001", "Valor":18135.0}
+,{"NombrePeriodo":"2000", "Valor":23482.0}
+]
+}
+,{"Nombre":"Navarra, Comunidad Foral de, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":3662.0}
+,{"NombrePeriodo":"2018", "Valor":3370.0}
+,{"NombrePeriodo":"2016", "Valor":3315.0}
+,{"NombrePeriodo":"2014", "Valor":3067.0}
+,{"NombrePeriodo":"2013", "Valor":2744.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"País Vasco, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"País Vasco", "Codigo":"16"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":117282.0}
+,{"NombrePeriodo":"2018", "Valor":122753.0}
+,{"NombrePeriodo":"2016", "Valor":136487.0}
+,{"NombrePeriodo":"2014", "Valor":146602.0}
+,{"NombrePeriodo":"2013", "Valor":154091.0}
+,{"NombrePeriodo":"2012", "Valor":154880.0}
+,{"NombrePeriodo":"2011", "Valor":176180.0}
+,{"NombrePeriodo":"2010", "Valor":183420.0}
+,{"NombrePeriodo":"2009", "Valor":187875.0}
+,{"NombrePeriodo":"2008", "Valor":203974.0}
+,{"NombrePeriodo":"2007", "Valor":195794.0}
+,{"NombrePeriodo":"2006", "Valor":189224.0}
+,{"NombrePeriodo":"2005", "Valor":202899.0}
+,{"NombrePeriodo":"2004", "Valor":214180.0}
+,{"NombrePeriodo":"2003", "Valor":213770.0}
+,{"NombrePeriodo":"2002", "Valor":195723.0}
+,{"NombrePeriodo":"2001", "Valor":202231.0}
+,{"NombrePeriodo":"2000", "Valor":187378.0}
+]
+}
+,{"Nombre":"País Vasco, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"País Vasco", "Codigo":"16"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":32666.0}
+,{"NombrePeriodo":"2018", "Valor":32956.0}
+,{"NombrePeriodo":"2016", "Valor":38287.0}
+,{"NombrePeriodo":"2014", "Valor":45211.0}
+,{"NombrePeriodo":"2013", "Valor":46113.0}
+,{"NombrePeriodo":"2012", "Valor":41592.0}
+,{"NombrePeriodo":"2011", "Valor":54501.0}
+,{"NombrePeriodo":"2010", "Valor":56643.0}
+,{"NombrePeriodo":"2009", "Valor":60347.0}
+,{"NombrePeriodo":"2008", "Valor":61016.0}
+,{"NombrePeriodo":"2007", "Valor":55497.0}
+,{"NombrePeriodo":"2006", "Valor":58632.0}
+,{"NombrePeriodo":"2005", "Valor":66967.0}
+,{"NombrePeriodo":"2004", "Valor":66045.0}
+,{"NombrePeriodo":"2003", "Valor":76315.0}
+,{"NombrePeriodo":"2002", "Valor":63611.0}
+,{"NombrePeriodo":"2001", "Valor":69502.0}
+,{"NombrePeriodo":"2000", "Valor":55765.0}
+]
+}
+,{"Nombre":"País Vasco, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"País Vasco", "Codigo":"16"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":77586.0}
+,{"NombrePeriodo":"2018", "Valor":82150.0}
+,{"NombrePeriodo":"2016", "Valor":88622.0}
+,{"NombrePeriodo":"2014", "Valor":91899.0}
+,{"NombrePeriodo":"2013", "Valor":97802.0}
+,{"NombrePeriodo":"2012", "Valor":92471.0}
+,{"NombrePeriodo":"2011", "Valor":91753.0}
+,{"NombrePeriodo":"2010", "Valor":95564.0}
+,{"NombrePeriodo":"2009", "Valor":97852.0}
+,{"NombrePeriodo":"2008", "Valor":108694.0}
+,{"NombrePeriodo":"2007", "Valor":96623.0}
+,{"NombrePeriodo":"2006", "Valor":100174.0}
+,{"NombrePeriodo":"2005", "Valor":108580.0}
+,{"NombrePeriodo":"2004", "Valor":115853.0}
+,{"NombrePeriodo":"2003", "Valor":114660.0}
+,{"NombrePeriodo":"2002", "Valor":112832.0}
+,{"NombrePeriodo":"2001", "Valor":114528.0}
+,{"NombrePeriodo":"2000", "Valor":117751.0}
+]
+}
+,{"Nombre":"País Vasco, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"País Vasco", "Codigo":"16"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":7030.0}
+,{"NombrePeriodo":"2018", "Valor":7647.0}
+,{"NombrePeriodo":"2016", "Valor":9578.0}
+,{"NombrePeriodo":"2014", "Valor":9492.0}
+,{"NombrePeriodo":"2013", "Valor":10176.0}
+,{"NombrePeriodo":"2012", "Valor":20817.0}
+,{"NombrePeriodo":"2011", "Valor":29926.0}
+,{"NombrePeriodo":"2010", "Valor":31213.0}
+,{"NombrePeriodo":"2009", "Valor":29676.0}
+,{"NombrePeriodo":"2008", "Valor":34264.0}
+,{"NombrePeriodo":"2007", "Valor":43674.0}
+,{"NombrePeriodo":"2006", "Valor":30418.0}
+,{"NombrePeriodo":"2005", "Valor":27352.0}
+,{"NombrePeriodo":"2004", "Valor":32282.0}
+,{"NombrePeriodo":"2003", "Valor":22795.0}
+,{"NombrePeriodo":"2002", "Valor":19280.0}
+,{"NombrePeriodo":"2001", "Valor":18201.0}
+,{"NombrePeriodo":"2000", "Valor":13862.0}
+]
+}
+,{"Nombre":"País Vasco, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"País Vasco", "Codigo":"16"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":117873.0}
+,{"NombrePeriodo":"2018", "Valor":122730.0}
+,{"NombrePeriodo":"2016", "Valor":129051.0}
+,{"NombrePeriodo":"2014", "Valor":123555.0}
+,{"NombrePeriodo":"2013", "Valor":115584.0}
+,{"NombrePeriodo":"2012", "Valor":112465.0}
+,{"NombrePeriodo":"2011", "Valor":109847.0}
+,{"NombrePeriodo":"2010", "Valor":105398.0}
+,{"NombrePeriodo":"2009", "Valor":107541.0}
+,{"NombrePeriodo":"2008", "Valor":113344.0}
+,{"NombrePeriodo":"2007", "Valor":97223.0}
+,{"NombrePeriodo":"2006", "Valor":85635.0}
+,{"NombrePeriodo":"2005", "Valor":86869.0}
+,{"NombrePeriodo":"2004", "Valor":81677.0}
+,{"NombrePeriodo":"2003", "Valor":147501.0}
+,{"NombrePeriodo":"2002", "Valor":137616.0}
+,{"NombrePeriodo":"2001", "Valor":129205.0}
+,{"NombrePeriodo":"2000", "Valor":126297.0}
+]
+}
+,{"Nombre":"País Vasco, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"País Vasco", "Codigo":"16"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":3001.0}
+,{"NombrePeriodo":"2018", "Valor":5361.0}
+,{"NombrePeriodo":"2016", "Valor":2744.0}
+,{"NombrePeriodo":"2014", "Valor":5434.0}
+,{"NombrePeriodo":"2013", "Valor":4312.0}
+,{"NombrePeriodo":"2012", "Valor":5199.0}
+,{"NombrePeriodo":"2011", "Valor":2452.0}
+,{"NombrePeriodo":"2010", "Valor":9629.0}
+,{"NombrePeriodo":"2009", "Valor":7048.0}
+,{"NombrePeriodo":"2008", "Valor":6570.0}
+,{"NombrePeriodo":"2007", "Valor":4636.0}
+,{"NombrePeriodo":"2006", "Valor":3165.0}
+,{"NombrePeriodo":"2005", "Valor":3704.0}
+,{"NombrePeriodo":"2004", "Valor":4948.0}
+,{"NombrePeriodo":"2003", "Valor":1285.0}
+,{"NombrePeriodo":"2002", "Valor":2196.0}
+,{"NombrePeriodo":"2001", "Valor":13344.0}
+,{"NombrePeriodo":"2000", "Valor":1965.0}
+]
+}
+,{"Nombre":"País Vasco, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"País Vasco", "Codigo":"16"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":13005.0}
+,{"NombrePeriodo":"2018", "Valor":12938.0}
+,{"NombrePeriodo":"2016", "Valor":12750.0}
+,{"NombrePeriodo":"2014", "Valor":12208.0}
+,{"NombrePeriodo":"2013", "Valor":13157.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Rioja, La, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":25032.0}
+,{"NombrePeriodo":"2018", "Valor":27290.0}
+,{"NombrePeriodo":"2016", "Valor":21173.0}
+,{"NombrePeriodo":"2014", "Valor":22051.0}
+,{"NombrePeriodo":"2013", "Valor":23896.0}
+,{"NombrePeriodo":"2012", "Valor":24366.0}
+,{"NombrePeriodo":"2011", "Valor":28550.0}
+,{"NombrePeriodo":"2010", "Valor":27987.0}
+,{"NombrePeriodo":"2009", "Valor":29478.0}
+,{"NombrePeriodo":"2008", "Valor":32398.0}
+,{"NombrePeriodo":"2007", "Valor":30870.0}
+,{"NombrePeriodo":"2006", "Valor":30081.0}
+,{"NombrePeriodo":"2005", "Valor":28795.0}
+,{"NombrePeriodo":"2004", "Valor":29181.0}
+,{"NombrePeriodo":"2003", "Valor":25594.0}
+,{"NombrePeriodo":"2002", "Valor":39447.0}
+,{"NombrePeriodo":"2001", "Valor":35377.0}
+,{"NombrePeriodo":"2000", "Valor":40405.0}
+]
+}
+,{"Nombre":"Rioja, La, - Sectores económicos", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":7944.0}
+,{"NombrePeriodo":"2018", "Valor":9736.0}
+,{"NombrePeriodo":"2016", "Valor":5650.0}
+,{"NombrePeriodo":"2014", "Valor":7312.0}
+,{"NombrePeriodo":"2013", "Valor":8395.0}
+,{"NombrePeriodo":"2012", "Valor":7593.0}
+,{"NombrePeriodo":"2011", "Valor":8774.0}
+,{"NombrePeriodo":"2010", "Valor":7679.0}
+,{"NombrePeriodo":"2009", "Valor":9145.0}
+,{"NombrePeriodo":"2008", "Valor":12313.0}
+,{"NombrePeriodo":"2007", "Valor":10554.0}
+,{"NombrePeriodo":"2006", "Valor":10807.0}
+,{"NombrePeriodo":"2005", "Valor":10070.0}
+,{"NombrePeriodo":"2004", "Valor":8665.0}
+,{"NombrePeriodo":"2003", "Valor":5555.0}
+,{"NombrePeriodo":"2002", "Valor":12272.0}
+,{"NombrePeriodo":"2001", "Valor":10099.0}
+,{"NombrePeriodo":"2000", "Valor":8161.0}
+]
+}
+,{"Nombre":"Rioja, La, - Hogares", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":14276.0}
+,{"NombrePeriodo":"2018", "Valor":13259.0}
+,{"NombrePeriodo":"2016", "Valor":13074.0}
+,{"NombrePeriodo":"2014", "Valor":12180.0}
+,{"NombrePeriodo":"2013", "Valor":12967.0}
+,{"NombrePeriodo":"2012", "Valor":15219.0}
+,{"NombrePeriodo":"2011", "Valor":14016.0}
+,{"NombrePeriodo":"2010", "Valor":13950.0}
+,{"NombrePeriodo":"2009", "Valor":15121.0}
+,{"NombrePeriodo":"2008", "Valor":17190.0}
+,{"NombrePeriodo":"2007", "Valor":17024.0}
+,{"NombrePeriodo":"2006", "Valor":16600.0}
+,{"NombrePeriodo":"2005", "Valor":15955.0}
+,{"NombrePeriodo":"2004", "Valor":15113.0}
+,{"NombrePeriodo":"2003", "Valor":14257.0}
+,{"NombrePeriodo":"2002", "Valor":14355.0}
+,{"NombrePeriodo":"2001", "Valor":14416.0}
+,{"NombrePeriodo":"2000", "Valor":17978.0}
+]
+}
+,{"Nombre":"Rioja, La, - Consumos municipales", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":2812.0}
+,{"NombrePeriodo":"2018", "Valor":4295.0}
+,{"NombrePeriodo":"2016", "Valor":2449.0}
+,{"NombrePeriodo":"2014", "Valor":2559.0}
+,{"NombrePeriodo":"2013", "Valor":2534.0}
+,{"NombrePeriodo":"2012", "Valor":1554.0}
+,{"NombrePeriodo":"2011", "Valor":5760.0}
+,{"NombrePeriodo":"2010", "Valor":6358.0}
+,{"NombrePeriodo":"2009", "Valor":5212.0}
+,{"NombrePeriodo":"2008", "Valor":2895.0}
+,{"NombrePeriodo":"2007", "Valor":3292.0}
+,{"NombrePeriodo":"2006", "Valor":2674.0}
+,{"NombrePeriodo":"2005", "Valor":2770.0}
+,{"NombrePeriodo":"2004", "Valor":5403.0}
+,{"NombrePeriodo":"2003", "Valor":5782.0}
+,{"NombrePeriodo":"2002", "Valor":12820.0}
+,{"NombrePeriodo":"2001", "Valor":10862.0}
+,{"NombrePeriodo":"2000", "Valor":14266.0}
+]
+}
+,{"Nombre":"Rioja, La, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":14609.0}
+,{"NombrePeriodo":"2018", "Valor":13819.0}
+,{"NombrePeriodo":"2016", "Valor":11087.0}
+,{"NombrePeriodo":"2014", "Valor":12162.0}
+,{"NombrePeriodo":"2013", "Valor":11913.0}
+,{"NombrePeriodo":"2012", "Valor":14144.0}
+,{"NombrePeriodo":"2011", "Valor":14903.0}
+,{"NombrePeriodo":"2010", "Valor":14035.0}
+,{"NombrePeriodo":"2009", "Valor":14112.0}
+,{"NombrePeriodo":"2008", "Valor":15857.0}
+,{"NombrePeriodo":"2007", "Valor":13034.0}
+,{"NombrePeriodo":"2006", "Valor":12312.0}
+,{"NombrePeriodo":"2005", "Valor":11478.0}
+,{"NombrePeriodo":"2004", "Valor":11393.0}
+,{"NombrePeriodo":"2003", "Valor":7934.0}
+,{"NombrePeriodo":"2002", "Valor":9534.0}
+,{"NombrePeriodo":"2001", "Valor":7363.0}
+,{"NombrePeriodo":"2000", "Valor":8793.0}
+]
+}
+,{"Nombre":"Rioja, La, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":304.0}
+,{"NombrePeriodo":"2018", "Valor":121.0}
+,{"NombrePeriodo":"2016", "Valor":2988.0}
+,{"NombrePeriodo":"2014", "Valor":3823.0}
+,{"NombrePeriodo":"2013", "Valor":2824.0}
+,{"NombrePeriodo":"2012", "Valor":2338.0}
+,{"NombrePeriodo":"2011", "Valor":230.0}
+,{"NombrePeriodo":"2010", "Valor":665.0}
+,{"NombrePeriodo":"2009", "Valor":7318.0}
+,{"NombrePeriodo":"2008", "Valor":340.0}
+,{"NombrePeriodo":"2007", "Valor":2555.0}
+,{"NombrePeriodo":"2006", "Valor":2966.0}
+,{"NombrePeriodo":"2005", "Valor":2289.0}
+,{"NombrePeriodo":"2004", "Valor":5403.0}
+,{"NombrePeriodo":"2003", "Valor":7324.0}
+,{"NombrePeriodo":"2002", "Valor":3747.0}
+,{"NombrePeriodo":"2001", "Valor":992.0}
+,{"NombrePeriodo":"2000", "Valor":21035.0}
+]
+}
+,{"Nombre":"Rioja, La, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+, "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":1156.0}
+,{"NombrePeriodo":"2018", "Valor":1125.0}
+,{"NombrePeriodo":"2016", "Valor":946.0}
+,{"NombrePeriodo":"2014", "Valor":1057.0}
+,{"NombrePeriodo":"2013", "Valor":1088.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+,{"Nombre":"Ceuta y Melilla, Volumen total de agua registrada y distribuida por tipo de usuario", "MetaData":[{"Variable":{"Nombre":"comunidades y ciudades autónomas", "Codigo":"comunidadesyciudadesautonomas"}
+, "Nombre":"Ceuta y Melilla", "Codigo":"CA20"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Volumen total de agua registrada y distribuida por tipo de usuario", "Codigo":"volumentotaldeaguaregistradaydistribuidaportipodeusuario"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":10651.0}
+,{"NombrePeriodo":"2018", "Valor":10336.0}
+,{"NombrePeriodo":"2016", "Valor":8642.0}
+,{"NombrePeriodo":"2014", "Valor":8751.0}
+,{"NombrePeriodo":"2013", "Valor":8770.0}
+,{"NombrePeriodo":"2012", "Valor":8897.0}
+,{"NombrePeriodo":"2011", "Valor":13117.0}
+,{"NombrePeriodo":"2010", "Valor":12297.0}
+,{"NombrePeriodo":"2009", "Valor":9287.0}
+,{"NombrePeriodo":"2008", "Valor":9365.0}
+,{"NombrePeriodo":"2007", "Valor":9271.0}
+,{"NombrePeriodo":"2006", "Valor":9860.0}
+,{"NombrePeriodo":"2005", "Valor":9722.0}
+,{"NombrePeriodo":"2004", "Valor":9597.0}
+,{"NombrePeriodo":"2003", "Valor":9655.0}
+,{"NombrePeriodo":"2002", "Valor":9512.0}
+,{"NombrePeriodo":"2001", "Valor":9631.0}
+,{"NombrePeriodo":"2000", "Valor":9744.0}
+]
+}
+,{"Nombre":"Ceuta y Melilla, - Sectores económicos", "MetaData":[{"Variable":{"Nombre":"comunidades y ciudades autónomas", "Codigo":"comunidadesyciudadesautonomas"}
+, "Nombre":"Ceuta y Melilla", "Codigo":"CA20"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Sectores económicos", "Codigo":"sectoreseconomicos"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":1289.0}
+,{"NombrePeriodo":"2018", "Valor":951.0}
+,{"NombrePeriodo":"2016", "Valor":691.0}
+,{"NombrePeriodo":"2014", "Valor":691.0}
+,{"NombrePeriodo":"2013", "Valor":674.0}
+,{"NombrePeriodo":"2012", "Valor":738.0}
+,{"NombrePeriodo":"2011", "Valor":2429.0}
+,{"NombrePeriodo":"2010", "Valor":961.0}
+,{"NombrePeriodo":"2009", "Valor":819.0}
+,{"NombrePeriodo":"2008", "Valor":897.0}
+,{"NombrePeriodo":"2007", "Valor":826.0}
+,{"NombrePeriodo":"2006", "Valor":836.0}
+,{"NombrePeriodo":"2005", "Valor":789.0}
+,{"NombrePeriodo":"2004", "Valor":786.0}
+,{"NombrePeriodo":"2003", "Valor":732.0}
+,{"NombrePeriodo":"2002", "Valor":880.0}
+,{"NombrePeriodo":"2001", "Valor":892.0}
+,{"NombrePeriodo":"2000", "Valor":901.0}
+]
+}
+,{"Nombre":"Ceuta y Melilla, - Hogares", "MetaData":[{"Variable":{"Nombre":"comunidades y ciudades autónomas", "Codigo":"comunidadesyciudadesautonomas"}
+, "Nombre":"Ceuta y Melilla", "Codigo":"CA20"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Hogares", "Codigo":"hogares"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":7523.0}
+,{"NombrePeriodo":"2018", "Valor":7553.0}
+,{"NombrePeriodo":"2016", "Valor":6397.0}
+,{"NombrePeriodo":"2014", "Valor":6484.0}
+,{"NombrePeriodo":"2013", "Valor":6488.0}
+,{"NombrePeriodo":"2012", "Valor":6608.0}
+,{"NombrePeriodo":"2011", "Valor":9298.0}
+,{"NombrePeriodo":"2010", "Valor":8727.0}
+,{"NombrePeriodo":"2009", "Valor":6552.0}
+,{"NombrePeriodo":"2008", "Valor":6869.0}
+,{"NombrePeriodo":"2007", "Valor":6830.0}
+,{"NombrePeriodo":"2006", "Valor":7298.0}
+,{"NombrePeriodo":"2005", "Valor":7124.0}
+,{"NombrePeriodo":"2004", "Valor":7397.0}
+,{"NombrePeriodo":"2003", "Valor":7251.0}
+,{"NombrePeriodo":"2002", "Valor":7750.0}
+,{"NombrePeriodo":"2001", "Valor":7970.0}
+,{"NombrePeriodo":"2000", "Valor":7897.0}
+]
+}
+,{"Nombre":"Ceuta y Melilla, - Consumos municipales", "MetaData":[{"Variable":{"Nombre":"comunidades y ciudades autónomas", "Codigo":"comunidadesyciudadesautonomas"}
+, "Nombre":"Ceuta y Melilla", "Codigo":"CA20"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"- Consumos municipales", "Codigo":"consumosmunicipales"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":1839.0}
+,{"NombrePeriodo":"2018", "Valor":1832.0}
+,{"NombrePeriodo":"2016", "Valor":1554.0}
+,{"NombrePeriodo":"2014", "Valor":1576.0}
+,{"NombrePeriodo":"2013", "Valor":1608.0}
+,{"NombrePeriodo":"2012", "Valor":1551.0}
+,{"NombrePeriodo":"2011", "Valor":1390.0}
+,{"NombrePeriodo":"2010", "Valor":2609.0}
+,{"NombrePeriodo":"2009", "Valor":1916.0}
+,{"NombrePeriodo":"2008", "Valor":1599.0}
+,{"NombrePeriodo":"2007", "Valor":1615.0}
+,{"NombrePeriodo":"2006", "Valor":1726.0}
+,{"NombrePeriodo":"2005", "Valor":1809.0}
+,{"NombrePeriodo":"2004", "Valor":1414.0}
+,{"NombrePeriodo":"2003", "Valor":1672.0}
+,{"NombrePeriodo":"2002", "Valor":882.0}
+,{"NombrePeriodo":"2001", "Valor":769.0}
+,{"NombrePeriodo":"2000", "Valor":946.0}
+]
+}
+,{"Nombre":"Ceuta y Melilla, Importe facturado por el agua suministrada", "MetaData":[{"Variable":{"Nombre":"comunidades y ciudades autónomas", "Codigo":"comunidadesyciudadesautonomas"}
+, "Nombre":"Ceuta y Melilla", "Codigo":"CA20"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe facturado por el agua suministrada", "Codigo":"importefacturadoporelaguasuministrada"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":15116.0}
+,{"NombrePeriodo":"2018", "Valor":14757.0}
+,{"NombrePeriodo":"2016", "Valor":12621.0}
+,{"NombrePeriodo":"2014", "Valor":12190.0}
+,{"NombrePeriodo":"2013", "Valor":12044.0}
+,{"NombrePeriodo":"2012", "Valor":12470.0}
+,{"NombrePeriodo":"2011", "Valor":16090.0}
+,{"NombrePeriodo":"2010", "Valor":12579.0}
+,{"NombrePeriodo":"2009", "Valor":9686.0}
+,{"NombrePeriodo":"2008", "Valor":9711.0}
+,{"NombrePeriodo":"2007", "Valor":6603.0}
+,{"NombrePeriodo":"2006", "Valor":8038.0}
+,{"NombrePeriodo":"2005", "Valor":7673.0}
+,{"NombrePeriodo":"2004", "Valor":7099.0}
+,{"NombrePeriodo":"2003", "Valor":7129.0}
+,{"NombrePeriodo":"2002", "Valor":6445.0}
+,{"NombrePeriodo":"2001", "Valor":6064.0}
+,{"NombrePeriodo":"2000", "Valor":5650.0}
+]
+}
+,{"Nombre":"Ceuta y Melilla, Importe total de la inversión en los servicios de suministro", "MetaData":[{"Variable":{"Nombre":"comunidades y ciudades autónomas", "Codigo":"comunidadesyciudadesautonomas"}
+, "Nombre":"Ceuta y Melilla", "Codigo":"CA20"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Importe total de la inversión en los servicios de suministro", "Codigo":"importetotaldelainversionenlosserviciosdesuministro"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":1720.0}
+,{"NombrePeriodo":"2018", "Valor":1830.0}
+,{"NombrePeriodo":"2016", "Valor":1625.0}
+,{"NombrePeriodo":"2014", "Valor":1823.0}
+,{"NombrePeriodo":"2013", "Valor":1941.0}
+,{"NombrePeriodo":"2012", "Valor":4107.0}
+,{"NombrePeriodo":"2011", "Valor":1400.0}
+,{"NombrePeriodo":"2010", "Valor":7450.0}
+,{"NombrePeriodo":"2009", "Valor":3333.0}
+,{"NombrePeriodo":"2008", "Valor":3107.0}
+,{"NombrePeriodo":"2007", "Valor":2832.0}
+,{"NombrePeriodo":"2006", "Valor":395.0}
+,{"NombrePeriodo":"2005", "Valor":420.0}
+,{"NombrePeriodo":"2004", "Valor":2083.0}
+,{"NombrePeriodo":"2003", "Valor":0.0}
+,{"NombrePeriodo":"2002", "Valor":0.0}
+,{"NombrePeriodo":"2001", "Valor":0.0}
+,{"NombrePeriodo":"2000", "Valor":0.0}
+]
+}
+,{"Nombre":"Ceuta y Melilla, Longitud de la red de suministro (km)", "MetaData":[{"Variable":{"Nombre":"comunidades y ciudades autónomas", "Codigo":"comunidadesyciudadesautonomas"}
+, "Nombre":"Ceuta y Melilla", "Codigo":"CA20"}
+,{"Variable":{"Nombre":"grupos de usuarios e importe", "Codigo":"gruposdeusuarioseimporte"}
+, "Nombre":"Longitud de la red de suministro (km)", "Codigo":"longituddelareddesuministrokm"}
+]
+, "Data":[{"NombrePeriodo":"2020", "Valor":410.0}
+,{"NombrePeriodo":"2018", "Valor":410.0}
+,{"NombrePeriodo":"2016", "Valor":400.0}
+,{"NombrePeriodo":"2014", "Valor":392.0}
+,{"NombrePeriodo":"2013", "Valor":392.0}
+,{"NombrePeriodo":"2012", "Valor":null}
+,{"NombrePeriodo":"2011", "Valor":null}
+,{"NombrePeriodo":"2010", "Valor":null}
+,{"NombrePeriodo":"2009", "Valor":null}
+,{"NombrePeriodo":"2008", "Valor":null}
+,{"NombrePeriodo":"2007", "Valor":null}
+,{"NombrePeriodo":"2006", "Valor":null}
+,{"NombrePeriodo":"2005", "Valor":null}
+,{"NombrePeriodo":"2004", "Valor":null}
+,{"NombrePeriodo":"2003", "Valor":null}
+,{"NombrePeriodo":"2002", "Valor":null}
+,{"NombrePeriodo":"2001", "Valor":null}
+,{"NombrePeriodo":"2000", "Valor":null}
+]
+}
+]
