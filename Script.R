@@ -2,6 +2,7 @@
 
 ## Esperanza de vida ----
 library(readr)
+library(rjson)
 EsperanzaVida <- fromJSON(file = "EsperanzaVida.json")
 head(EsperanzaVida)
 
@@ -17,3 +18,5 @@ calidadAgua <- extract_tables(
     file   = "Cap.3_part2._Libro_blanco_del_agua.pdf", 
     method = "decide", 
     output = "data.frame")
+
+calidadAgua
