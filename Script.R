@@ -13,3 +13,7 @@ cantidadAgua <- spread_all(cantidadAgua)
 
 
 ## Calidad del agua ----
+calidadAgua <- extract_tables(
+    file   = "Cap.3_part2._Libro_blanco_del_agua.pdf", 
+    method = "decide", 
+    output = "data.frame")
