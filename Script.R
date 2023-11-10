@@ -15,4 +15,4 @@ cantidadAgua <- spread_all(cantidadAgua)
 
 ## Calidad del agua ----
 install.packages("pdftools")
-
+library(pdftools)
