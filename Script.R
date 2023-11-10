@@ -18,3 +18,4 @@ install.packages("pdftools")
 library(pdftools)
 calidadAgua <- "Cap.3_part2._Libro_blanco_del_agua.pdf"
 calidadAgua <- pdf_text(calidadAgua)
+calidadAgua
