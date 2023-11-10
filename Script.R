@@ -11,4 +11,5 @@ head(cantidadAgua)
 
 cantidadAgua <- spread_all(cantidadAgua)
 
-## Calidad de agua ---
+
+## Calidad del agua ----
