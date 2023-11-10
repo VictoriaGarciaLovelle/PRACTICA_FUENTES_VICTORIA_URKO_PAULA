@@ -3,6 +3,7 @@
 ## Esperanza de vida ----
 library(readr)
 library(rjson)
+library(tidyjson)
 EsperanzaVida <- fromJSON(file = "EsperanzaVida.json")
 head(EsperanzaVida)
 
