@@ -3,10 +3,14 @@ install.packages("pdftools")
 library(pdftools)
 library(readr)
 library(rjson)
+library(tidyverse)
+library(tidyjson)
 
 ## Esperanza de vida ----
 EsperanzaVida <- fromJSON(file = "EsperanzaVida.json")
-head(EsperanzaVida)
+esperanza<- spread_all(EsperanzaVida)
+(esperanza)
+str(esperanza[[1]]["Nombre"], na.rm=TRUE)
 
 ## Cantidad de agua consumida ----
 cantidadAgua <- fromJSON(file = "CantidadAgua.json")
