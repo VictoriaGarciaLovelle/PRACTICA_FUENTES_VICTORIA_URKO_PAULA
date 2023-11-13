@@ -1,8 +1,10 @@
 # Importación de los datos ----
-
-## Esperanza de vida ----
+install.packages("pdftools")
+library(pdftools)
 library(readr)
 library(rjson)
+
+## Esperanza de vida ----
 EsperanzaVida <- fromJSON(file = "EsperanzaVida.json")
 head(EsperanzaVida)
 
@@ -14,8 +16,6 @@ cantidadAgua <- spread_all(cantidadAgua)
 
 
 ## Calidad del agua ----
-install.packages("pdftools")
-library(pdftools)
 calidadAgua <- "Cap.3_part2._Libro_blanco_del_agua.pdf"
 calidadAgua <- pdf_text(calidadAgua)
-calidadAgua
+str(calidadAgua)
