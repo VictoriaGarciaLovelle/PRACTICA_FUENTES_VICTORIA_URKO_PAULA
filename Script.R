@@ -23,7 +23,6 @@ cantidadAgua <- spread_all(cantidadDeAgua)
 cantidadAgua
 
 ## Calidad del agua ----
-calidadDelAgua <- "calidadDelAgua.pdf"
+calidadAgua <- pdftools::pdf_text("calidadDelAgua.pdf")
 
-calidadAgua <- pdf_text(calidadDelAgua)
 calidadAgua
