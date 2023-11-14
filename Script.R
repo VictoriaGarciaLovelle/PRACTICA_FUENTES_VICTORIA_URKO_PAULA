@@ -15,7 +15,7 @@ esperanzaVida
 
 
 
-str(esperanza[[1]]["Nombre"], na.rm=TRUE)
+str(esperanzaVida[[1]]["Nombre"], na.rm=TRUE)
 
 ## Cantidad de agua consumida ----
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
