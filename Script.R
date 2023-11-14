@@ -1,6 +1,7 @@
 # Importación de los datos ----
 install.packages("pdftools")
 library(pdftools)
+library(glue)
 library(readr)
 library(rjson)
 library(tidyverse)
