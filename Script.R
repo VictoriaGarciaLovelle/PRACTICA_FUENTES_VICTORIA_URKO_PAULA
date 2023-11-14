@@ -30,3 +30,20 @@ pdf_names <- glue("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 walk2(urls, pdf_names, download.file, mode = "wb")
 raw_text <- map(pdf_names, pdf_text)
 str (raw_text)
+raw_text[[1]][17] #Permite observar el segmento que nos interesa
+
+#
+clean_table <- function(table){
+  table <- str_split(table, "\n", simplify = TRUE)
+  country_name <- table[1, 1] %>% 
+    stringr::str_squish() %>% 
+    stringr::str_extract(".+?(?=\\sTotal)")
+  table_start <- stringr::str_which(table, "Prevalence of diabetes")
+  table_end <- stringr::str_which(table, "National response to diabetes")
+  table <- table[1, (table_start +1 ):(table_end - 1)]
+  table <- str_replace_all(table, "\\s{2,}", "|")
+  text_con <- textConnection(table)
+  data_table <- read.csv(text_con, sep = "|")
+  colnames(data_table) <- c("Condition", "Males", "Females", "Total")
+  dplyr::mutate(data_table, Country = country_name)
+}
