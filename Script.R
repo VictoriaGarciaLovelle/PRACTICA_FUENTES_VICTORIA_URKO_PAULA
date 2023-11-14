@@ -7,22 +7,23 @@ library(tidyverse)
 library(tidyjson)
 
 ## Esperanza de vida ----
-EsperanzaVida <- fromJSON(file = "EsperanzaVida.json")
-esperanza<- spread_all(EsperanzaVida)
-str(esperanza)
+esperanzaDeVida <- fromJSON(file = "EsperanzaVida.json")
+
+esperanzaVida<- spread_all(esperanzaDeVida)
+esperanzaVida
 
 
 
 str(esperanza[[1]]["Nombre"], na.rm=TRUE)
 
 ## Cantidad de agua consumida ----
-cantidadAgua <- fromJSON(file = "CantidadAgua.json")
-head(cantidadAgua)
-str(cantidadAgua)
-cantidadAgua <- spread_all(cantidadAgua)
+cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
 
+cantidadAgua <- spread_all(cantidadDeAgua)
+cantidadAgua
 
 ## Calidad del agua ----
-calidadAgua <- "calidadDelAgua.pdf"
-calidadAgua <- pdf_text(calidadAgua)
-str(calidadAgua)
+calidadDelAgua <- "calidadDelAgua.pdf"
+
+calidadAgua <- pdf_text(calidadDelAgua)
+calidadAgua
