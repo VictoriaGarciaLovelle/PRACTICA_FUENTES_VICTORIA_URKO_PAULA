@@ -23,6 +23,6 @@ cantidadAgua <- spread_all(cantidadAgua)
 
 
 ## Calidad del agua ----
-calidadAgua <- "Cap.3_part2._Libro_blanco_del_agua.pdf"
+calidadAgua <- "calidadDelAgua.pdf"
 calidadAgua <- pdf_text(calidadAgua)
 str(calidadAgua)
