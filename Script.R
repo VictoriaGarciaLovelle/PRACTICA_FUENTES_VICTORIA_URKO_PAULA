@@ -32,7 +32,7 @@ raw_text <- map(pdf_names, pdf_text)
 str (raw_text)
 raw_text[[1]][17] #Permite observar el segmento que nos interesa
 
-#
+
 clean_table <- function(table){
   table <- str_split(table, "\n", simplify = TRUE)
   calidadAgua <- table[8, 13] %>% 
@@ -50,3 +50,9 @@ clean_table <- function(table){
 
 calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
+
+
+
+
+
+
