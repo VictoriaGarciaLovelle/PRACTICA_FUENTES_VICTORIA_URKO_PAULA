@@ -35,7 +35,7 @@ raw_text[[1]][17] #Permite observar el segmento que nos interesa
 #
 clean_table <- function(table){
   table <- str_split(table, "\n", simplify = TRUE)
-  calidadAgua <- table[1, 1] %>% 
+  calidadAgua <- table[8, 13] %>% 
     stringr::str_squish() %>% 
     stringr::str_extract(".+?(?=\\sTotal)")
   table_start <- stringr::str_which(table, "Comunidad Autónoma")
@@ -43,11 +43,10 @@ clean_table <- function(table){
   #table <- table[1, (table_start +1 ):(table_end - 1)]
   table <- str_replace_all(table, "\\s{2,}", "|")
   text_con <- textConnection(table)
-  data_table <- read.csv(text_con, sep = "|")
-  colnames(data_table) <- c("Num. de Municipios", "Zonas de baño", "Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
+  data_table <- read.csv(text_con, sep = "|", row.names = NULL)
+  colnames(data_table) <- c("Num. de Municipios", "Zonas de baño") #, "Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
   dplyr::mutate(data_table, calidad = calidadAgua)
 }
-clean_table
 
 calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
