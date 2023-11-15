@@ -44,7 +44,7 @@ clean_table <- function(table){
   table <- str_replace_all(table, "\\s{2,}", "|")
   text_con <- textConnection(table)
   data_table <- read.csv(text_con, sep = "|", row.names = NULL)
-  colnames(data_table) <- c("Num. de Municipios", "Zonas de baño") #, "Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
+  colnames(data_table) <- c("Num. de Municipios", "Zonas de baño","Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
   dplyr::mutate(data_table, calidad = calidadAgua)
 }
 
