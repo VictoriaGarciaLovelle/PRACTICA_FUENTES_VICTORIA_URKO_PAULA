@@ -10,12 +10,12 @@ library(tidyjson)
 ## Esperanza de vida ----
 esperanzaDeVida <- fromJSON(file = "EsperanzaVida.json")
 
-esperanzaVida<- spread_all(esperanzaDeVida)
-esperanzaVida
+esperanzaVida <- spread_all(esperanzaDeVida)
+esperanzaVida #cuidado con este nombre, ya que es muy similar (pero diferente) al objeto JSON. Intentad ponerle apellidos como "EspVidaJson" o "EspVidaTibble"...o algo así.
 
+head(esperanzaVida$Nombre)
 
-
-str(esperanzaVida[[1]]["Nombre"], na.rm=TRUE)
+str(esperanzaVida[[1]]["Nombre"], na.rm = TRUE)
 
 ## Cantidad de agua consumida ----
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
@@ -29,7 +29,7 @@ urls <- glue(url)
 pdf_names <- glue("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 walk2(urls, pdf_names, download.file, mode = "wb")
 raw_text <- map(pdf_names, pdf_text)
-str (raw_text)
+str(raw_text)
 raw_text[[1]][17] #Permite observar el segmento que nos interesa
 
 
