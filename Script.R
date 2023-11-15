@@ -1,5 +1,5 @@
 # Importación de los datos ----
-install.packages("pdftools")
+#install.packages("pdftools")
 library(pdftools)
 library(glue)
 library(readr)
@@ -31,6 +31,10 @@ walk2(urls, pdf_names, download.file, mode = "wb")
 raw_text <- map(pdf_names, pdf_text)
 str (raw_text)
 raw_text[[1]][17] #Permite observar el segmento que nos interesa
+
+
+raw_text %>% 
+  str_split(., "\n", simplify = TRUE) 
 
 
 clean_table <- function(table){
