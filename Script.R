@@ -18,6 +18,8 @@ str(esperanzaVida)
 
 # Así puedo acceder a la comunidad autónoma
 esperanzaVida[[6]][[1]][["MetaData"]][[1]][["Nombre"]]
+#Asi puedo acceder al año
+esperanzaVida[[6]][[1]][["Data"]][[1]][["Anyo"]]
 
 
 ## Cantidad de agua consumida ----
