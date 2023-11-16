@@ -8,21 +8,17 @@ library(tidyverse)
 library(tidyjson)
 library(dplyr)
 library(stringr)
+library(purrr)
 
 ## Esperanza de vida ----
 EspVidaJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(EspVidaJson)
-View(esperanzaVida)
+str(esperanzaVida)
 
-nombre<- esperanzaVida$Nombre
-nombre
+# Así puedo acceder a la comunidad autónoma
+esperanzaVida[[6]][[1]][["MetaData"]][[1]][["Nombre"]]
 
-mi_tibble <- esperanzaVida %>%
-  mutate(Comunidad_Autonoma = str_extract(Nombre, "^[^\\.]+"),
-         Esperanza_Vida = str_extract(Nombre, "Esperanza de vida\\. ([^\\.]+)"))
-
-print(mi_tibble[c("Comunidad_Autonoma", "Esperanza_Vida")])
 
 ## Cantidad de agua consumida ----
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
