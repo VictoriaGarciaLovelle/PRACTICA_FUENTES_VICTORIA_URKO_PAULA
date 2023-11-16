@@ -8,10 +8,10 @@ library(tidyverse)
 library(tidyjson)
 
 ## Esperanza de vida ----
-esperanzaDeVida <- fromJSON(file = "EsperanzaVida.json")
+EspVidaJson <- fromJSON(file = "EsperanzaVida.json")
 
-esperanzaVida <- spread_all(esperanzaDeVida)
-esperanzaVida #cuidado con este nombre, ya que es muy similar (pero diferente) al objeto JSON. Intentad ponerle apellidos como "EspVidaJson" o "EspVidaTibble"...o algo así.
+esperanzaVida <- spread_all(EspVidaJson)
+esperanzaVida 
 
 head(esperanzaVida$Nombre)
 
