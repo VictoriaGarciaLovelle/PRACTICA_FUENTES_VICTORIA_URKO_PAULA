@@ -20,7 +20,8 @@ str(esperanzaVida)
 esperanzaVida[[6]][[1]][["MetaData"]][[1]][["Nombre"]]
 #Asi puedo acceder al año
 esperanzaVida[[6]][[1]][["Data"]][[1]][["Anyo"]]
-
+#Así puedo acceder al valor de la esperanza de vida
+esperanzaVida[[6]][[1]][["Data"]][[1]][["Valor"]]
 
 ## Cantidad de agua consumida ----
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
