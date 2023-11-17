@@ -14,13 +14,15 @@ library(purrr)
 EspVidaJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(EspVidaJson)
-str(esperanzaVida)
+head(esperanzaVida)
 
 # Así puedo acceder a la comunidad autónoma
 
+lista<-list()
 for (i in esperanzaVida){
-  esperanzaVida[[6]][[i]][["MetaData"]][[1]][["Nombre"]]
-}
+  elemento<-esperanzaVida[[6]][[1]][["MetaData"]][[i]][["Nombre"]]
+  lista <- c(lista, list(elemento))
+} #NO FUNCIONA
 
 #Asi puedo acceder al año
 esperanzaVida[[6]][[1]][["Data"]][[6]][["Anyo"]]
