@@ -44,7 +44,7 @@ raw_text <- map(pdf_names, pdf_text)
 str(raw_text)
 raw_text[[1]][17] #Permite observar el segmento que nos interesa
 
-
+# Empezar poco a poco viendo lo que vamos obteniendo...
 raw_text %>% 
   str_split(., "\n", simplify = TRUE) 
 
