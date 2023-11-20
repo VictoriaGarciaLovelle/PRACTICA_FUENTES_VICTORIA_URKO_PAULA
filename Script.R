@@ -88,7 +88,8 @@ sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\pres
                                   delim = ";", escape_double = FALSE, trim_ws = TRUE)
 view(sum_presupuestos)     
 
-
+#nuevo intento
+select(.data = sum_presupuestos, !(ends_with("Hogares")))
 
 
 
