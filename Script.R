@@ -88,9 +88,6 @@ sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\pres
                                   delim = ";", escape_double = FALSE, trim_ws = TRUE)
 view(sum_presupuestos)     
 
-sum_presupuestos <- subset(sum_presupuestos, "Grupos de usuarios e importes"!= "Volumen total de agua registrada y distribuida por tipo de usuario
-")
-write.csv(sum_presupuestos, "summodificado.csv", row.names = FALSE)
 
 
 
