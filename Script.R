@@ -81,10 +81,20 @@ clean_table <- function(table){
 calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
 
-
+#Lo siguiente representa el archivo inicial
 #elegir ruta
-choose.files()
+#choose.files()
 #importar nuevo csv provisional
-presupuestos_suministro <- read_delim("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448_def.csv",
-                                      delim = ";", escape_double= FALSE, trim_ws= TRUE)
+#presupuestos_suministro <- read_delim("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448_def.csv",
+                                      #delim = ";", escape_double= FALSE, trim_ws= TRUE)
+#view(presupuestos_suministro)
 
+#Segunda prueba de archivo
+#eligiendo ruta
+choose.files()
+#importando--
+sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv",
+                                delim = ";", escape_double = FALSE, trim_ws = TRUE)
+view(sum_presupuestos)
+#comprobando codificacion de los datos
+sum_presupuestos_compr <- read.csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv", fileEncoding = "UTF-8")
