@@ -93,8 +93,9 @@ calidadDelAgua
 #eligiendo ruta
 choose.files()
 #importando--
-sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv",
-                                delim = ";", escape_double = FALSE, trim_ws = TRUE)
-view(sum_presupuestos)
-#comprobando codificacion de los datos
-sum_presupuestos_compr <- read.csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv", fileEncoding = "UTF-8")
+#sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv",
+#                                delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+#viendo si se trata de un error de codificacion
+_codificacion_de_csv <- guess_encoding("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv")
+print(codificacion_decsv)
