@@ -82,5 +82,9 @@ calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
 
 
-#importar csv
+#elegir ruta
+choose.files()
+#importar nuevo csv provisional
+presupuestos_suministro <- read_delim("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448_def.csv",
+                                      delim = ";", escape_double= FALSE, trim_ws= TRUE)
 
