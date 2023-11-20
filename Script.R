@@ -67,6 +67,7 @@ clean_table <- function(table){
 calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
 
+#importar el csv que permite ver la cantidad de diner que se emplea para el suministro de agu
 
 
 
