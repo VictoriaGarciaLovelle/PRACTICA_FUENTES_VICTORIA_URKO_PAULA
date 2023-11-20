@@ -82,23 +82,21 @@ calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
 
 #Lo siguiente representa el archivo inicial
-#elegir ruta
-#choose.files()
-#importar nuevo csv provisional
-#presupuestos_suministro <- read_delim("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448_def.csv",
-                                      #delim = ";", escape_double= FALSE, trim_ws= TRUE)
-#view(presupuestos_suministro)
-
+#encontrando ruta
+choose.files()
+sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
+                                  delim = ";", escape_double = FALSE, trim_ws = TRUE)
+view(sum_presupuestos)                       
 #Segunda prueba de archivo
 #eligiendo ruta
-choose.files()
+#choose.files()
 #importando--
 #sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv",
 #                                delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 #viendo si se trata de un error de codificacion
-codificacion_de_csv <- guess_encoding("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv")
-print(codificacion_de_csv)
+#codificacion_de_csv <- guess_encoding("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv")
+#print(codificacion_de_csv)
 # solucion del error
-sum_presupuestos <- read.csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv", fileEncoding = "ISO-8859-1")
-view(sum_presupuestos)
+#sum_presupuestos <- read.csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv", fileEncoding = "ISO-8859-1")
+#view(sum_presupuestos)
