@@ -99,3 +99,6 @@ choose.files()
 #viendo si se trata de un error de codificacion
 codificacion_de_csv <- guess_encoding("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv")
 print(codificacion_de_csv)
+# solucion del error
+sum_presupuestos <- read.csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv", fileEncoding = "ISO-8859-1")
+view(sum_presupuestos)
