@@ -16,13 +16,26 @@ EspVidaJson <- fromJSON(file = "EsperanzaVida.json")
 esperanzaVida <- spread_all(EspVidaJson)
 head(esperanzaVida)
 
-
-esperanzaVida %>% 
+tibble1<-esperanzaVida %>% 
   gather_object %>%  #para cada atributo me dice de qué se trata
   json_types %>% 
   count(name, type)
 
-nombre<- spread_all(EspVidaJson$MetaData)
+tibble1
+
+data_meta_values <- tibble1 %>%
+  filter(name %in% c("MetaData", "Data")) %>%
+  select(name, type, n)
+
+data_meta_values$Data
+
+for (i in seq_len(nrow(data_meta_values))) {
+  name <- data_meta_values$name[i]
+  data <- lapply(esperanzaVida[[name]][i], fromJSON)
+  cat("Contenido de", name, ":\n")
+  print(data)
+}
+
 # Así puedo acceder a la comunidad autónoma
 esperanzaVida[[6]][[1]][["MetaData"]][[1]][["Nombre"]]
 #Asi puedo acceder al año
