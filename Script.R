@@ -16,14 +16,15 @@ EspVidaJson <- fromJSON(file = "EsperanzaVida.json")
 esperanzaVida <- spread_all(EspVidaJson)
 head(esperanzaVida)
 
+
+esperanzaVida %>% 
+  gather_object %>%  #para cada atributo me dice de qué se trata
+  json_types %>% 
+  count(name, type)
+
+nombre<- spread_all(EspVidaJson$MetaData)
 # Así puedo acceder a la comunidad autónoma
-
-lista<-list()
-for (i in esperanzaVida){
-  elemento<-esperanzaVida[[6]][[1]][["MetaData"]][[i]][["Nombre"]]
-  lista <- c(lista, list(elemento))
-} #NO FUNCIONA
-
+esperanzaVida[[6]][[1]][["MetaData"]][[1]][["Nombre"]]
 #Asi puedo acceder al año
 esperanzaVida[[6]][[1]][["Data"]][[6]][["Anyo"]]
 #Así puedo acceder al valor de la esperanza de vida
@@ -33,7 +34,7 @@ esperanzaVida[[6]][[1]][["Data"]][[1]][["Valor"]]
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
 
 cantidadAgua <- spread_all(cantidadDeAgua)
-cantidadAgua
+View(cantidadAgua)
 
 ## Calidad del agua ----
 url <- "https://www.chj.es/es-es/medioambiente/planificacionhidrologica/Documents/Plan%20de%20Recuperaci%C3%B3n%20del%20J%C3%BAcar/Cap.3_part2._Libro_blanco_del_agua.pdf"
