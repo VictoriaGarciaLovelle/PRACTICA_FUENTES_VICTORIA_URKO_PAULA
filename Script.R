@@ -36,7 +36,8 @@ for (i in seq_len(nrow(data_meta_values))) {
   print(data)
 }
 
-# Así puedo acceder a la comunidad autónoma
+# Así puedo acceder a la comunidad autónomaselect(.data = sum_presupuestos, !(ends_with("Hogares"))& !(ends_with("económicos"))& !(ends_with("municipales")) &
+
 esperanzaVida[[6]][[1]][["MetaData"]][[1]][["Nombre"]]
 #Asi puedo acceder al año
 esperanzaVida[[6]][[1]][["Data"]][[6]][["Anyo"]]
@@ -91,6 +92,8 @@ view(sum_presupuestos)
 #intento 3
 
 
+x<- select(.data = sum_presupuestos, ends_with("inversión en los servicios de suministro"))
+print(x)
 
 
 
