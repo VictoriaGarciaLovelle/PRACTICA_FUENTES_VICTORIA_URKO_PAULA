@@ -90,6 +90,7 @@ view(sum_presupuestos)
 
 sum_presupuestos <- subset(sum_presupuestos, "Grupos de usuarios e importes"!= "Volumen total de agua registrada y distribuida por tipo de usuario
 ")
+write.csv(sum_presupuestos, "summodificado.csv", row.names = FALSE)
 
 
 
