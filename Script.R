@@ -86,7 +86,24 @@ calidadDelAgua
 choose.files()
 sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
                                   delim = ";", escape_double = FALSE, trim_ws = TRUE)
-view(sum_presupuestos)                       
+view(sum_presupuestos)     
+
+sum_presupuestos <- subset(sum_presupuestos, "Grupos de usuarios e importes"!= "Volumen total de agua registrada y distribuida por tipo de usuario
+")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Segunda prueba de archivo
 #eligiendo ruta
 #choose.files()
@@ -100,3 +117,4 @@ view(sum_presupuestos)
 # solucion del error
 #sum_presupuestos <- read.csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv", fileEncoding = "ISO-8859-1")
 #view(sum_presupuestos)
+
