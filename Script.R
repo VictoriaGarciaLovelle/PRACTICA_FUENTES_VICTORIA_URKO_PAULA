@@ -81,9 +81,8 @@ clean_table <- function(table){
 calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
 
-#importar el csv que permite ver la cantidad de diner que se emplea para el suministro de agu
 
-
-
-
-
+#importar csv
+presupuestos_suministro <- read_delim("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
+delim = ";", escape_double = FALSE, trim_ws = TRUE)
+view(presupuestos_suministro)
