@@ -113,9 +113,6 @@ sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\pres
 view(sum_presupuestos)     
 
 
-#presupuestos <- read_csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448 __.csv",
-                         #col_types = )
-
 
 
 
