@@ -33,7 +33,6 @@ arrayData
 
 #Selecciono las columnas que me interesan
 seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
-seleccion
 
 # Utilizar strsplit para dividir la cadena de texto
 separador <- "\\."
@@ -45,11 +44,15 @@ for (i in partes){
 }
 comunidadesAutonomas
 seleccion$Nombre<-comunidadesAutonomas
-seleccion
+
+#Tabla buena
+tablaComunidadesAñoValor<- as_tibble(seleccion)
+attr(tablaComunidadesAñoValor, "JSON") <- NULL
+tablaComunidadesAñoValor
 
 # Cuento cuantas hay (para ver si coincide con las que hay en el excel)
-conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
-print(conteo_andalucia)
+#conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
+#print(conteo_andalucia)
 
 #Viendo los arrays en el tibble 1, entro en el array MetaData, de este puedo obtener de Nombre.2, en donde ponga Variable.Nombre("Comunidad Autónoma")
 arrayMetaData<-esperanzaVida %>%
