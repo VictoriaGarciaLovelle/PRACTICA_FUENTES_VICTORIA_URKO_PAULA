@@ -41,12 +41,9 @@ resultado<-seleccion %>%
   )
 resultado
 
-
-separador <- "\\."
-
 # Utilizar strsplit para dividir la cadena de texto
+separador <- "\\."
 partes <- strsplit(seleccion$Nombre, separador)
-partes[[1]][1] #Así es como saco los nombres de las comunidades autónomas
 
 comunidadesAutonomas<-c()
 for (i in partes){
@@ -57,7 +54,7 @@ resultado$Nombre<-comunidadesAutonomas
 resultado
 
 
-# Imprimir el resultado
+# Cuento cuantas hay
 conteo_andalucia <- sum(resultado$Nombre == "Andalucía")
 print(conteo_andalucia)
 
