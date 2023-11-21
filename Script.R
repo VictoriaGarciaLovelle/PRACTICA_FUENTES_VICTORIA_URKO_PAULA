@@ -54,7 +54,11 @@ tablaComunidadesAñoValor
 #conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
 #print(conteo_andalucia)
 
-
+tabla_agrupada <- tablaComunidadesAñoValor %>%
+  group_by(Anyo, Nombre) %>%
+  summarize(Media_Valor = mean(Valor, na.rm = TRUE))
+tabla_agrupada
+#print(tabla_agrupada, n = nrow(tabla_agrupada))
 
 #---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
