@@ -16,8 +16,9 @@ EspVidaJson <- fromJSON(file = "EsperanzaVida.json")
 esperanzaVida <- spread_all(EspVidaJson)
 head(esperanzaVida)
 
+# Para cada atributo me dice de qué tipo se trata
 tibble1<-esperanzaVida %>% 
-  gather_object %>%  #para cada atributo me dice de qué se trata
+  gather_object %>%  
   json_types %>% 
   count(name, type)
 
