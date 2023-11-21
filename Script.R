@@ -14,15 +14,12 @@ library(purrr)
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(archivoJson)
-head(esperanzaVida)
 
 # Para cada atributo me dice de qué tipo se trata
 tibble1<-esperanzaVida %>% 
   gather_object %>%  
   json_types %>% 
   count(name, type)
-
-tibble1
 
 #Quiero sacar los años, la comunidad autónoma, el valor (esperanza de vida)
 
@@ -32,16 +29,25 @@ arrayData<-esperanzaVida %>%
   gather_array %>% 
   spread_all %>% 
   select(-document.id, -array.index) 
+arrayData
 
 #ME FALTA DE OBTENER DE LA COLUMNA NOMBRE LAS COMUNIDADES AUTÓNOMAS ES UNA CADENA DE TEXTO
 seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
 resultado<-seleccion %>%
-  group_by(Anyo) %>%
+  group_by(Anyo, Nombre) %>%
   select(Valor) %>%
   summarise(
     Esperanza = mean(Valor, na.rm = TRUE),
   )
 resultado
+
+
+separador <- "\\."
+
+# Utilizar strsplit para dividir la cadena de texto
+partes <- strsplit(seleccion$Nombre, separador)
+partes[[1]][1] #Así es como saco los nombres de las comunidades autónomas
+
 
 #Viendo los arrays en el tibble 1, entro en el array MetaData, de este puedo obtener de Nombre.2, en donde ponga Variable.Nombre("Comunidad Autónoma")
 arrayMetaData<-esperanzaVida %>%
