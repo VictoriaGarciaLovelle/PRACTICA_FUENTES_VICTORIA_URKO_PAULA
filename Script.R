@@ -11,9 +11,9 @@ library(stringr)
 library(purrr)
 
 ## Esperanza de vida ----
-EspVidaJson <- fromJSON(file = "EsperanzaVida.json")
+archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
-esperanzaVida <- spread_all(EspVidaJson)
+esperanzaVida <- spread_all(archivoJson)
 head(esperanzaVida)
 
 # Para cada atributo me dice de qué tipo se trata
