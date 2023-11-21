@@ -116,9 +116,10 @@ sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\pres
 view(sum_)     
 #view(sum_presupuestos)     
 
-
-
-sum_<-filter(sum_presupuestos, `Grupos de usuarios e importe` %in% c("Importe total de la inversión en los servicios de suministro"))
+sum_<-select(.data= sum_presupuestos,`Comunidades y Ciudades Autónomas`:`Total`) %>% 
+         
+          filter(sum_presupuestos,`Grupos de usuarios e importe` %in%
+           c("Importe total de la inversión en los servicios de suministro"))
 
 
 
