@@ -31,15 +31,9 @@ arrayData<-esperanzaVida %>%
   select(-document.id, -array.index) 
 arrayData
 
-#ME FALTA DE OBTENER DE LA COLUMNA NOMBRE LAS COMUNIDADES AUTÓNOMAS ES UNA CADENA DE TEXTO
+#Selecciono las columnas que me interesan
 seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
-resultado<-seleccion %>%
-  group_by(Anyo, Nombre) %>%
-  select(Valor) %>%
-  summarise(
-    Esperanza = mean(Valor, na.rm = TRUE),
-  )
-resultado
+seleccion
 
 # Utilizar strsplit para dividir la cadena de texto
 separador <- "\\."
@@ -50,12 +44,11 @@ for (i in partes){
   comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
 }
 comunidadesAutonomas
-resultado$Nombre<-comunidadesAutonomas
-resultado
-
+seleccion$Nombre<-comunidadesAutonomas
+seleccion
 
 # Cuento cuantas hay
-conteo_andalucia <- sum(resultado$Nombre == "Andalucía")
+conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
 print(conteo_andalucia)
 
 #Viendo los arrays en el tibble 1, entro en el array MetaData, de este puedo obtener de Nombre.2, en donde ponga Variable.Nombre("Comunidad Autónoma")
