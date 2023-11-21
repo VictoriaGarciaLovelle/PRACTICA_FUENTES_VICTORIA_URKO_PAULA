@@ -63,6 +63,7 @@ tabla_agrupada
 
 tablaFinal<-rename(.data = tabla_agrupada, Año = Anyo, ComunidadAutonoma = Nombre)
 tablaFinal
+
 #---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
