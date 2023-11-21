@@ -116,8 +116,7 @@ sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\pres
 view(sum_)     
 #view(sum_presupuestos)     
 
-#presupuestos_agua <-read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448 __.csv",
-                                         # delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
 
 sum_<-filter(sum_presupuestos, `Grupos de usuarios e importe` %in% c("Importe total de la inversión en los servicios de suministro"))
 
@@ -126,17 +125,4 @@ sum_<-filter(sum_presupuestos, `Grupos de usuarios e importe` %in% c("Importe to
 
 
 
-#Segunda prueba de archivo
-#eligiendo ruta
-#choose.files()
-#importando--
-#sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv",
-#                                delim = ";", escape_double = FALSE, trim_ws = TRUE)
-
-#viendo si se trata de un error de codificacion
-#codificacion_de_csv <- guess_encoding("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv")
-#print(codificacion_de_csv)
-# solucion del error
-#sum_presupuestos <- read.csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\sum_presupuesto.csv", fileEncoding = "ISO-8859-1")
-#view(sum_presupuestos)
 
