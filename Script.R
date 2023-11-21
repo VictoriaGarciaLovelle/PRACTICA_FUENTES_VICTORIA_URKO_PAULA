@@ -47,7 +47,7 @@ comunidadesAutonomas
 seleccion$Nombre<-comunidadesAutonomas
 seleccion
 
-# Cuento cuantas hay
+# Cuento cuantas hay (para ver si coincide con las que hay en el excel)
 conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
 print(conteo_andalucia)
 
