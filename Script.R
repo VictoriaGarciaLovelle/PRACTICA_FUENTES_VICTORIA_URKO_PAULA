@@ -48,6 +48,18 @@ separador <- "\\."
 partes <- strsplit(seleccion$Nombre, separador)
 partes[[1]][1] #Así es como saco los nombres de las comunidades autónomas
 
+comunidadesAutonomas<-c()
+for (i in partes){
+  comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
+}
+comunidadesAutonomas
+resultado$Nombre<-comunidadesAutonomas
+resultado
+
+
+# Imprimir el resultado
+conteo_andalucia <- sum(resultado$Nombre == "Andalucía")
+print(conteo_andalucia)
 
 #Viendo los arrays en el tibble 1, entro en el array MetaData, de este puedo obtener de Nombre.2, en donde ponga Variable.Nombre("Comunidad Autónoma")
 arrayMetaData<-esperanzaVida %>%
