@@ -104,22 +104,18 @@ clean_table <- function(table){
 
 calidadDelAgua <- map_df(raw_text, clean_table)
 view(calidadDelAgua)
-#--------------------------------------------------------------
-#Lo siguiente representa el archivo inicial
+#----Presupuestos del agua-------------------------------------------------
+
 #encontrando ruta
 choose.files()
-
+#importando archivo
 sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
                                 delim = ";", escape_double = FALSE, trim_ws = TRUE)
-
-
-view(sum_)     
-#view(sum_presupuestos)     
-#select(.data= sum_presupuestos,`Comunidades y Ciudades Autónomas`:`Total`) 
+#modificando la tabla 
 sum_<- filter(sum_presupuestos,`Grupos de usuarios e importe` %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
   select(`Comunidades y Ciudades Autónomas`:Total) %>% 
             drop_na()
-           # summarise(.data=sum_presupuesto)
+
 
 
 
