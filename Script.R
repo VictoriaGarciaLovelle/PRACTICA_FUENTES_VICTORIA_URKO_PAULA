@@ -32,14 +32,24 @@ arrayData<-esperanzaVida %>%
 
 arrayData
 
+#Viendo los arrays en el tibble 1, entro en el array MetaData
+arrayMetaData<-esperanzaVida %>%
+  enter_object(Data) %>% 
+  gather_array %>% 
+  spread_all %>% 
+  select(-document.id, -array.index) 
 
+arrayMetaData
 
+#---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
 
 cantidadAgua <- spread_all(cantidadDeAgua)
 View(cantidadAgua)
 
+
+#---------------------------------------------------------------------------
 ## Calidad del agua ----
 url <- "https://www.chj.es/es-es/medioambiente/planificacionhidrologica/Documents/Plan%20de%20Recuperaci%C3%B3n%20del%20J%C3%BAcar/Cap.3_part2._Libro_blanco_del_agua.pdf"
 urls <- glue(url)
