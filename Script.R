@@ -74,10 +74,14 @@ View(cantidadAgua)
 
 #---------------------------------------------------------------------------
 ## Calidad del agua ----
+# Ruta al archivo PDF
+ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
+
+# Especificar la página del PDF que quieres procesar
+pagina <- ruta_pdf[17]
+pagina
 
 
-calidadDelAgua <- map_df(raw_text, clean_table)
-view(calidadDelAgua)
 #----Presupuestos del agua-------------------------------------------------
 
 #encontrando ruta

@@ -1,13 +1,7 @@
 # Instalar y cargar la librería pdftools
 install.packages("pdftools")
 library(pdftools)
-install.packages("dplyr")
-library(dplyr)
-library(pdftools)
-install.packages("stringr")
-library(stringr)
-install.packages("tidyr")
-library(tidyr)
+
 # Ruta al archivo PDF
 ruta_pdf <- pdf_text("Datos_Agua.pdf")
 
