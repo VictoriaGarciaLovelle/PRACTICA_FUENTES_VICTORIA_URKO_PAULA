@@ -45,7 +45,7 @@ for (i in partes){
 comunidadesAutonomas
 seleccion$Nombre<-comunidadesAutonomas
 
-#Tabla buena
+#Para eliminar una columna
 tablaComunidadesAñoValor<- as_tibble(seleccion)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
 tablaComunidadesAñoValor
@@ -54,12 +54,15 @@ tablaComunidadesAñoValor
 #conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
 #print(conteo_andalucia)
 
+#Agrupo por años (varios años de 2016 para cada c.a) y calculo la media de la esperanza de vida
 tabla_agrupada <- tablaComunidadesAñoValor %>%
   group_by(Anyo, Nombre) %>%
-  summarize(Media_Valor = mean(Valor, na.rm = TRUE))
+  summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))
 tabla_agrupada
 #print(tabla_agrupada, n = nrow(tabla_agrupada))
 
+tablaFinal<-rename(.data = tabla_agrupada, Año = Anyo, ComunidadAutonoma = Nombre)
+tablaFinal
 #---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
 cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
