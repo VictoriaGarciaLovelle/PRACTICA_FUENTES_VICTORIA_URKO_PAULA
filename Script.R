@@ -54,14 +54,7 @@ tablaComunidadesAñoValor
 #conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
 #print(conteo_andalucia)
 
-#Viendo los arrays en el tibble 1, entro en el array MetaData, de este puedo obtener de Nombre.2, en donde ponga Variable.Nombre("Comunidad Autónoma")
-arrayMetaData<-esperanzaVida %>%
-  enter_object(MetaData) %>% 
-  gather_array %>% 
-  spread_all %>% 
-  select(-document.id, -array.index) 
 
-arrayMetaData
 
 #---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
