@@ -24,13 +24,13 @@ tibble1<-esperanzaVida %>%
 tibble1
 
 #Viendo los arrays en el tibble 1, entro en el array Data
-arrays<-esperanzaVida %>%
+arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
   spread_all %>% 
   select(-document.id, -array.index) 
 
-arrays
+arrayData
 
 
 # Así puedo acceder a la comunidad autónomaselect(.data = sum_presupuestos, !(ends_with("Hogares"))& !(ends_with("económicos"))& !(ends_with("municipales")) &
