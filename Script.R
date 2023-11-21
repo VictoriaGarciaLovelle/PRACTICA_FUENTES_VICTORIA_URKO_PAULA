@@ -104,7 +104,7 @@ clean_table <- function(table){
 
 calidadDelAgua <- map_df(raw_text, clean_table)
 calidadDelAgua
-
+#--------------------------------------------------------------
 #Lo siguiente representa el archivo inicial
 #encontrando ruta
 choose.files()
@@ -112,11 +112,6 @@ sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\pres
                                   delim = ";", escape_double = FALSE, trim_ws = TRUE)
 view(sum_presupuestos)     
 
-#intento 3
-
-
-x<- select(.data = sum_presupuestos, ends_with("inversión en los servicios de suministro"))
-print(x)
 
 
 
