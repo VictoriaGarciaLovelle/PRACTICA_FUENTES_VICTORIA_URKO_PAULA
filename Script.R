@@ -74,33 +74,7 @@ View(cantidadAgua)
 
 #---------------------------------------------------------------------------
 ## Calidad del agua ----
-url <- "https://www.chj.es/es-es/medioambiente/planificacionhidrologica/Documents/Plan%20de%20Recuperaci%C3%B3n%20del%20J%C3%BAcar/Cap.3_part2._Libro_blanco_del_agua.pdf"
-urls <- glue(url)
-pdf_names <- glue("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
-walk2(urls, pdf_names, download.file, mode = "wb")
-raw_text <- map(pdf_names, pdf_text)
-str(raw_text)
-raw_text[[1]][17] #Permite observar el segmento que nos interesa
 
-# Empezar poco a poco viendo lo que vamos obteniendo...
-raw_text %>% 
-  str_split(., "\n", simplify = TRUE) 
-
-
-clean_table <- function(table){
-  table <- str_split(table, "\n", simplify = TRUE)
-  calidadAgua <- table[8, 13] %>% 
-    stringr::str_squish() %>% 
-    stringr::str_extract(".+?(?=\\sTotal)")
-  table_start <- stringr::str_which(table, "Comunidad Autónoma")
-  table_end <- stringr::str_which(table, "Aguas SCF")
-  #table <- table[1, (table_start +1 ):(table_end - 1)]
-  table <- str_replace_all(table, "\\s{2,}", "|")
-  text_con <- textConnection(table)
-  data_table <- read.csv(text_con, sep = "|", row.names = NULL)
-  colnames(data_table) <- c("Num. de Municipios", "Zonas de baño","Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
-  dplyr::mutate(data_table, calidad = calidadAgua)
-}
 
 calidadDelAgua <- map_df(raw_text, clean_table)
 view(calidadDelAgua)
