@@ -23,6 +23,15 @@ tibble1<-esperanzaVida %>%
 
 tibble1
 
+#Viendo los arrays en el tibble 1, entro en el array Data
+arrays<-esperanzaVida %>%
+  enter_object(Data) %>% #entro dentro y cojo el array
+  gather_array %>% # colapsa el array json en los pares clave-valor
+  spread_all %>% # para encuadrar el json en una estructura de datos
+  select(-document.id, -array.index) # select coge algunas columnas, si le dejo vacio
+# me coge todas, con un - delante le digo que coja todas menos esas.
+arrays$
+
 data_meta_values <- tibble1 %>%
   filter(name %in% c("MetaData", "Data")) %>%
   select(name, type, n)
