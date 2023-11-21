@@ -24,7 +24,9 @@ tibble1<-esperanzaVida %>%
 
 tibble1
 
-#Viendo los arrays en el tibble 1, entro en el array Data
+#Quiero sacar los años, la comunidad autónoma, el valor (esperanza de vida)
+
+#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
@@ -33,9 +35,9 @@ arrayData<-esperanzaVida %>%
 
 arrayData
 
-#Viendo los arrays en el tibble 1, entro en el array MetaData
+#Viendo los arrays en el tibble 1, entro en el array MetaData, de este puedo obtener de Nombre.2, en donde ponga Variable.Nombre("Comunidad Autónoma")
 arrayMetaData<-esperanzaVida %>%
-  enter_object(Data) %>% 
+  enter_object(MetaData) %>% 
   gather_array %>% 
   spread_all %>% 
   select(-document.id, -array.index) 
