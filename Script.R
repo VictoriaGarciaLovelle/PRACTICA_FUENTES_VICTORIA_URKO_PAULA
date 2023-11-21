@@ -108,17 +108,18 @@ view(calidadDelAgua)
 #Lo siguiente representa el archivo inicial
 #encontrando ruta
 choose.files()
+
 sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
                                 delim = ";", escape_double = FALSE, trim_ws = TRUE)
-sum_<- str_which(sum_presupuestos$`Grupos de usuarios e importe`,"Importe total de la inversión en los servicios de suministro")
+
 
 view(sum_)     
-view(sum_presupuestos)     
+#view(sum_presupuestos)     
 
 #presupuestos_agua <-read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448 __.csv",
                                          # delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
-
+sum_<-filter(sum_presupuestos, `Grupos de usuarios e importe` %in% c("Importe total de la inversión en los servicios de suministro"))
 
 
 
