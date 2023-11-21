@@ -108,12 +108,13 @@ calidadDelAgua
 #Lo siguiente representa el archivo inicial
 #encontrando ruta
 choose.files()
-#sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
-                                #  delim = ";", escape_double = FALSE, trim_ws = TRUE)
-#view(sum_presupuestos)     
+sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
+                                 delim = ";", escape_double = FALSE, trim_ws = TRUE)
+view(sum_presupuestos)     
 
 
-presupuestos <- read.csv()
+#presupuestos <- read_csv("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\53448 __.csv",
+                         #col_types = )
 
 
 
