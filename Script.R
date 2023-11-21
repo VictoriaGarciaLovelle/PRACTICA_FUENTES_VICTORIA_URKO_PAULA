@@ -21,9 +21,7 @@ tibble1<-esperanzaVida %>%
   json_types %>% 
   count(name, type)
 
-#Quiero sacar los años, la comunidad autónoma, el valor (esperanza de vida)
-
-#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida
+#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
@@ -43,6 +41,8 @@ for (i in partes){
   comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
 }
 comunidadesAutonomas
+
+#Cambio la columna nombre por la de las comunidades autónomas
 seleccion$Nombre<-comunidadesAutonomas
 
 #Para eliminar una columna
