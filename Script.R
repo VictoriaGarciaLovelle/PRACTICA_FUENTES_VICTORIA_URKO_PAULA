@@ -117,7 +117,7 @@ view(sum_)
 #view(sum_presupuestos)     
 #select(.data= sum_presupuestos,`Comunidades y Ciudades Autónomas`:`Total`) 
 sum_<- filter(sum_presupuestos,`Grupos de usuarios e importe` %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
-  select(all_of(sum_presupuestos),`Comunidades y Ciudades Autónomas`:Total) %>% 
+  select(`Comunidades y Ciudades Autónomas`:Total) %>% 
             drop_na()
            # summarise(.data=sum_presupuesto)
 
