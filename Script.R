@@ -89,6 +89,8 @@ linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
 linea_deseada
 linea_deseada[4]
 
+# Los datos proporcionados
+table(linea_deseada)
 
 #----Presupuestos del agua-------------------------------------------------
 
