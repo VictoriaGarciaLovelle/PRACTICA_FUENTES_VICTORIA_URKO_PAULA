@@ -177,8 +177,7 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 df <- df[,-c(1:3)]
 
 #Eliminación del primer elemento de todas las listas del dataframe
-df <- df %>%
-  mutate(across(everything(), ~tail(.x, -1)))
+
 
 # Imprimir el marco de datos resultante
 print(df)
