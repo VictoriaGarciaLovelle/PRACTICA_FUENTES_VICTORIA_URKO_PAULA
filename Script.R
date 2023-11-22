@@ -183,6 +183,10 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 
 # Imprimir el marco de datos resultante
 df
+
+# Transponer el marco de datos
+df_t <- t(df)
+
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 
 # Proceso de prueba
