@@ -99,6 +99,13 @@ comunidadesAutonomasCantidad
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
 arrayDataCantidad
 
+#Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
+tabla <- arrayDataCantidad %>%
+  filter(!(Nombre == "España")) %>%
+  select(Nombre, NombrePeriodo, Valor)
+  
+
+
 #---------------------------------------------------------------------------
 ## Calidad del agua ----
 # Ruta al archivo PDF
