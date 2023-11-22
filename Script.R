@@ -190,6 +190,9 @@ df_t <- t(df)
 # Convertir a un data frame
 df_tabla <- as.data.frame(df_t, stringsAsFactors = FALSE)
 
+# Ajustar nombres de columna
+colnames(df_tabla) <- df_tabla[1, ]
+
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 
 # Proceso de prueba
