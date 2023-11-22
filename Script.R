@@ -168,6 +168,10 @@ colnames(df) <- df[1, ]
 # Eliminar la primera fila
 df <- df[-1, ]
 
+# Convertir las columnas numéricas a tipo numérico
+cols_numericas <- colnames(df)[2:ncol(df)]
+df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
+
 # Proceso de prueba
 linea_deseada[4]
 
