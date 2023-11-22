@@ -201,11 +201,12 @@ df <- data.frame(
 regiones_a_eliminar <- c("ANDALUCÍA", "ARAGÓN", "ASTURIAS", "CASTILLA-LA-MANCHA", 
                          "CASTILLA-Y-LEÓN", "CATALUÑA", "EXTREMADURA", "GALICIA", 
                          "MADRID", "MURCIA", "NAVARRA", "RIOJA", "VALENCIA", "TOTAL")
+
+# Filtrar las filas que deseas eliminar
 df_filtrado <- df %>%
-  filter(!(Lista[[1]] %in% regiones_a_eliminar))
+  filter(!(Lista[[1]][1] %in% regiones_a_eliminar))
 
 df_filtrado
-
 
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 
