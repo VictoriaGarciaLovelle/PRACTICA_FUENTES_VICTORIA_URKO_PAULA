@@ -127,6 +127,9 @@ linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
 
 # Imprimir la línea deseada
 linea_deseada
+
+
+# Proceso de prueba
 linea_deseada[4]
 
 # Los datos proporcionados
