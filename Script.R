@@ -149,6 +149,10 @@ datos <- c(
   "TOTAL              202                     220             248              48               112             66         22"
 )
 
+# Eliminar las comillas y espacios en blanco adicionales
+datos_limpio <- gsub('“|”', '', datos)
+datos_limpio <- trimws(datos_limpio)
+
 # Proceso de prueba
 linea_deseada[4]
 
