@@ -139,7 +139,7 @@ datos <- c(
   "ARAGÓN              11                      11              12               3                7               1          1",
   "ASTURIAS             1                       1               1               0                0               1         0",
   "CASTILLA-LA-MANCHA 28                       39              43              24                 7             12          0",
-  "CASTILLA Y LEÓN      2                       2               2               0                1               1         0",
+  "CASTILLA-Y-LEÓN      2                       2               2               0                1               1         0",
   "CATALUÑA             9                      10              11               3                8               0         0",
   "EXTREMADURA         17                      17              17               0                0               0         17",
   "GALICIA             53                      54              68              10                45             13          0",
