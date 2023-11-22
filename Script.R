@@ -153,6 +153,9 @@ datos <- c(
 datos_limpio <- gsub('“|”', '', datos)
 datos_limpio <- trimws(datos_limpio)
 
+# Dividir las líneas en columnas
+datos_divididos <- strsplit(datos_limpio, "\\s+")
+
 # Proceso de prueba
 linea_deseada[4]
 
