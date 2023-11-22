@@ -183,7 +183,7 @@ eliminar_primer_elemento <- function(x) tail(x, -1)
 # Aplicar la función a cada elemento del data frame
 df_modificado <- lapply(df, eliminar_primer_elemento)
 
-df
+df_modificado
 
 
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
