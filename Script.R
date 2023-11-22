@@ -202,6 +202,9 @@ datos <- c(
 datos_limpio <- gsub('“|”', '', datos)
 datos_limpio <- trimws(datos_limpio)
 
+# Dividir las líneas en columnas
+datos_divididos <- strsplit(datos_limpio, "\\s+")
+
 # FINALIZACIÓN DE LA PRUEBA 2 --------------------------------------------------------------------------------
 # Proceso de prueba
 linea_deseada[4]
