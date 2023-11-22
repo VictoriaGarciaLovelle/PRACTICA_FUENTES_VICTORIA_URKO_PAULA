@@ -55,12 +55,12 @@ tablaComunidadesAñoValor
 #print(conteo_andalucia)
 
 #Agrupo por años (varios años de 2016 para cada c.a) y calculo la media de la esperanza de vida
-tabla_agrupada <- tablaComunidadesAñoValor %>%
+tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
   filter(Anyo==2020)%>%
   group_by(Anyo, Nombre) %>%
   summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
   rename(Año=Anyo,ComunidadAutonoma=Nombre)
-tabla_agrupada
+tablaEsperanzaDeVida
 
 #---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
