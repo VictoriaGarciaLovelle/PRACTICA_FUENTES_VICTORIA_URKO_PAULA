@@ -218,6 +218,9 @@ df1 <- df1[-1, ]
 cols_numericas1 <- colnames(df1)[2:ncol(df1)]
 df1[cols_numericas1] <- lapply(df1[cols_numericas1], as.numeric)
 
+# Impresión por pantalla del marco de datos
+df1
+
 # FINALIZACIÓN DE LA PRUEBA 2 --------------------------------------------------------------------------------
 # Proceso de prueba
 linea_deseada[4]
