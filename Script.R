@@ -184,7 +184,7 @@ regiones_a_eliminar <- c("ANDALUCÍA", "ARAGÓN", "ASTURIAS", "CASTILLA-LA-MANCH
 df_filtrado <- df %>%
   filter(!(Lista[[1]] %in% regiones_a_eliminar))
 
-df
+df_filtrado
 
 
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
