@@ -199,14 +199,14 @@ datos <- c(
 )
 
 # Eliminar las comillas y espacios en blanco adicionales
-datos_limpio <- gsub('“|”', '', datos)
-datos_limpio <- trimws(datos_limpio)
+datos_limpio1 <- gsub('“|”', '', datos)
+datos_limpio1 <- trimws(datos_limpio)
 
 # Dividir las líneas en columnas
-datos_divididos <- strsplit(datos_limpio, "\\s+")
+datos_divididos1 <- strsplit(datos_limpio, "\\s+")
 
 # Crear el marco de datos
-df <- as.data.frame(do.call(rbind, datos_divididos), stringsAsFactors = FALSE)
+df1 <- as.data.frame(do.call(rbind, datos_divididos), stringsAsFactors = FALSE)
 
 # FINALIZACIÓN DE LA PRUEBA 2 --------------------------------------------------------------------------------
 # Proceso de prueba
