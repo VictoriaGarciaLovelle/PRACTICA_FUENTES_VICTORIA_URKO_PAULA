@@ -196,6 +196,7 @@ colnames(df_tabla) <- df_tabla[1, ]
 # Eliminar la primera fila
 df_tabla <- df_tabla[-1, ]
 
+df_tabla
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 
 # Proceso de prueba
