@@ -105,12 +105,12 @@ tabla <- arrayDataCantidad %>%
   select(Nombre, NombrePeriodo, Valor)
   
 #Agrupo por comunidades autónomas y años
-Cantidad <- tabla %>%
+tablaCantidadDeAgua <- tabla %>%
   filter(NombrePeriodo  ==2020)%>%
   group_by(NombrePeriodo  , Nombre) %>%
   summarize(Cantidad = mean(Valor, na.rm = TRUE))%>%
   rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
-Cantidad
+tablaCantidadDeAgua
 
 #---------------------------------------------------------------------------
 ## Calidad del agua ----
