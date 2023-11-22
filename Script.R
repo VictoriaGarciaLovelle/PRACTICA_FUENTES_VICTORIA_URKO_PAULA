@@ -154,6 +154,9 @@ datos <- c(
 datos_limpio <- gsub('“|”', '', datos)
 datos_limpio <- trimws(datos_limpio)
 
+# Encontrar la longitud máxima de las listas
+longitud_maxima <- max(sapply(datos_divididos, length))
+
 # Rellenar las listas más cortas con NA
 datos_divididos <- lapply(datos_divididos, function(x) {
   if (length(x) < longitud_maxima) {
