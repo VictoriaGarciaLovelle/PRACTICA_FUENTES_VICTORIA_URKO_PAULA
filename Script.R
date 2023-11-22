@@ -191,7 +191,7 @@ df_t <- t(df)
 df_tabla <- as.data.frame(df_t, stringsAsFactors = FALSE)
 
 # Ajustar nombres de columna
-colnames(df_tabla) <- df_tabla[1, ]
+colnames(df_tabla) <- df_tabla[1:2, ]
 
 # Eliminar la primera fila
 df_tabla <- df_tabla[-1, ]
