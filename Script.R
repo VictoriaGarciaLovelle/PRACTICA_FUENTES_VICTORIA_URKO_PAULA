@@ -104,7 +104,13 @@ tabla <- arrayDataCantidad %>%
   filter(!(Nombre == "España")) %>%
   select(Nombre, NombrePeriodo, Valor)
   
-
+#Agrupo por comunidades autónomas y años
+Cantidad <- tabla %>%
+  filter(NombrePeriodo  ==2020)%>%
+  group_by(NombrePeriodo  , Nombre) %>%
+  summarize(Cantidad = mean(Valor, na.rm = TRUE))%>%
+  rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
+Cantidad
 
 #---------------------------------------------------------------------------
 ## Calidad del agua ----
