@@ -193,6 +193,9 @@ df_tabla <- as.data.frame(df_t, stringsAsFactors = FALSE)
 # Ajustar nombres de columna
 colnames(df_tabla) <- df_tabla[1, ]
 
+# Eliminar la primera fila
+df_tabla <- df_tabla[-1, ]
+
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 
 # Proceso de prueba
