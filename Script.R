@@ -97,11 +97,12 @@ table(linea_deseada)
 #encontrando ruta
 choose.files()
 #importando archivo
-sum_presupuestos <- read_delim ("C:\\Users\\G513\\Desktop\\GIS\\3\\fuentes\\presupuesto_de_suministro_de_agua.csv",
+sum_presupuestos <- read_delim ("summodificado.csv",
                                 delim = ";", escape_double = FALSE, trim_ws = TRUE)
+print (sum_presupuestos)
 #modificando la tabla 
-sum_<- filter(sum_presupuestos,`Grupos de usuarios e importe` %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
-  select(`Comunidades y Ciudades Autónomas`:Total) %>% 
+sum_<- filter(.data = sum_presupuestos,"Grupos de usuarios e importe2" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
+  select("Comunidades y Ciudades Autónomas":Total) %>% 
             drop_na()
 
 
