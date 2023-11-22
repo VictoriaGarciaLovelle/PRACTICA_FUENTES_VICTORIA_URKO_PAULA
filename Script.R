@@ -69,8 +69,19 @@ archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 cantidadAgua <- spread_all(archivoJsonCantidad)
 View(cantidadAgua)
 
-cantidadAgua
+#Veo los tipos de atributos
+cantidadAgua%>%
+  gather_object%>%
+  json_types%>%
+  count(name,type)
 
+#Entro en el array Data
+arrayDataCantidad<-cantidadAgua%>%
+  enter_object(Data)%>%
+  gather_array%>%
+  spread_all
+  
+arrayDataCantidad
 
 #---------------------------------------------------------------------------
 ## Calidad del agua ----
