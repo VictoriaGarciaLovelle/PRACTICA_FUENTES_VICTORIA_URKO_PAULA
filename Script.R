@@ -10,7 +10,7 @@ library(dplyr)
 library(stringr)
 library(purrr)
 
-## Esperanza de vida ----
+##----------------- Esperanza de vida -------------------
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(archivoJson)
@@ -62,8 +62,8 @@ tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
   rename(Año=Anyo,ComunidadAutonoma=Nombre)
 tablaEsperanzaDeVida
 
-#---------------------------------------------------------------------------
-## Cantidad de agua consumida ----
+
+## ------------- Cantidad de agua consumida ----------------------
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
 cantidadAgua <- spread_all(archivoJsonCantidad)
@@ -112,8 +112,8 @@ tablaCantidadDeAgua <- tabla %>%
   rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
 tablaCantidadDeAgua
 
-#---------------------------------------------------------------------------
-## Calidad del agua ----
+
+## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 
@@ -132,7 +132,7 @@ linea_deseada[4]
 # Los datos proporcionados
 table(linea_deseada)
 
-#----Presupuestos del agua-------------------------------------------------
+## -------------------- Presupuestos del agua ----------------------------
 
 #encontrando ruta . 
 choose.files()
