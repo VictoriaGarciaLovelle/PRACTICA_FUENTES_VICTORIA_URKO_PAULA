@@ -177,6 +177,10 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 # Eliminación de las tres primeras filas del df
 df <- df[,-c(1:3)]
 
+# Filtrar las filas que deseas eliminar
+regiones_a_eliminar <- c("ANDALUCÍA", "ARAGÓN", "ASTURIAS", "CASTILLA-LA-MANCHA", "TOTAL")
+df_filtrado <- df %>%
+  filter(!(Lista[[1]] %in% regiones_a_eliminar))
 
 df
 
