@@ -183,6 +183,10 @@ comunidades_autonomas <- df %>%
   select(Lista) %>%
   pull()
 
+# Eliminar las comunidades autónomas del data frame original
+df_sin_comunidades_autonomas <- df %>%
+  filter(!grepl("TOTAL", Lista))
+
 # Imprimir el marco de datos resultante
 print(df)
 
