@@ -162,6 +162,9 @@ datos_transpuesto <- t(datos_divididos)
 # Crear el marco de datos
 df <- as.data.frame(datos_transpuesto, stringsAsFactors = FALSE)
 
+# Ajustar los nombres de las columnas
+colnames(df) <- df[1, ]
+
 # Proceso de prueba
 linea_deseada[4]
 
