@@ -56,13 +56,11 @@ tablaComunidadesAñoValor
 
 #Agrupo por años (varios años de 2016 para cada c.a) y calculo la media de la esperanza de vida
 tabla_agrupada <- tablaComunidadesAñoValor %>%
+  filter(Anyo==2020)%>%
   group_by(Anyo, Nombre) %>%
-  summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))
+  summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
+  rename(Año=Anyo,ComunidadAutonoma=Nombre)
 tabla_agrupada
-#print(tabla_agrupada, n = nrow(tabla_agrupada))
-
-tablaFinal<-rename(.data = tabla_agrupada, Año = Anyo, ComunidadAutonoma = Nombre)
-tablaFinal
 
 #---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
