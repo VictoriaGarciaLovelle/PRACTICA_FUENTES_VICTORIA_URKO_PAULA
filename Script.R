@@ -177,13 +177,8 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 # Eliminación de las tres primeras filas del df
 df <- df[,-c(1:3)]
 
-# Función para eliminar el primer elemento de una lista
-eliminar_primer_elemento <- function(x) tail(x, -1)
 
-# Aplicar la función a cada elemento del data frame
-df_modificado <- lapply(df, eliminar_primer_elemento)
-
-df_modificado
+df
 
 
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
