@@ -187,6 +187,9 @@ df
 # Transponer el marco de datos
 df_t <- t(df)
 
+# Convertir a un data frame
+df_tabla <- as.data.frame(df_t, stringsAsFactors = FALSE)
+
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 
 # Proceso de prueba
