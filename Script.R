@@ -177,6 +177,25 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 # Eliminación de las tres primeras filas del df
 df <- df[,-c(1:3)]
 
+df <- data.frame(
+  Lista = I(list(
+    c("ANDALUCÍA", "58", "63", "70", "3", "36", "27", "4"),
+    c("ARAGÓN", "11", "11", "12", "3", "7", "1", "1"),
+    c("ASTURIAS", "1", "1", "1", "0", "0", "1", "0"),
+    c("CASTILLA-LA-MANCHA", "28", "39", "43", "24", "7", "12", "0"),
+    c("CASTILLA", "Y", "LEÓN", "2", "2", "2", "0", "1", "1", "0"),
+    c("CATALUÑA", "9", "10", "11", "3", "8", "0", "0"),
+    c("EXTREMADURA", "17", "17", "17", "0", "0", "0", "17"),
+    c("GALICIA", "53", "54", "68", "10", "45", "13", "0"),
+    c("MADRID", "6", "6", "7", "0", "2", "5", "0"),
+    c("MURCIA", "3", "3", "3", "0", "0", "3", "0"),
+    c("NAVARRA", "11", "11", "11", "4", "5", "2", "0"),
+    c("RIOJA", "1", "1", "1", "0", "1", "0", "0"),
+    c("VALENCIA", "2", "2", "2", "0", "1", "1", "0"),
+    c("TOTAL", "202", "220", "248", "48", "112", "66", "22")
+  ))
+)
+
 # Extraer las comunidades autónomas y almacenarlas en una variable
 comunidades_autonomas <- df %>%
   filter(!grepl("TOTAL", Lista)) %>%
@@ -184,7 +203,7 @@ comunidades_autonomas <- df %>%
   pull()
 
 # Eliminar las comunidades autónomas del data frame original
-df_sin_comunidades_autonomas <- df %>%
+df <- df %>%
   filter(!grepl("TOTAL", Lista))
 
 # Imprimir el marco de datos resultante
