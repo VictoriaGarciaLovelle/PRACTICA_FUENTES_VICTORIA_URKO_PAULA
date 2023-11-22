@@ -181,6 +181,9 @@ df <- df[-1, ]
 cols_numericas <- colnames(df)[2:ncol(df)]
 df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 
+# Eliminación de las 2 primeras filas
+df <- df[, -c(1, 2)]
+
 # Imprimir el marco de datos resultante
 df
 
