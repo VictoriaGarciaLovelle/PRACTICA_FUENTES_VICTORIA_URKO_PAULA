@@ -211,6 +211,9 @@ df1 <- as.data.frame(do.call(rbind, datos_divididos), stringsAsFactors = FALSE)
 # Ajustar los nombres de las columnas
 colnames(df1) <- df1[1, ]
 
+# Eliminar la primera fila
+df1 <- df1[-1, ]
+
 # FINALIZACIÓN DE LA PRUEBA 2 --------------------------------------------------------------------------------
 # Proceso de prueba
 linea_deseada[4]
