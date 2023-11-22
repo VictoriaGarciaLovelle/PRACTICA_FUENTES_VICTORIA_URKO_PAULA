@@ -128,6 +128,7 @@ linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
 # Imprimir la línea deseada
 linea_deseada
 
+# INICIALIZACIÓN DE LA PRUEBA 1 ----------------------------------------------------------------------------
 # Conjunto de datos de la tabla
 datos <- c(
   "                 Num. de",
@@ -174,7 +175,7 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 
 # Imprimir el marco de datos resultante
 df
-
+# FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 # Proceso de prueba
 linea_deseada[4]
 
