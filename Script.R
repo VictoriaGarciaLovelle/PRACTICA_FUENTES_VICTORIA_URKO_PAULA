@@ -154,8 +154,7 @@ datos <- c(
 datos_limpio <- gsub('“|”', '', datos)
 datos_limpio <- trimws(datos_limpio)
 
-# Dividir las líneas en columnas
-datos_divididos <- strsplit(datos_limpio, "\\s+")
+
 
 # Transponer la matriz para tener columnas como variables
 datos_transpuesto <- t(datos_divididos)
