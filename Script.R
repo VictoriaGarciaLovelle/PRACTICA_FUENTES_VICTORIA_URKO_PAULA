@@ -156,6 +156,9 @@ datos_limpio <- trimws(datos_limpio)
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(datos_limpio, "\\s+")
 
+# Transponer la matriz para tener columnas como variables
+datos_transpuesto <- t(datos_divididos)
+
 # Proceso de prueba
 linea_deseada[4]
 
