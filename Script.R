@@ -173,6 +173,9 @@ df <- df[-1, ]
 cols_numericas <- colnames(df)[2:ncol(df)]
 df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 
+# Eliminación de las tres primeras filas del df
+df <- df[,-c(1:3)]
+
 # Imprimir el marco de datos resultante
 print(df)
 
