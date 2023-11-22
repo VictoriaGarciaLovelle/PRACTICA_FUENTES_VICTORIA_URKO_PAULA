@@ -154,7 +154,13 @@ datos <- c(
 datos_limpio <- gsub('“|”', '', datos)
 datos_limpio <- trimws(datos_limpio)
 
-
+# Rellenar las listas más cortas con NA
+datos_divididos <- lapply(datos_divididos, function(x) {
+  if (length(x) < longitud_maxima) {
+    x <- c(x, rep(NA, longitud_maxima - length(x)))
+  }
+  x
+})
 
 # Transponer la matriz para tener columnas como variables
 datos_transpuesto <- t(datos_divididos)
