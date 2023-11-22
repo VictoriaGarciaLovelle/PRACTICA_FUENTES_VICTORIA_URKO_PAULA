@@ -178,7 +178,7 @@ df
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 # INICIALIZACIÓN DE LA PRUEBA 2 ------------------------------------------------------------------------------
 # Datos proporcionados
-datos <- c(
+datos1 <- c(
   "                 Num. de",
   "Comunidad Autónoma                       Zonas de        Puntos de         Aguas            Aguas           Aguas     Aguas",
   "                Municipios                baño           muestreo           “2”              “1”             “0”       SCF",
@@ -199,14 +199,14 @@ datos <- c(
 )
 
 # Eliminar las comillas y espacios en blanco adicionales
-datos_limpio1 <- gsub('“|”', '', datos)
-datos_limpio1 <- trimws(datos_limpio)
+datos_limpio1 <- gsub('“|”', '', datos1)
+datos_limpio1 <- trimws(datos_limpio1)
 
 # Dividir las líneas en columnas
-datos_divididos1 <- strsplit(datos_limpio, "\\s+")
+datos_divididos1 <- strsplit(datos_limpio1, "\\s+")
 
 # Crear el marco de datos
-df1 <- as.data.frame(do.call(rbind, datos_divididos), stringsAsFactors = FALSE)
+df1 <- as.data.frame(do.call(rbind, datos_divididos1), stringsAsFactors = FALSE)
 
 # Ajustar los nombres de las columnas
 colnames(df1) <- df1[1, ]
