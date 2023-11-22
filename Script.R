@@ -176,10 +176,7 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 # Imprimir el marco de datos resultante
 df
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
-# INICIALIZACIÓN DE LA PRUEBA 2 ------------------------------------------------------------------------------
-# Datos proporcionados
 
-# FINALIZACIÓN DE LA PRUEBA 2 --------------------------------------------------------------------------------
 # Proceso de prueba
 linea_deseada[4]
 
