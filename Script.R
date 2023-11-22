@@ -177,6 +177,49 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 df
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 # INICIALIZACIÓN DE LA PRUEBA 2 ------------------------------------------------------------------------------
+# Datos proporcionados
+datos <- c(
+  "                 Num. de",
+  "Comunidad Autónoma                       Zonas de        Puntos de         Aguas            Aguas           Aguas     Aguas",
+  "                Municipios                baño           muestreo           “2”              “1”             “0”       SCF",
+  "ANDALUCÍA           58                      63              70               3                36             27          4",
+  "ARAGÓN              11                      11              12               3                7               1          1",
+  "ASTURIAS             1                       1               1               0                0               1         0",
+  "CASTILLA-LA MANCHA 28                       39              43              24                 7             12          0",
+  "CASTILLA Y LEÓN      2                       2               2               0                1               1         0",
+  "CATALUÑA             9                      10              11               3                8               0         0",
+  "EXTREMADURA         17                      17              17               0                0               0         17",
+  "GALICIA             53                      54              68              10                45             13          0",
+  "MADRID               6                       6               7               0                2               5         0",
+  "MURCIA               3                       3               3               0                0               3         0",
+  "NAVARRA             11                      11              11               4                 5              2          0",
+  "RIOJA                1                      1                1               0                1               0         0",
+  "VALENCIA             2                       2               2               0                1               1         0",
+  "TOTAL              202                     220             248              48               112             66         22"
+)
+
+# Eliminar las comillas y espacios en blanco adicionales
+datos_limpio <- gsub('“|”', '', datos)
+datos_limpio <- trimws(datos_limpio)
+
+# Dividir las líneas en columnas
+datos_divididos <- strsplit(datos_limpio, "\\s+")
+
+# Crear el marco de datos
+df <- as.data.frame(do.call(rbind, datos_divididos), stringsAsFactors = FALSE)
+
+# Ajustar los nombres de las columnas
+colnames(df) <- df[1, ]
+
+# Eliminar la primera fila
+df <- df[-1, ]
+
+# Convertir las columnas numéricas a tipo numérico
+cols_numericas <- colnames(df)[2:ncol(df)]
+df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
+
+# Imprimir el marco de datos resultante
+print(df)
 
 # FINALIZACIÓN DE LA PRUEBA 2 --------------------------------------------------------------------------------
 # Proceso de prueba
