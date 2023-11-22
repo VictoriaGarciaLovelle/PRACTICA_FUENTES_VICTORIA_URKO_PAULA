@@ -165,6 +165,9 @@ df <- as.data.frame(datos_transpuesto, stringsAsFactors = FALSE)
 # Ajustar los nombres de las columnas
 colnames(df) <- df[1, ]
 
+# Eliminar la primera fila
+df <- df[-1, ]
+
 # Proceso de prueba
 linea_deseada[4]
 
