@@ -205,6 +205,9 @@ datos_limpio <- trimws(datos_limpio)
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(datos_limpio, "\\s+")
 
+# Crear el marco de datos
+df <- as.data.frame(do.call(rbind, datos_divididos), stringsAsFactors = FALSE)
+
 # FINALIZACIÓN DE LA PRUEBA 2 --------------------------------------------------------------------------------
 # Proceso de prueba
 linea_deseada[4]
