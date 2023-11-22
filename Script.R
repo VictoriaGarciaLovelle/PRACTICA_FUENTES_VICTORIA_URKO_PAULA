@@ -9,6 +9,7 @@ library(tidyjson)
 library(dplyr)
 library(stringr)
 library(purrr)
+library(dplyr)
 
 ##----------------- Esperanza de vida -------------------
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
@@ -176,8 +177,11 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 # Eliminación de las tres primeras filas del df
 df <- df[,-c(1:3)]
 
-#Eliminación del primer elemento de todas las listas del dataframe
-
+# Extraer las comunidades autónomas y almacenarlas en una variable
+comunidades_autonomas <- df %>%
+  filter(!grepl("TOTAL", Lista)) %>%
+  select(Lista) %>%
+  pull()
 
 # Imprimir el marco de datos resultante
 print(df)
