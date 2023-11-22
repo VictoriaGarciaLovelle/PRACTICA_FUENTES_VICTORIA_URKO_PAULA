@@ -172,6 +172,9 @@ df <- df[-1, ]
 cols_numericas <- colnames(df)[2:ncol(df)]
 df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 
+# Imprimir el marco de datos resultante
+df
+
 # Proceso de prueba
 linea_deseada[4]
 
