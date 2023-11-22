@@ -159,6 +159,9 @@ datos_divididos <- strsplit(datos_limpio, "\\s+")
 # Transponer la matriz para tener columnas como variables
 datos_transpuesto <- t(datos_divididos)
 
+# Crear el marco de datos
+df <- as.data.frame(datos_transpuesto, stringsAsFactors = FALSE)
+
 # Proceso de prueba
 linea_deseada[4]
 
