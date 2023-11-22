@@ -79,8 +79,24 @@ cantidadAgua%>%
 arrayDataCantidad<-cantidadAgua%>%
   enter_object(Data)%>%
   gather_array%>%
-  spread_all
+  spread_all%>%
+  select(-document.id,-array.index)
   
+arrayDataCantidad
+
+#Divido la cadena de texto nombre y solo cojo las comunidades autónomas
+separador<- "\\,"
+
+cadenas <- strsplit(arrayDataCantidad$Nombre, separador)
+cadenas
+comunidadesAutonomasCantidad<-c()
+for (i in cadenas){
+  comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
+}
+comunidadesAutonomasCantidad
+
+#Cambio la columna nombre por la columna de las comunidades autónomas
+arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
 arrayDataCantidad
 
 #---------------------------------------------------------------------------
