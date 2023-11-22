@@ -64,10 +64,12 @@ tabla_agrupada
 
 #---------------------------------------------------------------------------
 ## Cantidad de agua consumida ----
-cantidadDeAgua <- fromJSON(file = "CantidadAgua.json")
+archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
-cantidadAgua <- spread_all(cantidadDeAgua)
+cantidadAgua <- spread_all(archivoJsonCantidad)
 View(cantidadAgua)
+
+cantidadAgua
 
 
 #---------------------------------------------------------------------------
