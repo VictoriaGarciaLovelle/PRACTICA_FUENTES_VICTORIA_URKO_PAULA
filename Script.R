@@ -129,77 +129,7 @@ linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
 linea_deseada
 
 # INICIALIZACIÓN DE LA PRUEBA 1 ----------------------------------------------------------------------------
-# Conjunto de datos de la tabla
-datos <- c(
-  "                 Num. de",
-  "Comunidad Autónoma                       Zonas de        Puntos de         Aguas            Aguas           Aguas     Aguas",
-  "                Municipios                baño           muestreo           “2”              “1”             “0”       SCF",
-  "ANDALUCÍA           58                      63              70               3                36             27          4",
-  "ARAGÓN              11                      11              12               3                7               1          1",
-  "ASTURIAS             1                       1               1               0                0               1         0",
-  "CASTILLA-LA-MANCHA 28                       39              43              24                 7             12          0",
-  "CASTILLA Y LEÓN      2                       2               2               0                1               1         0",
-  "CATALUÑA             9                      10              11               3                8               0         0",
-  "EXTREMADURA         17                      17              17               0                0               0         17",
-  "GALICIA             53                      54              68              10                45             13          0",
-  "MADRID               6                       6               7               0                2               5         0",
-  "MURCIA               3                       3               3               0                0               3         0",
-  "NAVARRA             11                      11              11               4                 5              2          0",
-  "RIOJA                1                      1                1               0                1               0         0",
-  "VALENCIA             2                       2               2               0                1               1         0",
-  "TOTAL              202                     220             248              48               112             66         22"
-)
 
-# Eliminar las comillas y espacios en blanco adicionales
-datos_limpio <- gsub('“|”', '', datos)
-datos_limpio <- trimws(datos_limpio)
-
-# Encontrar la longitud máxima de las listas
-longitud_maxima <- max(sapply(datos_divididos, length))
-
-# Rellenar las listas más cortas con NA
-datos_divididos <- lapply(datos_divididos, function(x) {
-  if (length(x) < longitud_maxima) {
-    x <- c(x, rep(NA, longitud_maxima - length(x)))
-  }
-  x
-})
-
-# Transponer la matriz para tener columnas como variables
-datos_transpuesto <- t(datos_divididos)
-
-# Crear el marco de datos
-df <- as.data.frame(datos_transpuesto, stringsAsFactors = FALSE)
-
-# Ajustar los nombres de las columnas
-colnames(df) <- df[1, ]
-
-# Eliminar la primera fila
-df <- df[-1, ]
-
-# Convertir las columnas numéricas a tipo numérico
-cols_numericas <- colnames(df)[2:ncol(df)]
-df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
-
-# Eliminación de las 2 primeras filas
-df <- df[, -c(1, 2)]
-
-# Imprimir el marco de datos resultante
-df
-
-# Transponer el marco de datos
-df_t <- t(df)
-
-# Convertir a un data frame
-df_tabla <- as.data.frame(df_t, stringsAsFactors = FALSE)
-
-# Ajustar nombres de columna
-colnames(df_tabla) <- df_tabla[1:2, ]
-
-# Eliminar la primera fila
-df_tabla <- df_tabla[-1, ]
-
-df_tabla
 # FINALIZACIÓN DE LA PRUEBA 1 --------------------------------------------------------------------------------
 
 # Proceso de prueba
