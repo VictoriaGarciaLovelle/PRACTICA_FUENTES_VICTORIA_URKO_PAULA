@@ -149,24 +149,6 @@ for (i in datos_divididos){
 }
 data
 
-dataframeFin <- data.frame(
-  "Col1" = lapply(datos_divididos, function(x) x[1], simplify = TRUE),
-  "Col2" = lapply(datos_divididos, function(x) x[2], simplify = TRUE),
-  "Col3" = lapply(datos_divididos, function(x) x[3], simplify = TRUE),
-  "Col4" = lapply(datos_divididos, function(x) x[4], simplify = TRUE),
-  "Col5" = lapply(datos_divididos, function(x) x[5], simplify = TRUE),
-  "Col6" = lapply(datos_divididos, function(x) x[6], simplify = TRUE),
-  "Col7" = lapply(datos_divididos, function(x) x[7], simplify = TRUE),
-  "Col8" = lapply(datos_divididos, function(x) x[8], simplify = TRUE),
-  "Col9" = lapply(datos_divididos, function(x) x[9], simplify = TRUE),
-  "Col10" = lapply(datos_divididos, function(x) x[10], simplify = TRUE),
-  "Col11" = lapply(datos_divididos, function(x) x[11], simplify = TRUE),
-  "Col12" = lapply(datos_divididos, function(x) x[12], simplify = TRUE),
-  "Col13" = lapply(datos_divididos, function(x) x[13], simplify = TRUE),
-  "Col14" = lapply(datos_divididos, function(x) x[14], simplify = TRUE),
-  )
-
-dataframeFin
 
 # Ajustar los nombres de las columnas
 colnames(dataframeFin) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
