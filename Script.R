@@ -142,6 +142,26 @@ datos_divididos[[5]]<- c("CASTILLA-Y-LEÓN", "2", "2", "2", "0", "1", "1", "0"  
 datos_divididos
 
 ### Hasta aquí el código es correcto ----
+for (i in datos_divididos){
+  dataFrame <- data.frame(
+    "Col1" = c(i[1]),
+    "Col2" = i[1],
+    "Col3" = i[1],
+    "Col4" = i[1],
+    "Col5" = i[1],
+    "Col6" = i[1],
+    "Col7" = i[1],
+    "Col8" = i[1],
+    "Col9" = i[1],
+    "Col10" = i[1],
+    "Col11" = i[1],
+    "Col12" = i[1],
+    "Col13" = i[1],
+    "Col14" = i[1],
+  )
+}
+dataFrame
+
 dataframeFin <- data.frame(
   "Col1" = lapply(datos_divididos, function(x) x[1], simplify = TRUE),
   "Col2" = lapply(datos_divididos, function(x) x[2], simplify = TRUE),
