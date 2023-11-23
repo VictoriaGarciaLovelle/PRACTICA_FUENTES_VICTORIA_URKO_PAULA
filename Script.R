@@ -136,6 +136,10 @@ linea_deseada
 datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
 
+# Convertir la lista a un marco de datos
+datos_marco <- as.data.frame(datos_lista)
+
+
 # Ajustar los nombres de las columnas
 colnames(datos_divididos) <- (value = c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
                                 "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF"))
