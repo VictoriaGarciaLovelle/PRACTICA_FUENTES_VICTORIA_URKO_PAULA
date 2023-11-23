@@ -139,16 +139,16 @@ datos_divididos[[4]]<- c("CASTILLA-LA-MANCHA", "28", "39", "43", "24","7", "12",
 datos_divididos[[5]]<- c("CASTILLA-Y-LEÓN", "2", "2", "2", "0", "1", "1", "0"   )
 datos_divididos
 
-data<-data.frame()
+tablaCalidadDeAgua<-data.frame()
 for (i in datos_divididos){
-  data<-rbind(data,i)
+  tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
 }
-data
+tablaCalidadDeAgua
 
 # Ajustar los nombres de las columnas
-colnames(data) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
+colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
                                 "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
-data
+tablaCalidadDeAgua
 
 ## -------------------- Presupuestos del agua ----------------------------
 
