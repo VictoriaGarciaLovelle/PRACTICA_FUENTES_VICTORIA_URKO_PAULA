@@ -136,8 +136,9 @@ linea_deseada
 datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
 
-# Seleccionar las dimensiones 4-17
-datos_seleccionados <- lapply(datos[4:17], function(x) x[1])
+# Seleccionar las CCAA de las dimensiones 4-17
+col_CCAA <- lapply(datos_divididos[4:17], function(x) x[1])
+col_CCAA
 
 # Ajustar los nombres de las columnas
 colnames(datos_divididos) <- (value = c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
