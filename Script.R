@@ -131,14 +131,18 @@ linea_deseada
 
 # INICIALIZACIÓN DE LA PRUEBA 1 ----------------------------------------------------------------------------
 
-# Utilizar lmap ---- 
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
 
+# Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
+datos_divididos <- datos_divididos[-c(1:3)]
+datos_divididos
+
 # Seleccionar las CCAA de las dimensiones 4-17
-col_CCAA <- lapply(datos_divididos[4:17], function(x) x[1])
+col_CCAA <- lapply(datos_divididos, function(x) x[1])
 col_CCAA
+### Hasta aquí el código es correcto ----
 
 # Ajustar los nombres de las columnas
 colnames(datos_divididos) <- (value = c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
