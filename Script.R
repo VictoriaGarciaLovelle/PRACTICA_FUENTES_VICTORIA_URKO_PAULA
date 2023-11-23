@@ -146,8 +146,7 @@ for (i in datos_divididos){
 tablaCalidadDeAgua
 
 # Ajustar los nombres de las columnas
-colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
-                                "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
+colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo","Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
 tablaCalidadDeAgua
 
 ## -------------------- Presupuestos del agua ----------------------------
