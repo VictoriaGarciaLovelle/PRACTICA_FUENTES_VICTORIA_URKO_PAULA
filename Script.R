@@ -8,7 +8,7 @@ library(tidyverse)
 library(tidyjson)
 library(dplyr)
 library(stringr)
-library(purrr)
+library(purrr) #Función lmap aplica una función a cada lista
 library(dplyr)
 
 ##----------------- Esperanza de vida -------------------
@@ -155,8 +155,9 @@ datos <- c(
 datos_limpio <- gsub('“|”', '', datos)
 datos_limpio <- trimws(datos_limpio)
 
+# Utilizar lmap ---- 
 # Dividir las líneas en columnas
-datos_divididos <- strsplit(datos_limpio, "\\s+")
+datos_divididos <- strsplit(linea_deseada, "\\s+")
 
 # Transponer la matriz para tener columnas como variables
 datos_transpuesto <- t(datos_divididos)
