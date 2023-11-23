@@ -129,8 +129,6 @@ linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
 # Imprimir la línea deseada
 linea_deseada
 
-# INICIALIZACIÓN DE LA PRUEBA 1 ----------------------------------------------------------------------------
-
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
@@ -141,14 +139,11 @@ datos_divididos[[4]]<- c("CASTILLA-LA-MANCHA", "28", "39", "43", "24","7", "12",
 datos_divididos[[5]]<- c("CASTILLA-Y-LEÓN", "2", "2", "2", "0", "1", "1", "0"   )
 datos_divididos
 
-### Hasta aquí el código es correcto ----
 data<-data.frame()
 for (i in datos_divididos){
   data<-rbind(data,i)
-  
 }
 data
-
 
 # Ajustar los nombres de las columnas
 colnames(data) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
