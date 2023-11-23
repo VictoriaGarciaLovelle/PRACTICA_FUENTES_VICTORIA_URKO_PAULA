@@ -137,7 +137,7 @@ datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
 
 # Convertir la lista a un marco de datos
-datos_marco <- as.data.frame(datos_lista)
+datos_marco <- as.data.frame(datos_divididos)
 
 
 # Ajustar los nombres de las columnas
