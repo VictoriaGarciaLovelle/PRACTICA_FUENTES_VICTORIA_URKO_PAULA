@@ -137,8 +137,8 @@ datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
 
 # Ajustar los nombres de las columnas
-colnames(datos_divididos) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
-                                "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
+colnames(datos_divididos) <- (value = c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
+                                "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF"))
 colnames(df)
 
 # Eliminar la primera fila
