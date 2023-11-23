@@ -131,10 +131,6 @@ linea_deseada
 
 # INICIALIZACIÓN DE LA PRUEBA 1 ----------------------------------------------------------------------------
 
-# Eliminar las comillas y espacios en blanco adicionales
-datos_limpio <- gsub('“|”', '', datos)
-datos_limpio <- trimws(datos_limpio)
-
 # Utilizar lmap ---- 
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
