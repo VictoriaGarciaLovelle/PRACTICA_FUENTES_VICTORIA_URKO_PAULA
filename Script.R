@@ -137,35 +137,33 @@ datos_divididos
 
 # Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
 datos_divididos <- datos_divididos[-c(1:3)]
+datos_divididos[[4]][1] <- c("CASTILLA-LA-MANCHA")
+correcionCCAA <- datos_divididos[[4]][2]
+datos_divididos <- select(.data = datos_divididos, !(correcionCCAA))
 datos_divididos
 
-# Seleccionar las CCAA de las dimensiones 4-17
-col_CCAA <- lapply(datos_divididos, function(x) x[1])
-col_CCAA
-
 ### Hasta aquí el código es correcto ----
-for (i in datos_divididos){
-  dataframeFin <- data.frame(
-    "Col1" = lapply(datos_divididos, function(x) x[1]),
-    "Col2" = lapply(datos_divididos, function(x) x[2]),
-    "Col3" = lapply(datos_divididos, function(x) x[3]),
-    "Col4" = lapply(datos_divididos, function(x) x[4]),
-    "Col5" = lapply(datos_divididos, function(x) x[5]),
-    "Col6" = lapply(datos_divididos, function(x) x[6]),
-    "Col7" = lapply(datos_divididos, function(x) x[7]),
-    "Col8" = lapply(datos_divididos, function(x) x[8]),
-    "Col9" = lapply(datos_divididos, function(x) x[9]),
-    "Col10" = lapply(datos_divididos, function(x) x[10]),
-    "Col11" = lapply(datos_divididos, function(x) x[11]),
-    "Col12" = lapply(datos_divididos, function(x) x[12]),
-    "Col13" = lapply(datos_divididos, function(x) x[13]),
-    "Col14" = lapply(datos_divididos, function(x) x[14]),
+dataframeFin <- data.frame(
+  "Col1" = lapply(datos_divididos, function(x) x[1], simplify = TRUE),
+  "Col2" = lapply(datos_divididos, function(x) x[2], simplify = TRUE),
+  "Col3" = lapply(datos_divididos, function(x) x[3], simplify = TRUE),
+  "Col4" = lapply(datos_divididos, function(x) x[4], simplify = TRUE),
+  "Col5" = lapply(datos_divididos, function(x) x[5], simplify = TRUE),
+  "Col6" = lapply(datos_divididos, function(x) x[6], simplify = TRUE),
+  "Col7" = lapply(datos_divididos, function(x) x[7], simplify = TRUE),
+  "Col8" = lapply(datos_divididos, function(x) x[8], simplify = TRUE),
+  "Col9" = lapply(datos_divididos, function(x) x[9], simplify = TRUE),
+  "Col10" = lapply(datos_divididos, function(x) x[10], simplify = TRUE),
+  "Col11" = lapply(datos_divididos, function(x) x[11], simplify = TRUE),
+  "Col12" = lapply(datos_divididos, function(x) x[12], simplify = TRUE),
+  "Col13" = lapply(datos_divididos, function(x) x[13], simplify = TRUE),
+  "Col14" = lapply(datos_divididos, function(x) x[14], simplify = TRUE),
   )
-}
+
 dataframeFin
 
 # Ajustar los nombres de las columnas
-colnames(datos_divididos) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
+colnames(dataframeFin) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
                                 "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
 colnames(df)
 
