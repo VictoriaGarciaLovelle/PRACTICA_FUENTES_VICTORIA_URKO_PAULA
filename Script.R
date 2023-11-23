@@ -135,9 +135,6 @@ linea_deseada
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
 
-# Crear el marco de datos
-df <- as.data.frame(datos_transpuesto, stringsAsFactors = FALSE)
-
 # Ajustar los nombres de las columnas
 colnames(df) <- df[1, ]
 colnames(df)
