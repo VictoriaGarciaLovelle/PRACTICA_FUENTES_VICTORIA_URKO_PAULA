@@ -135,14 +135,12 @@ linea_deseada
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
 
-# Transponer la matriz para tener columnas como variables
-datos_transpuesto <- t(datos_divididos)
-
 # Crear el marco de datos
 df <- as.data.frame(datos_transpuesto, stringsAsFactors = FALSE)
 
 # Ajustar los nombres de las columnas
 colnames(df) <- df[1, ]
+colnames(df)
 
 # Eliminar la primera fila
 df <- df[-1, ]
@@ -153,8 +151,10 @@ df[cols_numericas] <- lapply(df[cols_numericas], as.numeric)
 
 # Eliminación de las tres primeras filas del df
 df <- df[,-c(1:3)]
-# Crear el data frame original
 
+df
+
+# Crear el data frame original
 df <- data.frame(
   Lista = I(list(
     c("ANDALUCÍA", "58", "63", "70", "3", "36", "27", "4"),
