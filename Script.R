@@ -138,6 +138,7 @@ datos_divididos
 # Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
 datos_divididos <- datos_divididos[-c(1:3)]
 datos_divididos[[4]]<- c("CASTILLA-LA-MANCHA", "28", "39", "43", "24","7", "12", "0" )
+datos_divididos[[5]]<- c("CASTILLA-Y-LEÓN", "2", "2", "2", "0", "1", "1", "0"   )
 datos_divididos
 
 ### Hasta aquí el código es correcto ----
