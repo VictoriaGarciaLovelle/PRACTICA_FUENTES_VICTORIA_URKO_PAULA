@@ -136,8 +136,8 @@ linea_deseada
 datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
 
-# Seleccion de datos sin nombre de columnas
-
+# Seleccionar las dimensiones 4-17
+datos_seleccionados <- lapply(datos[4:17], function(x) x[1])
 
 # Ajustar los nombres de las columnas
 colnames(datos_divididos) <- (value = c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo",
