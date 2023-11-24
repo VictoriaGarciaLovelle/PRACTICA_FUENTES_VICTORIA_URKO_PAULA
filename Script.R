@@ -159,7 +159,8 @@ sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total)
             drop_na()   %>% 
           filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")%>%
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"01 Andalucía" , "Andalucía")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"02 Aragón" , "Aragón"))
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"02 Aragón" , "Aragón")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"03 Asturias, Principado de" , "Asturias"))
 
 
 
