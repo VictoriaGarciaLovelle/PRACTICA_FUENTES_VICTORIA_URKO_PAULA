@@ -154,7 +154,7 @@ tablaCalidadDeAgua
 #encontrando ruta . 
 choose.files()
 #importando archivo
-sum__presupuestos <- read_delim ("summodificado.csv",
+sum__presupuestos <- read_delim (,
                                 delim = ";", escape_double = FALSE, trim_ws = TRUE)
 view(sum__presupuestos)
 print (sum__presupuestos)
