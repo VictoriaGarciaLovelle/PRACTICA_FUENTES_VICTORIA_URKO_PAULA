@@ -157,7 +157,7 @@ choose.files()
 #sum__presupuestos <- read_delim (,
                                 #delim = ";", escape_double = FALSE, trim_ws = TRUE)
 summodificado <- read_csv("summodificado.csv")
-view(sum__presupuestos)
+view(summodificado )
 print (sum__presupuestos)
 #modificando la tabla 
 sum_<- filter(.data = sum__presupuestos,"Grupos de usuarios e importe2" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
