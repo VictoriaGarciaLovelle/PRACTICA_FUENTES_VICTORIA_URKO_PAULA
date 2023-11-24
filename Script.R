@@ -153,7 +153,7 @@ tablaCalidadDeAgua
 #importando archivo
 summodificado <- read_csv("summodificado.csv")
 view(summodificado)
-#print (summodificado)
+
 #modificando la tabla 
 #summodificado<- filter(.data = summodificado,"Grupos de usuarios e importe" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
   #select("Comunidades y Ciudades Autónomas":"Total") %>% 
