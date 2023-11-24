@@ -154,16 +154,16 @@ tablaCalidadDeAgua
 #encontrando ruta . 
 choose.files()
 #importando archivo
-#sum__presupuestos <- read_delim (,
-                                #delim = ";", escape_double = FALSE, trim_ws = TRUE)
-summodificado <- read_csv("summodificado.csv")
-view(summodificado)
-print (summodificado)
+#summodificado <- read_delim ("summodificado.csv",
+ #                               delim = ";", escape_double = FALSE, trim_ws = TRUE)
+#summodificado <- read_csv("summodificado.csv")
+#view(summodificado)
+#print (summodificado)
 #modificando la tabla 
-summodificado<- filter(.data = summodificado,"Grupos de usuarios e importe" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
-  select("Comunidades y Ciudades Autónomas":Total) %>% 
-            drop_na()
-view(sum_)
+#summodificado<- filter(.data = summodificado,"Grupos de usuarios e importe" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
+  #select("Comunidades y Ciudades Autónomas":"Total") %>% 
+ #           drop_na()
+#view(sum_)
 
 
 
