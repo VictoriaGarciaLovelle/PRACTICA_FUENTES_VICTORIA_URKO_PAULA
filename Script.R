@@ -151,8 +151,7 @@ tablaCalidadDeAgua
 
 ## -------------------- Presupuestos del agua ----------------------------
 
-#encontrando ruta . 
-choose.files()
+
 #importando archivo
 #summodificado <- read_delim ("summodificado.csv",
                       # delim = ";", escape_double = FALSE, trim_ws = TRUE)
