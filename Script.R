@@ -159,9 +159,7 @@ sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total)
             drop_na()   %>% 
           filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")
 
+sum_$`Comunidades y Ciudades Autónomas´[sum_$Comunidades y Ciudades Autónomas == "01 Andalucía"] <- "Andalucía"
 
-
-
-
-
+View(sum_)
 
