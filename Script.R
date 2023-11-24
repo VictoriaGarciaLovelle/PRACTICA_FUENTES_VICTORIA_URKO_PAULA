@@ -157,9 +157,10 @@ summodificado <- read_csv("summodificado.csv")
 #Modificando el csv
 sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total) %>% 
             drop_na()   %>% 
-          filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")
+          filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")%>%
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"01 Andalucía" , "Andalucía"))
 
-sum_$`Comunidades y Ciudades Autónomas´[sum_$Comunidades y Ciudades Autónomas == "01 Andalucía"] <- "Andalucía"
+
 
 View(sum_)
 
