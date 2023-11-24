@@ -157,10 +157,10 @@ summodificado <- read_csv("summodificado.csv")
 #Modificando el csv
 sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total) %>% 
             drop_na()   %>% 
-          filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" )
+          filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")
 
 
-
+view(sum_)
 
 
 
