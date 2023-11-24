@@ -150,16 +150,12 @@ colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Z
 tablaCalidadDeAgua
 
 ## -------------------- Presupuestos del agua ----------------------------
+
 #importando archivo
 summodificado <- read_csv("summodificado.csv")
+
 view(summodificado)
-
-#modificando la tabla 
-#summodificado<- filter(.data = summodificado,"Grupos de usuarios e importe" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
-  #select("Comunidades y Ciudades Autónomas":"Total") %>% 
- #           drop_na()
-view(sum_)
-
+#Modificando el csv
 sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total) %>% 
             drop_na()   %>% 
           filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" )
