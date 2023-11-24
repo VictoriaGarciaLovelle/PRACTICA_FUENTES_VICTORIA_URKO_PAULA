@@ -173,7 +173,7 @@ sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total)
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"13 Comunidad de Madrid" , "Comunidad de Madrid")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"14  Murcia, Región de" , "Región de Murcia")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"15 Navarra" , "Navarra")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"16 Balears, Illes" , "Baleares")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"16 País Vasco" , "País Vasco")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"17 Balears, Illes" , "Baleares")) %>% 
   
 
