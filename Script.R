@@ -150,11 +150,7 @@ colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Z
 tablaCalidadDeAgua
 
 ## -------------------- Presupuestos del agua ----------------------------
-
-
 #importando archivo
-#summodificado <- read_delim ("summodificado.csv",
-                      # delim = ";", escape_double = FALSE, trim_ws = TRUE)
 summodificado <- read_csv("summodificado.csv")
 view(summodificado)
 #print (summodificado)
