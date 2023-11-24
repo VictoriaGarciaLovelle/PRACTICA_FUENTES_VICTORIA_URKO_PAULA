@@ -158,9 +158,9 @@ choose.files()
                                 #delim = ";", escape_double = FALSE, trim_ws = TRUE)
 summodificado <- read_csv("summodificado.csv")
 view(summodificado)
-print (sum__presupuestos)
+print (summodificado)
 #modificando la tabla 
-sum_<- filter(.data = summodificado,"Grupos de usuarios e importe" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
+summodificado<- filter(.data = summodificado,"Grupos de usuarios e importe" %in% c("Importe total de la inversión en los servicios de suministro")) %>% 
   select("Comunidades y Ciudades Autónomas":Total) %>% 
             drop_na()
 view(sum_)
