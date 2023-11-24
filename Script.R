@@ -170,11 +170,11 @@ sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total)
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"10 Comunidad Valenciana" , "Baleares")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"11 Extremadura" , "Extremadura")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"12 Galicia" , "Galicia")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"04 Balears, Illes" , "Baleares")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"04 Balears, Illes" , "Baleares")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"04 Balears, Illes" , "Baleares")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"04 Balears, Illes" , "Baleares")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"04 Balears, Illes" , "Baleares")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"13 Comunidad de Madrid" , "Comunidad de Madrid")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"14 Balears, Illes" , "Baleares")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"15 Balears, Illes" , "Baleares")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"16 Balears, Illes" , "Baleares")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"17 Balears, Illes" , "Baleares")) %>% 
   
 
 
