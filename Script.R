@@ -167,7 +167,7 @@ view(sum_)
 
 sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total) %>% 
             drop_na() %>% 
-          filter(summodificado, "Grupos de usuarios e importe"=="Importe total de la inversión en los servicios de suministro")
+          filter("Grupos de usuarios e importe" %in% "Importe total de la inversión en los servicios de suministro")
 
 
 
