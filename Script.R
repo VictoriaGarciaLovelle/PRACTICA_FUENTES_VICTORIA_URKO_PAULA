@@ -167,14 +167,14 @@ sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total)
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"07 Castilla y León" , " Castilla y León")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"08 Castilla - La Mancha" , "Castilla - La Mancha")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"09 Cataluña" , "Cataluña")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"10 Comunidad Valenciana" , "Baleares")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"10 Comunitat Valenciana" , "Comunidad Valenciana")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"11 Extremadura" , "Extremadura")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"12 Galicia" , "Galicia")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"13 Comunidad de Madrid" , "Comunidad de Madrid")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"14  Murcia, Región de" , "Región de Murcia")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"15 Navarra" , "Navarra")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"13 Madrid, Comunidad de" , "Comunidad de Madrid")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"14 Murcia, Región de" , "Región de Murcia")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"15 Navarra, Comunidad Foral de" , "Navarra")) %>% 
   mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"16 País Vasco" , "País Vasco")) %>% 
-  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"17 Rioja, La" , "La Rioja")) %>% 
+  mutate(`Comunidades y Ciudades Autónomas`= str_replace(`Comunidades y Ciudades Autónomas`,"17 Rioja, La" , "La Rioja"))
   
 
 
