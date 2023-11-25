@@ -180,5 +180,4 @@ filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los se
 
 
 
-View(sum_)
 
