@@ -154,6 +154,7 @@ colNumericas <- c("Num de Municipios", "Zonas de baño", "Puntos de muestreo", "
 tablaCalidadDeAgua <- tablaCalidadDeAgua %>%
   mutate_at(vars(colNumericas), as.numeric)
 
+tablaCalidadDeAgua
 str(tablaCalidadDeAgua)
 ## -------------------- Presupuestos del agua ----------------------------
 
