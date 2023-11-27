@@ -143,12 +143,18 @@ tablaCalidadDeAgua<-data.frame()
 for (i in datos_divididos){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
 }
+
 tablaCalidadDeAgua
 
 # Ajustar los nombres de las columnas
 colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo","Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
 tablaCalidadDeAgua
 
+colNumericas <- c("Num de Municipios", "Zonas de baño", "Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
+tablaCalidadDeAgua <- tablaCalidadDeAgua %>%
+  mutate_at(vars(colNumericas), as.numeric)
+
+str(tablaCalidadDeAgua)
 ## -------------------- Presupuestos del agua ----------------------------
 
 #importando archivo
