@@ -116,6 +116,10 @@ tablaCantidadDeAgua <- tabla %>%
   rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
 tablaCantidadDeAgua
 
+tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
+tablaCantidadDeAgua
+
 
 ## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
