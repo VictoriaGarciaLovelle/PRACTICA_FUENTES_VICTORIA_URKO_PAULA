@@ -63,6 +63,9 @@ tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
   rename(Año=Anyo,ComunidadAutonoma=Nombre)
 tablaEsperanzaDeVida
 
+tablaEsperanzaDeVida <- tablaEsperanzaDeVida %>%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
+tablaEsperanzaDeVida
 
 ## ------------- Cantidad de agua consumida ----------------------
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
