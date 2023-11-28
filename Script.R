@@ -147,6 +147,7 @@ datosDeInteres[[4]] <- c("CASTILLA - LA MANCHA","28","39","43","24","7","12","0"
 datosDeInteres[[5]] <- c("CASTILLA Y LEÓN","2","2","2","0","1","1","0")
 datosDeInteres[[9]] <- c("MADRID, COMUNIDAD DE","6","6","7","0","2","5","0")
 datosDeInteres[[10]] <- c("MURCIA, REGIÓN DE","3","3","3","0","0","3","0")
+datosDeInteres[[11]] <- c("NAVARRA, COMUNIDAD FORAL DE","11","11","11","4","5","2","0")
 datosDeInteres
 
 tablaCalidadDeAgua<-data.frame()
