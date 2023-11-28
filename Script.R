@@ -145,7 +145,7 @@ datos_obtenidos <- datos_divididos[-c(1:3)]
 datos_obtenidos
 
 tablaCalidadDeAgua<-data.frame()
-for (i in datos_divididos){
+for (i in datos_obtenidos){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
 }
 
