@@ -141,8 +141,8 @@ datos_divididos <- strsplit(linea_deseada, "\\s+")
 datos_divididos
 
 # Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
-datos_divididos <- datos_divididos[-c(1:3)]
-datos_divididos
+datos_obtenidos <- datos_divididos[-c(1:3)]
+datos_obtenidos
 
 tablaCalidadDeAgua<-data.frame()
 for (i in datos_divididos){
