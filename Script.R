@@ -143,6 +143,7 @@ datos_divididos
 # Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
 datos_obtenidos <- datos_divididos[-c(1:3)]
 datosDeInteres <- datos_obtenidos[-c(length(datos_obtenidos))]
+datosDeInteres[[4]] <- c("CASTILLA - LA MANCHA","28","39","43","24","7","12","0")
 datosDeInteres
 
 tablaCalidadDeAgua<-data.frame()
