@@ -144,6 +144,7 @@ datos_divididos
 datos_obtenidos <- datos_divididos[-c(1:3)]
 datosDeInteres <- datos_obtenidos[-c(length(datos_obtenidos))]
 datosDeInteres[[4]] <- c("CASTILLA - LA MANCHA","28","39","43","24","7","12","0")
+datosDeInteres[[5]] <- c("CASTILLA Y LEÓN","2","2","2","0","1","1","0")
 datosDeInteres
 
 tablaCalidadDeAgua<-data.frame()
