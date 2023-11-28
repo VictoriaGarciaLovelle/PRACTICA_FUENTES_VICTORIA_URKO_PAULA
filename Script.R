@@ -142,10 +142,11 @@ datos_divididos
 
 # Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
 datos_obtenidos <- datos_divididos[-c(1:3)]
-datos_obtenidos
+datosDeInteres <- datos_obtenidos[-c(length(datos_obtenidos))]
+datosDeInteres
 
 tablaCalidadDeAgua<-data.frame()
-for (i in datos_obtenidos){
+for (i in datosDeInteres){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
 }
 
