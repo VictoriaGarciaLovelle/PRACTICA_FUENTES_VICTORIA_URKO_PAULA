@@ -121,6 +121,8 @@ tablaCantidadDeAgua
 
 tablaCantidadDeAgua[4,] <- c("2020","BALEARS, ILLES","42033")
 tablaCantidadDeAgua[8,] <- c("2020","CASTILLA - LA MANCHA","60920")
+tablaCantidadDeAgua[14,] <- c("2020","MADRID, COMUNIDAD DE","216232")
+
 
 ## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
