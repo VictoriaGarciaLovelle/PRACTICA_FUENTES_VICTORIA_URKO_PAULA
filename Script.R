@@ -179,7 +179,8 @@ tablaCalidadDeAgua <- tablaCalidadDeAgua %>%
   mutate_at(vars(colNumericas), as.integer)
 
 tablaCalidadDeAgua
-str(tablaCalidadDeAgua)
+colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
+tablaCalidadDeAgua
 ## -------------------- Presupuestos del agua ----------------------------
 
 #importando archivo
