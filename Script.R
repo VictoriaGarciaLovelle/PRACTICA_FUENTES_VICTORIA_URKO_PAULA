@@ -120,7 +120,7 @@ tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
 tablaCantidadDeAgua
 
 tablaCantidadDeAgua[4,2] <- c("BALEARS, ILLES")
-tablaCantidadDeAgua[8,] <- c("2020","CASTILLA - LA MANCHA","60920")
+tablaCantidadDeAgua[8,2] <- c("CASTILLA - LA MANCHA")
 tablaCantidadDeAgua[14,] <- c("2020","MADRID, COMUNIDAD DE","216232")
 tablaCantidadDeAgua[15,] <- c("2020","MURCIA, REGIÓN DE","57000")
 tablaCantidadDeAgua[16,] <- c("2020","NAVARRA, COMUNIDAD FORAL DE","22551")
