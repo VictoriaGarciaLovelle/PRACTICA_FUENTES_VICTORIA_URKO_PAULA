@@ -119,7 +119,7 @@ tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 tablaCantidadDeAgua
 
-tablaCantidadDeAgua[4,] <- c("2020","BALEARS, ILLES","42033")
+tablaCantidadDeAgua[4,2] <- c("BALEARS, ILLES")
 tablaCantidadDeAgua[8,] <- c("2020","CASTILLA - LA MANCHA","60920")
 tablaCantidadDeAgua[14,] <- c("2020","MADRID, COMUNIDAD DE","216232")
 tablaCantidadDeAgua[15,] <- c("2020","MURCIA, REGIÓN DE","57000")
