@@ -203,4 +203,9 @@ tablaNobuena
 tablaPresupuestos <- tablaNobuena %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 tablaPresupuestos
+#----------------------------------------------------------------------------------------
+tablaEsperanzaDeVida
+tablaCantidadDeAgua
+tablaCalidadDeAgua
+tablaPresupuestos
 
