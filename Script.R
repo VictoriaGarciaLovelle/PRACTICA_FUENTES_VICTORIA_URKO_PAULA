@@ -130,6 +130,8 @@ tablaCantidadDeAgua[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
 tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
 tablaCantidadDeAgua
 
+colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
+tablaCantidadDeAgua
 ## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
