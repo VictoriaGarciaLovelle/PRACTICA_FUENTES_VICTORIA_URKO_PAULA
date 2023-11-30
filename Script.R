@@ -125,7 +125,7 @@ tablaCantidadDeAgua[14,2] <- c("MADRID, COMUNIDAD DE")
 tablaCantidadDeAgua[15,2] <- c("MURCIA, REGIÓN DE")
 tablaCantidadDeAgua[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
 tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
-
+tablaCantidadDeAgua
 
 ## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
