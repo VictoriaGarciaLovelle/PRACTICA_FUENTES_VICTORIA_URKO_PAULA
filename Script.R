@@ -197,7 +197,7 @@ tablaNobuena <- sum_ %>%
   )
 # Mostrar el resultado
 tablaNobuena
-colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Periodo", "Total")
+colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Anio", "Total")
 tablaNobuena
 
 tablaPresupuestos <- tablaNobuena %>%
