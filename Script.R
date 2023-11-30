@@ -185,10 +185,16 @@ sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total)
             drop_na()   %>% 
   filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")
 
-tablaPresupuestos <- sum_ %>%
+tablaNobuena <- sum_ %>%
   mutate(
     `Comunidades y Ciudades Autónomas` = gsub("^\\d+\\s*", "", `Comunidades y Ciudades Autónomas`)
   )
 # Mostrar el resultado
+tablaNobuena
+colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Periodo", "Total")
+tablaNobuena
+
+tablaPresupuestos <- tablaNobuena %>%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 tablaPresupuestos
 
