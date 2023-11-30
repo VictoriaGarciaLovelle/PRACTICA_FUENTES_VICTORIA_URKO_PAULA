@@ -121,10 +121,10 @@ tablaCantidadDeAgua
 
 tablaCantidadDeAgua[4,2] <- c("BALEARS, ILLES")
 tablaCantidadDeAgua[8,2] <- c("CASTILLA - LA MANCHA")
-tablaCantidadDeAgua[14,] <- c("2020","MADRID, COMUNIDAD DE","216232")
-tablaCantidadDeAgua[15,] <- c("2020","MURCIA, REGIÓN DE","57000")
-tablaCantidadDeAgua[16,] <- c("2020","NAVARRA, COMUNIDAD FORAL DE","22551")
-tablaCantidadDeAgua[18,] <- c("2020","RIOJA, LA","9448")
+tablaCantidadDeAgua[14,2] <- c("MADRID, COMUNIDAD DE")
+tablaCantidadDeAgua[15,2] <- c("MURCIA, REGIÓN DE")
+tablaCantidadDeAgua[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
+tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
 
 
 ## --------------------- Calidad del agua ----------------------------
