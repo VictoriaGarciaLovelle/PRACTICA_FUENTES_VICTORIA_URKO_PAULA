@@ -71,7 +71,6 @@ tablaEsperanzaDeVida
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
 cantidadAgua <- spread_all(archivoJsonCantidad)
-View(cantidadAgua)
 
 #Veo los tipos de atributos
 cantidadAgua%>%
@@ -119,6 +118,8 @@ tablaCantidadDeAgua
 tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 tablaCantidadDeAgua
+
+tablaCantidadDeAgua[4,] <- c("2020","BALEARS, ILLES","42033")
 
 
 ## --------------------- Calidad del agua ----------------------------
