@@ -131,7 +131,11 @@ tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
 tablaCantidadDeAgua
 
 colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
+
+tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+  mutate_at(vars(Anio), as.integer)
 tablaCantidadDeAgua
+str(tablaCantidadDeAgua)
 ## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
@@ -208,4 +212,17 @@ tablaEsperanzaDeVida
 tablaCantidadDeAgua
 tablaCalidadDeAgua
 tablaPresupuestos
+
+str(tablaEsperanzaDeVida)
+str(tablaCantidadDeAgua)
+#----------------------------------------------------------------------------------------
+EsperanzayCantidad<- tablaEsperanzaDeVida%>%
+                    left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
+                    group_by(ComunidadAutonoma)
+
+
+
+
+
+
 
