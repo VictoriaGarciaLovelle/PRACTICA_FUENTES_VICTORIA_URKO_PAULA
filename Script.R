@@ -219,7 +219,7 @@ str(tablaCantidadDeAgua)
 EsperanzayCantidad<- tablaEsperanzaDeVida%>%
                     left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
                     group_by(ComunidadAutonoma) 
-
+EsperanzayCantidad
 
 
 
