@@ -218,10 +218,16 @@ str(tablaCantidadDeAgua)
 #----------------------------------------------------------------------------------------
 EsperanzayCantidad<- tablaEsperanzaDeVida%>%
                     left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
-                    group_by(ComunidadAutonoma) 
+                    group_by(ComunidadAutonoma) %>%
+                    drop_na()
 EsperanzayCantidad
 
+library(ggplot2)
+library(tidyr)
+ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(aes(colour="blue"))
 
+ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
+  geom_bar(stat = "identity")
 
 
 
