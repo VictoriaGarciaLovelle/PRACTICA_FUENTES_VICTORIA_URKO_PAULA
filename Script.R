@@ -229,8 +229,8 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(
 ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
   geom_bar(stat = "identity")
 #---
-CantidadyPresupuesto<- tablaPresupuestos %>% 
-                    left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma")) %>% 
+CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
+                    left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
                     select(-GruposeImporte) %>%
                     drop_na()
 CantidadyPresupuesto
@@ -242,3 +242,4 @@ tablaFinal<- EsperanzayCantidad %>%
               drop_na()
                         
 tablaFinal
+
