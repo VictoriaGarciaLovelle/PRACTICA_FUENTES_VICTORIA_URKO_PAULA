@@ -224,9 +224,11 @@ EsperanzayCantidad
 
 library(ggplot2)
 library(tidyr)
+#-Parte que en principio da error
 #ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(aes(colour="blue"))
 #ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
  # geom_bar(stat = "identity")
+#-Posible solucion-
 ggplot(data = EsperanzayCantidad, aes(x = Cantidad, y = EsperanzaDeVida, fill = "blue")) +
   geom_bar(stat = "identity")
 
@@ -238,6 +240,7 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
                     select(-GruposeImporte) %>%
                     drop_na()
 CantidadyPresupuesto
+
 ggplot(data=CantidadyPresupuesto, aes(x=Cantidad, y=Total, fill="blue"))+
   geom_bar(stat="identity")
 ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=ComunidadAutonoma))+
@@ -252,6 +255,7 @@ tablaFinal<- EsperanzayCantidad %>%
               drop_na()
                         
 tablaFinal
+
 ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma))+
   geom_point()+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
