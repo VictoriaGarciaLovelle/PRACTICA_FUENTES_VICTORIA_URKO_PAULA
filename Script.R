@@ -240,9 +240,10 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
 CantidadyPresupuesto
 ggplot(data=CantidadyPresupuesto, aes(x=Cantidad, y=Total, fill="blue"))+
   geom_bar(stat="identity")
+ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=ComunidadAutonoma))+
+  geom_bar(stat= "identity")
 
-ggplot(data = CantidadyPresupuesto, aes(x = ComunidadAutonoma, y = Total, fill = ComunidadAutonoma)) +
-  geom_bar(stat = "identity")
+
 #---
 tablaFinal<- EsperanzayCantidad %>% 
               left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
