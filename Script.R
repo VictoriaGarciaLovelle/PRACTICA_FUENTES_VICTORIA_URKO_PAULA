@@ -224,9 +224,13 @@ EsperanzayCantidad
 
 library(ggplot2)
 library(tidyr)
-ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(aes(colour="blue"))
+#ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(aes(colour="blue"))
+#ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
+ # geom_bar(stat = "identity")
+ggplot(data = EsperanzayCantidad, aes(x = Cantidad, y = EsperanzaDeVida, fill = "blue")) +
+  geom_bar(stat = "identity")
 
-ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
+ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida, fill = ComunidadAutonoma)) +
   geom_bar(stat = "identity")
 #---
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
