@@ -243,3 +243,9 @@ tablaFinal<- EsperanzayCantidad %>%
                         
 tablaFinal
 
+#depende de las columnas que querais de calidad
+#tablaFinal<- EsperanzayCantidad %>% 
+#left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+# left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
+# select(AQUI PONER LAS COLUMNAS QUE NO SE QUIERAN VER) %>% 
+#  drop_na()
