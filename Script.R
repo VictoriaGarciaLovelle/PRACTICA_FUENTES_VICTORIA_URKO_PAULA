@@ -239,3 +239,8 @@ EsperanyCalidad<-tablaEsperanzaDeVida%>%
                  group_by(ComunidadAutonoma) %>%
                   drop_na()
 EsperanyCalidad
+
+EsperanzaCantidadPresupuesto<- EsperanzayCantidad %>% 
+                              left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>% 
+                              left
+EsperanzaCantidadPresupuesto
