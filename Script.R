@@ -238,8 +238,8 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
                     select(-GruposeImporte) %>%
                     drop_na()
 CantidadyPresupuesto
-ggplot(data = CantidadyPresupuesto, aes(x = Cantidad, y = Total, fill = "blue")) +
-  geom_bar(stat = "identity")
+ggplot(data=CantidadyPresupuesto, aes(x=Cantidad, y=Total, fill="blue"))+
+  geom_bar(stat="identity")
 
 ggplot(data = CantidadyPresupuesto, aes(x = ComunidadAutonoma, y = Total, fill = ComunidadAutonoma)) +
   geom_bar(stat = "identity")
