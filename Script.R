@@ -251,6 +251,12 @@ tablaFinal<- EsperanzayCantidad %>%
               drop_na()
                         
 tablaFinal
+ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma))+
+  geom_point()+
+  labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
+        x="Presupuesto",
+        y="Esperanza de vida")+
+  theme_minimal()
 
 #depende de las columnas que querais de calidad
 #tablaFinal<- EsperanzayCantidad %>% 
