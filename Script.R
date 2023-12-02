@@ -218,7 +218,7 @@ str(tablaCantidadDeAgua)
 #----------------------------------------------------------------------------------------
 EsperanzayCantidad<- tablaEsperanzaDeVida%>%
                     left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
-                    group_by(ComunidadAutonoma) %>%
+                   group_by(ComunidadAutonoma) %>%
                     drop_na()
 EsperanzayCantidad
 
@@ -229,6 +229,9 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(
 ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
   geom_bar(stat = "identity")
 
-
-
+CantidadPresupuesto<- tablaCantidadDeAgua %>% 
+                    left_join(x=., y=tablaPresupuestos, by=c("ComunidadAutonoma","Anio")) %>% 
+                   #select(-GruposeImporte) %>% 
+                    drop_na()
+CantidadPresupuesto
 
