@@ -231,12 +231,11 @@ ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutono
 
 CantidadPresupuesto<- tablaPresupuestos %>% 
                     left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma")) %>% 
-                    #select(-GruposeImporte) %>% 
                     drop_na()
 CantidadPresupuesto
 
 EsperanyCalidad<-tablaEsperanzaDeVida%>%
-  left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
-  group_by(ComunidadAutonoma) %>%
-  drop_na()
+                left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
+                 group_by(ComunidadAutonoma) %>%
+                  drop_na()
 EsperanyCalidad
