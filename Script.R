@@ -236,11 +236,13 @@ CantidadPresupuesto
 
 EsperanyCalidad<-tablaEsperanzaDeVida%>%
                 left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
-                 group_by(ComunidadAutonoma) %>%
+                group_by(ComunidadAutonoma) %>%
                   drop_na()
 EsperanyCalidad
 
 EsperanzaCantidadPresupuesto<- EsperanzayCantidad %>% 
-                              left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>% 
-                              left
+                              left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+                              select(-GruposeImporte) %>% 
+                            left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
+                            group_by("ComunidadAutonoma")
 EsperanzaCantidadPresupuesto
