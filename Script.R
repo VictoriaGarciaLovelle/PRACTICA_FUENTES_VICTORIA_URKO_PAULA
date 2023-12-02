@@ -224,7 +224,7 @@ EsperanzayCantidad
 
 library(ggplot2)
 library(tidyr)
-#-Parte que en principio da error
+#-Parte que en principio da error-
 #ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(aes(colour="blue"))
 #ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
  # geom_bar(stat = "identity")
