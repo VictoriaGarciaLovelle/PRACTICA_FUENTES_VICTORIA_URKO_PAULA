@@ -234,6 +234,7 @@ ggplot(data = EsperanzayCantidad, aes(x = Cantidad, y = EsperanzaDeVida, fill = 
 
 ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida, fill = ComunidadAutonoma)) +
   geom_bar(stat = "identity")
+
 #---
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
                     left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
@@ -276,3 +277,9 @@ ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma)
 # left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
 # select(AQUI PONER LAS COLUMNAS QUE NO SE QUIERAN VER) %>% 
 #  drop_na()
+
+#------ tablas con joins ----
+EsperanzayCantidad
+EsperanzayCalidad
+CantidadyPresupuesto
+tablaFinal
