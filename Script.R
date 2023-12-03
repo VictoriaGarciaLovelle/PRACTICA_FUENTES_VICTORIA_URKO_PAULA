@@ -229,8 +229,6 @@ library(tidyr)
 #ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
  # geom_bar(stat = "identity")
 #-Posible solucion-
-ggplot(data = EsperanzayCantidad, aes(x = Cantidad, y = EsperanzaDeVida, fill = "blue")) +
-  geom_bar(stat = "identity")
 
 ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida, fill = ComunidadAutonoma)) +
   geom_bar(stat = "identity")
