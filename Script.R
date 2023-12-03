@@ -249,7 +249,7 @@ ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=Comun
 
 #---
 tablaFinal<- EsperanzayCantidad %>% 
-              left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+              left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
               left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
               select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
               drop_na()
