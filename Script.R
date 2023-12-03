@@ -248,6 +248,13 @@ ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=Comun
 
 
 #---
+EsperanzayCalidad<- tablaEsperanzaDeVida%>%
+  left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+EsperanzayCalidad
+
+#-----
 tablaFinal<- EsperanzayCantidad %>% 
               left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
               left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
