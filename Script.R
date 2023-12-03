@@ -251,7 +251,7 @@ EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   drop_na()
 EsperanzayCalidad
 
-
+# AQUÍ TENEMOS QUE AGRUPAR TODAS LAS COLUMNAS DE AGUA YA QUE QUIERO PONER EN EL EJE X LA ESPERANZA DE VIDA Y EN EL EJE Y LA CALIDAD DEL AGUA 
 ggplot(data=EsperanzayCalidad, aes(x= EsperanzaDeVida, y= factor(), fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
 #-----
