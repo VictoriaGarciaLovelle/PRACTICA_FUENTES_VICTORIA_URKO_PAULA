@@ -251,6 +251,9 @@ EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   drop_na()
 EsperanzayCalidad
 
+
+ggplot(data=EsperanzayCalidad, aes(x= EsperanzaDeVida, y= factor(), fill=ComunidadAutonoma))+
+  geom_bar(stat= "identity")
 #-----
 tablaFinal<- EsperanzayCantidad %>% 
               left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
