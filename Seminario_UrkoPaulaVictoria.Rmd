@@ -69,5 +69,14 @@ tablaEsperanzaDeVida
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
 cantidadAgua <- spread_all(archivoJsonCantidad)
-
 ```
+
+
+
+
+
+
+
+
+
+
