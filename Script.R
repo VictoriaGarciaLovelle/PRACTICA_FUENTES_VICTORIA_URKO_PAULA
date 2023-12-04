@@ -257,3 +257,10 @@ ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida.x, fill=CalidadAgua)
        x="Cantidad",
        y="EsperanzaDeVida.x")+
   theme_minimal()
+
+
+# EJECUCIÓN DE GRÁFICOS ----
+grafEsperanzaCantidad
+grafCantidadPresupuesto
+grafEsperanzaCalidad
+grafTablaFinal
