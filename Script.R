@@ -26,7 +26,6 @@ arrayData<-esperanzaVida %>%
   gather_array %>% 
   spread_all %>% 
   select(Nombre, Anyo, Valor) 
-arrayData
 
 #Selecciono las columnas que me interesan
 #seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
