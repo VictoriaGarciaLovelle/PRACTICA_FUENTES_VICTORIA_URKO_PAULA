@@ -33,7 +33,6 @@ arrayData<-esperanzaVida %>%
 # Utilizar strsplit para dividir la cadena de texto
 #separador <- "\\."
 partes <- strsplit(arrayData$Nombre, "\\.")
-partes
 
 comunidadesAutonomas<-c()
 for (i in partes){
