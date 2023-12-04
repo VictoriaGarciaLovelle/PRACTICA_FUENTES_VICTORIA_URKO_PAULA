@@ -201,9 +201,6 @@ tablaNobuena <- sum_ %>%
   mutate(
     ComunidadAutonoma = gsub("^\\d+\\s*", "", ComunidadAutonoma)
   )
-# Mostrar el resultado
-tablaNobuena
-
 
 tablaPresupuestos <- tablaNobuena %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
