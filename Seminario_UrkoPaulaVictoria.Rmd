@@ -30,6 +30,14 @@ tibble1<-esperanzaVida %>%
   json_types %>% 
   count(name, type)
 
+#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
+arrayData<-esperanzaVida %>%
+  enter_object(Data) %>% 
+  gather_array %>% 
+  spread_all %>% 
+  select(-document.id, -array.index) 
+arrayData
+
 ```
 
 ## R Markdown
