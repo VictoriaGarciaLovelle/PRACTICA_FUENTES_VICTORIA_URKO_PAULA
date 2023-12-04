@@ -7,7 +7,8 @@ library(rjson)
 library(tidyverse)
 library(tidyjson)
 library(stringr)
-library(purrr) #Función lmap aplica una función a cada lista
+library(purrr)
+library(tidyr)
 
 ##----------------- Esperanza de vida -------------------
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
@@ -181,13 +182,14 @@ tablaCalidadDeAguaFinal
 tablaPresupuestosFinal
 
 #----------------------------Joins---------------------------------------------------
-EsperanzayCantidad<- tablaEsperanzaDeVida%>%
-  left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
+# ESPERANZA DE VIDA - CANTIDAD
+EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCantidadDeAguaFinal, by=c("Anio","ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
 
-#--grafico Esperanza y cantidad---
-library(tidyr)
+# ---------------------------Gráficos------------------------------------------------
+# Esperanza y cantidad---
 ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
   geom_point(aes(color=ComunidadAutonoma))+
   geom_smooth()+
