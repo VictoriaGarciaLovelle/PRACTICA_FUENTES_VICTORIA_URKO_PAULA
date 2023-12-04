@@ -224,7 +224,7 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
   left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
   select(-GruposDeUsuarioEImporte) %>%
-  arrange(desc(Cantidad)) %>%
+  arrange(desc(Presupuesto)) %>%
   drop_na()
 
 CantidadyPresupuesto
@@ -232,19 +232,21 @@ CantidadyPresupuesto
 library(ggrepel)
 ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto , y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity", width = 5000) +
-  geom_text(aes(label = ComunidadAutonoma))
+  geom_text_repel(aes(label = ComunidadAutonoma))
 
-CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Cantidad))
+CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Presupuesto))
 
 CantidadyPresupuesto1
 
 #.--Grafico Cantidad y presupuesto--
 
-ggplot(data=CantidadyPresupuesto, aes(x= Total, y= Cantidad, fill=ComunidadAutonoma))+
+ggplot(data=CantidadyPresupuesto1, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")+
   labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
        x="Presupuestos",
-       y="Cantidad de agua")
+       y="Cantidad de agua")+
+  geom_bar(stat= "identity", width = 5000) +
+  geom_text_repel(aes(label = ComunidadAutonoma))
 #--
 EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
