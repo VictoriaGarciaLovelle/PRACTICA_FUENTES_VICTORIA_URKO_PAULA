@@ -199,7 +199,7 @@ sum_ <- select(.data = summodificado, ComunidadAutonoma: Presupuesto) %>%
 
 tablaNobuena <- sum_ %>%
   mutate(
-    'Comunidades y Ciudades Autónomas' = gsub("^\\d+\\s*", "", 'Comunidades y Ciudades Autónomas')
+    ComunidadAutonoma = gsub("^\\d+\\s*", "", ComunidadAutonoma)
   )
 # Mostrar el resultado
 tablaNobuena
