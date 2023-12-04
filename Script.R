@@ -8,7 +8,6 @@ library(tidyverse)
 library(tidyjson)
 library(stringr)
 library(purrr) #Función lmap aplica una función a cada lista
-library(dplyr)
 
 ##----------------- Esperanza de vida -------------------
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
