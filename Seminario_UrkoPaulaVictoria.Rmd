@@ -7,12 +7,10 @@ output: html_document
 
 ```{r CargaLibrerías}
 library(pdftools)
-library(glue)
-library(rjson)
 library(tidyverse)
 library(tidyjson)
-library(stringr)
-library(purrr) 
+library(tidyr)
+library(rjson) 
 ```
 
 ## Tabla de Esperanza de Vida:
