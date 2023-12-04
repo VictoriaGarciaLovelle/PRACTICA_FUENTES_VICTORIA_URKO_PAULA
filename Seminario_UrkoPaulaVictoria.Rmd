@@ -10,70 +10,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(pdftools)
 library(glue)
-library(readr)
 library(rjson)
 library(tidyverse)
 library(tidyjson)
-library(dplyr)
 library(stringr)
 library(purrr) 
 ```
 
 ## Tabla de Esperanza de Vida:
 ```{r, echo=TRUE}
-archivoJson <- fromJSON(file = "EsperanzaVida.json")
+knitr::opts_chunk$set(echo = TRUE)
 
-esperanzaVida <- spread_all(archivoJson)
-
-# Para cada atributo me dice de qué tipo se trata
-tibble1<-esperanzaVida %>% 
-  gather_object %>%  
-  json_types %>% 
-  count(name, type)
-
-#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
-arrayData<-esperanzaVida %>%
-  enter_object(Data) %>% 
-  gather_array %>% 
-  spread_all %>% 
-  select(-document.id, -array.index) 
-arrayData
-
-#Selecciono las columnas que me interesan
-seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
-
-# Utilizar strsplit para dividir la cadena de texto
-separador <- "\\."
-partes <- strsplit(seleccion$Nombre, separador)
-
-comunidadesAutonomas<-c()
-for (i in partes){
-  comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
-}
-comunidadesAutonomas
-
-#Cambio la columna nombre por la de las comunidades autónomas
-seleccion$Nombre<-comunidadesAutonomas
-
-#Para eliminar una columna
-tablaComunidadesAñoValor<- as_tibble(seleccion)
-attr(tablaComunidadesAñoValor, "JSON") <- NULL
-tablaComunidadesAñoValor
-
-#Agrupo por años (varios años de 2020 para cada c.a) y calculo la media de la esperanza de vida
-tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
-  filter(Anyo==2020)%>%
-  group_by(Anyo, Nombre) %>%
-  summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
-  rename(Año=Anyo,ComunidadAutonoma=Nombre)
-tablaEsperanzaDeVida
-
-tablaEsperanzaDeVida <- tablaEsperanzaDeVida %>%
-  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
-tablaEsperanzaDeVida
-
-colnames(tablaEsperanzaDeVida) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
-tablaEsperanzaDeVida
 
 ```
 
