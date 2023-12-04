@@ -38,7 +38,6 @@ comunidadesAutonomas<-c()
 for (i in partes){
   comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
 }
-comunidadesAutonomas
 
 #Cambio la columna nombre por la de las comunidades autónomas
 arrayData$Nombre<-comunidadesAutonomas
