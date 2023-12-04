@@ -230,7 +230,7 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
 CantidadyPresupuesto
 
 ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto , y= Cantidad, fill=ComunidadAutonoma))+
-  geom_bar(stat= "identity")
+  geom_bar(stat= "identity", width = 0.8)
 
 CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Cantidad))
 
