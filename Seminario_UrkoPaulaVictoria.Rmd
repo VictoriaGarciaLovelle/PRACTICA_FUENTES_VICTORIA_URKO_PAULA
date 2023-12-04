@@ -99,6 +99,11 @@ comunidadesAutonomasCantidad
 #Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
 
+#Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
+tabla <- arrayDataCantidad %>%
+  filter(!(Nombre == "España")) %>%
+  select(Nombre, NombrePeriodo, Valor)
+
 ```
 
 
