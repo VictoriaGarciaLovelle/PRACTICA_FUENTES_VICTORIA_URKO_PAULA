@@ -239,17 +239,15 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
                     select(-GruposeImporte) %>%
                     arrange(desc(Cantidad)) %>%
                     drop_na()
-<<<<<<< HEAD
 
 CantidadyPresupuesto
 
 ggplot(data=CantidadyPresupuesto, aes(x= Total , y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
-=======
+
 CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Cantidad))
 
 CantidadyPresupuesto1
->>>>>>> 3b610c3ab2f7a4a4149c4ad2f44f04b2d704deb0
 
 #.--Grafico Cantidad y presupuesto--
 
@@ -317,3 +315,5 @@ CantidadyPresupuesto
 tablaFinal
 
 tablaFinal
+
+#   hOLA
