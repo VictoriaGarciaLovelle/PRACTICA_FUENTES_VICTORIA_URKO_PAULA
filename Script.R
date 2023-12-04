@@ -56,7 +56,6 @@ tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
   group_by(Anyo, Nombre) %>%
   summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
   rename(Año=Anyo,ComunidadAutonoma=Nombre)
-tablaEsperanzaDeVida
 
 tablaEsperanzaDeVida <- tablaEsperanzaDeVida %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
