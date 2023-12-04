@@ -81,6 +81,7 @@ arrayDataCantidad<-cantidadAgua%>%
 #Divido la cadena de texto nombre y solo cojo las comunidades autónomas
 cadenas <- strsplit(arrayDataCantidad$Nombre, "\\,")
 
+comunidadesAutonomasCantidad<-c()
 for (i in cadenas){
   comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
 }
