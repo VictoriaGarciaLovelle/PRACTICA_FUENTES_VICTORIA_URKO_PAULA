@@ -358,6 +358,112 @@ Garcia Lovelle</h4>
 </div>
 
 
+<pre class="r"><code>library(pdftools)</code></pre>
+<pre><code>## Warning: package &#39;pdftools&#39; was built under R version 4.3.2</code></pre>
+<pre><code>## Using poppler version 23.08.0</code></pre>
+<pre class="r"><code>library(glue)
+library(rjson)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.3     ✔ readr     2.1.4
+## ✔ forcats   1.0.0     ✔ stringr   1.5.0
+## ✔ ggplot2   3.4.3     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+## ✔ purrr     1.0.2</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(tidyjson)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;tidyjson&#39;
+## 
+## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter</code></pre>
+<pre class="r"><code>library(stringr)
+library(purrr) </code></pre>
+<div id="tabla-de-esperanza-de-vida" class="section level2">
+<h2>Tabla de Esperanza de Vida:</h2>
+<pre class="r"><code>archivoJson &lt;- fromJSON(file = &quot;EsperanzaVida.json&quot;)
+
+esperanzaVida &lt;- spread_all(archivoJson)
+
+# Para cada atributo me dice de qué tipo se trata
+tibble1&lt;-esperanzaVida %&gt;% 
+  gather_object %&gt;%  
+  json_types %&gt;% 
+  count(name, type)</code></pre>
+<pre class="r"><code>#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
+arrayData&lt;-esperanzaVida %&gt;%
+  enter_object(Data) %&gt;% 
+  gather_array %&gt;% 
+  spread_all %&gt;% 
+  select(Nombre, Anyo, Valor) 
+arrayData</code></pre>
+<pre><code>## # A tbl_json: 23,940 x 4 tibble with a &quot;JSON&quot; attribute
+##    ..JSON                  Nombre                                     Anyo Valor
+##    &lt;chr&gt;                   &lt;chr&gt;                                     &lt;dbl&gt; &lt;dbl&gt;
+##  1 &quot;{\&quot;Fecha\&quot;:\&quot;2021-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2021  57.0
+##  2 &quot;{\&quot;Fecha\&quot;:\&quot;2020-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2020  57.0
+##  3 &quot;{\&quot;Fecha\&quot;:\&quot;2019-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2019  57.7
+##  4 &quot;{\&quot;Fecha\&quot;:\&quot;2018-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2018  57.2
+##  5 &quot;{\&quot;Fecha\&quot;:\&quot;2017-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2017  57.3
+##  6 &quot;{\&quot;Fecha\&quot;:\&quot;2016-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2016  57.3
+##  7 &quot;{\&quot;Fecha\&quot;:\&quot;2021-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2021  55.2
+##  8 &quot;{\&quot;Fecha\&quot;:\&quot;2020-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2020  55.5
+##  9 &quot;{\&quot;Fecha\&quot;:\&quot;2019-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2019  56.5
+## 10 &quot;{\&quot;Fecha\&quot;:\&quot;2018-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2018  55.9
+## # ℹ 23,930 more rows</code></pre>
+<pre class="r"><code>separador &lt;- &quot;\\.&quot;
+partes &lt;- strsplit(arrayData$Nombre, separador)
+
+comunidadesAutonomas&lt;-c()
+for (i in partes){
+  comunidadesAutonomas&lt;-c(comunidadesAutonomas,i[1])
+}
+
+arrayData$Nombre&lt;-comunidadesAutonomas
+
+tablaComunidadesAñoValor&lt;- as_tibble(arrayData)
+attr(tablaComunidadesAñoValor, &quot;JSON&quot;) &lt;- NULL
+
+tablaEsperanzaDeVida &lt;- tablaComunidadesAñoValor %&gt;%
+  filter(Anyo==2020)%&gt;%
+  group_by(Anyo, Nombre) %&gt;%
+  summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%&gt;%
+  rename(Año=Anyo,ComunidadAutonoma=Nombre)</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;Anyo&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre class="r"><code>tablaEsperanzaDeVida &lt;- tablaEsperanzaDeVida %&gt;%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
+
+colnames(tablaEsperanzaDeVida) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;EsperanzaDeVida&quot;)
+tablaEsperanzaDeVida</code></pre>
+<pre><code>## # A tibble: 19 × 3
+## # Groups:   Anio [1]
+##     Anio ComunidadAutonoma           EsperanzaDeVida
+##    &lt;dbl&gt; &lt;chr&gt;                                 &lt;dbl&gt;
+##  1  2020 ANDALUCÍA                              28.0
+##  2  2020 ARAGÓN                                 28.4
+##  3  2020 ASTURIAS, PRINCIPADO DE                28.1
+##  4  2020 BALEARS, ILLES                         29.3
+##  5  2020 CANARIAS                               29.1
+##  6  2020 CANTABRIA                              28.9
+##  7  2020 CASTILLA - LA MANCHA                   27.5
+##  8  2020 CASTILLA Y LEÓN                        28.5
+##  9  2020 CATALUÑA                               28.3
+## 10  2020 CEUTA                                  26.7
+## 11  2020 COMUNITAT VALENCIANA                   28.5
+## 12  2020 EXTREMADURA                            27.9
+## 13  2020 GALICIA                                29.3
+## 14  2020 MADRID, COMUNIDAD DE                   28.0
+## 15  2020 MELILLA                                26.3
+## 16  2020 MURCIA, REGIÓN DE                      28.4
+## 17  2020 NAVARRA, COMUNIDAD FORAL DE            29.0
+## 18  2020 PAÍS VASCO                             28.8
+## 19  2020 RIOJA, LA                              28.6</code></pre>
+</div>
 <div id="r-markdown" class="section level2">
 <h2>R Markdown</h2>
 <p>This is an R Markdown document. Markdown is a simple formatting
