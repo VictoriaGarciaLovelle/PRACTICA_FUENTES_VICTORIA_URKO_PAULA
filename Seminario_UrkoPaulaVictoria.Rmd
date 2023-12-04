@@ -5,6 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+## Carga de librerías:
 ```{r CargaLibrerías}
 library(pdftools)
 library(tidyverse)
