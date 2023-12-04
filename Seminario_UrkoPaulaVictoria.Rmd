@@ -48,6 +48,9 @@ for (i in partes){
 
 seleccion$Nombre<-comunidadesAutonomas
 
+tablaComunidadesAñoValor<- as_tibble(seleccion)
+attr(tablaComunidadesAñoValor, "JSON") <- NULL
+tablaComunidadesAñoValor
 
 
 
