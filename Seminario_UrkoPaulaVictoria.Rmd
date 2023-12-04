@@ -24,6 +24,12 @@ archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(archivoJson)
 
+# Para cada atributo me dice de qué tipo se trata
+tibble1<-esperanzaVida %>% 
+  gather_object %>%  
+  json_types %>% 
+  count(name, type)
+
 ```
 
 ## R Markdown
