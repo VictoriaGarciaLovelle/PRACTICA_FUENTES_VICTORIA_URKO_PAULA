@@ -35,8 +35,10 @@ arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
   spread_all %>% 
-  select(-document.id, -array.index) 
+  select(Nombre, Anyo, Valor) 
 arrayData
+
+
 
 ```
 
