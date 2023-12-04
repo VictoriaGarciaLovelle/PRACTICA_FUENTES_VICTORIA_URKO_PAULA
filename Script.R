@@ -256,6 +256,7 @@ ggplot(data=CantidadyPresupuesto, aes(x= Total, y= Cantidad, fill=ComunidadAuton
   labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
        x="Presupuestos",
        y="Cantidad de agua")
+  theme_minimal()
 #--
 EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
@@ -270,9 +271,10 @@ EsperanzayCalidad1
 graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
   facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
-labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
+  labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
      x="Calidad",
-     y="Esperanza de vida")
+     y="Esperanza de vida")+
+  theme_minimal()
 graficoEsperanzaCalidad
 
 #-----
