@@ -173,7 +173,7 @@ tablaPresupuestos <- summodificado%>%
   select (.data = ., Anio, ComunidadAutonoma:Presupuesto) %>%
   drop_na()
 
-
+tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 ```
 
 
