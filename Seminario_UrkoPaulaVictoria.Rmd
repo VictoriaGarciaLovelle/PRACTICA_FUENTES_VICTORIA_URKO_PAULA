@@ -78,6 +78,13 @@ cantidadAgua%>%
   json_types%>%
   count(name,type)
 
+#Entro en el array Data
+arrayDataCantidad<-cantidadAgua%>%
+  enter_object(Data)%>%
+  gather_array%>%
+  spread_all%>%
+  select(-document.id,-array.index)
+
 ```
 
 
