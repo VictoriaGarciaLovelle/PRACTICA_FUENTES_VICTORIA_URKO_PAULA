@@ -96,6 +96,9 @@ for (i in cadenas){
 }
 comunidadesAutonomasCantidad
 
+#Cambio la columna nombre por la columna de las comunidades autónomas
+arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
+
 ```
 
 
