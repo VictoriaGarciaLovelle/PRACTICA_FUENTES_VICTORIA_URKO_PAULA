@@ -1301,7 +1301,53 @@ arrayDataCantidad$Nombre&lt;-comunidadesAutonomasCantidad
 #Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
 tabla &lt;- arrayDataCantidad %&gt;%
   filter(!(Nombre == &quot;España&quot;)) %&gt;%
-  select(Nombre, NombrePeriodo, Valor)</code></pre>
+  select(Nombre, NombrePeriodo, Valor)
+
+#Agrupo por comunidades autónomas y años
+tablaCantidadDeAgua &lt;- tabla %&gt;%
+  filter(NombrePeriodo  ==2020)%&gt;%
+  group_by(NombrePeriodo  , Nombre) %&gt;%
+  summarize(Cantidad = mean(Valor, na.rm = TRUE))%&gt;%
+  rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;NombrePeriodo&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre class="r"><code>tablaCantidadDeAgua &lt;- tablaCantidadDeAgua %&gt;%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
+
+tablaCantidadDeAgua[4,2] &lt;- c(&quot;BALEARS, ILLES&quot;)
+tablaCantidadDeAgua[8,2] &lt;- c(&quot;CASTILLA - LA MANCHA&quot;)
+tablaCantidadDeAgua[14,2] &lt;- c(&quot;MADRID, COMUNIDAD DE&quot;)
+tablaCantidadDeAgua[15,2] &lt;- c(&quot;MURCIA, REGIÓN DE&quot;)
+tablaCantidadDeAgua[16,2] &lt;- c(&quot;NAVARRA, COMUNIDAD FORAL DE&quot;)
+tablaCantidadDeAgua[18,2] &lt;- c(&quot;RIOJA, LA&quot;)
+
+colnames(tablaCantidadDeAgua) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;Cantidad&quot;)
+
+tablaCantidadDeAgua &lt;- tablaCantidadDeAgua %&gt;%
+  mutate_at(vars(Anio), as.integer)
+tablaCantidadDeAgua</code></pre>
+<pre><code>## # A tibble: 18 × 3
+## # Groups:   Anio [1]
+##     Anio ComunidadAutonoma           Cantidad
+##    &lt;int&gt; &lt;chr&gt;                          &lt;dbl&gt;
+##  1  2020 ANDALUCÍA                    262867 
+##  2  2020 ARAGÓN                        38689.
+##  3  2020 ASTURIAS                      28342.
+##  4  2020 BALEARS, ILLES                42033.
+##  5  2020 CANARIAS                      79923.
+##  6  2020 CANTABRIA                     20367.
+##  7  2020 CASTILLA Y LEÓN               73272.
+##  8  2020 CASTILLA - LA MANCHA          60920.
+##  9  2020 CATALUÑA                     239767.
+## 10  2020 CEUTA Y MELILLA                5507.
+## 11  2020 COMUNITAT VALENCIANA         188854.
+## 12  2020 EXTREMADURA                   28064.
+## 13  2020 GALICIA                       71149 
+## 14  2020 MADRID, COMUNIDAD DE         216232.
+## 15  2020 MURCIA, REGIÓN DE             57000.
+## 16  2020 NAVARRA, COMUNIDAD FORAL DE   22551.
+## 17  2020 PAÍS VASCO                    52635.
+## 18  2020 RIOJA, LA                      9448.</code></pre>
 </div>
 
 

@@ -16,6 +16,7 @@ library(purrr)
 ```
 
 ## Tabla de Esperanza de Vida:
+
 ```{r cargaDeDatosJson}
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
@@ -27,7 +28,6 @@ tibble1<-esperanzaVida %>%
   json_types %>% 
   count(name, type)
 ```
-
 
 ```{r ObtencionTablaEsperanza}
 #Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
@@ -65,13 +65,14 @@ tablaEsperanzaDeVida
 ```
 
 ## Tabla de Cantidad de Agua:
+
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
 cantidadAgua <- spread_all(archivoJsonCantidad)
 ```
 
-``` {r tablaCantidadAgua}
+```{r tablaCantidadAgua}
 #Veo los tipos de atributos
 cantidadAgua%>%
   gather_object%>%
@@ -94,7 +95,7 @@ comunidadesAutonomasCantidad<-c()
 for (i in cadenas){
   comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
 }
-comunidadesAutonomasCantidad
+comunidadesAutonomasCantidad[1:5,]
 
 #Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
@@ -128,11 +129,3 @@ tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
 tablaCantidadDeAgua
 
 ```
-
-
-
-
-
-
-
-
