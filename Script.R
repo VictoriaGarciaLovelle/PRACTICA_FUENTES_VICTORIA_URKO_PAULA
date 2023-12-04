@@ -3,6 +3,7 @@
 library(pdftools)
 library(tidyverse)
 library(tidyr)
+library(rjson)
 
 ##----------------- Esperanza de vida -------------------
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
