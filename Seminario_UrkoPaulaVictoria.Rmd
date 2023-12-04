@@ -38,6 +38,9 @@ arrayData<-esperanzaVida %>%
   select(Nombre, Anyo, Valor) 
 arrayData
 
+separador <- "\\."
+partes <- strsplit(seleccion$Nombre, separador)
+
 
 
 ```
