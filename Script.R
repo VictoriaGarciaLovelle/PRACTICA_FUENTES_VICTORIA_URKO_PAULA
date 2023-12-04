@@ -194,6 +194,14 @@ CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>%
   arrange(desc(Presupuesto)) %>%
   drop_na()
 
+# ESPERANZA Y CALIDAD
+EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+
+EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+
 # ---------------------------Gráficos------------------------------------------------
 # Esperanza y cantidad
 ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
@@ -205,7 +213,6 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
   theme_minimal()
 
 # Cantidad y presupuesto
-
 ggplot(data=CantidadyPresupuesto1, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")+
   labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
@@ -213,15 +220,6 @@ ggplot(data=CantidadyPresupuesto1, aes(x= Presupuesto, y= Cantidad, fill=Comunid
        y="Cantidad de agua")+
   geom_bar(stat= "identity", width = 5000)+
   theme_minimal()
-
-#--
-EsperanzayCalidad<- tablaEsperanzaDeVida%>%
-  left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
-  group_by(ComunidadAutonoma) %>%
-  drop_na()
-
-EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
-EsperanzayCalidadFinal
 
 # como la variable drv tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
 graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
