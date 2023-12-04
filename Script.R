@@ -90,7 +90,6 @@ for (i in cadenas){
 
 #Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
-arrayDataCantidad
 
 #Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
 tabla <- arrayDataCantidad %>%
