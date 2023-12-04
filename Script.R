@@ -235,12 +235,12 @@ ggplot(data=CantidadyPresupuesto1, aes(x= Presupuesto, y= Cantidad, fill=Comunid
        x="Presupuestos",
        y="Cantidad de agua")+
   geom_bar(stat= "identity", width = 5000)
+
 #--
 EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
-EsperanzayCalidad
 
 EsperanzayCalidad1 <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
 EsperanzayCalidad1
