@@ -45,7 +45,6 @@ arrayData$Nombre<-comunidadesAutonomas
 #Para eliminar una columna
 tablaComunidadesAñoValor<- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
-tablaComunidadesAñoValor
 
 # Cuento cuantas hay (para ver si coincide con las que hay en el excel)
 #conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
