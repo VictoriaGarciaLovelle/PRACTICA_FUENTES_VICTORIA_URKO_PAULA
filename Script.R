@@ -152,7 +152,8 @@ colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "Zonas
 
 colNumericas <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
-  mutate_at(vars(colNumericas), as.integer)
+  mutate_at(vars(colNumericas), as.integer) %>%
+  drop_na()
 
 tablaCalidadDeAgua
 ## -------------------- Presupuestos del agua ----------------------------
