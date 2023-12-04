@@ -102,11 +102,9 @@ tablaCantidadDeAgua <- tabla %>%
   group_by(NombrePeriodo  , Nombre) %>%
   summarize(Cantidad = mean(Valor, na.rm = TRUE))%>%
   rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
-tablaCantidadDeAgua
 
-tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
-tablaCantidadDeAgua
 
 tablaCantidadDeAgua[4,2] <- c("BALEARS, ILLES")
 tablaCantidadDeAgua[8,2] <- c("CASTILLA - LA MANCHA")
