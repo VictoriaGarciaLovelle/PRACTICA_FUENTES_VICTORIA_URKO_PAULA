@@ -211,8 +211,6 @@ tablaCantidadDeAgua
 tablaCalidadDeAgua
 tablaPresupuestos
 
-str(tablaEsperanzaDeVida)
-str(tablaCantidadDeAgua)
 #----------------------------Joins---------------------------------------------------
 EsperanzayCantidad<- tablaEsperanzaDeVida%>%
   left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
