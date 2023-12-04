@@ -123,6 +123,10 @@ tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
 
 colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
 
+tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+  mutate_at(vars(Anio), as.integer)
+tablaCantidadDeAgua
+
 ```
 
 
