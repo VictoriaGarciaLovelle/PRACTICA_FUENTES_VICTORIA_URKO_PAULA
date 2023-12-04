@@ -199,6 +199,8 @@ tablaPresupuestos <- summodificado%>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma)) %>%
   select (.data = ., Anio, ComunidadAutonoma:Presupuesto) %>%
   drop_na()
+
+tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos
 #----------------------------------------------------------------------------------------
 tablaEsperanzaDeVida
