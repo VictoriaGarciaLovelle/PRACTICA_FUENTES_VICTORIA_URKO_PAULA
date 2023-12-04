@@ -106,13 +106,12 @@ tablaCantidadDeAgua <- tabla %>%
 tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
-tablaCantidadDeAgua[4,2] <- c("BALEARS, ILLES")
-tablaCantidadDeAgua[8,2] <- c("CASTILLA - LA MANCHA")
-tablaCantidadDeAgua[14,2] <- c("MADRID, COMUNIDAD DE")
-tablaCantidadDeAgua[15,2] <- c("MURCIA, REGIÓN DE")
-tablaCantidadDeAgua[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
-tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
-tablaCantidadDeAgua
+tablaCantidadDeAguaFinal[4,2] <- c("BALEARS, ILLES")
+tablaCantidadDeAguaFinal[8,2] <- c("CASTILLA - LA MANCHA")
+tablaCantidadDeAguaFinal[14,2] <- c("MADRID, COMUNIDAD DE")
+tablaCantidadDeAguaFinal[15,2] <- c("MURCIA, REGIÓN DE")
+tablaCantidadDeAguaFinal[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
+tablaCantidadDeAguaFinal[18,2] <- c("RIOJA, LA")
 
 colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
 
