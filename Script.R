@@ -125,14 +125,9 @@ ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 
 # Especificar la página del PDF que quieres procesar
 pagina <- ruta_pdf[17]
-pagina
 
 lineas <- strsplit(pagina, "\n")[[1]]
-lineas
 linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
-
-# Imprimir la línea deseada
-linea_deseada
 
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
