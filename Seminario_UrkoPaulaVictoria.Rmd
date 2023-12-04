@@ -41,6 +41,11 @@ arrayData
 separador <- "\\."
 partes <- strsplit(seleccion$Nombre, separador)
 
+comunidadesAutonomas<-c()
+for (i in partes){
+  comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
+}
+
 
 
 ```
