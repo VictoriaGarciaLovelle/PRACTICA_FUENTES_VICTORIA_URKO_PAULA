@@ -71,7 +71,14 @@ archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 cantidadAgua <- spread_all(archivoJsonCantidad)
 ```
 
+``` {r tablaCantidadAgua}
+#Veo los tipos de atributos
+cantidadAgua%>%
+  gather_object%>%
+  json_types%>%
+  count(name,type)
 
+```
 
 
 
