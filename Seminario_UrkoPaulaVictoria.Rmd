@@ -46,6 +46,9 @@ for (i in partes){
   comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
 }
 
+seleccion$Nombre<-comunidadesAutonomas
+
+
 
 
 ```
