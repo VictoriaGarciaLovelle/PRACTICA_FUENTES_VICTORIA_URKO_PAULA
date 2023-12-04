@@ -81,8 +81,6 @@ arrayDataCantidad<-cantidadAgua%>%
   spread_all%>%
   select(-document.id,-array.index)
 
-arrayDataCantidad
-
 #Divido la cadena de texto nombre y solo cojo las comunidades autónomas
 separador<- "\\,"
 
