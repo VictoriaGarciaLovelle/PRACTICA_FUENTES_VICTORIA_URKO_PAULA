@@ -10,6 +10,7 @@ library(dplyr)
 library(stringr)
 library(purrr) #Función lmap aplica una función a cada lista
 library(dplyr)
+library(ggrepel)
 
 ##----------------- Esperanza de vida -------------------
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
@@ -226,17 +227,6 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
   select(-GruposDeUsuarioEImporte) %>%
   arrange(desc(Presupuesto)) %>%
   drop_na()
-
-CantidadyPresupuesto
-
-library(ggrepel)
-ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto , y= Cantidad, fill=ComunidadAutonoma))+
-  geom_bar(stat= "identity", width = 5000) +
-  geom_text_repel(aes(label = ComunidadAutonoma))
-
-CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Presupuesto))
-
-CantidadyPresupuesto1
 
 #.--Grafico Cantidad y presupuesto--
 
