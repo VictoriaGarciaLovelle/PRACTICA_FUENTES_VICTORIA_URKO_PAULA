@@ -229,11 +229,14 @@ library(tidyr)
 #ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
  # geom_bar(stat = "identity")
 #-Posible solucion-
-ggplot(data = EsperanzayCantidad, aes(x = Cantidad, y = EsperanzaDeVida, fill = "blue")) +
-  geom_bar(stat = "identity")
 
 ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida, fill = ComunidadAutonoma)) +
   geom_bar(stat = "identity")
+
+ggplot(data = diamonds, aes(x = cut)) +
+  geom_bar(aes(fill = clarity), position = "dodge")
+
+
 #---
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
                     left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
@@ -241,15 +244,23 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
                     drop_na()
 CantidadyPresupuesto
 
-ggplot(data=CantidadyPresupuesto, aes(x=Cantidad, y=Total, fill="blue"))+
-  geom_bar(stat="identity")
 ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
 
 
 #---
+EsperanzayCalidad<- tablaEsperanzaDeVida%>%
+  left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+EsperanzayCalidad
+
+# AQUÍ TENEMOS QUE AGRUPAR TODAS LAS COLUMNAS DE AGUA YA QUE QUIERO PONER EN EL EJE X LA ESPERANZA DE VIDA Y EN EL EJE Y LA CALIDAD DEL AGUA 
+ggplot(data=EsperanzayCalidad, aes(x= EsperanzaDeVida, y= factor(), fill=ComunidadAutonoma))+
+  geom_bar(stat= "identity")
+#-----
 tablaFinal<- EsperanzayCantidad %>% 
-              left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+              left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
               left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
               select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
               drop_na()
