@@ -131,7 +131,6 @@ linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
 
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
-datos_divididos
 
 # Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
 datos_obtenidos <- datos_divididos[-c(1:3)]
@@ -143,7 +142,6 @@ datosDeInteres[[10]] <- c("MURCIA, REGIÓN DE","3","3","3","0","0","3","0")
 datosDeInteres[[11]] <- c("NAVARRA, COMUNIDAD FORAL DE","11","11","11","4","5","2","0")
 datosDeInteres[[12]] <- c("RIOJA, LA","1","1","1","0","1","0","0")
 datosDeInteres[[13]] <- c("COMUNITAT VALENCIANA","2","2","2","0","1","1","0")
-datosDeInteres
 
 tablaCalidadDeAgua<-data.frame()
 for (i in datosDeInteres){
