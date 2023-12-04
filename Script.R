@@ -286,8 +286,17 @@ tablaFinal<- EsperanzayCantidad %>%
 tablaFinal
 
 ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida.x))+
-  geom_point(aes(colour = CalidadAgua))+
+  #geom_point(aes(colour = CalidadAgua))+
+  geom_point()+
   geom_smooth()+
+  labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
+       x="Cantidad",
+       y="EsperanzaDeVida.x")+
+  theme_minimal()
+
+# Mismos valores CalidadAgua
+ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida.x, fill=CalidadAgua))+
+  geom_bar(stat= "identity")+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
        x="Cantidad",
        y="EsperanzaDeVida.x")+
