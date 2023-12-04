@@ -209,7 +209,6 @@ EsperanzayCantidad<- tablaEsperanzaDeVida%>%
   left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
-EsperanzayCantidad
 
 #--grafico Esperanza y cantidad---
 library(ggplot2)
