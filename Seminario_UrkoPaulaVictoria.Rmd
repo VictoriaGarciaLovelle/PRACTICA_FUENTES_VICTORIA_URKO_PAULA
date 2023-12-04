@@ -35,7 +35,6 @@ arrayData<-esperanzaVida %>%
   gather_array %>% 
   spread_all %>% 
   select(Nombre, Anyo, Valor) 
-arrayData
 
 partes <- strsplit(arrayData$Nombre, "\\.")
 
@@ -124,5 +123,16 @@ colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
 tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate_at(vars(Anio), as.integer)
 tablaCantidadDeAguaFinal
+
+```
+
+```{r cargaDatosCalidadDeAgua}
+ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
+
+
+
+
+
+
 
 ```
