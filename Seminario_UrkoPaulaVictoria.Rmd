@@ -89,6 +89,13 @@ arrayDataCantidad<-cantidadAgua%>%
 separador<- "\\,"
 cadenas <- strsplit(arrayDataCantidad$Nombre, separador)
 
+#Obtengo las comunidades autónomas
+comunidadesAutonomasCantidad<-c()
+for (i in cadenas){
+  comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
+}
+comunidadesAutonomasCantidad
+
 ```
 
 
