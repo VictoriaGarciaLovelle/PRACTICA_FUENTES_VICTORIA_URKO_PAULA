@@ -175,7 +175,7 @@ tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestosFinal <- tablaPresupuestos[,-3]
 tablaPresupuestosFinal
 
-# EJECUCIÓN DE TODAS LAS TABLAS
+# EJECUCIÓN DE TODAS LAS TABLAS ----
 tablaEsperanzaDeVidaFinal
 tablaCantidadDeAguaFinal
 tablaCalidadDeAguaFinal
@@ -188,8 +188,15 @@ EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
 
+# CANTIDAD - PRESUPUESTO
+CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>% 
+  left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
+  select(-GruposDeUsuarioEImporte) %>%
+  arrange(desc(Presupuesto)) %>%
+  drop_na()
+
 # ---------------------------Gráficos------------------------------------------------
-# Esperanza y cantidad---
+# Esperanza y cantidad
 ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
   geom_point(aes(color=ComunidadAutonoma))+
   geom_smooth()+
@@ -198,12 +205,6 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
        y="Esperanza de vida")+
   theme_minimal()
 
-#--Cantidad y presupuesto--
-CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
-  left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
-  select(-GruposDeUsuarioEImporte) %>%
-  arrange(desc(Presupuesto)) %>%
-  drop_na()
 
 #.--Grafico Cantidad y presupuesto--
 
