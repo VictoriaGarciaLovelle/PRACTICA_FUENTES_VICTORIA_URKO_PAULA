@@ -199,8 +199,19 @@ EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
-
 EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+
+# JOIN FINAL
+tablaFinal<- EsperanzayCantidad %>% 
+  left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+  left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
+  mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
+  select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
+  mutate(Anio = coalesce(Anio.x, Anio.y))%>%
+  select(-Anio.x, -Anio.y)%>%
+  select(Anio, ComunidadAutonoma, everything())%>%
+  drop_na()
 
 # ---------------------------Gráficos------------------------------------------------
 # Esperanza y cantidad
@@ -229,14 +240,6 @@ ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVid
        x="Calidad",
        y="Esperanza de vida")
 
-#-----
-tablaFinal<- EsperanzayCantidad %>% 
-  left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
-  left_join(x=., y=EsperanzayCalidad1, by=c("ComunidadAutonoma")) %>% 
-  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
-  drop_na()
-
-tablaFinal
 
 ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida.x))+
   geom_point(aes(colour = CalidadAgua))+
