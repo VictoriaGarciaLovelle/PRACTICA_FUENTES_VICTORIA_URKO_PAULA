@@ -201,6 +201,7 @@ tablaPresupuestos <- summodificado%>%
   drop_na()
 
 tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
+tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestos
 #----------------------------------------------------------------------------------------
 tablaEsperanzaDeVida
