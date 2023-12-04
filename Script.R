@@ -103,22 +103,22 @@ tablaCantidadDeAgua <- tabla %>%
   summarize(Cantidad = mean(Valor, na.rm = TRUE))%>%
   rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
 
-tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
+tablaCantidadDeAgua1 <- tablaCantidadDeAgua %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
-tablaCantidadDeAguaFinal[4,2] <- c("BALEARS, ILLES")
-tablaCantidadDeAguaFinal[8,2] <- c("CASTILLA - LA MANCHA")
-tablaCantidadDeAguaFinal[14,2] <- c("MADRID, COMUNIDAD DE")
-tablaCantidadDeAguaFinal[15,2] <- c("MURCIA, REGIÓN DE")
-tablaCantidadDeAguaFinal[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
-tablaCantidadDeAguaFinal[18,2] <- c("RIOJA, LA")
+tablaCantidadDeAgua1[4,2] <- c("BALEARS, ILLES")
+tablaCantidadDeAgua1[8,2] <- c("CASTILLA - LA MANCHA")
+tablaCantidadDeAgua1[14,2] <- c("MADRID, COMUNIDAD DE")
+tablaCantidadDeAgua1[15,2] <- c("MURCIA, REGIÓN DE")
+tablaCantidadDeAgua1[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
+tablaCantidadDeAgua1[18,2] <- c("RIOJA, LA")
 
-colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
+colnames(tablaCantidadDeAgua1) <- c("Anio", "ComunidadAutonoma", "Cantidad")
 
-tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate_at(vars(Anio), as.integer)
-tablaCantidadDeAgua
-str(tablaCantidadDeAgua)
+tablaCantidadDeAguaFinal
+
 ## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
