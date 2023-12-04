@@ -95,7 +95,7 @@ comunidadesAutonomasCantidad<-c()
 for (i in cadenas){
   comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
 }
-comunidadesAutonomasCantidad[1:5,]
+comunidadesAutonomasCantidad
 
 #Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
