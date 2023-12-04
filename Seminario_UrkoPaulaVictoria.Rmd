@@ -148,6 +148,9 @@ datosDeInteres[[12]] <- c("RIOJA, LA","1","1","1","0","1","0","0")
 datosDeInteres[[13]] <- c("COMUNITAT VALENCIANA","2","2","2","0","1","1","0")
 
 tablaCalidadDeAgua<-data.frame()
+for (i in datosDeInteres){
+  tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
+}
 ```
 
 
