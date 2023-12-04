@@ -237,10 +237,12 @@ ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
                     left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
                     select(-GruposeImporte) %>%
+                    arrange(desc(Cantidad)) %>%
                     drop_na()
+
 CantidadyPresupuesto
 
-ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=ComunidadAutonoma))+
+ggplot(data=CantidadyPresupuesto, aes(x= Total , y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
 
 
@@ -269,12 +271,14 @@ tablaFinal<- EsperanzayCantidad %>%
                         
 tablaFinal
 
-ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma))+
-  geom_point()+
+ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida.x))+
+  geom_point(aes(colour = CalidadAgua))+
+  geom_smooth()+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
-        x="Presupuesto",
-        y="Esperanza de vida")+
+        x="Cantidad",
+        y="EsperanzaDeVida.x")+
   theme_minimal()
+
 #------Posible solucion para la tabla final si no son las columnas que se necesiten---
 #depende de las columnas que querais de calidad
 #tablaFinal<- EsperanzayCantidad %>% 
@@ -288,3 +292,4 @@ EsperanzayCantidad
 EsperanzayCalidad
 CantidadyPresupuesto
 tablaFinal
+
