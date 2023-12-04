@@ -148,18 +148,12 @@ for (i in datosDeInteres){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
 }
 
-tablaCalidadDeAgua
+colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 
-# Ajustar los nombres de las columnas
-colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo","Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
-tablaCalidadDeAgua
-
-colNumericas <- c("Num de Municipios", "Zonas de baño", "Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
-tablaCalidadDeAgua <- tablaCalidadDeAgua %>%
+colNumericas <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
+tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
   mutate_at(vars(colNumericas), as.integer)
 
-tablaCalidadDeAgua
-colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 tablaCalidadDeAgua
 ## -------------------- Presupuestos del agua ----------------------------
 
