@@ -233,6 +233,10 @@ library(tidyr)
 ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida, fill = ComunidadAutonoma)) +
   geom_bar(stat = "identity")
 
+ggplot(data = diamonds, aes(x = cut)) +
+  geom_bar(aes(fill = clarity), position = "dodge")
+
+
 #---
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
                     left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
