@@ -191,7 +191,6 @@ EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
 # CANTIDAD - PRESUPUESTO
 CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>% 
   left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
-  select(-GruposDeUsuarioEImporte) %>%
   arrange(desc(Presupuesto)) %>%
   drop_na()
 
