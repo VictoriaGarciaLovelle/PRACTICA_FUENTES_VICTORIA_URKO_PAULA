@@ -121,6 +121,8 @@ tablaCantidadDeAgua[15,2] <- c("MURCIA, REGIÓN DE")
 tablaCantidadDeAgua[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
 tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
 
+colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
+
 ```
 
 
