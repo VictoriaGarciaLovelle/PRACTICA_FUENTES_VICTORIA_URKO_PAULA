@@ -134,3 +134,14 @@ pagina <- ruta_pdf[17]
 lineas <- strsplit(pagina, "\n")[[1]]
 linea_deseada <- lineas[5:21] 
 ```
+
+```{r tablaCalidadDeAgua}
+datos_divididos <- strsplit(linea_deseada, "\\s+")
+
+
+```
+
+
+
+
+
