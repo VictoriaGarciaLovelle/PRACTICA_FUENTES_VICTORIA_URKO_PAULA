@@ -249,10 +249,6 @@ library(tidyr)
 ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida, fill = ComunidadAutonoma)) +
   geom_bar(stat = "identity")
 
-ggplot(data = diamonds, aes(x = cut)) +
-  geom_bar(aes(fill = clarity), position = "dodge")
-
-
 #---
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
                     left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
@@ -284,13 +280,25 @@ EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   drop_na()
 EsperanzayCalidad
 
+<<<<<<< HEAD
 # AQUÍ TENEMOS QUE AGRUPAR TODAS LAS COLUMNAS DE AGUA YA QUE QUIERO PONER EN EL EJE X LA ESPERANZA DE VIDA Y EN EL EJE Y LA CALIDAD DEL AGUA 
 ggplot(data=EsperanzayCalidad, aes(x= EsperanzaDeVida, y= factor(Calidad), fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
+=======
+EsperanzayCalidad1 <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+EsperanzayCalidad1
+
+# como la variable `drv` tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
+graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
+  geom_point(aes(colour = ComunidadAutonoma)) +
+  facet_wrap(facets = vars(CalidadAgua), nrow = 1)
+graficoEsperanzaCalidad
+
+>>>>>>> 06382347b0aaf5703568808af8ba3395eeff84bd
 #-----
 tablaFinal<- EsperanzayCantidad %>% 
               left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
-              left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
+              left_join(x=., y=EsperanzayCalidad1, by=c("ComunidadAutonoma")) %>% 
               select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
               drop_na()
                         
@@ -310,3 +318,8 @@ ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma)
 # select(AQUI PONER LAS COLUMNAS QUE NO SE QUIERAN VER) %>% 
 #  drop_na()
 
+#------ tablas con joins ----
+EsperanzayCantidad
+EsperanzayCalidad
+CantidadyPresupuesto
+tablaFinal
