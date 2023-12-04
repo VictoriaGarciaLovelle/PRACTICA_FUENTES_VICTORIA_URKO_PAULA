@@ -27,15 +27,16 @@ arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
   spread_all %>% 
-  select(-document.id, -array.index) 
+  select(Nombre, Anyo, Valor) 
 arrayData
 
 #Selecciono las columnas que me interesan
-seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
+#seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
 
 # Utilizar strsplit para dividir la cadena de texto
 separador <- "\\."
-partes <- strsplit(seleccion$Nombre, separador)
+partes <- strsplit(arrayData$Nombre, separador)
+partes
 
 comunidadesAutonomas<-c()
 for (i in partes){
@@ -44,10 +45,10 @@ for (i in partes){
 comunidadesAutonomas
 
 #Cambio la columna nombre por la de las comunidades autónomas
-seleccion$Nombre<-comunidadesAutonomas
+arrayData$Nombre<-comunidadesAutonomas
 
 #Para eliminar una columna
-tablaComunidadesAñoValor<- as_tibble(seleccion)
+tablaComunidadesAñoValor<- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
 tablaComunidadesAñoValor
 

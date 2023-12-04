@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r}
+```{r CargaLibrerías}
 library(pdftools)
 library(glue)
 library(rjson)
@@ -16,7 +16,7 @@ library(purrr)
 ```
 
 ## Tabla de Esperanza de Vida:
-```{r}
+```{r cargaDeDatosJson}
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(archivoJson)
