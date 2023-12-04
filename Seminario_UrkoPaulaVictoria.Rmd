@@ -165,6 +165,9 @@ tablaCalidadDeAguaFinal
 ```{r cargaPresupuesto}
 summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
+
+tablaPresupuestos <- summodificado%>%
+  filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
 ```
 
 
