@@ -5,26 +5,127 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r CargaLibrerías}
+library(pdftools)
+library(glue)
+library(rjson)
+library(tidyverse)
+library(tidyjson)
+library(stringr)
+library(purrr) 
 ```
 
-## R Markdown
+## Tabla de Esperanza de Vida:
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r cargaDeDatosJson}
+archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+esperanzaVida <- spread_all(archivoJson)
 
-```{r cars}
-summary(cars)
+# Para cada atributo me dice de qué tipo se trata
+tibble1<-esperanzaVida %>% 
+  gather_object %>%  
+  json_types %>% 
+  count(name, type)
 ```
 
-## Including Plots
+```{r ObtencionTablaEsperanza}
+#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
+arrayData<-esperanzaVida %>%
+  enter_object(Data) %>% 
+  gather_array %>% 
+  spread_all %>% 
+  select(Nombre, Anyo, Valor) 
+arrayData
 
-You can also embed plots, for example:
+separador <- "\\."
+partes <- strsplit(arrayData$Nombre, separador)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+comunidadesAutonomas<-c()
+for (i in partes){
+  comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
+}
+
+arrayData$Nombre<-comunidadesAutonomas
+
+tablaComunidadesAñoValor<- as_tibble(arrayData)
+attr(tablaComunidadesAñoValor, "JSON") <- NULL
+
+tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
+  filter(Anyo==2020)%>%
+  group_by(Anyo, Nombre) %>%
+  summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
+  rename(Año=Anyo,ComunidadAutonoma=Nombre)
+
+tablaEsperanzaDeVida <- tablaEsperanzaDeVida %>%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
+
+colnames(tablaEsperanzaDeVida) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
+tablaEsperanzaDeVida
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Tabla de Cantidad de Agua:
+
+```{r CargaDatosCantidad}
+archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
+
+cantidadAgua <- spread_all(archivoJsonCantidad)
+```
+
+```{r tablaCantidadAgua}
+#Veo los tipos de atributos
+cantidadAgua%>%
+  gather_object%>%
+  json_types%>%
+  count(name,type)
+
+#Entro en el array Data
+arrayDataCantidad<-cantidadAgua%>%
+  enter_object(Data)%>%
+  gather_array%>%
+  spread_all%>%
+  select(-document.id,-array.index)
+
+#Divido la cadena de texto nombre y solo cojo las comunidades autónomas
+separador<- "\\,"
+cadenas <- strsplit(arrayDataCantidad$Nombre, separador)
+
+#Obtengo las comunidades autónomas
+comunidadesAutonomasCantidad<-c()
+for (i in cadenas){
+  comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
+}
+comunidadesAutonomasCantidad
+
+#Cambio la columna nombre por la columna de las comunidades autónomas
+arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
+
+#Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
+tabla <- arrayDataCantidad %>%
+  filter(!(Nombre == "España")) %>%
+  select(Nombre, NombrePeriodo, Valor)
+
+#Agrupo por comunidades autónomas y años
+tablaCantidadDeAgua <- tabla %>%
+  filter(NombrePeriodo  ==2020)%>%
+  group_by(NombrePeriodo  , Nombre) %>%
+  summarize(Cantidad = mean(Valor, na.rm = TRUE))%>%
+  rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
+
+tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
+
+tablaCantidadDeAgua[4,2] <- c("BALEARS, ILLES")
+tablaCantidadDeAgua[8,2] <- c("CASTILLA - LA MANCHA")
+tablaCantidadDeAgua[14,2] <- c("MADRID, COMUNIDAD DE")
+tablaCantidadDeAgua[15,2] <- c("MURCIA, REGIÓN DE")
+tablaCantidadDeAgua[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
+tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
+
+colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
+
+tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+  mutate_at(vars(Anio), as.integer)
+tablaCantidadDeAgua
+
+```
