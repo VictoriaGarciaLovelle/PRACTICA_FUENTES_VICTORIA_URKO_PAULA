@@ -20,7 +20,9 @@ library(purrr)
 ## Tabla de Esperanza de Vida:
 ```{r, echo=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
+archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
+esperanzaVida <- spread_all(archivoJson)
 
 ```
 
