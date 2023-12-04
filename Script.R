@@ -279,26 +279,10 @@ ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida.x, fill=CalidadAgua)
        y="EsperanzaDeVida.x")+
   theme_minimal()
 
-#------Posible solucion para la tabla final si no son las columnas que se necesiten---
-#depende de las columnas que querais de calidad
-#tablaFinal<- EsperanzayCantidad %>% 
-#left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
-# left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
-# select(AQUI PONER LAS COLUMNAS QUE NO SE QUIERAN VER) %>% 
-#  drop_na()
-
-ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida.x, color=ComunidadAutonoma))+
+ggplot(data=tablaFinal, aes(x=Presupuesto, y=EsperanzaDeVida.x, color=ComunidadAutonoma))+
   geom_point()+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
        x="Presupuesto",
        y="Esperanza de vida")+
   theme_minimal()
 
-
-#------ tablas con joins ----
-EsperanzayCantidad
-EsperanzayCalidad
-CantidadyPresupuesto
-tablaFinal
-
-tablaFinal
