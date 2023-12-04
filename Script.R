@@ -6,7 +6,6 @@ library(readr)
 library(rjson)
 library(tidyverse)
 library(tidyjson)
-library(dplyr)
 library(stringr)
 library(purrr) #Función lmap aplica una función a cada lista
 library(dplyr)
