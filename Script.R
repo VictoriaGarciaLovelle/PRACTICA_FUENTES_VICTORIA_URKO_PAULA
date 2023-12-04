@@ -266,6 +266,7 @@ graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCali
 labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
      x="Calidad",
      y="Esperanza de vida")
+
 graficoEsperanzaCalidad
 
 #-----
@@ -277,7 +278,7 @@ tablaFinal<- EsperanzayCantidad %>%
 
 tablaFinal
 
-ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida.x, color=ComunidadAutonoma))+
+ggplot(data=tablaFinal, aes(x=, y=EsperanzaDeVida.x, color=ComunidadAutonoma))+
   geom_point()+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
        x="Presupuesto",
