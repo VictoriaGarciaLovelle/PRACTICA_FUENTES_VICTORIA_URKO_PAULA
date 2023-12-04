@@ -1,6 +1,6 @@
 ---
 title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
-subtitle: "Relación entre Paro y Suicidio"
+subtitle: "Relación entre Esperanza de Vida y el Agua"
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output: html_document
