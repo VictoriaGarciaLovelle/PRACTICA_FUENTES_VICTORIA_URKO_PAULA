@@ -174,7 +174,11 @@ tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestosFinal <- tablaPresupuestos[,-3]
 tablaPresupuestosFinal
 
-
+# EJECUCIÓN DE TODAS LAS TABLAS
+tablaEsperanzaDeVidaFinal
+tablaCantidadDeAguaFinal
+tablaCalidadDeAguaFinal
+tablaPresupuestosFinal
 
 #----------------------------Joins---------------------------------------------------
 EsperanzayCantidad<- tablaEsperanzaDeVida%>%
