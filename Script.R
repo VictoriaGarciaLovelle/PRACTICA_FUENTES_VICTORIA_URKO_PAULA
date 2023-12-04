@@ -248,11 +248,11 @@ grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
   theme_minimal()
 
 # Mismos valores CalidadAgua
-ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida.x, fill=CalidadAgua))+
+ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
   geom_bar(stat= "identity")+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
        x="Cantidad",
-       y="EsperanzaDeVida.x")+
+       y="EsperanzaDeVida")+
   theme_minimal()
 
 
