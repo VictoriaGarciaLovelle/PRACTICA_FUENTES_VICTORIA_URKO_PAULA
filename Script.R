@@ -242,8 +242,8 @@ EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
 
-EsperanzayCalidad1 <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
-EsperanzayCalidad1
+EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+EsperanzayCalidadFinal
 
 # como la variable drv tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
 graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
