@@ -223,13 +223,13 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
 #--Cantidad y presupuesto--
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
   left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
-  select(-GruposeImporte) %>%
+  select(-GruposDeUsuarioEImporte) %>%
   arrange(desc(Cantidad)) %>%
   drop_na()
 
 CantidadyPresupuesto
 
-ggplot(data=CantidadyPresupuesto, aes(x= Total , y= Cantidad, fill=ComunidadAutonoma))+
+ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto , y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
 
 CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Cantidad))
