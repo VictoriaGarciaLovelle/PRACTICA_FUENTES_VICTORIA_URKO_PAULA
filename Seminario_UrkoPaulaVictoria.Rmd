@@ -5,9 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+```{r}
 library(pdftools)
 library(glue)
 library(rjson)
@@ -18,8 +16,7 @@ library(purrr)
 ```
 
 ## Tabla de Esperanza de Vida:
-```{r, echo=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(archivoJson)
@@ -29,7 +26,10 @@ tibble1<-esperanzaVida %>%
   gather_object %>%  
   json_types %>% 
   count(name, type)
+```
 
+
+```{r, echo=TRUE}
 #Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
@@ -65,9 +65,6 @@ tablaEsperanzaDeVida
 
 colnames(tablaEsperanzaDeVida) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
 tablaEsperanzaDeVida
-
-
-
 ```
 
 ## R Markdown
