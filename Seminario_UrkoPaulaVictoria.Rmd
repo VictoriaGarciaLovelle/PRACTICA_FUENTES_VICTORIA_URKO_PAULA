@@ -129,6 +129,8 @@ tablaCantidadDeAguaFinal
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 pagina <- ruta_pdf[17]
+lineas <- strsplit(pagina, "\n")[[1]]
+
 
 
 
