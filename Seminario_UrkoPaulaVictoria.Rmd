@@ -38,8 +38,7 @@ arrayData<-esperanzaVida %>%
   select(Nombre, Anyo, Valor) 
 arrayData
 
-separador <- "\\."
-partes <- strsplit(arrayData$Nombre, separador)
+partes <- strsplit(arrayData$Nombre, "\\.")
 
 comunidadesAutonomas<-c()
 for (i in partes){
@@ -57,11 +56,11 @@ tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
   summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
   rename(Año=Anyo,ComunidadAutonoma=Nombre)
 
-tablaEsperanzaDeVida <- tablaEsperanzaDeVida %>%
+tablaEsperanzaDeVidaFinal <- tablaEsperanzaDeVida %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
-colnames(tablaEsperanzaDeVida) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
-tablaEsperanzaDeVida
+colnames(tablaEsperanzaDeVidaFinal) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
+tablaEsperanzaDeVidaFinal
 ```
 
 ## Tabla de Cantidad de Agua:
