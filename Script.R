@@ -211,7 +211,6 @@ EsperanzayCantidad<- tablaEsperanzaDeVida%>%
   drop_na()
 
 #--grafico Esperanza y cantidad---
-library(ggplot2)
 library(tidyr)
 ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
   geom_point(aes(color=ComunidadAutonoma))+
