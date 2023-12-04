@@ -164,6 +164,7 @@ tablaCalidadDeAguaFinal
 
 ```{r cargaPresupuesto}
 summodificado <- read_csv("summodificado.csv")
+colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
 ```
 
 
