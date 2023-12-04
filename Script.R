@@ -203,11 +203,6 @@ tablaPresupuestos <- summodificado%>%
 tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestos
-#----------------------------------------------------------------------------------------
-tablaEsperanzaDeVida
-tablaCantidadDeAgua
-tablaCalidadDeAgua
-tablaPresupuestos
 
 #----------------------------Joins---------------------------------------------------
 EsperanzayCantidad<- tablaEsperanzaDeVida%>%
