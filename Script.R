@@ -269,3 +269,4 @@ ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma)
 # left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
 # select(AQUI PONER LAS COLUMNAS QUE NO SE QUIERAN VER) %>% 
 #  drop_na()
+
