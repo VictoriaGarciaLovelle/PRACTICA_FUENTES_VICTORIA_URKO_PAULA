@@ -196,7 +196,8 @@ colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsua
 tablaPresupuestos <- summodificado%>%
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
   mutate(ComunidadAutonoma = gsub("^\\d+\\s*", "", ComunidadAutonoma)) %>%
-  rename_with(.data = ., toupper(ComunidadAutonoma))
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma)) %>%
+  drop_na()
 tablaPresupuestos
 #----------------------------------------------------------------------------------------
 tablaEsperanzaDeVida
