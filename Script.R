@@ -223,29 +223,42 @@ EsperanzayCantidad<- tablaEsperanzaDeVida%>%
                     drop_na()
 EsperanzayCantidad
 
+#--grafico Esperanza y cantidad---
 library(ggplot2)
 library(tidyr)
-#-Parte que en principio da error
-#ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y= EsperanzaDeVida)) + geom_bar(aes(colour="blue"))
-#ggplot(data = EsperanzayCantidad, aes(x = factor(EsperanzaDeVida,ComunidadAutonoma) , y= Cantidad)) +
- # geom_bar(stat = "identity")
-#-Posible solucion-
+ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
+geom_point(aes(color=ComunidadAutonoma))+
+  geom_smooth()+
+  labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
+       x="Cantidad de agua ",
+       y="Esperanza de vida")+
+  theme_minimal()
 
-ggplot(data = EsperanzayCantidad, aes(x = ComunidadAutonoma, y = EsperanzaDeVida, fill = ComunidadAutonoma)) +
-  geom_bar(stat = "identity")
-
-#---
+#--Cantidad y presupuesto--
 CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
                     left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
                     select(-GruposeImporte) %>%
+                    arrange(desc(Cantidad)) %>%
                     drop_na()
+
 CantidadyPresupuesto
 
-ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=ComunidadAutonoma))+
+ggplot(data=CantidadyPresupuesto, aes(x= Total , y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
 
+CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Cantidad))
 
-#---
+CantidadyPresupuesto1
+
+#.--Grafico Cantidad y presupuesto--
+
+ggplot(data=CantidadyPresupuesto, aes(x= Total, y= Cantidad, fill=ComunidadAutonoma))+
+  geom_bar(stat= "identity")+
+  labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
+       x="Presupuestos",
+       y="Cantidad de agua")
+  theme_minimal()
+#--
 EsperanzayCalidad<- tablaEsperanzaDeVida%>%
   left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
@@ -255,27 +268,33 @@ EsperanzayCalidad
 EsperanzayCalidad1 <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
 EsperanzayCalidad1
 
-# como la variable `drv` tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
+# como la variable drv tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
 graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
-  facet_wrap(facets = vars(CalidadAgua), nrow = 1)
+  facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
+  labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
+     x="Calidad",
+     y="Esperanza de vida")+
+  theme_minimal()
 graficoEsperanzaCalidad
 
 #-----
 tablaFinal<- EsperanzayCantidad %>% 
-              left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
-              left_join(x=., y=EsperanzayCalidad1, by=c("ComunidadAutonoma")) %>% 
-              select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
-              drop_na()
-                        
+  left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+  left_join(x=., y=EsperanzayCalidad1, by=c("ComunidadAutonoma")) %>% 
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
+  drop_na()
+
 tablaFinal
 
-ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma))+
-  geom_point()+
+ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida.x))+
+  geom_point(aes(colour = CalidadAgua))+
+  geom_smooth()+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
-        x="Presupuesto",
-        y="Esperanza de vida")+
+        x="Cantidad",
+        y="EsperanzaDeVida.x")+
   theme_minimal()
+
 #------Posible solucion para la tabla final si no son las columnas que se necesiten---
 #depende de las columnas que querais de calidad
 #tablaFinal<- EsperanzayCantidad %>% 
@@ -284,8 +303,20 @@ ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida, color=ComunidadAutonoma)
 # select(AQUI PONER LAS COLUMNAS QUE NO SE QUIERAN VER) %>% 
 #  drop_na()
 
+ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida.x, color=ComunidadAutonoma))+
+  geom_point()+
+  labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
+       x="Presupuesto",
+       y="Esperanza de vida")+
+  theme_minimal()
+
+
 #------ tablas con joins ----
 EsperanzayCantidad
 EsperanzayCalidad
 CantidadyPresupuesto
 tablaFinal
+
+tablaFinal
+
+#   hOLA
