@@ -204,15 +204,15 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
        y="Esperanza de vida")+
   theme_minimal()
 
-
-#.--Grafico Cantidad y presupuesto--
+# Cantidad y presupuesto
 
 ggplot(data=CantidadyPresupuesto1, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")+
   labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
        x="Presupuestos",
        y="Cantidad de agua")+
-  geom_bar(stat= "identity", width = 5000)
+  geom_bar(stat= "identity", width = 5000)+
+  theme_minimal()
 
 #--
 EsperanzayCalidad<- tablaEsperanzaDeVida%>%
