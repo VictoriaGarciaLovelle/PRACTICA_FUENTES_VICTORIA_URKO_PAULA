@@ -111,6 +111,9 @@ tablaCantidadDeAgua <- tabla %>%
   summarize(Cantidad = mean(Valor, na.rm = TRUE))%>%
   rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
 
+tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
+
 ```
 
 
