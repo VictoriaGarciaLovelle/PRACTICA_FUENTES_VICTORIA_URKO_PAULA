@@ -358,19 +358,16 @@ Garcia Lovelle</h4>
 </div>
 
 
+<div id="carga-de-librerías" class="section level2">
+<h2>Carga de librerías:</h2>
 <pre class="r"><code>library(pdftools)</code></pre>
 <pre><code>## Warning: package &#39;pdftools&#39; was built under R version 4.3.2</code></pre>
 <pre><code>## Using poppler version 23.08.0</code></pre>
-<pre class="r"><code>library(glue)
-library(rjson)
-library(tidyverse)</code></pre>
-<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 4.3.2</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.3.2</code></pre>
-<pre><code>## Warning: package &#39;stringr&#39; was built under R version 4.3.2</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.4     ✔ readr     2.1.4
-## ✔ forcats   1.0.0     ✔ stringr   1.5.1
-## ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+## ✔ dplyr     1.1.3     ✔ readr     2.1.4
+## ✔ forcats   1.0.0     ✔ stringr   1.5.0
+## ✔ ggplot2   3.4.3     ✔ tibble    3.2.1
 ## ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
 ## ✔ purrr     1.0.2</code></pre>
 <pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -384,8 +381,9 @@ library(tidyverse)</code></pre>
 ## The following object is masked from &#39;package:stats&#39;:
 ## 
 ##     filter</code></pre>
-<pre class="r"><code>library(stringr)
-library(purrr) </code></pre>
+<pre class="r"><code>library(tidyr)
+library(rjson) </code></pre>
+</div>
 <div id="tabla-de-esperanza-de-vida" class="section level2">
 <h2>Tabla de Esperanza de Vida:</h2>
 <pre class="r"><code>archivoJson &lt;- fromJSON(file = &quot;EsperanzaVida.json&quot;)
@@ -403,23 +401,8 @@ arrayData&lt;-esperanzaVida %&gt;%
   gather_array %&gt;% 
   spread_all %&gt;% 
   select(Nombre, Anyo, Valor) 
-arrayData</code></pre>
-<pre><code>## # A tbl_json: 23,940 x 4 tibble with a &quot;JSON&quot; attribute
-##    ..JSON                  Nombre                                     Anyo Valor
-##    &lt;chr&gt;                   &lt;chr&gt;                                     &lt;dbl&gt; &lt;dbl&gt;
-##  1 &quot;{\&quot;Fecha\&quot;:\&quot;2021-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2021  57.0
-##  2 &quot;{\&quot;Fecha\&quot;:\&quot;2020-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2020  57.0
-##  3 &quot;{\&quot;Fecha\&quot;:\&quot;2019-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2019  57.7
-##  4 &quot;{\&quot;Fecha\&quot;:\&quot;2018-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2018  57.2
-##  5 &quot;{\&quot;Fecha\&quot;:\&quot;2017-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2017  57.3
-##  6 &quot;{\&quot;Fecha\&quot;:\&quot;2016-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2016  57.3
-##  7 &quot;{\&quot;Fecha\&quot;:\&quot;2021-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2021  55.2
-##  8 &quot;{\&quot;Fecha\&quot;:\&quot;2020-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2020  55.5
-##  9 &quot;{\&quot;Fecha\&quot;:\&quot;2019-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2019  56.5
-## 10 &quot;{\&quot;Fecha\&quot;:\&quot;2018-...&quot; &quot;Andalucía. Mortalidad. Esperanza de vid…  2018  55.9
-## # ℹ 23,930 more rows</code></pre>
-<pre class="r"><code>separador &lt;- &quot;\\.&quot;
-partes &lt;- strsplit(arrayData$Nombre, separador)
+
+partes &lt;- strsplit(arrayData$Nombre, &quot;\\.&quot;)
 
 comunidadesAutonomas&lt;-c()
 for (i in partes){
@@ -438,11 +421,11 @@ tablaEsperanzaDeVida &lt;- tablaComunidadesAñoValor %&gt;%
   rename(Año=Anyo,ComunidadAutonoma=Nombre)</code></pre>
 <pre><code>## `summarise()` has grouped output by &#39;Anyo&#39;. You can override using the
 ## `.groups` argument.</code></pre>
-<pre class="r"><code>tablaEsperanzaDeVida &lt;- tablaEsperanzaDeVida %&gt;%
+<pre class="r"><code>tablaEsperanzaDeVidaFinal &lt;- tablaEsperanzaDeVida %&gt;%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
-colnames(tablaEsperanzaDeVida) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;EsperanzaDeVida&quot;)
-tablaEsperanzaDeVida</code></pre>
+colnames(tablaEsperanzaDeVidaFinal) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;EsperanzaDeVida&quot;)
+tablaEsperanzaDeVidaFinal</code></pre>
 <pre><code>## # A tibble: 19 × 3
 ## # Groups:   Anio [1]
 ##     Anio ComunidadAutonoma           EsperanzaDeVida
@@ -491,814 +474,16 @@ arrayDataCantidad&lt;-cantidadAgua%&gt;%
   select(-document.id,-array.index)
 
 #Divido la cadena de texto nombre y solo cojo las comunidades autónomas
-separador&lt;- &quot;\\,&quot;
-cadenas &lt;- strsplit(arrayDataCantidad$Nombre, separador)
+cadenas &lt;- strsplit(arrayDataCantidad$Nombre, &quot;\\,&quot;)
 
 #Obtengo las comunidades autónomas
 comunidadesAutonomasCantidad&lt;-c()
 for (i in cadenas){
   comunidadesAutonomasCantidad&lt;-c(comunidadesAutonomasCantidad,i[1])
 }
-comunidadesAutonomasCantidad</code></pre>
-<pre><code>##    [1] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##    [4] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##    [7] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [10] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [13] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [16] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [19] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [22] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [25] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [28] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [31] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [34] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [37] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [40] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [43] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [46] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [49] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [52] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [55] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [58] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [61] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [64] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [67] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [70] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [73] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [76] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [79] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [82] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [85] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [88] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [91] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [94] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##   [97] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [100] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [103] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [106] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [109] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [112] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [115] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [118] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [121] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [124] &quot;España&quot;               &quot;España&quot;               &quot;España&quot;              
-##  [127] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [130] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [133] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [136] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [139] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [142] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [145] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [148] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [151] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [154] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [157] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [160] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [163] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [166] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [169] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [172] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [175] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [178] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [181] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [184] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [187] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [190] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [193] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [196] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [199] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [202] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [205] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [208] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [211] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [214] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [217] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [220] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [223] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [226] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [229] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [232] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [235] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [238] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [241] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [244] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [247] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [250] &quot;Andalucía&quot;            &quot;Andalucía&quot;            &quot;Andalucía&quot;           
-##  [253] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [256] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [259] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [262] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [265] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [268] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [271] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [274] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [277] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [280] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [283] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [286] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [289] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [292] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [295] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [298] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [301] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [304] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [307] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [310] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [313] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [316] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [319] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [322] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [325] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [328] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [331] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [334] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [337] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [340] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [343] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [346] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [349] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [352] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [355] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [358] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [361] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [364] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [367] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [370] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [373] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [376] &quot;Aragón&quot;               &quot;Aragón&quot;               &quot;Aragón&quot;              
-##  [379] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [382] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [385] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [388] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [391] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [394] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [397] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [400] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [403] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [406] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [409] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [412] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [415] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [418] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [421] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [424] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [427] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [430] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [433] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [436] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [439] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [442] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [445] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [448] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [451] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [454] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [457] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [460] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [463] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [466] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [469] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [472] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [475] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [478] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [481] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [484] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [487] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [490] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [493] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [496] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [499] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [502] &quot;Asturias&quot;             &quot;Asturias&quot;             &quot;Asturias&quot;            
-##  [505] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [508] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [511] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [514] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [517] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [520] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [523] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [526] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [529] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [532] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [535] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [538] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [541] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [544] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [547] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [550] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [553] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [556] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [559] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [562] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [565] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [568] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [571] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [574] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [577] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [580] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [583] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [586] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [589] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [592] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [595] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [598] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [601] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [604] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [607] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [610] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [613] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [616] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [619] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [622] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [625] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [628] &quot;Balears&quot;              &quot;Balears&quot;              &quot;Balears&quot;             
-##  [631] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [634] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [637] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [640] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [643] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [646] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [649] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [652] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [655] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [658] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [661] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [664] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [667] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [670] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [673] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [676] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [679] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [682] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [685] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [688] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [691] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [694] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [697] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [700] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [703] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [706] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [709] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [712] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [715] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [718] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [721] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [724] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [727] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [730] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [733] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [736] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [739] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [742] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [745] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [748] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [751] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [754] &quot;Canarias&quot;             &quot;Canarias&quot;             &quot;Canarias&quot;            
-##  [757] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [760] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [763] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [766] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [769] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [772] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [775] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [778] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [781] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [784] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [787] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [790] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [793] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [796] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [799] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [802] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [805] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [808] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [811] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [814] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [817] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [820] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [823] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [826] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [829] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [832] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [835] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [838] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [841] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [844] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [847] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [850] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [853] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [856] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [859] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [862] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [865] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [868] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [871] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [874] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [877] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [880] &quot;Cantabria&quot;            &quot;Cantabria&quot;            &quot;Cantabria&quot;           
-##  [883] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [886] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [889] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [892] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [895] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [898] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [901] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [904] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [907] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [910] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [913] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [916] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [919] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [922] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [925] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [928] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [931] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [934] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [937] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [940] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [943] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [946] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [949] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [952] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [955] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [958] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [961] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [964] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [967] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [970] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [973] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [976] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [979] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [982] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [985] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [988] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [991] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [994] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-##  [997] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-## [1000] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-## [1003] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-## [1006] &quot;Castilla y León&quot;      &quot;Castilla y León&quot;      &quot;Castilla y León&quot;     
-## [1009] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1012] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1015] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1018] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1021] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1024] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1027] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1030] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1033] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1036] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1039] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1042] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1045] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1048] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1051] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1054] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1057] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1060] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1063] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1066] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1069] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1072] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1075] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1078] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1081] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1084] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1087] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1090] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1093] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1096] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1099] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1102] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1105] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1108] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1111] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1114] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1117] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1120] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1123] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1126] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1129] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1132] &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;   &quot;Castilla-La Mancha&quot;  
-## [1135] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1138] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1141] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1144] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1147] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1150] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1153] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1156] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1159] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1162] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1165] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1168] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1171] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1174] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1177] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1180] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1183] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1186] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1189] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1192] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1195] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1198] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1201] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1204] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1207] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1210] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1213] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1216] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1219] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1222] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1225] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1228] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1231] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1234] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1237] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1240] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1243] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1246] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1249] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1252] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1255] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1258] &quot;Cataluña&quot;             &quot;Cataluña&quot;             &quot;Cataluña&quot;            
-## [1261] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1264] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1267] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1270] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1273] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1276] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1279] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1282] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1285] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1288] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1291] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1294] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1297] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1300] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1303] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1306] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1309] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1312] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1315] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1318] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1321] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1324] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1327] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1330] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1333] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1336] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1339] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1342] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1345] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1348] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1351] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1354] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1357] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1360] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1363] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1366] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1369] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1372] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1375] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1378] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1381] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1384] &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot; &quot;Comunitat Valenciana&quot;
-## [1387] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1390] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1393] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1396] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1399] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1402] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1405] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1408] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1411] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1414] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1417] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1420] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1423] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1426] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1429] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1432] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1435] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1438] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1441] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1444] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1447] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1450] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1453] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1456] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1459] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1462] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1465] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1468] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1471] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1474] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1477] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1480] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1483] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1486] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1489] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1492] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1495] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1498] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1501] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1504] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1507] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1510] &quot;Extremadura&quot;          &quot;Extremadura&quot;          &quot;Extremadura&quot;         
-## [1513] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1516] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1519] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1522] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1525] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1528] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1531] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1534] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1537] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1540] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1543] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1546] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1549] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1552] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1555] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1558] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1561] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1564] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1567] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1570] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1573] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1576] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1579] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1582] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1585] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1588] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1591] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1594] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1597] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1600] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1603] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1606] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1609] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1612] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1615] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1618] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1621] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1624] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1627] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1630] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1633] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1636] &quot;Galicia&quot;              &quot;Galicia&quot;              &quot;Galicia&quot;             
-## [1639] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1642] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1645] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1648] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1651] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1654] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1657] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1660] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1663] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1666] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1669] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1672] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1675] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1678] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1681] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1684] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1687] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1690] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1693] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1696] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1699] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1702] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1705] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1708] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1711] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1714] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1717] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1720] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1723] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1726] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1729] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1732] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1735] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1738] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1741] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1744] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1747] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1750] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1753] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1756] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1759] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1762] &quot;Madrid&quot;               &quot;Madrid&quot;               &quot;Madrid&quot;              
-## [1765] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1768] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1771] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1774] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1777] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1780] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1783] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1786] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1789] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1792] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1795] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1798] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1801] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1804] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1807] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1810] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1813] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1816] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1819] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1822] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1825] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1828] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1831] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1834] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1837] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1840] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1843] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1846] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1849] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1852] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1855] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1858] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1861] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1864] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1867] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1870] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1873] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1876] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1879] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1882] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1885] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1888] &quot;Murcia&quot;               &quot;Murcia&quot;               &quot;Murcia&quot;              
-## [1891] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1894] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1897] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1900] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1903] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1906] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1909] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1912] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1915] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1918] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1921] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1924] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1927] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1930] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1933] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1936] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1939] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1942] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1945] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1948] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1951] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1954] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1957] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1960] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1963] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1966] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1969] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1972] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1975] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1978] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1981] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1984] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1987] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1990] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1993] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1996] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [1999] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [2002] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [2005] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [2008] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [2011] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [2014] &quot;Navarra&quot;              &quot;Navarra&quot;              &quot;Navarra&quot;             
-## [2017] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2020] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2023] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2026] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2029] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2032] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2035] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2038] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2041] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2044] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2047] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2050] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2053] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2056] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2059] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2062] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2065] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2068] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2071] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2074] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2077] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2080] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2083] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2086] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2089] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2092] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2095] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2098] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2101] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2104] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2107] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2110] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2113] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2116] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2119] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2122] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2125] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2128] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2131] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2134] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2137] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2140] &quot;País Vasco&quot;           &quot;País Vasco&quot;           &quot;País Vasco&quot;          
-## [2143] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2146] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2149] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2152] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2155] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2158] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2161] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2164] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2167] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2170] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2173] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2176] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2179] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2182] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2185] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2188] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2191] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2194] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2197] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2200] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2203] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2206] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2209] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2212] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2215] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2218] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2221] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2224] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2227] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2230] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2233] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2236] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2239] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2242] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2245] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2248] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2251] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2254] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2257] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2260] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2263] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2266] &quot;Rioja&quot;                &quot;Rioja&quot;                &quot;Rioja&quot;               
-## [2269] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2272] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2275] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2278] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2281] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2284] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2287] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2290] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2293] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2296] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2299] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2302] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2305] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2308] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2311] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2314] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2317] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2320] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2323] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2326] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2329] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2332] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2335] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2338] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2341] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2344] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2347] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2350] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2353] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2356] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2359] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2362] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2365] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2368] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2371] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2374] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2377] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2380] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2383] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2386] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2389] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;     
-## [2392] &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;      &quot;Ceuta y Melilla&quot;</code></pre>
-<pre class="r"><code>#Cambio la columna nombre por la columna de las comunidades autónomas
+
+
+#Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre&lt;-comunidadesAutonomasCantidad
 
 #Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
@@ -1326,9 +511,9 @@ tablaCantidadDeAgua[18,2] &lt;- c(&quot;RIOJA, LA&quot;)
 
 colnames(tablaCantidadDeAgua) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;Cantidad&quot;)
 
-tablaCantidadDeAgua &lt;- tablaCantidadDeAgua %&gt;%
+tablaCantidadDeAguaFinal &lt;- tablaCantidadDeAgua %&gt;%
   mutate_at(vars(Anio), as.integer)
-tablaCantidadDeAgua</code></pre>
+tablaCantidadDeAguaFinal</code></pre>
 <pre><code>## # A tibble: 18 × 3
 ## # Groups:   Anio [1]
 ##     Anio ComunidadAutonoma           Cantidad
@@ -1351,6 +536,76 @@ tablaCantidadDeAgua</code></pre>
 ## 16  2020 NAVARRA, COMUNIDAD FORAL DE   22551.
 ## 17  2020 PAÍS VASCO                    52635.
 ## 18  2020 RIOJA, LA                      9448.</code></pre>
+</div>
+<div id="tabla-de-calidad-de-agua" class="section level2">
+<h2>Tabla de calidad de agua</h2>
+<pre class="r"><code>ruta_pdf &lt;- pdf_text(&quot;report_Cap.3_part2._Libro_blanco_del_agua.pdf&quot;)
+pagina &lt;- ruta_pdf[17]
+lineas &lt;- strsplit(pagina, &quot;\n&quot;)[[1]]
+linea_deseada &lt;- lineas[5:21] </code></pre>
+<pre class="r"><code>datos_divididos &lt;- strsplit(linea_deseada, &quot;\\s+&quot;)
+datos_obtenidos &lt;- datos_divididos[-c(1:3)]
+
+datosDeInteres &lt;- datos_obtenidos[-c(length(datos_obtenidos))]
+datosDeInteres[[4]] &lt;- c(&quot;CASTILLA - LA MANCHA&quot;,&quot;28&quot;,&quot;39&quot;,&quot;43&quot;,&quot;24&quot;,&quot;7&quot;,&quot;12&quot;,&quot;0&quot;)
+datosDeInteres[[5]] &lt;- c(&quot;CASTILLA Y LEÓN&quot;,&quot;2&quot;,&quot;2&quot;,&quot;2&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;)
+datosDeInteres[[9]] &lt;- c(&quot;MADRID, COMUNIDAD DE&quot;,&quot;6&quot;,&quot;6&quot;,&quot;7&quot;,&quot;0&quot;,&quot;2&quot;,&quot;5&quot;,&quot;0&quot;)
+datosDeInteres[[10]] &lt;- c(&quot;MURCIA, REGIÓN DE&quot;,&quot;3&quot;,&quot;3&quot;,&quot;3&quot;,&quot;0&quot;,&quot;0&quot;,&quot;3&quot;,&quot;0&quot;)
+datosDeInteres[[11]] &lt;- c(&quot;NAVARRA, COMUNIDAD FORAL DE&quot;,&quot;11&quot;,&quot;11&quot;,&quot;11&quot;,&quot;4&quot;,&quot;5&quot;,&quot;2&quot;,&quot;0&quot;)
+datosDeInteres[[12]] &lt;- c(&quot;RIOJA, LA&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;)
+datosDeInteres[[13]] &lt;- c(&quot;COMUNITAT VALENCIANA&quot;,&quot;2&quot;,&quot;2&quot;,&quot;2&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;)
+
+tablaCalidadDeAgua&lt;-data.frame()
+for (i in datosDeInteres){
+  tablaCalidadDeAgua&lt;-rbind(tablaCalidadDeAgua,i)
+}
+
+colnames(tablaCalidadDeAgua) &lt;- c(&quot;ComunidadAutonoma&quot;, &quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
+
+colNumericas &lt;- c(&quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
+tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
+  mutate_at(vars(colNumericas), as.integer)</code></pre>
+<pre><code>## Warning: Using an external vector in selections was deprecated in tidyselect 1.1.0.
+## ℹ Please use `all_of()` or `any_of()` instead.
+##   # Was:
+##   data %&gt;% select(colNumericas)
+## 
+##   # Now:
+##   data %&gt;% select(all_of(colNumericas))
+## 
+## See &lt;https://tidyselect.r-lib.org/reference/faq-external-vector.html&gt;.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre class="r"><code>tablaCalidadDeAguaFinal</code></pre>
+<pre><code>##              ComunidadAutonoma NumdeMunicipios ZonasdeBaño PuntosdeMuestreo
+## 1                    ANDALUCÍA              58          63               70
+## 2                       ARAGÓN              11          11               12
+## 3                     ASTURIAS               1           1                1
+## 4         CASTILLA - LA MANCHA              28          39               43
+## 5              CASTILLA Y LEÓN               2           2                2
+## 6                     CATALUÑA               9          10               11
+## 7                  EXTREMADURA              17          17               17
+## 8                      GALICIA              53          54               68
+## 9         MADRID, COMUNIDAD DE               6           6                7
+## 10           MURCIA, REGIÓN DE               3           3                3
+## 11 NAVARRA, COMUNIDAD FORAL DE              11          11               11
+## 12                   RIOJA, LA               1           1                1
+## 13        COMUNITAT VALENCIANA               2           2                2
+##    Aguas2 Aguas1 Aguas0 AguasSCF
+## 1       3     36     27        4
+## 2       3      7      1        1
+## 3       0      0      1        0
+## 4      24      7     12        0
+## 5       0      1      1        0
+## 6       3      8      0        0
+## 7       0      0      0       17
+## 8      10     45     13        0
+## 9       0      2      5        0
+## 10      0      0      3        0
+## 11      4      5      2        0
+## 12      0      1      0        0
+## 13      0      1      1        0</code></pre>
 </div>
 
 

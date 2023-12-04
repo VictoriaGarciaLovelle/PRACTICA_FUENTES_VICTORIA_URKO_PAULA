@@ -162,6 +162,10 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 tablaCalidadDeAguaFinal
 ```
 
+```{r cargaPresupuesto}
+summodificado <- read_csv("summodificado.csv")
+```
+
 
 
 
