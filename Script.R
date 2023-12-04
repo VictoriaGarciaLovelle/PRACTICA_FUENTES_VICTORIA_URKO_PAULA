@@ -34,8 +34,8 @@ arrayData
 #seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
 
 # Utilizar strsplit para dividir la cadena de texto
-separador <- "\\."
-partes <- strsplit(arrayData$Nombre, separador)
+#separador <- "\\."
+partes <- strsplit(arrayData$Nombre, "\\.")
 partes
 
 comunidadesAutonomas<-c()
