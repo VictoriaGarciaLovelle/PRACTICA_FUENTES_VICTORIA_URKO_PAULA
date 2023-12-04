@@ -2,6 +2,7 @@
 #install.packages("pdftools")
 library(pdftools)
 library(tidyverse)
+library(tidyjson)
 library(tidyr)
 library(rjson)
 
