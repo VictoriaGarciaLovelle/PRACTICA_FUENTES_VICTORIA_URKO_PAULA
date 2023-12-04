@@ -150,12 +150,11 @@ for (i in datosDeInteres){
 
 colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 
-colNumericas <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
+colNumericas <- c("NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
-  mutate_at(vars(colNumericas), as.integer) %>%
-  drop_na()
+  mutate_at(vars(colNumericas), as.integer)
 
-tablaCalidadDeAgua
+tablaCalidadDeAguaFinal
 ## -------------------- Presupuestos del agua ----------------------------
 
 #importando archivo
@@ -172,7 +171,10 @@ tablaPresupuestos <- summodificado%>%
 
 tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
-tablaPresupuestos
+tablaPresupuestosFinal <- tablaPresupuestos[,-3]
+tablaPresupuestosFinal
+
+
 
 #----------------------------Joins---------------------------------------------------
 EsperanzayCantidad<- tablaEsperanzaDeVida%>%
