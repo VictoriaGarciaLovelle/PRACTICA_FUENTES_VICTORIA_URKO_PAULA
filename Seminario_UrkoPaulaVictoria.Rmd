@@ -52,6 +52,13 @@ tablaComunidadesAñoValor<- as_tibble(seleccion)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
 tablaComunidadesAñoValor
 
+tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
+  filter(Anyo==2020)%>%
+  group_by(Anyo, Nombre) %>%
+  summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
+  rename(Año=Anyo,ComunidadAutonoma=Nombre)
+tablaEsperanzaDeVida
+
 
 
 ```
