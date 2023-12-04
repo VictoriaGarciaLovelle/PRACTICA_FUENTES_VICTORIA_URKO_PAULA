@@ -197,6 +197,7 @@ tablaPresupuestos <- summodificado%>%
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
   mutate(ComunidadAutonoma = gsub("^\\d+\\s*", "", ComunidadAutonoma)) %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma)) %>%
+  select (.data = ., Anio, ComunidadAutonoma:Presupuesto) %>%
   drop_na()
 tablaPresupuestos
 #----------------------------------------------------------------------------------------
