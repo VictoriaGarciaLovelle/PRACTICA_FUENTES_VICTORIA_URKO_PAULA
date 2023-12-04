@@ -190,12 +190,12 @@ tablaCalidadDeAgua
 
 #importando archivo
 summodificado <- read_csv("summodificado.csv")
-colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Periodo", "Presupuesto")
+colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
 
 #Modificando el csv
 sum_ <- select(.data = summodificado, ComunidadAutonoma: Presupuesto) %>% 
   drop_na()   %>% 
-  filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Periodo== "2020")
+  filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020")
 
 tablaNobuena <- sum_ %>%
   mutate(
@@ -203,8 +203,7 @@ tablaNobuena <- sum_ %>%
   )
 # Mostrar el resultado
 tablaNobuena
-colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Anio", "Total")
-tablaNobuena
+
 
 tablaPresupuestos <- tablaNobuena %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
