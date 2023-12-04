@@ -222,6 +222,22 @@ EsperanzayCantidad<- tablaEsperanzaDeVida%>%
                     drop_na()
 EsperanzayCantidad
 
+#
+ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
+geom_point(aes(color=ComunidadAutonoma))+
+  geom_smooth()+
+  labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
+       x="Cantidad de agua ",
+       y="Esperanza de vida")+
+  theme_minimal()
+
+
+
+
+
+
+
+
 library(ggplot2)
 library(tidyr)
 #-Parte que en principio da error
@@ -244,6 +260,19 @@ CantidadyPresupuesto<- tablaCantidadDeAgua%>%
                     drop_na()
 CantidadyPresupuesto
 
+
+ggplot(data=CantidadyPresupuesto, aes(x=Cantidad, y=Total))+
+  geom_point(aes(color=ComunidadAutonoma))+
+  geom_smooth()+
+  labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
+       x="Cantidad de agua ",
+       y="Presupuestos")+
+  theme_minimal()
+
+
+
+
+
 ggplot(data=CantidadyPresupuesto, aes(x= ComunidadAutonoma, y= Total, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
 
@@ -256,7 +285,7 @@ EsperanzayCalidad<- tablaEsperanzaDeVida%>%
 EsperanzayCalidad
 
 # AQUÍ TENEMOS QUE AGRUPAR TODAS LAS COLUMNAS DE AGUA YA QUE QUIERO PONER EN EL EJE X LA ESPERANZA DE VIDA Y EN EL EJE Y LA CALIDAD DEL AGUA 
-ggplot(data=EsperanzayCalidad, aes(x= EsperanzaDeVida, y= factor(), fill=ComunidadAutonoma))+
+ggplot(data=EsperanzayCalidad, aes(x= EsperanzaDeVida, y= factor(Calidad), fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")
 #-----
 tablaFinal<- EsperanzayCantidad %>% 
