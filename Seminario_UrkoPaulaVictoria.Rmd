@@ -137,6 +137,7 @@ linea_deseada <- lineas[5:21]
 
 ```{r tablaCalidadDeAgua}
 datos_divididos <- strsplit(linea_deseada, "\\s+")
+datos_obtenidos <- datos_divididos[-c(1:3)]
 
 
 ```
