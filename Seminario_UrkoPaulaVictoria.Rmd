@@ -175,6 +175,7 @@ tablaPresupuestos <- summodificado%>%
 
 tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
+tablaPresupuestosFinal <- tablaPresupuestos[,-3]
 ```
 
 
