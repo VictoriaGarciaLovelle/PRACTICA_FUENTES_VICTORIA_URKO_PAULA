@@ -221,14 +221,13 @@ ggplot(data=CantidadyPresupuesto1, aes(x= Presupuesto, y= Cantidad, fill=Comunid
   geom_bar(stat= "identity", width = 5000)+
   theme_minimal()
 
-# como la variable drv tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
-graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
+# Esperanza y calidad
+ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
   facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
   labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
        x="Calidad",
        y="Esperanza de vida")
-graficoEsperanzaCalidad
 
 #-----
 tablaFinal<- EsperanzayCantidad %>% 
