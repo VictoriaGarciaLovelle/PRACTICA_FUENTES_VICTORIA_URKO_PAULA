@@ -410,6 +410,10 @@ arrayData&lt;-esperanzaVida %&gt;%
   gather_array %&gt;% 
   spread_all %&gt;% 
   select(Nombre, Anyo, Valor) </code></pre>
+<p>El atributo Nombre contiene una cadena de caracteres muy largo
+separados por puntos. Entre toda la información está el nombre de la
+comunidad autónoma, por lo que se separa la cadena de texto y se obtiene
+únicamente estos nombres.</p>
 <pre class="r"><code>partes &lt;- strsplit(arrayData$Nombre, &quot;\\.&quot;)
 
 comunidadesAutonomas&lt;-c()
@@ -417,9 +421,12 @@ for (i in partes){
   comunidadesAutonomas&lt;-c(comunidadesAutonomas,i[1])
 }
 
-arrayData$Nombre&lt;-comunidadesAutonomas
-
-tablaComunidadesAñoValor&lt;- as_tibble(arrayData)
+arrayData$Nombre&lt;-comunidadesAutonomas</code></pre>
+<p>De la tabla se obtiene el año 2020 de cada comunidad autónoma y se
+obtiene como valor la media de la esperanza de vida en ese año.</p>
+<p>Para tener todas las tablas con el mismo estilo, se han pasado los
+nombres de las comunidades autónomas a mayúsculas.</p>
+<pre class="r"><code>tablaComunidadesAñoValor&lt;- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, &quot;JSON&quot;) &lt;- NULL
 
 tablaEsperanzaDeVida &lt;- tablaComunidadesAñoValor %&gt;%
@@ -431,8 +438,10 @@ tablaEsperanzaDeVida &lt;- tablaComunidadesAñoValor %&gt;%
 tablaEsperanzaDeVidaFinal &lt;- tablaEsperanzaDeVida %&gt;%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
-colnames(tablaEsperanzaDeVidaFinal) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;EsperanzaDeVida&quot;)
-tablaEsperanzaDeVidaFinal</code></pre>
+colnames(tablaEsperanzaDeVidaFinal) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;EsperanzaDeVida&quot;)</code></pre>
+<p>En la tabla final, se puede observar la media de la esperanza de vida
+de cada comunidad autónoma en el año 2020.</p>
+<pre class="r"><code>tablaEsperanzaDeVidaFinal</code></pre>
 <pre><code>## # A tibble: 19 × 3
 ## # Groups:   Anio [1]
 ##     Anio ComunidadAutonoma           EsperanzaDeVida
