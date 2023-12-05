@@ -16,6 +16,7 @@ A lo largo del seminario analizaremos de manera formal cómo diversos aspectos r
 
 
 ## Carga de librerías:
+
 ```{r CargaLibrerías}
 library(pdftools)
 library(tidyverse)
@@ -25,6 +26,8 @@ library(rjson)
 ```
 
 ## Tabla de Esperanza de Vida:
+Para obtener la tabla de esperanza de vida hay que cargar los datos de un archivo Json.
+Se crea la importación de los datos Json, después se encuadra el archivo y se accede a todos los tipos almacenados en la variable EsperanzaVida.
 
 ```{r cargaDeDatosJson}
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
