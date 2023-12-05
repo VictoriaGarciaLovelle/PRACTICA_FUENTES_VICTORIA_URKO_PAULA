@@ -43,7 +43,6 @@ tibble1<-esperanzaVida %>%
 
 
 Para obtener la tabla final se ha accedido a aquel que era de tipo array que contenia los valores de interés.
-
 ```{r ObtencionTablaEsperanza}
 #Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
 arrayData<-esperanzaVida %>%
