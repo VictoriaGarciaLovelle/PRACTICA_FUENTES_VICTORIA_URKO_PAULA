@@ -95,7 +95,10 @@ cantidadAgua%>%
 ```
 
 
-Para poder obtener la tabla final de la cantidad de agua consumida en cada comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés.
+Para poder obtener la tabla final de la cantidad de agua consumida en cada comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data.
+Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las comunidades autónomas.
+
+
 ```{r tablaCantidadAgua}
 #Entro en el array Data
 arrayDataCantidad<-cantidadAgua%>%
