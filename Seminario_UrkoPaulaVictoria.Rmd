@@ -120,13 +120,16 @@ for (i in cadenas){
 #Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
 
-```
-
-```{r, eval = TRUE,warning=FALSE }
 #Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
 tabla <- arrayDataCantidad %>%
   filter(!(Nombre == "España")) %>%
   select(Nombre, NombrePeriodo, Valor)
+
+```
+
+En la tabla que de momento obtenemps
+```{r, eval = TRUE,warning=FALSE }
+
 
 #Agrupo por comunidades autónomas y años
 tablaCantidadDeAgua <- tabla %>%
