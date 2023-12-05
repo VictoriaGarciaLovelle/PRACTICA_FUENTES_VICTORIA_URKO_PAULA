@@ -94,13 +94,9 @@ cantidadAgua%>%
   count(name,type)
 ```
 
-```{r tablaCantidadAgua}
-#Veo los tipos de atributos
-cantidadAgua%>%
-  gather_object%>%
-  json_types%>%
-  count(name,type)
 
+Para poder obtener la tabla final de la cantidad de agua consumida en cada comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés.
+```{r tablaCantidadAgua}
 #Entro en el array Data
 arrayDataCantidad<-cantidadAgua%>%
   enter_object(Data)%>%
