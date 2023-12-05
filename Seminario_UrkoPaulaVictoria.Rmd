@@ -27,6 +27,7 @@ library(rjson)
 
 ## Tabla de Esperanza de Vida:
 Para obtener la tabla de esperanza de vida hay que cargar los datos de un archivo Json.
+
 Se crea la importación de los datos Json, después se encuadra el archivo y se observan todos los tipos almacenados en la variable EsperanzaVida.
 
 ```{r cargaDeDatosJson}
@@ -81,6 +82,7 @@ tablaEsperanzaDeVidaFinal
 
 ## Tabla de Cantidad de Agua:
 Para obtener la tabla de la cantidad de agua hay que cargar los datos de un archivo Json.
+
 Se crea la importación de los datos Json, después se encuadra el archivo y se observan todos los tipos de atributos almacenados en la variable EsperanzaVida
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
@@ -96,10 +98,10 @@ cantidadAgua%>%
 
 
 Para poder obtener la tabla final de la cantidad de agua consumida en cada comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data.
+
 Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las comunidades autónomas.
+
 Esa nueva variable con las comunidades autónomas se añaden a la tabla final y se elimina donde ponga España.
-
-
 ```{r tablaCantidadAgua}
 #Entro en el array Data
 arrayDataCantidad<-cantidadAgua%>%
@@ -128,7 +130,9 @@ tabla <- arrayDataCantidad %>%
 ```
 
 Se filtra únicamente por el año 2020, que es el año de interés, se realiza una media de los valores obtenidos en el año 2020 de cada comunicad autónoma.
+
 Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las comunidades autónomas a mayúsculas y se han renombrado.
+
 Por último se ha pasado a tipo entero la columna años.
 ```{r, eval = TRUE,warning=FALSE }
 #Agrupo por comunidades autónomas y años
