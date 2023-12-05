@@ -556,30 +556,10 @@ tablaCantidadDeAgua[18,2] &lt;- c(&quot;RIOJA, LA&quot;)
 colnames(tablaCantidadDeAgua) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;Cantidad&quot;)
 
 tablaCantidadDeAguaFinal &lt;- tablaCantidadDeAgua %&gt;%
-  mutate_at(vars(Anio), as.integer)
-tablaCantidadDeAguaFinal</code></pre>
-<pre><code>## # A tibble: 18 × 3
-## # Groups:   Anio [1]
-##     Anio ComunidadAutonoma           Cantidad
-##    &lt;int&gt; &lt;chr&gt;                          &lt;dbl&gt;
-##  1  2020 ANDALUCÍA                    262867 
-##  2  2020 ARAGÓN                        38689.
-##  3  2020 ASTURIAS                      28342.
-##  4  2020 BALEARS, ILLES                42033.
-##  5  2020 CANARIAS                      79923.
-##  6  2020 CANTABRIA                     20367.
-##  7  2020 CASTILLA Y LEÓN               73272.
-##  8  2020 CASTILLA - LA MANCHA          60920.
-##  9  2020 CATALUÑA                     239767.
-## 10  2020 CEUTA Y MELILLA                5507.
-## 11  2020 COMUNITAT VALENCIANA         188854.
-## 12  2020 EXTREMADURA                   28064.
-## 13  2020 GALICIA                       71149 
-## 14  2020 MADRID, COMUNIDAD DE         216232.
-## 15  2020 MURCIA, REGIÓN DE             57000.
-## 16  2020 NAVARRA, COMUNIDAD FORAL DE   22551.
-## 17  2020 PAÍS VASCO                    52635.
-## 18  2020 RIOJA, LA                      9448.</code></pre>
+  mutate_at(vars(Anio), as.integer)</code></pre>
+<p>En la tabla final de la cantidad de agua, se puede observar la
+cantidad de agua consumida por cada comunidad autónoma en el año 2020.
+<code>{ r tablaFinal} tablaCantidadDeAguaFinal</code></p>
 </div>
 <div id="tabla-de-calidad-de-agua" class="section level2">
 <h2>Tabla de calidad de agua</h2>

@@ -159,8 +159,10 @@ tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
 
 ```
 En la tabla final de la cantidad de agua, se puede observar la cantidad de agua consumida por cada comunidad autónoma en el año 2020.
-```{ r tablaFinal}
+```{r tablaFinal}
+
 tablaCantidadDeAguaFinal
+
 ```
 
 
