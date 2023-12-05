@@ -127,10 +127,9 @@ tabla <- arrayDataCantidad %>%
 
 ```
 
-En la tabla que de momento obtenemps
+Se filtra únicamente por el año 2020, que es el año de interés, se realiza una media de los valores obtenidos en el año 2020 de cada comunicad autónoma.
+
 ```{r, eval = TRUE,warning=FALSE }
-
-
 #Agrupo por comunidades autónomas y años
 tablaCantidadDeAgua <- tabla %>%
   filter(NombrePeriodo  ==2020)%>%
