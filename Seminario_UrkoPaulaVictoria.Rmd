@@ -156,8 +156,11 @@ colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
 
 tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate_at(vars(Anio), as.integer)
-tablaCantidadDeAguaFinal
 
+```
+En la tabla final de la cantidad de agua, se puede observar la cantidad de agua consumida por cada comunidad autónoma en el año 2020.
+```{ r tablaFinal}
+tablaCantidadDeAguaFinal
 ```
 
 

@@ -406,9 +406,10 @@ library(rjson) </code></pre>
 <div id="tabla-de-esperanza-de-vida" class="section level2">
 <h2>Tabla de Esperanza de Vida:</h2>
 <p>Para obtener la tabla de esperanza de vida hay que cargar los datos
-de un archivo Json. Se crea la importación de los datos Json, después se
-encuadra el archivo y se observan todos los tipos almacenados en la
-variable EsperanzaVida.</p>
+de un archivo Json.</p>
+<p>Se crea la importación de los datos Json, después se encuadra el
+archivo y se observan todos los tipos almacenados en la variable
+EsperanzaVida.</p>
 <pre class="r"><code>archivoJson &lt;- fromJSON(file = &quot;EsperanzaVida.json&quot;)
 
 esperanzaVida &lt;- spread_all(archivoJson)
@@ -477,9 +478,10 @@ tablaEsperanzaDeVidaFinal</code></pre>
 <div id="tabla-de-cantidad-de-agua" class="section level2">
 <h2>Tabla de Cantidad de Agua:</h2>
 <p>Para obtener la tabla de la cantidad de agua hay que cargar los datos
-de un archivo Json. Se crea la importación de los datos Json, después se
-encuadra el archivo y se observan todos los tipos de atributos
-almacenados en la variable EsperanzaVida</p>
+de un archivo Json.</p>
+<p>Se crea la importación de los datos Json, después se encuadra el
+archivo y se observan todos los tipos de atributos almacenados en la
+variable EsperanzaVida</p>
 <pre class="r"><code>archivoJsonCantidad &lt;- fromJSON(file = &quot;CantidadAgua.json&quot;)
 
 cantidadAgua &lt;- spread_all(archivoJsonCantidad)
@@ -497,12 +499,12 @@ cantidadAgua%&gt;%
 ## 3 Nombre   string   133</code></pre>
 <p>Para poder obtener la tabla final de la cantidad de agua consumida en
 cada comunidad autónoma, se ha accedido al atributo de tipo array que
-contiene la información de interés que es Data. Seguidamente, como
-únicamente necesitamos las comunidades autónomas y están escritas en una
-larga cadena de texto, dividimos la cadena de texto y obtenemos de ella
-el nombre de las comunidades autónomas. Esa nueva variable con las
-comunidades autónomas se añaden a la tabla final y se elimina donde
-ponga España.</p>
+contiene la información de interés que es Data.</p>
+<p>Seguidamente, como únicamente necesitamos las comunidades autónomas y
+están escritas en una larga cadena de texto, dividimos la cadena de
+texto y obtenemos de ella el nombre de las comunidades autónomas.</p>
+<p>Esa nueva variable con las comunidades autónomas se añaden a la tabla
+final y se elimina donde ponga España.</p>
 <pre class="r"><code>#Entro en el array Data
 arrayDataCantidad&lt;-cantidadAgua%&gt;%
   enter_object(Data)%&gt;%
@@ -528,10 +530,11 @@ tabla &lt;- arrayDataCantidad %&gt;%
   select(Nombre, NombrePeriodo, Valor)</code></pre>
 <p>Se filtra únicamente por el año 2020, que es el año de interés, se
 realiza una media de los valores obtenidos en el año 2020 de cada
-comunicad autónoma. Para tener todas las tablas con el mismo estilo, se
-han pasado los nombres de las comunidades autónomas a mayúsculas y se
-han renombrado. Por último se ha pasado a tipo entero la columna
-años.</p>
+comunicad autónoma.</p>
+<p>Para tener todas las tablas con el mismo estilo, se han pasado los
+nombres de las comunidades autónomas a mayúsculas y se han
+renombrado.</p>
+<p>Por último se ha pasado a tipo entero la columna años.</p>
 <pre class="r"><code>#Agrupo por comunidades autónomas y años
 tablaCantidadDeAgua &lt;- tabla %&gt;%
   filter(NombrePeriodo  ==2020)%&gt;%
