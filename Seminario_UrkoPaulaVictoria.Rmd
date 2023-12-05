@@ -87,7 +87,7 @@ tablaEsperanzaDeVidaFinal <- tablaEsperanzaDeVida %>%
 colnames(tablaEsperanzaDeVidaFinal) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
 ```
 
-
+En la tabla final, se puede observar la media de la esperanza de vida de cada comunidad autónoma en el año 2020.
 ```{r tablaEsperanza}
 tablaEsperanzaDeVidaFinal
 ```
