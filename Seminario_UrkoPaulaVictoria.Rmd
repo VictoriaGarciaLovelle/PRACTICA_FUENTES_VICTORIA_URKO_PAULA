@@ -57,7 +57,6 @@ arrayData<-esperanzaVida %>%
 
 El atributo Nombre contiene una cadena de caracteres muy largo separados por puntos. Entre toda la información está el nombre de la comunidad autónoma, por lo que se separa la cadena de texto y se obtiene únicamente estos nombres. 
 
-
 ```{r, eval = TRUE,warning=FALSE}
 partes <- strsplit(arrayData$Nombre, "\\.")
 
@@ -67,6 +66,7 @@ for (i in partes){
 }
 
 arrayData$Nombre<-comunidadesAutonomas
+```
 
 tablaComunidadesAñoValor<- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
