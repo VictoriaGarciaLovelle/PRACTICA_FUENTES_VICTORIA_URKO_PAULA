@@ -85,6 +85,10 @@ tablaEsperanzaDeVidaFinal <- tablaEsperanzaDeVida %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
 colnames(tablaEsperanzaDeVidaFinal) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
+```
+
+
+```{r tablaEsperanza}
 tablaEsperanzaDeVidaFinal
 ```
 
