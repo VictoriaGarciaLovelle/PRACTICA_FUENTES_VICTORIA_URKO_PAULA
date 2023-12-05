@@ -17,7 +17,7 @@ A lo largo del seminario analizaremos de manera formal cómo diversos aspectos r
 
 ## Carga de librerías:
 
-```{r CargaLibrerías, eval = TRUE, warning=FALSE}
+```{r CargaLibrerías, eval = TRUE, include=FALSE}
 library(pdftools)
 library(tidyverse)
 library(tidyjson)
