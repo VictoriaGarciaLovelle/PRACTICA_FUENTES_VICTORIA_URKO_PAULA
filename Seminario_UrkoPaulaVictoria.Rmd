@@ -97,6 +97,7 @@ cantidadAgua%>%
 
 Para poder obtener la tabla final de la cantidad de agua consumida en cada comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data.
 Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las comunidades autónomas.
+Esa nueva variable con las comunidades autónomas se añaden a la tabla final.
 
 
 ```{r tablaCantidadAgua}
@@ -116,10 +117,12 @@ for (i in cadenas){
   comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
 }
 
-
 #Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
 
+```
+
+```{r, eval = TRUE,warning=FALSE }
 #Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
 tabla <- arrayDataCantidad %>%
   filter(!(Nombre == "España")) %>%
