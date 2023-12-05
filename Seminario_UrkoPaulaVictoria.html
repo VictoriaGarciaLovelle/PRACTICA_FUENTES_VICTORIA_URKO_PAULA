@@ -380,29 +380,10 @@ de Vida</li>
 </ol>
 <div id="carga-de-librerías" class="section level2">
 <h2>Carga de librerías:</h2>
-<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)
-library(pdftools)</code></pre>
-<pre><code>## Warning: package &#39;pdftools&#39; was built under R version 4.3.2</code></pre>
-<pre><code>## Using poppler version 23.08.0</code></pre>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.3     ✔ readr     2.1.4
-## ✔ forcats   1.0.0     ✔ stringr   1.5.0
-## ✔ ggplot2   3.4.3     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
-## ✔ purrr     1.0.2</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<pre class="r"><code>library(tidyjson)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;tidyjson&#39;
-## 
-## The following object is masked from &#39;package:stats&#39;:
-## 
-##     filter</code></pre>
-<pre class="r"><code>library(tidyr)
+<pre class="r"><code>library(pdftools)
+library(tidyverse)
+library(tidyjson)
+library(tidyr)
 library(rjson) </code></pre>
 </div>
 <div id="tabla-de-esperanza-de-vida" class="section level2">
@@ -445,10 +426,9 @@ tablaEsperanzaDeVida &lt;- tablaComunidadesAñoValor %&gt;%
   filter(Anyo==2020)%&gt;%
   group_by(Anyo, Nombre) %&gt;%
   summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%&gt;%
-  rename(Año=Anyo,ComunidadAutonoma=Nombre)</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;Anyo&#39;. You can override using the
-## `.groups` argument.</code></pre>
-<pre class="r"><code>tablaEsperanzaDeVidaFinal &lt;- tablaEsperanzaDeVida %&gt;%
+  rename(Año=Anyo,ComunidadAutonoma=Nombre)
+
+tablaEsperanzaDeVidaFinal &lt;- tablaEsperanzaDeVida %&gt;%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
 colnames(tablaEsperanzaDeVidaFinal) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;EsperanzaDeVida&quot;)
@@ -542,10 +522,9 @@ tablaCantidadDeAgua &lt;- tabla %&gt;%
   filter(NombrePeriodo  ==2020)%&gt;%
   group_by(NombrePeriodo  , Nombre) %&gt;%
   summarize(Cantidad = mean(Valor, na.rm = TRUE))%&gt;%
-  rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;NombrePeriodo&#39;. You can override using the
-## `.groups` argument.</code></pre>
-<pre class="r"><code>tablaCantidadDeAgua &lt;- tablaCantidadDeAgua %&gt;%
+  rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
+
+tablaCantidadDeAgua &lt;- tablaCantidadDeAgua %&gt;%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
 
 tablaCantidadDeAgua[4,2] &lt;- c(&quot;BALEARS, ILLES&quot;)
@@ -613,20 +592,9 @@ colnames(tablaCalidadDeAgua) &lt;- c(&quot;ComunidadAutonoma&quot;, &quot;NumdeM
 
 colNumericas &lt;- c(&quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
 tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
-  mutate_at(vars(colNumericas), as.integer)</code></pre>
-<pre><code>## Warning: Using an external vector in selections was deprecated in tidyselect 1.1.0.
-## ℹ Please use `all_of()` or `any_of()` instead.
-##   # Was:
-##   data %&gt;% select(colNumericas)
-## 
-##   # Now:
-##   data %&gt;% select(all_of(colNumericas))
-## 
-## See &lt;https://tidyselect.r-lib.org/reference/faq-external-vector.html&gt;.
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-## generated.</code></pre>
-<pre class="r"><code>tablaCalidadDeAguaFinal</code></pre>
+  mutate_at(vars(colNumericas), as.integer)
+
+tablaCalidadDeAguaFinal</code></pre>
 <pre><code>##              ComunidadAutonoma NumdeMunicipios ZonasdeBaño PuntosdeMuestreo
 ## 1                    ANDALUCÍA              58          63               70
 ## 2                       ARAGÓN              11          11               12
@@ -655,16 +623,8 @@ tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
 ## 11      4      5      2        0
 ## 12      0      1      0        0
 ## 13      0      1      1        0</code></pre>
-<pre class="r"><code>summodificado &lt;- read_csv(&quot;summodificado.csv&quot;)</code></pre>
-<pre><code>## Rows: 2394 Columns: 5
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (4): Total Nacional, Comunidades y Ciudades Autónomas, Grupos de usuario...
-## dbl (1): periodo
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre class="r"><code>colnames(summodificado) &lt;- c(&quot;TotalNacional&quot;, &quot;ComunidadAutonoma&quot;, &quot;GruposDeUsuarioEImporte&quot;,&quot;Anio&quot;, &quot;Presupuesto&quot;)
+<pre class="r"><code>summodificado &lt;- read_csv(&quot;summodificado.csv&quot;)
+colnames(summodificado) &lt;- c(&quot;TotalNacional&quot;, &quot;ComunidadAutonoma&quot;, &quot;GruposDeUsuarioEImporte&quot;,&quot;Anio&quot;, &quot;Presupuesto&quot;)
 
 tablaPresupuestos &lt;- summodificado%&gt;%
   filter(GruposDeUsuarioEImporte==&quot;Importe total de la inversión en los servicios de suministro&quot; &amp; Anio== &quot;2020&quot;) %&gt;%
