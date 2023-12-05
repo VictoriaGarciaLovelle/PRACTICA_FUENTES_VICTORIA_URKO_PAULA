@@ -17,7 +17,7 @@ A lo largo del seminario analizaremos de manera formal cómo diversos aspectos r
 
 ## Carga de librerías:
 
-```{r CargaLibrerías}
+```{r CargaLibrerías, eval = TRUE,warning=FALSE}
 library(pdftools)
 library(tidyverse)
 library(tidyjson)
@@ -43,7 +43,7 @@ tibble1<-esperanzaVida %>%
 
 
 Para obtener la tabla final se ha accedido a aquel que era de tipo array que contenia los valores de interés.
-Al ser una cadena de caracteres, únicamente nos interesa la comunidad autónoma.ñ
+
 ```{r ObtencionTablaEsperanza}
 #Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
 arrayData<-esperanzaVida %>%
@@ -51,7 +51,8 @@ arrayData<-esperanzaVida %>%
   gather_array %>% 
   spread_all %>% 
   select(Nombre, Anyo, Valor) 
-
+```
+```{r, eval = TRUE,warning=FALSE}
 partes <- strsplit(arrayData$Nombre, "\\.")
 
 comunidadesAutonomas<-c()
