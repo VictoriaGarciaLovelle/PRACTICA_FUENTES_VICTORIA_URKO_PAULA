@@ -69,6 +69,8 @@ arrayData$Nombre<-comunidadesAutonomas
 ```
 
 De la tabla se obtiene el año 2020 de cada comunidad autónoma y se obtiene como valor la media de la esperanza de vida en ese año.
+
+Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las comunidades autónomas a mayúsculas.
 ```{r obtenciontablaEsperanza}
 tablaComunidadesAñoValor<- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
