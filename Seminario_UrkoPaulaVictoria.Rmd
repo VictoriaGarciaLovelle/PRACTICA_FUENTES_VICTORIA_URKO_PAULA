@@ -5,6 +5,12 @@ author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output: html_document
 ---
+# Objetivos
+1. Afectación de la calidad del agua en la Esperanza de Vida
+2. Afectación de la cantidad de agua consumida en la Esperanza de Vida
+3. Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
+4. Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
+
 
 ## Carga de librerías:
 ```{r CargaLibrerías}

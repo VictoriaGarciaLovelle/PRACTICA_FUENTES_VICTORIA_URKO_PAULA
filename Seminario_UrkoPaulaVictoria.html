@@ -11,9 +11,9 @@
 
 <meta name="author" content="Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle" />
 
-<meta name="date" content="2023-12-04" />
+<meta name="date" content="2023-12-05" />
 
-<title>Seminario_UrkoPaulaVictoria</title>
+<title>Seminario Fuentes de datos Biómédicas y Web Semántica</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,10 +350,12 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Seminario_UrkoPaulaVictoria</h1>
+<h1 class="title toc-ignore">Seminario Fuentes de datos Biómédicas y Web
+Semántica</h1>
+<h3 class="subtitle">Relación entre la Esperanza de Vida y el Agua</h3>
 <h4 class="author">Urko Alli Barrena, Paula Gregorio Losada, Victoria
 Garcia Lovelle</h4>
-<h4 class="date">2023-12-04</h4>
+<h4 class="date">2023-12-05</h4>
 
 </div>
 
@@ -606,6 +608,49 @@ tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
 ## 11      4      5      2        0
 ## 12      0      1      0        0
 ## 13      0      1      1        0</code></pre>
+<pre class="r"><code>summodificado &lt;- read_csv(&quot;summodificado.csv&quot;)</code></pre>
+<pre><code>## Rows: 2394 Columns: 5
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (4): Total Nacional, Comunidades y Ciudades Autónomas, Grupos de usuario...
+## dbl (1): periodo
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>colnames(summodificado) &lt;- c(&quot;TotalNacional&quot;, &quot;ComunidadAutonoma&quot;, &quot;GruposDeUsuarioEImporte&quot;,&quot;Anio&quot;, &quot;Presupuesto&quot;)
+
+tablaPresupuestos &lt;- summodificado%&gt;%
+  filter(GruposDeUsuarioEImporte==&quot;Importe total de la inversión en los servicios de suministro&quot; &amp; Anio== &quot;2020&quot;) %&gt;%
+  mutate(ComunidadAutonoma = gsub(&quot;^\\d+\\s*&quot;, &quot;&quot;, ComunidadAutonoma)) %&gt;%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma)) %&gt;%
+  select (.data = ., Anio, ComunidadAutonoma:Presupuesto) %&gt;%
+  drop_na()
+
+tablaPresupuestos$Presupuesto &lt;- gsub(&quot;\\.&quot;, &quot;&quot;, tablaPresupuestos$Presupuesto)
+tablaPresupuestos$Presupuesto &lt;- as.integer(tablaPresupuestos$Presupuesto)
+tablaPresupuestosFinal &lt;- tablaPresupuestos[,-3]
+
+tablaPresupuestosFinal</code></pre>
+<pre><code>## # A tibble: 17 × 3
+##     Anio ComunidadAutonoma           Presupuesto
+##    &lt;dbl&gt; &lt;chr&gt;                             &lt;int&gt;
+##  1  2020 ANDALUCÍA                         43361
+##  2  2020 ARAGÓN                              691
+##  3  2020 ASTURIAS, PRINCIPADO DE             757
+##  4  2020 BALEARS, ILLES                    14514
+##  5  2020 CANARIAS                           4015
+##  6  2020 CANTABRIA                           223
+##  7  2020 CASTILLA Y LEÓN                    8083
+##  8  2020 CASTILLA - LA MANCHA               2397
+##  9  2020 CATALUÑA                          30222
+## 10  2020 COMUNITAT VALENCIANA              39274
+## 11  2020 EXTREMADURA                        2263
+## 12  2020 GALICIA                            2594
+## 13  2020 MADRID, COMUNIDAD DE              80532
+## 14  2020 MURCIA, REGIÓN DE                  3170
+## 15  2020 NAVARRA, COMUNIDAD FORAL DE        5704
+## 16  2020 PAÍS VASCO                         3001
+## 17  2020 RIOJA, LA                           304</code></pre>
 </div>
 
 
