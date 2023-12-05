@@ -14,11 +14,12 @@ A lo largo del seminario analizaremos de manera formal cómo diversos aspectos r
 3. Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
 4. Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
 
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
+```
 ## Carga de librerías:
 
 ```{r CargaLibrerías, eval = TRUE}
-knitr::opts_chunk$set(echo = TRUE)
 library(pdftools)
 library(tidyverse)
 library(tidyjson)
