@@ -3,7 +3,7 @@
 library(pdftools)
 library(tidyverse)
 library(tidyjson)
-library(tidyr)
+#library(tidyr)
 library(rjson)
 
 ##----------------- Esperanza de vida -------------------
