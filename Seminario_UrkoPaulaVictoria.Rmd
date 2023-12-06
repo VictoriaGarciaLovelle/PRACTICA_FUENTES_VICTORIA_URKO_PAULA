@@ -12,9 +12,6 @@ output:
     toc_depth: '6'
 subtitle: Relación entre la Esperanza de Vida y el Agua
 ---
-
-
-=======
 ```{r, echo=FALSE, out.width="20%"}
 htmltools::img(src = knitr::image_uri(f = "escudo_ubu.jpg"), 
                alt = 'logo', 
