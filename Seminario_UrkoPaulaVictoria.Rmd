@@ -9,8 +9,8 @@ output:
     toc_depth: 6
     toc_float: true
 ---
-```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r, include=TRUE}
+knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics("escudo_ubu.jpg")
 ```
 
