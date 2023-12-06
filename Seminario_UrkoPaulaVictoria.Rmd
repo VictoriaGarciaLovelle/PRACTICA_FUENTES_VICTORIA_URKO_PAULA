@@ -33,12 +33,11 @@ library(pdftools)
 library(tidyverse)
 ```
 
+3. tidyjson: Esta librería fue útil para trabajar con datos en formato JSON. Fue esencial para analizar y extraer información de archivos JSON relacionados con la esperanza de vida y la cantidad de agua.
 ```{r cargatidyjson}
 library(tidyjson)
 ```
-```{r cargatidyr}
-library(tidyr)
-```
+
 ```{r cargarjson}
 library(rjson) 
 ```
