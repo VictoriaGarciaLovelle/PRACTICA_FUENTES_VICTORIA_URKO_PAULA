@@ -43,6 +43,7 @@ library(tidyjson)
 library(rjson) 
 ```
 
+# Obtención de tablas:
 ## Tabla de Esperanza de Vida:
 Para obtener la tabla de esperanza de vida hay que cargar los datos de un archivo Json.
 
@@ -195,10 +196,7 @@ tablaCantidadDeAguaFinal
 
 
 ## Tabla de calidad de agua
-
-Para obtener la tabla de la calidad del agua hay que cargar los datos de un archivo pdf.
-
-Para que nos fuese mas fácil hemos obtenido de todo el pdf la página que contenía los datos deseados. De esa página se han obtenido las líneas de interés.
+Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF. Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 pagina <- ruta_pdf[17]
