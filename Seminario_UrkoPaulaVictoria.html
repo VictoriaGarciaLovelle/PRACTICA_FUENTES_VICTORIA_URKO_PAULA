@@ -362,13 +362,20 @@ Garcia Lovelle</h4>
 
 <div id="introducción" class="section level1">
 <h1>Introducción</h1>
-<p>A lo largo del seminario analizaremos de manera formal cómo diversos
-aspectos relacionados con la calidad y la cantidad de agua consumida
-pueden afectar en la esperanza de vida en las distintas Comunidades
-Autónomas de España.</p>
+<p>En el desarrollo de este seminario, analizaremos cómo diversos
+aspectos relacionados con la calidad y cantidad de agua consumida pueden
+influir en la esperanza de vida en las diferentes Comunidades Autónomas
+de España.</p>
+<p>Exploraremos detalladamente cómo la calidad del agua, medida a través
+de diferentes parámetros, y la cantidad de agua, pueden ser factores
+determinantes para la salud y, consecuentemente, para la esperanza de
+vida de las Comunidades Autónomas.</p>
 </div>
 <div id="objetivos" class="section level1">
 <h1>Objetivos</h1>
+<p>Este estudio tiene como objetivo examinar a fondo las conexiones
+entre los factores medioambientales y la salud humana, centrándonos
+específicamente en el papel crucial del agua como recurso esencial.</p>
 <ol style="list-style-type: decimal">
 <li>Afectación de la calidad del agua en la Esperanza de Vida</li>
 <li>Afectación de la cantidad de agua consumida en la Esperanza de
@@ -380,40 +387,60 @@ de Vida</li>
 </ol>
 <div id="carga-de-librerías" class="section level2">
 <h2>Carga de librerías:</h2>
-<pre class="r"><code>library(pdftools)
-library(tidyverse)
-library(tidyjson)
-library(tidyr)
-library(rjson) </code></pre>
+<ol style="list-style-type: decimal">
+<li>pdftools: Esta librería se utilizó para extraer datos de archivos
+PDF. En particular, se empleó para obtener información relevante sobre
+la calidad del agua de un informe en formato PDF.</li>
+</ol>
+<pre class="r"><code>library(pdftools)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>tidyverse: Un conjunto de paquetes que facilitan la manipulación y
+visualización de datos en R. Incluye librerías como tidyr y dplyr, las
+cuales fueron esenciales para organizar y transformar datos.</li>
+</ol>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>tidyjson: Esta librería fue útil para trabajar con datos en formato
+JSON. Fue esencial para analizar y extraer información de archivos JSON
+relacionados con la esperanza de vida y la cantidad de agua.</li>
+</ol>
+<pre class="r"><code>library(tidyjson)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>rjson: Se utilizó para cargar y procesar datos almacenados en
+formato JSON. Facilita la manipulación de datos estructurados y su
+conversión a formatos compatibles con R.</li>
+</ol>
+<pre class="r"><code>library(rjson) </code></pre>
 </div>
+</div>
+<div id="obtención-de-tablas" class="section level1">
+<h1>Obtención de tablas:</h1>
 <div id="tabla-de-esperanza-de-vida" class="section level2">
 <h2>Tabla de Esperanza de Vida:</h2>
-<p>Para obtener la tabla de esperanza de vida hay que cargar los datos
-de un archivo Json.</p>
-<p>Se crea la importación de los datos Json, después se encuadra el
-archivo y se observan todos los tipos almacenados en la variable
-EsperanzaVida.</p>
+<p>Para obtener la tabla de esperanza de vida se cargan los datos desde
+un archivo Json.</p>
+<p>Después organizan esos datos en un formato de tabla y realiza un
+análisis para saber qué tipos contiene la variable EsperanzaVida.</p>
 <pre class="r"><code>archivoJson &lt;- fromJSON(file = &quot;EsperanzaVida.json&quot;)
 
 esperanzaVida &lt;- spread_all(archivoJson)
 
-# Para cada atributo me dice de qué tipo se trata
 tibble1&lt;-esperanzaVida %&gt;% 
   gather_object %&gt;%  
   json_types %&gt;% 
   count(name, type)</code></pre>
 <p>Para obtener la tabla final se ha accedido a aquel que era de tipo
-array que contenia los valores de interés.</p>
-<pre class="r"><code>#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
-arrayData&lt;-esperanzaVida %&gt;%
+array que contiene los valores de interés y organiza estos datos en una
+tabla.</p>
+<pre class="r"><code>arrayData&lt;-esperanzaVida %&gt;%
   enter_object(Data) %&gt;% 
   gather_array %&gt;% 
   spread_all %&gt;% 
   select(Nombre, Anyo, Valor) </code></pre>
-<p>El atributo Nombre contiene una cadena de caracteres muy largo
-separados por puntos. Entre toda la información está el nombre de la
-comunidad autónoma, por lo que se separa la cadena de texto y se obtiene
-únicamente estos nombres.</p>
+<p>El atributo Nombre contiene una cadena de caracteres muy larga
+separada por puntos. Entre toda la información estan los nombres de las
+diferentes Comunidades Autónomas, por lo que se separa la cadena de
+texto y se obtienen únicamente estos nombres.</p>
 <pre class="r"><code>partes &lt;- strsplit(arrayData$Nombre, &quot;\\.&quot;)
 
 comunidadesAutonomas&lt;-c()
@@ -422,7 +449,7 @@ for (i in partes){
 }
 
 arrayData$Nombre&lt;-comunidadesAutonomas</code></pre>
-<p>De la tabla se obtiene el año 2020 de cada comunidad autónoma y se
+<p>De la tabla se obtiene el año 2020 de cada Comunidad Autónoma y se
 obtiene como valor la media de la esperanza de vida en ese año.</p>
 <p>Para tener todas las tablas con el mismo estilo, se han pasado los
 nombres de las comunidades autónomas a mayúsculas.</p>
@@ -440,7 +467,7 @@ tablaEsperanzaDeVidaFinal &lt;- tablaEsperanzaDeVida %&gt;%
 
 colnames(tablaEsperanzaDeVidaFinal) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&quot;, &quot;EsperanzaDeVida&quot;)</code></pre>
 <p>En la tabla final, se puede observar la media de la esperanza de vida
-de cada comunidad autónoma en el año 2020.</p>
+de cada Comunidad Autónoma en el año 2020.</p>
 <pre class="r"><code>tablaEsperanzaDeVidaFinal</code></pre>
 <pre><code>## # A tibble: 19 × 3
 ## # Groups:   Anio [1]
@@ -468,16 +495,14 @@ de cada comunidad autónoma en el año 2020.</p>
 </div>
 <div id="tabla-de-cantidad-de-agua" class="section level2">
 <h2>Tabla de Cantidad de Agua:</h2>
-<p>Para obtener la tabla de la cantidad de agua hay que cargar los datos
-de un archivo Json.</p>
-<p>Se crea la importación de los datos Json, después se encuadra el
-archivo y se observan todos los tipos de atributos almacenados en la
-variable EsperanzaVida</p>
+<p>Para obtener la tabla de cantidad de agua se cargan los datos desde
+un archivo Json.</p>
+<p>Después organizan esos datos en un formato de tabla y realiza un
+análisis para saber qué tipos contiene la variable EsperanzaVida.</p>
 <pre class="r"><code>archivoJsonCantidad &lt;- fromJSON(file = &quot;CantidadAgua.json&quot;)
 
 cantidadAgua &lt;- spread_all(archivoJsonCantidad)
 
-#Veo los tipos de atributos
 cantidadAgua%&gt;%
   gather_object%&gt;%
   json_types%&gt;%
@@ -489,33 +514,29 @@ cantidadAgua%&gt;%
 ## 2 MetaData array    133
 ## 3 Nombre   string   133</code></pre>
 <p>Para poder obtener la tabla final de la cantidad de agua consumida en
-cada comunidad autónoma, se ha accedido al atributo de tipo array que
-contiene la información de interés que es Data.</p>
+cada Comunidad autónoma, se ha accedido al atributo de tipo array que
+contiene la información de interés que es Data y organiza estos datos en
+una tabla.</p>
 <p>Seguidamente, como únicamente necesitamos las comunidades autónomas y
 están escritas en una larga cadena de texto, dividimos la cadena de
-texto y obtenemos de ella el nombre de las comunidades autónomas.</p>
-<p>Esa nueva variable con las comunidades autónomas se añaden a la tabla
+texto y obtenemos de ella el nombre de las Comunidades Autónomas.</p>
+<p>Esa nueva variable con las Comunidades Autónomas se añaden a la tabla
 final y se elimina donde ponga España.</p>
-<pre class="r"><code>#Entro en el array Data
-arrayDataCantidad&lt;-cantidadAgua%&gt;%
+<pre class="r"><code>arrayDataCantidad&lt;-cantidadAgua%&gt;%
   enter_object(Data)%&gt;%
   gather_array%&gt;%
   spread_all%&gt;%
   select(-document.id,-array.index)
 
-#Divido la cadena de texto nombre y solo cojo las comunidades autónomas
 cadenas &lt;- strsplit(arrayDataCantidad$Nombre, &quot;\\,&quot;)
 
-#Obtengo las comunidades autónomas
 comunidadesAutonomasCantidad&lt;-c()
 for (i in cadenas){
   comunidadesAutonomasCantidad&lt;-c(comunidadesAutonomasCantidad,i[1])
 }
 
-#Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre&lt;-comunidadesAutonomasCantidad
 
-#Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
 tabla &lt;- arrayDataCantidad %&gt;%
   filter(!(Nombre == &quot;España&quot;)) %&gt;%
   select(Nombre, NombrePeriodo, Valor)</code></pre>
@@ -523,11 +544,10 @@ tabla &lt;- arrayDataCantidad %&gt;%
 realiza una media de los valores obtenidos en el año 2020 de cada
 comunicad autónoma.</p>
 <p>Para tener todas las tablas con el mismo estilo, se han pasado los
-nombres de las comunidades autónomas a mayúsculas y se han
+nombres de las Comunidades Autónomas a mayúsculas y se han
 renombrado.</p>
 <p>Por último se ha pasado a tipo entero la columna años.</p>
-<pre class="r"><code>#Agrupo por comunidades autónomas y años
-tablaCantidadDeAgua &lt;- tabla %&gt;%
+<pre class="r"><code>tablaCantidadDeAgua &lt;- tabla %&gt;%
   filter(NombrePeriodo  ==2020)%&gt;%
   group_by(NombrePeriodo  , Nombre) %&gt;%
   summarize(Cantidad = mean(Valor, na.rm = TRUE))%&gt;%
@@ -548,7 +568,7 @@ colnames(tablaCantidadDeAgua) &lt;- c(&quot;Anio&quot;, &quot;ComunidadAutonoma&
 tablaCantidadDeAguaFinal &lt;- tablaCantidadDeAgua %&gt;%
   mutate_at(vars(Anio), as.integer)</code></pre>
 <p>En la tabla final de la cantidad de agua, se puede observar la
-cantidad de agua consumida por cada comunidad autónoma en el año
+cantidad de agua consumida por cada Comunidad Autónoma en el año
 2020.</p>
 <pre class="r"><code>tablaCantidadDeAguaFinal</code></pre>
 <pre><code>## # A tibble: 18 × 3
@@ -576,19 +596,23 @@ cantidad de agua consumida por cada comunidad autónoma en el año
 </div>
 <div id="tabla-de-calidad-de-agua" class="section level2">
 <h2>Tabla de calidad de agua</h2>
-<p>Para obtener la tabla de la calidad del agua hay que cargar los datos
-de un archivo pdf.</p>
-<p>Para que nos fuese mas fácil hemos obtenido de todo el pdf la página
-que contenía los datos deseados. De esa página se han obtenido las
-líneas de interés.</p>
+<p>Este código extrae y procesa información relevante sobre la calidad
+del agua de un informe en PDF.</p>
+<p>Primero, convierte el contenido del PDF a texto y luego selecciona un
+rango específico de líneas en una página particular del documento, con
+el objetivo de obtener datos clave relacionados con la calidad del
+agua.</p>
 <pre class="r"><code>ruta_pdf &lt;- pdf_text(&quot;report_Cap.3_part2._Libro_blanco_del_agua.pdf&quot;)
 pagina &lt;- ruta_pdf[17]
 lineas &lt;- strsplit(pagina, &quot;\n&quot;)[[1]]
 linea_deseada &lt;- lineas[5:21] </code></pre>
-<p>Se dividen los datos en colummnas y se eliminan las primeras 3
-dimensiones y la última ya que no son de interés. Después, se agregan
-nuevos elementos y se renombran las comunidades autónomas ya que salen
-descuadradas.</p>
+<p>En este código se dividen las líneas deseadas usando espacios como
+delimitadores. Luego, crea dos conjuntos de datos: datos_obtenidos,
+excluyendo las primeras tres dimensiones no necesarias, y
+datosDeInteres, que contiene la información esencial sobre las
+comunidades autónomas y los valores de la calidad del agua.</p>
+<p>Además, se añaden manualmente filas específicas que no se extrajeron
+correctamente del informe.</p>
 <pre class="r"><code>datos_divididos &lt;- strsplit(linea_deseada, &quot;\\s+&quot;)
 datos_obtenidos &lt;- datos_divididos[-c(1:3)]
 
@@ -603,8 +627,8 @@ datosDeInteres[[13]] &lt;- c(&quot;COMUNITAT VALENCIANA&quot;,&quot;2&quot;,&quo
 <p>En cada iteración del bucle, se agrega la fila representada por el
 elemento i al data frame tablaCalidadDeAgua utilizando la función
 rbind().</p>
-<p>Se renombran y se cambia a tipo numérico a aquellas columnas que sea
-necesario.</p>
+<p>Por último se renombra y se cambia a tipo numérico a aquellas
+columnas que sea necesario.</p>
 <pre class="r"><code>tablaCalidadDeAgua&lt;-data.frame()
 for (i in datosDeInteres){
   tablaCalidadDeAgua&lt;-rbind(tablaCalidadDeAgua,i)
@@ -647,10 +671,22 @@ tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
 </div>
 <div id="tabla-presupuesto" class="section level2">
 <h2>Tabla presupuesto</h2>
+<p>Para obtener esta tabla se ha importado un archivo CSV utilizando la
+función read_csv y después se renombran las columnas para tener
+unificados todos los nombres de las diferentes tablas.</p>
 <pre class="r"><code>summodificado &lt;- read_csv(&quot;summodificado.csv&quot;)
-colnames(summodificado) &lt;- c(&quot;TotalNacional&quot;, &quot;ComunidadAutonoma&quot;, &quot;GruposDeUsuarioEImporte&quot;,&quot;Anio&quot;, &quot;Presupuesto&quot;)
-
-tablaPresupuestos &lt;- summodificado%&gt;%
+colnames(summodificado) &lt;- c(&quot;TotalNacional&quot;, &quot;ComunidadAutonoma&quot;, &quot;GruposDeUsuarioEImporte&quot;,&quot;Anio&quot;, &quot;Presupuesto&quot;)</code></pre>
+<p>Se realizan una serie de modificaciones para poder obtener la tabla
+deseada.</p>
+<p>Se seleccionan las filas donde la columna “GruposDeUsuarioEImporte”
+es igual a “Importe total de la inversión en los servicios de
+suministro” y la columna “Anio” es igual a “2020”.</p>
+<p>Delante de cada nombre de la Comunidad Autónoma existe un número por
+lo que se elimina y se convierten los nombres de las comunidades a
+mayúsculas.</p>
+<p>Se eliminan los puntos de la columna presupuesto y se pasa a tipo
+entero. Y por último se descarta lo que no es necesario.</p>
+<pre class="r"><code>tablaPresupuestos &lt;- summodificado%&gt;%
   filter(GruposDeUsuarioEImporte==&quot;Importe total de la inversión en los servicios de suministro&quot; &amp; Anio== &quot;2020&quot;) %&gt;%
   mutate(ComunidadAutonoma = gsub(&quot;^\\d+\\s*&quot;, &quot;&quot;, ComunidadAutonoma)) %&gt;%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma)) %&gt;%
@@ -659,9 +695,11 @@ tablaPresupuestos &lt;- summodificado%&gt;%
 
 tablaPresupuestos$Presupuesto &lt;- gsub(&quot;\\.&quot;, &quot;&quot;, tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto &lt;- as.integer(tablaPresupuestos$Presupuesto)
-tablaPresupuestosFinal &lt;- tablaPresupuestos[,-3]
-
-tablaPresupuestosFinal</code></pre>
+tablaPresupuestosFinal &lt;- tablaPresupuestos[,-3]</code></pre>
+<p>Asi obtenemos los datos de los presupuesto para la potabilización del
+agua en el año 2020 en las diferentes Comunidades Autónomas de
+España</p>
+<pre class="r"><code>tablaPresupuestosFinal</code></pre>
 <pre><code>## # A tibble: 17 × 3
 ##     Anio ComunidadAutonoma           Presupuesto
 ##    &lt;dbl&gt; &lt;chr&gt;                             &lt;int&gt;
