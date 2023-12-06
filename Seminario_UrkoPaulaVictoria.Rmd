@@ -23,7 +23,6 @@ htmltools::img(src = knitr::image_uri(f = "escudo_ubu.jpg"),
 
 <style>
 body {
-text-align: justify}
 
 
 
