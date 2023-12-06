@@ -22,12 +22,24 @@ Este estudio tiene como objetivo examinar a fondo las conexiones entre los facto
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
 ```
 ## Carga de librerías:
-
+1. pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
 ```{r CargaLibrerías, eval = TRUE}
 library(pdftools)
+```
+
+2. tidyverse: Un conjunto de paquetes que facilitan la manipulación y visualización de datos en R. Incluye librerías como tidyr y dplyr, las cuales fueron esenciales para organizar y transformar datos.
+
+```{r cargatidyverse}
 library(tidyverse)
+```
+
+```{r cargatidyjson}
 library(tidyjson)
+```
+```{r cargatidyr}
 library(tidyr)
+```
+```{r cargarjson}
 library(rjson) 
 ```
 
