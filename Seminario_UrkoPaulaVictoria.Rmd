@@ -205,8 +205,9 @@ linea_deseada <- lineas[5:21]
 ```
 
 
-Se dividen los datos en colummnas y se eliminan las primeras 3 dimensiones y la última ya que no son de interés.
-Después, se agregan nuevos elementos y se renombran las comunidades autónomas ya que salen descuadradas.
+En este código se dividen las líneas deseadas usando espacios como delimitadores. Luego, crea dos conjuntos de datos: datos_obtenidos, excluyendo las primeras tres dimensiones no necesarias, y datosDeInteres, que contiene la información esencial sobre las comunidades autónomas y los valores de la calidad del agua.
+
+Además, se añaden manualmente filas específicas que no se extrajeron correctamente del informe.
 
 ```{r tablaCalidadDeAgua}
 datos_divididos <- strsplit(linea_deseada, "\\s+")
@@ -224,7 +225,7 @@ datosDeInteres[[13]] <- c("COMUNITAT VALENCIANA","2","2","2","0","1","1","0")
 
 En cada iteración del bucle, se agrega la fila representada por el elemento i al data frame tablaCalidadDeAgua utilizando la función rbind().
 
-Se renombran y se cambia a tipo numérico a aquellas columnas que sea necesario.
+Por último se renombra y se cambia a tipo numérico a aquellas columnas que sea necesario.
 ``` {r calidad}
 tablaCalidadDeAgua<-data.frame()
 for (i in datosDeInteres){
