@@ -12,7 +12,7 @@ output:
     toc_depth: '6'
 subtitle: Relación entre la Esperanza de Vida y el Agua
 ---
-<<<<<<< HEAD
+
 
 =======
 ```{r, echo=FALSE, out.width="20%"}
