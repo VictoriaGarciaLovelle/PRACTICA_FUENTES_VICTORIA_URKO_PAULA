@@ -54,7 +54,6 @@ archivoJson <- fromJSON(file = "EsperanzaVida.json")
 
 esperanzaVida <- spread_all(archivoJson)
 
-# Para cada atributo me dice de qué tipo se trata
 tibble1<-esperanzaVida %>% 
   gather_object %>%  
   json_types %>% 
@@ -62,9 +61,8 @@ tibble1<-esperanzaVida %>%
 ```
 
 
-Para obtener la tabla final se ha accedido a aquel que era de tipo array que contenia los valores de interés.
+Para obtener la tabla final se ha accedido a aquel que era de tipo array que contiene los valores de interés y organiza estos datos en una tabla.
 ```{r ObtencionTablaEsperanza,  warning=FALSE}
-#Viendo los arrays en el tibble 1, entro en el array Data, de éste puedo obtener el valor de la esperanza de vida, los años y el nombre de las comunidades Autónomas
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
@@ -72,7 +70,7 @@ arrayData<-esperanzaVida %>%
   select(Nombre, Anyo, Valor) 
 ```
 
-El atributo Nombre contiene una cadena de caracteres muy largo separados por puntos. Entre toda la información está el nombre de la comunidad autónoma, por lo que se separa la cadena de texto y se obtiene únicamente estos nombres. 
+El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres. 
 
 ```{r, eval = TRUE,warning=FALSE}
 partes <- strsplit(arrayData$Nombre, "\\.")
@@ -85,7 +83,7 @@ for (i in partes){
 arrayData$Nombre<-comunidadesAutonomas
 ```
 
-De la tabla se obtiene el año 2020 de cada comunidad autónoma y se obtiene como valor la media de la esperanza de vida en ese año.
+De la tabla se obtiene el año 2020 de cada Comunidad Autónoma y se obtiene como valor la media de la esperanza de vida en ese año.
 
 Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las comunidades autónomas a mayúsculas.
 ```{r obtenciontablaEsperanza}
@@ -104,7 +102,7 @@ tablaEsperanzaDeVidaFinal <- tablaEsperanzaDeVida %>%
 colnames(tablaEsperanzaDeVidaFinal) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
 ```
 
-En la tabla final, se puede observar la media de la esperanza de vida de cada comunidad autónoma en el año 2020.
+En la tabla final, se puede observar la media de la esperanza de vida de cada Comunidad Autónoma en el año 2020.
 ```{r tablaEsperanza}
 tablaEsperanzaDeVidaFinal
 ```
@@ -118,7 +116,6 @@ archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
 cantidadAgua <- spread_all(archivoJsonCantidad)
 
-#Veo los tipos de atributos
 cantidadAgua%>%
   gather_object%>%
   json_types%>%
@@ -126,32 +123,27 @@ cantidadAgua%>%
 ```
 
 
-Para poder obtener la tabla final de la cantidad de agua consumida en cada comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data.
+Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
 
-Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las comunidades autónomas.
+Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las Comunidades Autónomas.
 
-Esa nueva variable con las comunidades autónomas se añaden a la tabla final y se elimina donde ponga España.
+Esa nueva variable con las Comunidades Autónomas se añaden a la tabla final y se elimina donde ponga España.
 ```{r tablaCantidadAgua}
-#Entro en el array Data
 arrayDataCantidad<-cantidadAgua%>%
   enter_object(Data)%>%
   gather_array%>%
   spread_all%>%
   select(-document.id,-array.index)
 
-#Divido la cadena de texto nombre y solo cojo las comunidades autónomas
 cadenas <- strsplit(arrayDataCantidad$Nombre, "\\,")
 
-#Obtengo las comunidades autónomas
 comunidadesAutonomasCantidad<-c()
 for (i in cadenas){
   comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
 }
 
-#Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
 
-#Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
 tabla <- arrayDataCantidad %>%
   filter(!(Nombre == "España")) %>%
   select(Nombre, NombrePeriodo, Valor)
@@ -160,11 +152,10 @@ tabla <- arrayDataCantidad %>%
 
 Se filtra únicamente por el año 2020, que es el año de interés, se realiza una media de los valores obtenidos en el año 2020 de cada comunicad autónoma.
 
-Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las comunidades autónomas a mayúsculas y se han renombrado.
+Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las Comunidades Autónomas a mayúsculas y se han renombrado.
 
 Por último se ha pasado a tipo entero la columna años.
 ```{r, eval = TRUE,warning=FALSE }
-#Agrupo por comunidades autónomas y años
 tablaCantidadDeAgua <- tabla %>%
   filter(NombrePeriodo  ==2020)%>%
   group_by(NombrePeriodo  , Nombre) %>%
@@ -187,16 +178,17 @@ tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate_at(vars(Anio), as.integer)
 
 ```
-En la tabla final de la cantidad de agua, se puede observar la cantidad de agua consumida por cada comunidad autónoma en el año 2020.
+En la tabla final de la cantidad de agua, se puede observar la cantidad de agua consumida por cada Comunidad Autónoma en el año 2020.
 ```{r tablaFinal}
-
 tablaCantidadDeAguaFinal
 
 ```
 
 
 ## Tabla de calidad de agua
-Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF. Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
+Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF. 
+
+Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 pagina <- ruta_pdf[17]
@@ -254,8 +246,10 @@ colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsua
 
 Se realizan una serie de modificaciones para poder obtener la tabla deseada.
 
-Se seleccionan las filas donde la columna "GruposDeUsuarioEImporte" es igual a "Importe total de la inversión en los servicios de suministro" y la columna "Anio" es igual a "2020"
+Se seleccionan las filas donde la columna "GruposDeUsuarioEImporte" es igual a "Importe total de la inversión en los servicios de suministro" y la columna "Anio" es igual a "2020".
+
 Delante de cada nombre de la Comunidad Autónoma existe un número por lo que se elimina y se convierten los nombres de las comunidades a mayúsculas.
+
 Se eliminan los puntos de la columna presupuesto y se pasa a tipo entero. Y por último se descarta lo que no es necesario.
 ```{r tablaPresupuesto}
 tablaPresupuestos <- summodificado%>%
