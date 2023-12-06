@@ -11,7 +11,7 @@ output:
 ---
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::include_graphics("escudo_ubu.png")
+knitr::include_graphics("escudo_ubu.jpg")
 ```
 
 # Introducción
