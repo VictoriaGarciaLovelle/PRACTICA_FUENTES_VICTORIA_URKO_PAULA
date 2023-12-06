@@ -17,7 +17,11 @@ htmltools::img(src = knitr::image_uri(f = "escudo_ubu.jpg"),
                alt = 'logo', 
                style = 'position:absolute; top:0; right:0; padding:10px;')
 ```
-![logo](escudo_ubu.jpg)
+
+```{r, echo=FALSE, out.width="20%"}
+knitr::include_graphics("escudo_ubu.jpg")
+```
+
 
 # Introducción
 En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España. 
