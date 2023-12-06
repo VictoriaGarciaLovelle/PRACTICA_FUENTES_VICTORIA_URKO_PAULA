@@ -9,7 +9,9 @@ output:
     toc_depth: 6
     toc_float: true
 ---
+{r, 
 knitr::include_graphics("INPUT/escudo_ubu.jpg")
+}
 
 
 # Introducción
