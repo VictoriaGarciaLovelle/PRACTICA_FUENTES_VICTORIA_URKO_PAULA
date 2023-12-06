@@ -45,9 +45,9 @@ library(rjson)
 
 # Obtención de tablas:
 ## Tabla de Esperanza de Vida:
-Para obtener la tabla de esperanza de vida hay que cargar los datos de un archivo Json.
+Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
 
-Se crea la importación de los datos Json, después se encuadra el archivo y se observan todos los tipos almacenados en la variable EsperanzaVida.
+Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
 
 ```{r cargaDeDatosJson}
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
@@ -110,9 +110,9 @@ tablaEsperanzaDeVidaFinal
 ```
 
 ## Tabla de Cantidad de Agua:
-Para obtener la tabla de la cantidad de agua hay que cargar los datos de un archivo Json.
+Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
 
-Se crea la importación de los datos Json, después se encuadra el archivo y se observan todos los tipos de atributos almacenados en la variable EsperanzaVida
+Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
