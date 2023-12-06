@@ -10,7 +10,6 @@ output:
     toc_float: true
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 knitr::include_graphics("escudo_ubu.png")
 ```
 
