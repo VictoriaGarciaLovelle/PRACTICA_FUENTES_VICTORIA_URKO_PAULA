@@ -3,8 +3,14 @@ title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
 subtitle: "Relación entre la Esperanza de Vida y el Agua"
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_depth: 6
+    toc_float: true
 ---
+![](INPUT/escudo_ubu.jpg)
+
 # Introducción
 En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España. 
 
