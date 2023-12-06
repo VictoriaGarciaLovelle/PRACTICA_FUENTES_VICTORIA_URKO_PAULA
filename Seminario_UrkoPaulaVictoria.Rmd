@@ -107,7 +107,7 @@ En la tabla final, se puede observar la media de la esperanza de vida de cada Co
 tablaEsperanzaDeVidaFinal
 ```
 
-### 2. Tabla de Cantidad de Agua:
+### 2. Tabla de la Cantidad de Agua:
 Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
 
 Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
@@ -185,7 +185,7 @@ tablaCantidadDeAguaFinal
 ```
 
 
-### 3. Tabla de calidad de agua
+### 3. Tabla de la Calidad del Agua
 Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF. 
 
 Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
@@ -237,7 +237,7 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 tablaCalidadDeAguaFinal
 ```
 
-### 4. Tabla presupuesto
+### 4. Tabla de Presupuesto para la Potabilización del Agua
 Para obtener esta tabla se ha importado un archivo CSV utilizando la función read_csv y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
 ```{r cargaPresupuesto}
 summodificado <- read_csv("summodificado.csv")
