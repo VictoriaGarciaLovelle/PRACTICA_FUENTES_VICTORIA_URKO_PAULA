@@ -27,7 +27,7 @@ Este estudio tiene como objetivo examinar a fondo las conexiones entre los facto
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
 ```
-# Carga de librerías:
+# Carga de librerías
 1. pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
 ```{r CargaLibrerías, eval = TRUE}
 library(pdftools)
@@ -49,7 +49,7 @@ library(tidyjson)
 library(rjson) 
 ```
 
-# Obtención de tablas:
+# Obtención de tablas
 ### 1. Tabla de Esperanza de Vida:
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
 
