@@ -9,10 +9,16 @@ output:
     toc_depth: 6
     toc_float: true
 ---
-```{r, include=TRUE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::include_graphics("escudo_ubu.jpg")
-```
+
+# Cargar el paquete here para gestionar las rutas de forma más robusta
+if (!requireNamespace("here", quietly = TRUE)) {
+  install.packages("here")
+}
+library(here)
+knitr::include_graphics(here::here("escudo_ubu.png"))
+```   
 
 # Introducción
 En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España. 
