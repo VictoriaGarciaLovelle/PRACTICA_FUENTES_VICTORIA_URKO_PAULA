@@ -342,16 +342,18 @@ CantidadyPresupuesto
 
 En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las del presupuesto de manera descendente.
 
-```{r grafEsperanzaCantidad}
-grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
-  geom_point(aes(color=ComunidadAutonoma))+
-  geom_smooth()+
-  labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
-       x="Cantidad de agua ",
-       y="Esperanza de vida")+
+```{r grafCantidadPresupuesto}
+grafCantidadPresupuesto <- ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
+  geom_bar(stat= "identity")+
+  labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
+       x="Presupuestos",
+       y="Cantidad de agua")+
+  geom_bar(stat= "identity", width = 5000)+
   theme_minimal()
-grafEsperanzaCantidad
+grafCantidadPresupuesto
 ```
+
+Aqui creamos la gráfica de la nueva tabla "grafCantidadPresupuesto" creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")* cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra. Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica
 
 ### 3. Relación entre esperanza de vida y calidad
 
