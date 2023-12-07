@@ -158,20 +158,20 @@ tablaCalidadDeAguaFinal
 #importando archivo
 summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
-
+view(summodificado)
 #Modificando el csv
-<<<<<<< HEAD
-sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total) %>% 
+
+sum_ <- select(.data = summodificado, "ComunidadAutonoma":"Presupuesto") %>% 
   drop_na()   %>% 
   filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")
 
 tablaNobuena <- sum_ %>%
-  mutate(`Comunidades y Ciudades Autónomas`= gsub("^\\d+\\s*", "", `Comunidades y Ciudades Autónomas´) )
+  mutate(`Comunidades y Ciudades Autónomas´= gsub("^\\d+\\s*", "", `Comunidades y Ciudades Autónomas´) )
 # Mostrar el resultado
 tablaNobuena
 colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Anio", "Total")
 tablaNobuena
-=======
+
 tablaPresupuestos <- summodificado%>%
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
   mutate(ComunidadAutonoma = gsub("^\\d+\\s*", "", ComunidadAutonoma)) %>%
@@ -183,7 +183,7 @@ tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestosFinal <- tablaPresupuestos[,-3]
 tablaPresupuestosFinal
->>>>>>> ee7e3de0ba404bc60f8117148a181ce9077f238f
+
 
 # EJECUCIÓN DE TODAS LAS TABLAS ----
 tablaEsperanzaDeVidaFinal
