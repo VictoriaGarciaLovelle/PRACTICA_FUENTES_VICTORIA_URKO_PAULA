@@ -314,6 +314,7 @@ EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
 
 ```{r EsperanzayCantidad}
 EsperanzayCantidad
+datos_ordenados <- EsperanzayCantidad[order(EsperanzayCantidad[["Cantidad"]]), ]
 ```
 
-Nuestro principal objetivo ees determinar la esperanzaa de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se cosnume en cada Comunidad Autónoma.
+Nuestro principal objetivo es determinar la esperanzaa de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se cosnume en cada Comunidad Autónoma.
