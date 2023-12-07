@@ -353,7 +353,7 @@ grafCantidadPresupuesto <- ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto,
 grafCantidadPresupuesto
 ```
 
-Aqui creamos la gráfica de la nueva tabla "grafCantidadPresupuesto" creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")* cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra. Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica
+Aqui creamos la gráfica de la nueva tabla "grafCantidadPresupuesto" creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")* cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
 ### 3. Relación entre esperanza de vida y calidad
 
@@ -425,4 +425,9 @@ EsparanzaVidaMayorMenor
 ```{r CantidaAguaMayorMenor}
 CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad), ]
 CantidadAguaMayorMenor
+```
+
+```{r CantidadyPresupuesto}
+CantidadyPresupuestoaMayorMenor <- CantidadyPresupuesto[order(-CantidadyPresupuesto$Cantidad), ]
+CantidadyPresupuesto
 ```
