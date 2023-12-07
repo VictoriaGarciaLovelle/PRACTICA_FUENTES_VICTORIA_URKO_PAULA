@@ -312,7 +312,7 @@ EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
   drop_na()
 ```
 
-En el fragmento de codigo anterior, unimos mediante un *left_join* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCantidadDeAguaFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en funcion de las Comunidades Autónomas.
+En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCantidadDeAguaFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las Comunidades Autónomas.
 
 ```{r EsperanzayCantidad}
 EsperanzayCantidad
