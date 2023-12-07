@@ -332,6 +332,16 @@ Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla rel
 
 ### 2. Relación entre cantidad y presupuesto
 
+```{r CantidadyPresupuesto}
+CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>% 
+  left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
+  arrange(desc(Presupuesto)) %>%
+  drop_na()
+CantidadyPresupuesto
+```
+
+En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las del presupuesto de manera descendente.
+
 # Anexo 1
 
 \label{anexo}
