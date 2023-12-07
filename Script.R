@@ -163,7 +163,7 @@ view(summodificado)
 
 sum_ <- select(.data = summodificado, "ComunidadAutonoma":"Presupuesto") %>% 
   drop_na()   %>% 
-  filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")
+  filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020")
 
 tablaNobuena <- sum_ %>%
   mutate(`Comunidades y Ciudades Autónomas´= gsub("^\\d+\\s*", "", `Comunidades y Ciudades Autónomas´) )
