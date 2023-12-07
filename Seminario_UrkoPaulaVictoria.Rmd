@@ -316,6 +316,21 @@ EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
 EsperanzayCantidad
 MenorMayorCantidad <- EsperanzayCantidad[order(EsperanzayCantidad[["Cantidad"]]), ]
 MenorMayorCantidad
+x <- EsperanzayCantidad[order(EsperanzayCantidad[["EsperanzaDeVida"]]), ]
+x
 ```
 
-Nuestro principal objetivo es determinar la esperanzaa de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se cosnume en cada Comunidad Autónoma.
+Nuestro principal objetivo es determinar la esperanzaa de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se cosnume en cada Comunidad Autónoma. Podemos observar que no hay relacion directamete proporcional entre la cantidad de agua consumida y esperanza de vida de cada Comunidad Autonoma. Comprobamos que las Islas Baleares se encuetra en la undecima posicion en cuanto a consumo de agua y primero en cuanto a la esperanza de vida, por otro lado, Andalucia esta situada la primera en cuanto a la cantidad de agua que consumen y decimotercera en cuanto a esperanza de vida se refiere
+
+```{r grafEsperanzaCantidad}
+grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
+  geom_point(aes(color=ComunidadAutonoma))+
+  geom_smooth()+
+  labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
+       x="Cantidad de agua ",
+       y="Esperanza de vida")+
+  theme_minimal()
+```
+
+```{}
+```
