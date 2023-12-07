@@ -299,7 +299,7 @@ Asi obtenemos los datos de los presupuesto para la potabilización del agua en e
 tablaPresupuestosFinal
 ```
 
-# Joins de tablas
+# Joins de tablas y sus correspondientes gráficas
 
 En este aparatado realizamos uan cantidad de cuatro joins, los cuaes explicaremos a continuación.
 
@@ -332,5 +332,6 @@ grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=Esper
   theme_minimal()
 ```
 
-```{}
+```{r grafEsperanzaCantidad}
+grafEsperanzaCantidad
 ```
