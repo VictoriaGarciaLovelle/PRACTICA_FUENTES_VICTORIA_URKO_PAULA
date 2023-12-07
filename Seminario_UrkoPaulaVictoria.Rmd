@@ -378,6 +378,22 @@ grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadA
 grafEsperanzaCalidad
 ```
 
+### 4. Relación entre esperanza de vida, calidad del agua y presupuesto
+
+```{r tablaFinal}
+tablaFinal<- EsperanzayCantidad %>% 
+  left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+  left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
+  mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
+  select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
+  mutate(Anio = coalesce(Anio.x, Anio.y))%>%
+  select(-Anio.x, -Anio.y)%>%
+  select(Anio, ComunidadAutonoma, everything())%>%
+  drop_na()
+tablaFinal
+```
+
 # Anexo 1
 
 \label{anexo}
