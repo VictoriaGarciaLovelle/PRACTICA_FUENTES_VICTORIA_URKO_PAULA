@@ -158,13 +158,13 @@ tablaCalidadDeAguaFinal
 #importando archivo
 summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
-view(summodificado)
+
 #Modificando el csv
 
 sum_ <- select(.data = summodificado, "ComunidadAutonoma":"Presupuesto") %>% 
   drop_na()   %>% 
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020")
-view(sum_)
+
 tablaNobuena <- sum_ %>%
   mutate("ComunidadAutonoma"= gsub("^\\d+\\s*", "", "ComunidadAutonoma") )
 # Mostrar el resultado
@@ -276,3 +276,4 @@ grafEsperanzaCantidad
 grafCantidadPresupuesto
 grafEsperanzaCalidad
 grafTablaFinal
+
