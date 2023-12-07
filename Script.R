@@ -262,6 +262,15 @@ grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
        y="EsperanzaDeVida.x")+
   theme_minimal()
 
+ggplot(tablaFinal, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
+  geom_point(alpha = 0.7) +
+  scale_size_continuous(range = c(3, 10)) +
+  labs(title = "s",
+       x = "Cantidad",
+       y = "Esperanza de Vida",
+       size = "Presupuesto",
+       color = "CalidadAgua")
+
 # Mismos valores CalidadAgua
 ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
   geom_bar(stat= "identity")+

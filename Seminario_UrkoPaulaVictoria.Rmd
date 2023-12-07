@@ -394,6 +394,17 @@ tablaFinal<- EsperanzayCantidad %>%
 tablaFinal
 ```
 
+```{r grafTablaFinal}
+grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
+  geom_point(aes(colour = CalidadAgua))+
+  geom_smooth()+
+  labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
+       x="Cantidad",
+       y="EsperanzaDeVida.x")+
+  theme_minimal()
+grafTablaFinal
+```
+
 # Anexo 1
 
 \label{anexo}
