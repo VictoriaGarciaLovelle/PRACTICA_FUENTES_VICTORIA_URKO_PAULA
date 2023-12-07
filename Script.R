@@ -164,9 +164,9 @@ view(summodificado)
 sum_ <- select(.data = summodificado, "ComunidadAutonoma":"Presupuesto") %>% 
   drop_na()   %>% 
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020")
-
+view(sum_)
 tablaNobuena <- sum_ %>%
-  mutate(`Comunidades y Ciudades Autónomas´= gsub("^\\d+\\s*", "", `Comunidades y Ciudades Autónomas´) )
+  mutate("ComunidadAutonoma"= gsub("^\\d+\\s*", "", "ComunidadAutonoma") )
 # Mostrar el resultado
 tablaNobuena
 colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Anio", "Total")
