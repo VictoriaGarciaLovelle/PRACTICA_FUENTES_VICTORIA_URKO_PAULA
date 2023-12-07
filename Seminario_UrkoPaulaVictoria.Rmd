@@ -334,6 +334,8 @@ grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=Esper
   theme_minimal()
 ```
 
+Como podemos observar en esta caja de codigo, creamos la grafica de la nueva tabla "EsperanzayCantidad" creada a partir del *left_join( )* anterior. En el eje de las abcisas encontramos la cantidad de agua consumida y en el eje de las ordenadas encontramos la espeanza de vida. Como podemos comprobar en la leyenda gracias a la función *geom_point(aes(color=ComunidadAutonoma))* cada comunidad sera representada en la grafica por un color perteneciente al gradiente y en forma de circulo. Con la funcion *geom_smooth()* creamos la linea de tendencia ya que tenemos un grafico de dispersión y asi podemos entender el patrón que estamos estudiando con esta grafica.
+
 ```{r grafEsperanzaCantidad}
 grafEsperanzaCantidad
 ```
