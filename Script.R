@@ -1,15 +1,10 @@
 # Importación de los datos ----
 #install.packages("pdftools")
 library(pdftools)
-library(glue)
-library(readr)
-library(rjson)
 library(tidyverse)
 library(tidyjson)
-library(dplyr)
-library(stringr)
-library(purrr) #Función lmap aplica una función a cada lista
-library(dplyr)
+#library(tidyr)
+library(rjson)
 
 ##----------------- Esperanza de vida -------------------
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
@@ -28,21 +23,18 @@ arrayData<-esperanzaVida %>%
   gather_array %>% 
   spread_all %>% 
   select(Nombre, Anyo, Valor) 
-arrayData
 
 #Selecciono las columnas que me interesan
 #seleccion<-select(.data = arrayData, Nombre, Anyo, Valor)
 
 # Utilizar strsplit para dividir la cadena de texto
-separador <- "\\."
-partes <- strsplit(arrayData$Nombre, separador)
-partes
+#separador <- "\\."
+partes <- strsplit(arrayData$Nombre, "\\.")
 
 comunidadesAutonomas<-c()
 for (i in partes){
   comunidadesAutonomas<-c(comunidadesAutonomas,i[1])
 }
-comunidadesAutonomas
 
 #Cambio la columna nombre por la de las comunidades autónomas
 arrayData$Nombre<-comunidadesAutonomas
@@ -50,7 +42,6 @@ arrayData$Nombre<-comunidadesAutonomas
 #Para eliminar una columna
 tablaComunidadesAñoValor<- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
-tablaComunidadesAñoValor
 
 # Cuento cuantas hay (para ver si coincide con las que hay en el excel)
 #conteo_andalucia <- sum(seleccion$Nombre == "Andalucía")
@@ -62,14 +53,12 @@ tablaEsperanzaDeVida <- tablaComunidadesAñoValor %>%
   group_by(Anyo, Nombre) %>%
   summarize(EsperanzaDeVida = mean(Valor, na.rm = TRUE))%>%
   rename(Año=Anyo,ComunidadAutonoma=Nombre)
-tablaEsperanzaDeVida
 
-tablaEsperanzaDeVida <- tablaEsperanzaDeVida %>%
+tablaEsperanzaDeVidaFinal <- tablaEsperanzaDeVida %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
-tablaEsperanzaDeVida
 
-colnames(tablaEsperanzaDeVida) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
-tablaEsperanzaDeVida
+colnames(tablaEsperanzaDeVidaFinal) <- c("Anio", "ComunidadAutonoma", "EsperanzaDeVida")
+tablaEsperanzaDeVidaFinal
 
 ## ------------- Cantidad de agua consumida ----------------------
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
@@ -89,22 +78,16 @@ arrayDataCantidad<-cantidadAgua%>%
   spread_all%>%
   select(-document.id,-array.index)
 
-arrayDataCantidad
-
 #Divido la cadena de texto nombre y solo cojo las comunidades autónomas
-separador<- "\\,"
+cadenas <- strsplit(arrayDataCantidad$Nombre, "\\,")
 
-cadenas <- strsplit(arrayDataCantidad$Nombre, separador)
-cadenas
 comunidadesAutonomasCantidad<-c()
 for (i in cadenas){
   comunidadesAutonomasCantidad<-c(comunidadesAutonomasCantidad,i[1])
 }
-comunidadesAutonomasCantidad
 
 #Cambio la columna nombre por la columna de las comunidades autónomas
 arrayDataCantidad$Nombre<-comunidadesAutonomasCantidad
-arrayDataCantidad
 
 #Tengo que eliminar de la tabla las comunidades autónomas donde ponga españa
 tabla <- arrayDataCantidad %>%
@@ -117,44 +100,35 @@ tablaCantidadDeAgua <- tabla %>%
   group_by(NombrePeriodo  , Nombre) %>%
   summarize(Cantidad = mean(Valor, na.rm = TRUE))%>%
   rename(Año=NombrePeriodo,ComunidadAutonoma=Nombre)
-tablaCantidadDeAgua
 
-tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+tablaCantidadDeAgua1 <- tablaCantidadDeAgua %>%
   mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
-tablaCantidadDeAgua
 
-tablaCantidadDeAgua[4,2] <- c("BALEARS, ILLES")
-tablaCantidadDeAgua[8,2] <- c("CASTILLA - LA MANCHA")
-tablaCantidadDeAgua[14,2] <- c("MADRID, COMUNIDAD DE")
-tablaCantidadDeAgua[15,2] <- c("MURCIA, REGIÓN DE")
-tablaCantidadDeAgua[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
-tablaCantidadDeAgua[18,2] <- c("RIOJA, LA")
-tablaCantidadDeAgua
+tablaCantidadDeAgua1[4,2] <- c("BALEARS, ILLES")
+tablaCantidadDeAgua1[8,2] <- c("CASTILLA - LA MANCHA")
+tablaCantidadDeAgua1[14,2] <- c("MADRID, COMUNIDAD DE")
+tablaCantidadDeAgua1[15,2] <- c("MURCIA, REGIÓN DE")
+tablaCantidadDeAgua1[16,2] <- c("NAVARRA, COMUNIDAD FORAL DE")
+tablaCantidadDeAgua1[18,2] <- c("RIOJA, LA")
 
-colnames(tablaCantidadDeAgua) <- c("Anio", "ComunidadAutonoma", "Cantidad")
+colnames(tablaCantidadDeAgua1) <- c("Anio", "ComunidadAutonoma", "Cantidad")
 
-tablaCantidadDeAgua <- tablaCantidadDeAgua %>%
+tablaCantidadDeAguaFinal <- tablaCantidadDeAgua1 %>%
   mutate_at(vars(Anio), as.integer)
-tablaCantidadDeAgua
-str(tablaCantidadDeAgua)
+tablaCantidadDeAguaFinal
+
 ## --------------------- Calidad del agua ----------------------------
 # Ruta al archivo PDF
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 
 # Especificar la página del PDF que quieres procesar
 pagina <- ruta_pdf[17]
-pagina
 
 lineas <- strsplit(pagina, "\n")[[1]]
-lineas
 linea_deseada <- lineas[5:21]  # Ajusta el índice según tu necesidad
-
-# Imprimir la línea deseada
-linea_deseada
 
 # Dividir las líneas en columnas
 datos_divididos <- strsplit(linea_deseada, "\\s+")
-datos_divididos
 
 # Eliminación de las primeras 3 dimensiones pertenecientes a los nombres de las columnas
 datos_obtenidos <- datos_divididos[-c(1:3)]
@@ -166,32 +140,27 @@ datosDeInteres[[10]] <- c("MURCIA, REGIÓN DE","3","3","3","0","0","3","0")
 datosDeInteres[[11]] <- c("NAVARRA, COMUNIDAD FORAL DE","11","11","11","4","5","2","0")
 datosDeInteres[[12]] <- c("RIOJA, LA","1","1","1","0","1","0","0")
 datosDeInteres[[13]] <- c("COMUNITAT VALENCIANA","2","2","2","0","1","1","0")
-datosDeInteres
 
 tablaCalidadDeAgua<-data.frame()
 for (i in datosDeInteres){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
 }
 
-tablaCalidadDeAgua
+colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 
-# Ajustar los nombres de las columnas
-colnames(tablaCalidadDeAgua) <- c("Comunidad Autónoma", "Num de Municipios", "Zonas de baño", "Puntos de muestreo","Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
-tablaCalidadDeAgua
-
-colNumericas <- c("Num de Municipios", "Zonas de baño", "Puntos de muestreo", "Aguas 2", "Aguas 1", "Aguas 0", "Aguas SCF")
-tablaCalidadDeAgua <- tablaCalidadDeAgua %>%
+colNumericas <- c("NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
+tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
   mutate_at(vars(colNumericas), as.integer)
 
-tablaCalidadDeAgua
-colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
-tablaCalidadDeAgua
+tablaCalidadDeAguaFinal
 ## -------------------- Presupuestos del agua ----------------------------
 
 #importando archivo
 summodificado <- read_csv("summodificado.csv")
+colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
 
 #Modificando el csv
+<<<<<<< HEAD
 sum_ <- select(.data = summodificado, "Comunidades y Ciudades Autónomas":Total) %>% 
   drop_na()   %>% 
   filter(`Grupos de usuarios e importe`=="Importe total de la inversión en los servicios de suministro" & periodo== "2020")
@@ -202,29 +171,61 @@ tablaNobuena <- sum_ %>%
 tablaNobuena
 colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Anio", "Total")
 tablaNobuena
+=======
+tablaPresupuestos <- summodificado%>%
+  filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
+  mutate(ComunidadAutonoma = gsub("^\\d+\\s*", "", ComunidadAutonoma)) %>%
+  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma)) %>%
+  select (.data = ., Anio, ComunidadAutonoma:Presupuesto) %>%
+  drop_na()
 
-tablaPresupuestos <- tablaNobuena %>%
-  mutate(ComunidadAutonoma = toupper(ComunidadAutonoma))
-tablaPresupuestos
-#----------------------------------------------------------------------------------------
-tablaEsperanzaDeVida
-tablaCantidadDeAgua
-tablaCalidadDeAgua
-tablaPresupuestos
+tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
+tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
+tablaPresupuestosFinal <- tablaPresupuestos[,-3]
+tablaPresupuestosFinal
+>>>>>>> ee7e3de0ba404bc60f8117148a181ce9077f238f
 
-str(tablaEsperanzaDeVida)
-str(tablaCantidadDeAgua)
+# EJECUCIÓN DE TODAS LAS TABLAS ----
+tablaEsperanzaDeVidaFinal
+tablaCantidadDeAguaFinal
+tablaCalidadDeAguaFinal
+tablaPresupuestosFinal
+
 #----------------------------Joins---------------------------------------------------
-EsperanzayCantidad<- tablaEsperanzaDeVida%>%
-  left_join(x=., y=tablaCantidadDeAgua, by=c("Anio","ComunidadAutonoma"))%>%
+# ESPERANZA DE VIDA - CANTIDAD
+EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCantidadDeAguaFinal, by=c("Anio","ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
-EsperanzayCantidad
 
-#--grafico Esperanza y cantidad---
-library(ggplot2)
-library(tidyr)
-ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
+# CANTIDAD - PRESUPUESTO
+CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>% 
+  left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
+  arrange(desc(Presupuesto)) %>%
+  drop_na()
+
+# ESPERANZA Y CALIDAD
+EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+
+# JOIN FINAL
+tablaFinal<- EsperanzayCantidad %>% 
+  left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+  left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
+  mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
+  select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
+  mutate(Anio = coalesce(Anio.x, Anio.y))%>%
+  select(-Anio.x, -Anio.y)%>%
+  select(Anio, ComunidadAutonoma, everything())%>%
+  drop_na()
+
+# ---------------------------Gráficos------------------------------------------------
+# Esperanza y cantidad
+grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
   geom_point(aes(color=ComunidadAutonoma))+
   geom_smooth()+
   labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
@@ -232,58 +233,28 @@ ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
        y="Esperanza de vida")+
   theme_minimal()
 
-#--Cantidad y presupuesto--
-CantidadyPresupuesto<- tablaCantidadDeAgua%>% 
-  left_join(x=., y=tablaPresupuestos, by=c("Anio","ComunidadAutonoma")) %>% 
-  select(-GruposeImporte) %>%
-  arrange(desc(Cantidad)) %>%
-  drop_na()
-
-CantidadyPresupuesto
-
-ggplot(data=CantidadyPresupuesto, aes(x= Total , y= Cantidad, fill=ComunidadAutonoma))+
-  geom_bar(stat= "identity")
-
-CantidadyPresupuesto1<- arrange(.data=CantidadyPresupuesto, desc(Cantidad))
-
-CantidadyPresupuesto1
-
-#.--Grafico Cantidad y presupuesto--
-
-ggplot(data=CantidadyPresupuesto, aes(x= Total, y= Cantidad, fill=ComunidadAutonoma))+
+# Cantidad y presupuesto
+grafCantidadPresupuesto <- ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")+
   labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
        x="Presupuestos",
-       y="Cantidad de agua")
-#--
-EsperanzayCalidad<- tablaEsperanzaDeVida%>%
-  left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma"))%>%
-  group_by(ComunidadAutonoma) %>%
-  drop_na()
-EsperanzayCalidad
+       y="Cantidad de agua")+
+  geom_bar(stat= "identity", width = 5000)+
+  theme_minimal()
 
-EsperanzayCalidad1 <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
-EsperanzayCalidad1
+# Esperanza y calidad
 
-# como la variable drv tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
-graficoEsperanzaCalidad <- ggplot(data = EsperanzayCalidad1, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
+CalidadyEsperanza <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2:AguasSCF))
+grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
   facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
   labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
        x="Calidad",
-       y="Esperanza de vida")
-graficoEsperanzaCalidad
+       y="Esperanza de vida")+
+  theme_minimal()
 
-#-----
-tablaFinal<- EsperanzayCantidad %>% 
-  left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
-  left_join(x=., y=EsperanzayCalidad1, by=c("ComunidadAutonoma")) %>% 
-  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
-  drop_na()
-
-tablaFinal
-
-ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida.x))+
+# Tabla final
+grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
   geom_point(aes(colour = CalidadAgua))+
   geom_smooth()+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
@@ -291,28 +262,17 @@ ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida.x))+
        y="EsperanzaDeVida.x")+
   theme_minimal()
 
-#------Posible solucion para la tabla final si no son las columnas que se necesiten---
-#depende de las columnas que querais de calidad
-#tablaFinal<- EsperanzayCantidad %>% 
-#left_join(x=., y=CantidadPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
-# left_join(x=., y=tablaCalidadDeAgua, by=c("ComunidadAutonoma")) %>% 
-# select(AQUI PONER LAS COLUMNAS QUE NO SE QUIERAN VER) %>% 
-#  drop_na()
-
-ggplot(data=tablaFinal, aes(x=Total, y=EsperanzaDeVida.x, color=ComunidadAutonoma))+
-  geom_point()+
+# Mismos valores CalidadAgua
+ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
+  geom_bar(stat= "identity")+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
-       x="Presupuesto",
-       y="Esperanza de vida")+
+       x="Cantidad",
+       y="EsperanzaDeVida")+
   theme_minimal()
 
 
-#------ tablas con joins ----
-EsperanzayCantidad
-EsperanzayCalidad
-CantidadyPresupuesto
-tablaFinal
-
-tablaFinal
-
-#   hOLA
+# EJECUCIÓN DE GRÁFICOS ----
+grafEsperanzaCantidad
+grafCantidadPresupuesto
+grafEsperanzaCalidad
+grafTablaFinal
