@@ -427,6 +427,8 @@ CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad)
 CantidadAguaMayorMenor
 ```
 
+Oreden de la tabla Cantidad y Presupuestos en función de Cantidad:
+
 ```{r CantidadyPresupuestos}
 CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>% 
   left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
