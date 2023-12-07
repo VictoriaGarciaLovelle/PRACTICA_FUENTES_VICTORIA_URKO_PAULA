@@ -427,7 +427,10 @@ CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad)
 CantidadAguaMayorMenor
 ```
 
-```{r CantidadyPresupuesto}
-CantidadyPresupuestoaMayorMenor <- CantidadyPresupuesto[order(-CantidadyPresupuesto$Cantidad), ]
-CantidadyPresupuesto
+```{r CantidadyPresupuestos}
+CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>% 
+  left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
+  arrange(desc(Cantidad)) %>% 
+  drop_na()
+CantidadyPresupuestos
 ```
