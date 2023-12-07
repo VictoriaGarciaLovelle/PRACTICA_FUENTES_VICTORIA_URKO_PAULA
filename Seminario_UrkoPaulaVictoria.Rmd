@@ -342,6 +342,32 @@ CantidadyPresupuesto
 
 En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las del presupuesto de manera descendente.
 
+```{r grafEsperanzaCantidad}
+grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
+  geom_point(aes(color=ComunidadAutonoma))+
+  geom_smooth()+
+  labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
+       x="Cantidad de agua ",
+       y="Esperanza de vida")+
+  theme_minimal()
+grafEsperanzaCantidad
+```
+
+### 2. Relación entre cantidad y presupuesto
+
+```{r EsperanzayCalidad}
+EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+EsperanzayCalidad
+```
+
+En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las del presupuesto de manera descendente.
+
+```{}
+```
+
 # Anexo 1
 
 \label{anexo}
