@@ -12,48 +12,58 @@ output:
     toc_depth: '6'
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
+
 ![](escudo_ubu.jpg)
 
 # Introducción
-En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España. 
+
+En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España.
 
 Exploraremos detalladamente cómo la calidad del agua, medida a través de diferentes parámetros, y la cantidad de agua, pueden ser factores determinantes para la salud y, consecuentemente, para la esperanza de vida de las Comunidades Autónomas.
 
 # Objetivos
+
 Este estudio tiene como objetivo examinar a fondo las conexiones entre los factores medioambientales y la salud humana, centrándonos específicamente en el papel crucial del agua como recurso esencial.
 
-1. Afectación de la calidad del agua en la Esperanza de Vida
-2. Afectación de la cantidad de agua consumida en la Esperanza de Vida
-3. Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
-4. Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
+1.  Afectación de la calidad del agua en la Esperanza de Vida
+2.  Afectación de la cantidad de agua consumida en la Esperanza de Vida
+3.  Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
+4.  Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
 ```
+
 # Carga de librerías
-1. pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
+
+1.  pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
+
 ```{r CargaLibrerías, eval = TRUE}
 library(pdftools)
 ```
 
-2. tidyverse: Un conjunto de paquetes que facilitan la manipulación y visualización de datos en R. Incluye librerías como tidyr y dplyr, las cuales fueron esenciales para organizar y transformar datos.
+2.  tidyverse: Un conjunto de paquetes que facilitan la manipulación y visualización de datos en R. Incluye librerías como tidyr y dplyr, las cuales fueron esenciales para organizar y transformar datos.
 
 ```{r cargatidyverse}
 library(tidyverse)
 ```
 
-3. tidyjson: Esta librería fue útil para trabajar con datos en formato JSON. Fue esencial para analizar y extraer información de archivos JSON relacionados con la esperanza de vida y la cantidad de agua.
+3.  tidyjson: Esta librería fue útil para trabajar con datos en formato JSON. Fue esencial para analizar y extraer información de archivos JSON relacionados con la esperanza de vida y la cantidad de agua.
+
 ```{r cargatidyjson}
 library(tidyjson)
 ```
 
-4. rjson: Se utilizó para cargar y procesar datos almacenados en formato JSON. Facilita la manipulación de datos estructurados y su conversión a formatos compatibles con R.
+4.  rjson: Se utilizó para cargar y procesar datos almacenados en formato JSON. Facilita la manipulación de datos estructurados y su conversión a formatos compatibles con R.
+
 ```{r cargarjson}
 library(rjson) 
 ```
 
 # Obtención de tablas
+
 ### 1. Tabla de Esperanza de Vida
+
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
 
 Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
@@ -69,8 +79,8 @@ tibble1<-esperanzaVida %>%
   count(name, type)
 ```
 
-
 Para obtener la tabla final se ha accedido a aquel que era de tipo array que contiene los valores de interés y organiza estos datos en una tabla.
+
 ```{r ObtencionTablaEsperanza,  warning=FALSE}
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
@@ -79,7 +89,7 @@ arrayData<-esperanzaVida %>%
   select(Nombre, Anyo, Valor) 
 ```
 
-El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres. 
+El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres.
 
 ```{r, eval = TRUE,warning=FALSE}
 partes <- strsplit(arrayData$Nombre, "\\.")
@@ -95,6 +105,7 @@ arrayData$Nombre<-comunidadesAutonomas
 De la tabla se obtiene el año 2020 de cada Comunidad Autónoma y se obtiene como valor la media de la esperanza de vida en ese año.
 
 Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las comunidades autónomas a mayúsculas.
+
 ```{r obtenciontablaEsperanza}
 tablaComunidadesAñoValor<- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
@@ -112,14 +123,17 @@ colnames(tablaEsperanzaDeVidaFinal) <- c("Anio", "ComunidadAutonoma", "Esperanza
 ```
 
 En la tabla final, se puede observar la media de la esperanza de vida de cada Comunidad Autónoma en el año 2020.
+
 ```{r tablaEsperanza}
 tablaEsperanzaDeVidaFinal
 ```
 
 ### 2. Tabla de la Cantidad de Agua
+
 Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
 
 Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
@@ -131,12 +145,12 @@ cantidadAgua%>%
   count(name,type)
 ```
 
-
 Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
 
 Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las Comunidades Autónomas.
 
 Esa nueva variable con las Comunidades Autónomas se añaden a la tabla final y se elimina donde ponga España.
+
 ```{r tablaCantidadAgua}
 arrayDataCantidad<-cantidadAgua%>%
   enter_object(Data)%>%
@@ -164,6 +178,7 @@ Se filtra únicamente por el año 2020, que es el año de interés, se realiza u
 Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las Comunidades Autónomas a mayúsculas y se han renombrado.
 
 Por último se ha pasado a tipo entero la columna años.
+
 ```{r, eval = TRUE,warning=FALSE }
 tablaCantidadDeAgua <- tabla %>%
   filter(NombrePeriodo  ==2020)%>%
@@ -187,24 +202,26 @@ tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate_at(vars(Anio), as.integer)
 
 ```
+
 En la tabla final de la cantidad de agua, se puede observar la cantidad de agua consumida por cada Comunidad Autónoma en el año 2020.
+
 ```{r tablaFinal}
 tablaCantidadDeAguaFinal
 
 ```
 
-
 ### 3. Tabla de la Calidad del Agua
-Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF. 
+
+Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF.
 
 Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
+
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 pagina <- ruta_pdf[17]
 lineas <- strsplit(pagina, "\n")[[1]]
 linea_deseada <- lineas[5:21] 
 ```
-
 
 En este código se dividen las líneas deseadas usando espacios como delimitadores. Luego, crea dos conjuntos de datos: datos_obtenidos, excluyendo las primeras tres dimensiones no necesarias, y datosDeInteres, que contiene la información esencial sobre las comunidades autónomas y los valores de la calidad del agua.
 
@@ -227,7 +244,8 @@ datosDeInteres[[13]] <- c("COMUNITAT VALENCIANA","2","2","2","0","1","1","0")
 En cada iteración del bucle, se agrega la fila representada por el elemento i al data frame tablaCalidadDeAgua utilizando la función rbind().
 
 Por último se renombra y se cambia a tipo numérico a aquellas columnas que sea necesario.
-``` {r calidad}
+
+```{r calidad}
 tablaCalidadDeAgua<-data.frame()
 for (i in datosDeInteres){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
@@ -241,13 +259,14 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 
 ```
 
-
 ```{r tablafinalCalidad}
 tablaCalidadDeAguaFinal
 ```
 
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
+
 Para obtener esta tabla se ha importado un archivo CSV utilizando la función read_csv y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
+
 ```{r cargaPresupuesto}
 summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
@@ -260,6 +279,7 @@ Se seleccionan las filas donde la columna "GruposDeUsuarioEImporte" es igual a "
 Delante de cada nombre de la Comunidad Autónoma existe un número por lo que se elimina y se convierten los nombres de las comunidades a mayúsculas.
 
 Se eliminan los puntos de la columna presupuesto y se pasa a tipo entero. Y por último se descarta lo que no es necesario.
+
 ```{r tablaPresupuesto}
 tablaPresupuestos <- summodificado%>%
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
@@ -271,14 +291,27 @@ tablaPresupuestos <- summodificado%>%
 tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestosFinal <- tablaPresupuestos[,-3]
-``` 
+```
+
 Asi obtenemos los datos de los presupuesto para la potabilización del agua en el año 2020 en las diferentes Comunidades Autónomas de España
+
 ```{r tablaFinalPresupuesto}
 tablaPresupuestosFinal
 ```
 
+# Joins de tablas
 
+En este aparatado realizamos uan cantidad de cuatro joins, los cuaes explicaremos a continuación.
 
+### **1.Esperanza de vida y cantidad**
 
+```{r EsperanzayCantidad}
+EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCantidadDeAguaFinal, by=c("Anio","ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+```
 
-
+```{r EsperanzayCantidad}
+EsperanzayCantidad
+```
