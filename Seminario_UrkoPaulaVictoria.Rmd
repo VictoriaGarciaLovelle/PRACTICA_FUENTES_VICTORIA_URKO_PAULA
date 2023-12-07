@@ -303,7 +303,7 @@ tablaPresupuestosFinal
 
 En este aparatado realizamos uan cantidad de cuatro joins, los cuaes explicaremos a continuación.
 
-### **1.Esperanza de vida y cantidad**
+### **1. Relación entre esperanza de vida y cantidad**
 
 ```{r EsperanzayCantidad}
 EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
@@ -328,11 +328,13 @@ grafEsperanzaCantidad
 
 Como podemos observar en esta caja de código, creamos la gráfica de la nueva tabla "EsperanzayCantidad" creada a partir del *left_join( )* anterior. En el eje de las abscisas encontramos la cantidad de agua consumida y en el eje de las ordenadas encontramos la esperanza de vida. Como podemos comprobar en la leyenda, gracias a la función *geom_point(aes(color=ComunidadAutonoma))* cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de círculo. Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica.
 
-Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos \ref{AnexoI} que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua y en primer lugar en cuanto a la esperanza de vida. Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen y en el decimotercero en lo que respecta a la esperanza de vida. Aun así, como podemos comprobar a continuación, la línea de tendencia de nuestro gráfico muestra que los extremos no son buenos y que los ciudadanos con una esperanza de vida potencialmente buena son aquellos que consumen una cantidad intermedia de agua.
+Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el Anexo 1 \ref{anexo} que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua y en primer lugar en cuanto a la esperanza de vida. Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen y en el decimotercero en lo que respecta a la esperanza de vida. Aun así, como podemos comprobar a continuación, la línea de tendencia de nuestro gráfico muestra que los extremos no son buenos y que los ciudadanos con una esperanza de vida potencialmente buena son aquellos que consumen una cantidad intermedia de agua.
+
+### 2. Relación entre cantidad y presupuesto
 
 # Anexo 1
 
-\label{AnexoI}
+\label{anexo}
 
 Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
 
