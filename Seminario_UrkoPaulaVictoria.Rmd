@@ -353,19 +353,29 @@ grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=Esper
 grafEsperanzaCantidad
 ```
 
-### 2. Relación entre cantidad y presupuesto
+### 3. Relación entre esperanza de vida y calidad
 
-```{r EsperanzayCalidad}
+```{r EsperanzayCalidadFinal}
 EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
-EsperanzayCalidad
+  EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+EsperanzayCalidadFinal
 ```
 
 En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las del presupuesto de manera descendente.
 
-```{}
+```{r grafEsperanzaCalidad}
+CalidadyEsperanza <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2:AguasSCF))
+grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
+  geom_point(aes(colour = ComunidadAutonoma)) +
+  facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
+  labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
+       x="Calidad",
+       y="Esperanza de vida")+
+  theme_minimal()
+grafEsperanzaCalidad
 ```
 
 # Anexo 1
