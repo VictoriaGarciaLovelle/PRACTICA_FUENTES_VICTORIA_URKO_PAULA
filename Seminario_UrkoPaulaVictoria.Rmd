@@ -371,7 +371,11 @@ CalidadyEsperanza <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadA
 grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
   facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
-
+  labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
+       x="Calidad",
+       y="Esperanza de vida")+
+  theme_minimal()
+grafEsperanzaCalidad
 ```
 
 # Anexo 1
