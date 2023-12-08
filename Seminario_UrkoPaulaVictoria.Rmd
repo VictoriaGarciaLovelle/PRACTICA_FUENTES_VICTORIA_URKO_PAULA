@@ -412,7 +412,7 @@ grafEsperanzaCalidad
 
 Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
 
-Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua) (, podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que (...)
+Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua) los tres tipols de agua nos indicarán el grado de calidad de estas. Podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que
 
 ### 4. Relación entre esperanza de vida, calidad del agua, presupuesto y cantidad.
 
@@ -471,5 +471,27 @@ CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>%
   arrange(desc(Cantidad)) %>% 
   drop_na()
 CantidadyPresupuestos
+
+```
+
+Porcentajes de cada tipo de agua por Comunidades Autónomas:
+
+```{r calidad}
+tablaCalidadDeAgua<-data.frame()
+for (i in datosDeInteres){
+  tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
+}
+
+colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
+
+colNumericas <- c("NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
+tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
+  mutate_at(vars(colNumericas), as.integer) %>%
+  select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0) %>%  
+  mutate(total_aguas=(Aguas2+Aguas1+Aguas0)) %>% 
+  mutate(Agua2_porcentaje=(Aguas2/total_aguas)*100) %>% 
+  mutate(Agua1_porcentaje=(Aguas1/total_aguas)*100) %>% 
+  mutate(Agua0_porcentaje=(Aguas0/total_aguas)*100)
+tablaCalidadDeAguaFinal
 
 ```
