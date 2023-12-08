@@ -433,13 +433,13 @@ tablaend
 En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCantidad" y "CantidadyPresupuesto" teniendo como clave común las columnas "ComunidadAutonoma", "Cantidad" y "Anio". Posteriormente, realizamos otro *letf_join( )* combinando las tablas "EsperanzayCantidad" junto con "EsperanzayCalidadFinal", las cuales se unen gracias a la columna "ComunidadAutonoma" . A partir del reesultado anterior, eliminaremos las columnas no deseadas ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") con la función *select( ).* Por otro lado, modificaremos las columnas que aparecen con ".x", recuperando su nombre original seleccionando el primer valor no nulo.
 
 ```{r grafTablaFinal}
-grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
+grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = Porcentaje_Maximo)) +
   geom_point() +
   labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",
        x = "Cantidad",
        y = "Esperanza de Vida",
        size = "Presupuesto",
-       color = "CalidadAgua")+
+       color = "Porcentaje_Maximo")+
       theme_minimal()
 grafTablaFinal
 ```
@@ -478,14 +478,7 @@ CantidadyPresupuestos
 -   Porcentajes de cada tipo de agua por Comunidades Autónomas:
 
 ```{r calidadconporcentaje}
-tablaCalidadDeAgua<-data.frame()
-for (i in datosDeInteres){
-  tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
-}
 
-colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
-
-colNumericas <- c("NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
   mutate_at(vars(colNumericas), as.integer) %>%
   select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0) %>%  
@@ -493,7 +486,6 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
   mutate(Agua2_porcentaje=(Aguas2/total_aguas)*100) %>% 
   mutate(Agua1_porcentaje=(Aguas1/total_aguas)*100) %>% 
   mutate(Agua0_porcentaje=(Aguas0/total_aguas)*100) %>% 
-  mutate(Porcentaje_Maximo=pmax(Agua2_porcentaje,Agua1_porcentaje,Agua0_porcentaje))
 tablaCalidadDeAguaFinal
 
 ```
