@@ -277,8 +277,12 @@ tablaCalidadDeAguaFinal
 
 En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y Aguas0, vamos a ver a qué se refieren:
 
--   Aguas2: Aguas aptas, de muy buena calidad.
+-   ::: {#VariableAgua}
+    Aguas2: Aguas aptas, de muy buena calidad.
+    :::
+
 -   Aguas1: Aguas aptas, de buena calidad.
+
 -   Aguas0: Aguas no aptas, mala calidad.
 
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
@@ -350,7 +354,7 @@ grafEsperanzaCantidad
 
 Como podemos observar en esta caja de código, creamos la gráfica de la nueva tabla "EsperanzayCantidad" creada a partir del *left_join( )* anterior. En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular gracias a la función "*geom_point(aes(color=ComunidadAutonoma))"* . Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica.
 
-Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el [go to heading](#anexo) que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua (42033.429) y en primer lugar en cuanto a la esperanza de vida (29,29776). Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen (262867.000) y en el decimotercero en lo que respecta a la esperanza de vida (28.03881). Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
+Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el [Anexo I](#anexo) que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua (42033.429) y en primer lugar en cuanto a la esperanza de vida (29,29776). Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen (262867.000) y en el decimotercero en lo que respecta a la esperanza de vida (28.03881). Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
 
 ### 2. Relación entre cantidad y presupuesto
 
@@ -407,7 +411,7 @@ grafEsperanzaCalidad
 
 Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
 
-Como se explica en el \\\@ref (, podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que (...)
+Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua) (, podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que (...)
 
 ### 4. Relación entre esperanza de vida, calidad del agua, presupuesto y cantidad.
 
@@ -440,7 +444,7 @@ grafTablaFinal
 
 En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadass a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) . En* este, el ejes de las abscisas se representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los circulos mientras que su tamaño estga determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
 
-# Anexo 
+# Anexo {#anexo}
 
 Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
 
@@ -468,4 +472,3 @@ CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>%
 CantidadyPresupuestos
 
 ```
-
