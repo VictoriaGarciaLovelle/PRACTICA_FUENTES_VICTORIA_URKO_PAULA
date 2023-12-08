@@ -410,9 +410,9 @@ grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCal
 grafEsperanzaCalidad
 ```
 
-Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
+Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos las facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
 
-Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua) los tres tipols de agua nos indicarán el grado de calidad de estas. Según los porcentajes obtenidos en el [Anexo I](#anexo) la Comunidad Autónoma que utilizacomo fuente principial las aguas de tipo "Aguas 2" es Castilla- La Mancha, pero su esperaza de vida es baja. Luego Comunidades Autómas como Murcia y Astruias utilizan el 100% del "Aguas 0" y aun asi tiene una eseranza de vida en la media de lo normal. Por ultimo, Galicia, líder en esperanza de vida usa en su mayoría aguas de tipo "Aguas 1". Concluyendo así que no hay ninguna relacion a primera vista sobre la calidad de agua utilizada y la espernaza de vida.
+Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua), los tres tipos de agua nos indicarán el grado de calidad de estas. Según los porcentajes obtenidos en el [Anexo I](#anexo), la Comunidad Autónoma que utiliza como fuente principial las aguas de tipo "Aguas 2" es Castilla La Mancha, pero su esperaza de vida es baja. Luego, Comunidades Autónomas como Murcia y Astruias utilizan el 100% de "Aguas 0" y aun así tienen una esperanza de vida en la media de lo normal. Por último, Galicia, líder en esperanza de vida, usa en su mayoría aguas de tipo "Aguas 1". Concluyendo así que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida.
 
 ### 4. Relación entre esperanza de vida, calidad del agua, presupuesto y cantidad.
 
@@ -447,23 +447,23 @@ En relación con el último gráfico, se puede observar la combinación de las c
 
 # Anexo {#anexo}
 
-Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
+-   Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
 
--   La esperanza de vida
+    La esperanza de vida
 
 ```{r EsparanzaVidaMayorMenor}
 EsparanzaVidaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$EsperanzaDeVida), ]
 EsparanzaVidaMayorMenor
 ```
 
--   La cantidad de agua consumida
+La cantidad de agua consumida
 
 ```{r CantidaAguaMayorMenor}
 CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad), ]
 CantidadAguaMayorMenor
 ```
 
-Oreden de la tabla Cantidad y Presupuestos en función de Cantidad:
+-   Oreden de la tabla Cantidad y Presupuestos en función de Cantidad:
 
 ```{r CantidadyPresupuestos}
 CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>% 
@@ -474,7 +474,7 @@ CantidadyPresupuestos
 
 ```
 
-Porcentajes de cada tipo de agua por Comunidades Autónomas:
+-   Porcentajes de cada tipo de agua por Comunidades Autónomas:
 
 ```{r calidadconporcentaje}
 tablaCalidadDeAgua<-data.frame()
