@@ -391,7 +391,7 @@ Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utiliza
 
 En función del gráfico resultante, es necesario saber que en (referenciar pdf) nos aclara que el valor "Aguas 0" se refeiere a aguas no aptas para el baño, "Aguas 1" agas aptas para el baño de buena calidad, "Aguas 2" aguas aptas para el baño de muy buena calidad y "Aguas SFC" se asignan a los puntos del muestreo en los cuales se cumple que al menos un 90% del agua no sobrepasan los valores de Estrptococos Fecales, Transparencia, Oxígeno disuelto y Materias Flotantes*,* y por otro lado no debe cumplirse que el muestreo sea quincenal más un muestreo previo al comienzo de la temporada. Ya aclarado cada valor, podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que (...)
 
-### 4. Relación entre esperanza de vida, calidad del agua, presupuesto  y cantidad.
+### 4. Relación entre esperanza de vida, calidad del agua, presupuesto y cantidad.
 
 ```{r tablaend}
 tablaend<- EsperanzayCantidad %>% 
