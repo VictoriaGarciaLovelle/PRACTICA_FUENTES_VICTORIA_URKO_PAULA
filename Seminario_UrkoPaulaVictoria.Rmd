@@ -23,12 +23,17 @@ Exploraremos detalladamente cómo la calidad del agua, medida a través de difer
 
 # Objetivos
 
-Este estudio tiene como objetivo examinar a fondo las conexiones entre los factores medioambientales y la salud humana, centrándonos específicamente en el papel crucial del agua como recurso esencial.
+El objetivo principal de este seminario es analizar de manera formal cómo diversos aspectos relacionados con la calidad y la cantidad de agua consumida pueden afectar en la esperanza de vida en las distintas Comunidades Autónomas de España. Se explorarán los siguientes puntos:
 
-1.  Afectación de la calidad del agua en la Esperanza de Vida
-2.  Afectación de la cantidad de agua consumida en la Esperanza de Vida
-3.  Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
-4.  Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
+1. Afectación de la calidad del agua en la Esperanza de Vida:
+      Investigar cómo la calidad del agua puede tener repercusiones directas en la esperanza de vida de la         población española por Comunidades Autónomas.
+2. Afectación de la cantidad de agua consumida en la Esperanza de Vida:
+      Analizar de manera detallada cómo la cantidad de agua consumida puede influir en la esperanza de vida        de la población española por Comunidades Autónomas.
+3. Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida:
+      Evaluar la relación entre el presupuesto destinado a la potabilización del agua y la cantidad de agua        consumida, explorando posibles implicaciones para la esperanza de vida.
+4. Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida:
+      Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto         significativo en la esperanza de vida de la población española por Comunidades Autónomas.
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
@@ -356,7 +361,7 @@ grafCantidadPresupuesto
 
 Aquí creamos la gráfica de la nueva tabla "grafCantidadPresupuesto", creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")*, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
-De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el conusmo de agua mayor (puede comprobarese en el Anexo I \ref{Anexo I}). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podelmos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuerta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
+De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el Anexo I \ref{Anexo I}). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
 ### 3. Relación entre esperanza de vida y calidad
 
