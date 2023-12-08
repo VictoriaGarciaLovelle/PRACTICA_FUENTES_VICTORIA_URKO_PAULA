@@ -13,7 +13,7 @@ output:
     toc_depth: '6'
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
-![](EscudoUBU.png){width=250px}
+![](images/EscudoUBU.png){width=250px}
 
 # Introducción
 
@@ -72,6 +72,7 @@ library(rjson)
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
 
 Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+
 
 ```{r cargaDeDatosJson}
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
@@ -218,8 +219,10 @@ tablaCantidadDeAguaFinal
 ### 3. Tabla de la Calidad del Agua
 
 Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF.
+El PDF tiene 217 páginas de las cuales la página deseada es la 17 que contiene la tabla que queremos obtener.
+![](images/imagenPDFTabla){width=250px}
 
-Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
+Para poder obtener esta tabla y poder utilizarla para le estudio, primero se convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento (página 17), con el objetivo de obtener datos clave relacionados con la calidad del agua.
 
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
