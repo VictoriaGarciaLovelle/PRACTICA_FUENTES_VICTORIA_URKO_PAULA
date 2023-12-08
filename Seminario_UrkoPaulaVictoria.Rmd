@@ -16,7 +16,7 @@ subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 
 ![](images/EscudoUBU.png){width="250px"}
 
-\justify
+\begin{center}
 
 # Introducción
 
@@ -498,3 +498,5 @@ tablaCalidadDeAguaFinalnueva <- tablaCalidadDeAgua %>%
 
 tablaCalidadDeAguaFinalnueva
 ```
+
+\\end{center}
