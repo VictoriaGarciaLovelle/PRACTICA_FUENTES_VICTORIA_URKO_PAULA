@@ -385,8 +385,8 @@ grafEsperanzaCalidad
 
 ### 4. Relación entre esperanza de vida, calidad del agua y presupuesto
 
-```{r tablaFinal}
-tablaFinal1<- EsperanzayCantidad %>% 
+```{r tablaend}
+tablaend<- EsperanzayCantidad %>% 
   left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
   left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
   select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
@@ -396,11 +396,11 @@ tablaFinal1<- EsperanzayCantidad %>%
   select(-Anio.x, -Anio.y)%>%
   select(Anio, ComunidadAutonoma, everything())%>%
   drop_na()
-tablaFinal1
+tablaend
 ```
 
 ```{r grafTablaFinal}
-grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
+grafTablaFinal <- ggplot(data=tablaend, aes(x=Cantidad, y=EsperanzaDeVida))+
   geom_point(aes(colour = CalidadAgua))+
   geom_smooth()+
   labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
