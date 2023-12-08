@@ -1,7 +1,5 @@
 ---
 title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
-![](escudo_ubu.jpg){width=1in}  
-  Adding a Logo to LaTeX Title
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output:
@@ -16,8 +14,8 @@ subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
 
 
-```{=tex}
-\begin{justify}
+```{r echo=FALSE, purl=FALSE}
+
 ```
 # Introducción
 
