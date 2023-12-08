@@ -208,6 +208,7 @@ CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>%
 EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   drop_na()
 EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
 
@@ -215,14 +216,13 @@ EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "Cal
 tablaFinal<- EsperanzayCantidad %>% 
   left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
   left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
-  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
   select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
   mutate(Anio = coalesce(Anio.x, Anio.y))%>%
   select(-Anio.x, -Anio.y)%>%
   select(Anio, ComunidadAutonoma, everything())%>%
   drop_na()
-
+view (tablaFinal)
 # ---------------------------Gráficos------------------------------------------------
 # Esperanza y cantidad
 grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+

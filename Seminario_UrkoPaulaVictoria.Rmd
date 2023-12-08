@@ -364,6 +364,7 @@ De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una ci
 EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   drop_na()
   EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
 EsperanzayCalidadFinal
@@ -372,7 +373,6 @@ EsperanzayCalidadFinal
 En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las del presupuesto de manera descendente.
 
 ```{r grafEsperanzaCalidad}
-CalidadyEsperanza <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2:AguasSCF))
 grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
   facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
