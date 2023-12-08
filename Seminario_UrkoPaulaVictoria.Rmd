@@ -227,7 +227,7 @@ Este código extrae y procesa información relevante sobre la calidad del agua d
 El PDF tiene 217 páginas de las cuales la página deseada es la 17 que contiene la tabla que queremos obtener.
 La tabla en el PDF se muestra asi:
 
-![](images/imagenPDFTabla.png){width=500px}
+![](images/imagenPDFTabla.png){width=600px}
 
 Para poder obtener esta tabla y poder utilizarla para el estudio, primero se convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento (página 17), con el objetivo de obtener datos clave relacionados con la calidad del agua.
 
