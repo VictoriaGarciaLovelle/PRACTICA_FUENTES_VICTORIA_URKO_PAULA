@@ -70,6 +70,8 @@ library(rjson)
 ### 1. Tabla de Esperanza de Vida
 
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
+![](images/EsperanzadeVidaJson.png){width=900px}
+
 
 Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
 
