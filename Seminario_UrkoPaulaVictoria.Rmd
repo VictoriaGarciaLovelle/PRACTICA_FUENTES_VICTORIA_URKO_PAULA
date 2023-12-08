@@ -16,6 +16,8 @@ subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 
 ![](images/EscudoUBU.png){width="250px"}
 
+`text-align: justify;`
+
 # Introducción
 
 En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España.
