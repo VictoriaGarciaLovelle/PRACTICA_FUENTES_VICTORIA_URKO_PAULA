@@ -360,21 +360,18 @@ De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una ci
 
 ### 3. Relación entre esperanza de vida y calidad
 
-```{r EsperanzayCalidad}
+```{r EsperanzayCalidadFinal}
 EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
-  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   drop_na()
-EsperanzayCalidad
-```
-
-```{r EsperanzayCalidadFinal}
 EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
 EsperanzayCalidadFinal
+
 ```
 
-En este código, unimos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, eliminamos tres columnas que pertenecen a "tablaCalidadDeAguaFinal" ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") a través de un *select( )* ya que no son relevantes en nuestro estudio. Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
+En este código, unimos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las culumnas "Aguas2", "Aguas1", "Aguas0",\
+"AguasSCF", las cuales son relevantes en nuestro estudio. Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
 
 ```{r grafEsperanzaCalidad}
 grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
