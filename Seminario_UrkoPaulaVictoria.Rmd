@@ -70,10 +70,10 @@ library(rjson)
 ### 1. Tabla de Esperanza de Vida
 
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
-![](images/EsperanzadeVidaJson.png){width=900px}
-Este es una porcion de todo el archivo JSON, de los cuales se tienen que seleccionar los datos deseados.
+![](images/EsperanzadeVidaJson.png)
+Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar los datos deseados.
 
-Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
 
 
 ```{r cargaDeDatosJson}
@@ -140,7 +140,10 @@ tablaEsperanzaDeVidaFinal
 
 Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
 
-Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+![](images/CantidadAguaJSON.png)
+Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar los datos deseados.
+
+Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable cantidadAgua.
 
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
@@ -153,7 +156,7 @@ cantidadAgua%>%
   count(name,type)
 ```
 
-Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
+Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad Autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
 
 Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las Comunidades Autónomas.
 
