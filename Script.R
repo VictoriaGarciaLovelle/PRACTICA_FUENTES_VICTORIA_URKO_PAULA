@@ -222,7 +222,7 @@ tablaFinal<- EsperanzayCantidad %>%
   select(-Anio.x, -Anio.y)%>%
   select(Anio, ComunidadAutonoma, everything())%>%
   drop_na()
-view (tablaFinal)
+
 # ---------------------------Gráficos------------------------------------------------
 # Esperanza y cantidad
 grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
