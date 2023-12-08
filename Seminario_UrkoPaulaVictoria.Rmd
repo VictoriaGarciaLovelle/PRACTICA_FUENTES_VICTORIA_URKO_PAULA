@@ -413,7 +413,7 @@ grafEsperanzaCalidad
 
 Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos las facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
 
-Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua), los tres tipos de agua nos indicarán el grado de calidad de estas. Según los porcentajes obtenidos en el [Anexo I](#anexo), la Comunidad Autónoma que utiliza como fuente principial las aguas de tipo "Aguas 2" es Castilla La Mancha, pero su esperaza de vida es baja. Luego, Comunidades Autónomas como Murcia y Astruias utilizan el 100% de "Aguas 0" y aun así tienen una esperanza de vida en la media de lo normal. Por último, Galicia, líder en esperanza de vida, usa en su mayoría aguas de tipo "Aguas 1". Concluyendo así que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida.
+Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua), los tres tipos de agua nos indicarán el grado de calidad de estas. Según los porcentajes obtenidos en el [Anexo](#tablaPorcentaje)[I](#anexo), la Comunidad Autónoma que utiliza como fuente principial las aguas de tipo "Aguas 2" es Castilla La Mancha, pero su esperaza de vida es baja. Luego, Comunidades Autónomas como Murcia y Astruias utilizan el 100% de "Aguas 0" y aun así tienen una esperanza de vida en la media de lo normal. Por último, Galicia, líder en esperanza de vida, usa en su mayoría aguas de tipo "Aguas 1". Concluyendo así que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida.
 
 ### 4. Relación entre esperanza de vida, calidad del agua, presupuesto y cantidad.
 
@@ -475,6 +475,9 @@ CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>%
 CantidadyPresupuestos
 
 ```
+
+::: {#tablaPorcentaje}
+:::
 
 -   Porcentajes de cada tipo de agua por Comunidades Autónomas:
 
