@@ -42,4 +42,12 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
 
 # Resultados
 
+### Cantidad de agua junto Esperanza de vida por Comunidades Autónomas
+
+![image](https://github.com/VictoriaGarciaLovelle/PRACTICA_FUENTES_VICTORIA_URKO_PAULA/assets/126605718/09967ecd-1afe-410c-82d6-90e96439ac65)
+
+En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular. Finalmente, creamos un gráfico de dispersión y para poder entender mejor el patrón que estamos estudiando con esta gráfica.
+
+Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
+
 # Conclusión
