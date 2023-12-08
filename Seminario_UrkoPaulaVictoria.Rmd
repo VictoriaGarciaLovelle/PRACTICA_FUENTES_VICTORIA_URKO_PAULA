@@ -14,6 +14,12 @@ output:
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
 
+`<style>
+  body {
+    text-align: justify;
+  }
+</style>`
+
 ![](images/EscudoUBU.png){width="250px"}
 
 \begin{center}
