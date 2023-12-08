@@ -1,5 +1,7 @@
 ---
 title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
+![](escudo_ubu.jpg){width=1in}  
+  Adding a Logo to LaTeX Title
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output:
@@ -13,7 +15,6 @@ output:
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
 
-![](escudo_ubu.jpg)
 
 ```{=tex}
 \begin{justify}
@@ -304,7 +305,7 @@ tablaPresupuestosFinal
 
 # Joins de tablas y sus correspondientes gráficas
 
-En este aparatado realizamos uan cantidad de cuatro joins, los cuaes explicaremos a continuación.
+En este aparatado realizamos uan cantidad de cuatro joins, los cuales explicaremos a continuación.
 
 ### 1. Relación entre esperanza de vida y cantidad
 
