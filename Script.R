@@ -151,7 +151,8 @@ colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "Zonas
 colNumericas <- c("NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
   mutate_at(vars(colNumericas), as.integer)%>%
-  select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0)
+  select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0) 
+
 
 tablaCalidadDeAguaFinal
 ## -------------------- Presupuestos del agua ----------------------------

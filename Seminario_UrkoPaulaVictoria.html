@@ -1794,6 +1794,9 @@ colNumericas &lt;- c(&quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot
 tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
   mutate_at(vars(colNumericas), as.integer) %&gt;%
   select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0)</code></pre>
+<div id="VariableAgua">
+
+</div>
 <pre class="r"><code>tablaCalidadDeAguaFinal</code></pre>
 <pre><code>##              ComunidadAutonoma Aguas2 Aguas1 Aguas0
 ## 1                    ANDALUCÍA      3     36     27
@@ -1812,9 +1815,7 @@ tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
 <p>En esta tabla final se pueden observar unas columnas llamadas Aguas1,
 Aguas2 y Aguas0, vamos a ver a qué se refieren:</p>
 <ul>
-<li><div id="VariableAgua">
-<p>Aguas2: Aguas aptas, de muy buena calidad.</p>
-</div></li>
+<li><p>Aguas2: Aguas aptas, de muy buena calidad.</p></li>
 <li><p>Aguas1: Aguas aptas, de buena calidad.</p></li>
 <li><p>Aguas0: Aguas no aptas, mala calidad.</p></li>
 </ul>
