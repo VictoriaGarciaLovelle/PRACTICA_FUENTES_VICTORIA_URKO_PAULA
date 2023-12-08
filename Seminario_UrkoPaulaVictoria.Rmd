@@ -70,7 +70,9 @@ library(rjson)
 ### 1. Tabla de Esperanza de Vida
 
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
+
 ![](images/EsperanzadeVidaJson.png)
+
 Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar los datos deseados.
 
 Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
@@ -141,6 +143,7 @@ tablaEsperanzaDeVidaFinal
 Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
 
 ![](images/CantidadAguaJSON.png)
+
 Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar los datos deseados.
 
 Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable cantidadAgua.
