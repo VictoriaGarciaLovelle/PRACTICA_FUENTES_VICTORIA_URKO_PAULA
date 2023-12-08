@@ -378,7 +378,7 @@ grafCantidadPresupuesto
 
 Aquí creamos la gráfica de la nueva tabla "grafCantidadPresupuesto", creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")*, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
-De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el [Anexo I][anexo] ). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
+De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el [Anexo I](#anexo) ). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
 ### 3. Relación entre esperanza de vida y calidad
 
@@ -441,8 +441,6 @@ grafTablaFinal
 En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadass a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) . En* este, el ejes de las abscisas se representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los circulos mientras que su tamaño estga determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
 
 # Anexo 
-[id]:anexo
-
 
 Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
 
