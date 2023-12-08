@@ -383,6 +383,8 @@ grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadA
 grafEsperanzaCalidad
 ```
 
+Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas sse encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( )* afregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
+
 ### 4. Relación entre esperanza de vida, calidad del agua y presupuesto
 
 ```{r tablaend}
