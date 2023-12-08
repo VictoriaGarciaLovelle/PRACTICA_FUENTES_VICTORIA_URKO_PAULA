@@ -2059,11 +2059,15 @@ Comunidad Autónoma que represente. Al tener varios datos de la calidad
 del agua, dividimos e facetas con la ayuda de la función <em>facet_wrap(
 )</em> organizando estas facetas en una sola fila.</p>
 <p>Como se explica en el <a href="#VariableAgua">Apartado 3 de la
-obtención de tablas</a> (, podemos apreciar cómo Castilla-La Mancha
-(27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia
-de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El
-resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo
-que nos indica que (…)</p>
+obtención de tablas</a> los tres tipols de agua nos indicarán el grado
+de calidad de estas. Según los porcentajes obtenidos en el <a href="#anexo">Anexo I</a> la Comunidad Autónoma que utilizacomo fuente
+principial las aguas de tipo “Aguas 2” es Castilla- La Mancha, pero su
+esperaza de vida es baja. Luego Comunidades Autómas como Murcia y
+Astruias utilizan el 100% del “Aguas 0” y aun asi tiene una eseranza de
+vida en la media de lo normal. Por ultimo, Galicia, líder en esperanza
+de vida usa en su mayoría aguas de tipo “Aguas 1”. Concluyendo así que
+no hay ninguna relacion a primera vista sobre la calidad de agua
+utilizada y la espernaza de vida.</p>
 </div>
 <div id="relación-entre-esperanza-de-vida-calidad-del-agua-presupuesto-y-cantidad." class="section level3">
 <h3>4. Relación entre esperanza de vida, calidad del agua, presupuesto y
@@ -2208,6 +2212,51 @@ CantidadyPresupuestos</code></pre>
 ## 14  2020 NAVARRA, COMUNIDAD FORAL DE   22551.        5704
 ## 15  2020 CANTABRIA                     20367.         223
 ## 16  2020 RIOJA, LA                      9448.         304</code></pre>
+<p>Porcentajes de cada tipo de agua por Comunidades Autónomas:</p>
+<pre class="r"><code>tablaCalidadDeAgua&lt;-data.frame()
+for (i in datosDeInteres){
+  tablaCalidadDeAgua&lt;-rbind(tablaCalidadDeAgua,i)
+}
+
+colnames(tablaCalidadDeAgua) &lt;- c(&quot;ComunidadAutonoma&quot;, &quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
+
+colNumericas &lt;- c(&quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
+tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
+  mutate_at(vars(colNumericas), as.integer) %&gt;%
+  select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0) %&gt;%  
+  mutate(total_aguas=(Aguas2+Aguas1+Aguas0)) %&gt;% 
+  mutate(Agua2_porcentaje=(Aguas2/total_aguas)*100) %&gt;% 
+  mutate(Agua1_porcentaje=(Aguas1/total_aguas)*100) %&gt;% 
+  mutate(Agua0_porcentaje=(Aguas0/total_aguas)*100)
+tablaCalidadDeAguaFinal</code></pre>
+<pre><code>##              ComunidadAutonoma Aguas2 Aguas1 Aguas0 total_aguas
+## 1                    ANDALUCÍA      3     36     27          66
+## 2                       ARAGÓN      3      7      1          11
+## 3                     ASTURIAS      0      0      1           1
+## 4         CASTILLA - LA MANCHA     24      7     12          43
+## 5              CASTILLA Y LEÓN      0      1      1           2
+## 6                     CATALUÑA      3      8      0          11
+## 7                  EXTREMADURA      0      0      0           0
+## 8                      GALICIA     10     45     13          68
+## 9         MADRID, COMUNIDAD DE      0      2      5           7
+## 10           MURCIA, REGIÓN DE      0      0      3           3
+## 11 NAVARRA, COMUNIDAD FORAL DE      4      5      2          11
+## 12                   RIOJA, LA      0      1      0           1
+## 13        COMUNITAT VALENCIANA      0      1      1           2
+##    Agua2_porcentaje Agua1_porcentaje Agua0_porcentaje
+## 1          4.545455         54.54545        40.909091
+## 2         27.272727         63.63636         9.090909
+## 3          0.000000          0.00000       100.000000
+## 4         55.813953         16.27907        27.906977
+## 5          0.000000         50.00000        50.000000
+## 6         27.272727         72.72727         0.000000
+## 7               NaN              NaN              NaN
+## 8         14.705882         66.17647        19.117647
+## 9          0.000000         28.57143        71.428571
+## 10         0.000000          0.00000       100.000000
+## 11        36.363636         45.45455        18.181818
+## 12         0.000000        100.00000         0.000000
+## 13         0.000000         50.00000        50.000000</code></pre>
 </div>
 
 
