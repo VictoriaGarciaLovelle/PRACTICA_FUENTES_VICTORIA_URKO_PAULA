@@ -26,9 +26,9 @@ Exploraremos detalladamente cómo la calidad del agua, medida a través de difer
 
 El objetivo principal de este seminario es analizar de manera formal cómo diversos aspectos relacionados con la calidad y la cantidad de agua consumida pueden afectar en la esperanza de vida en las distintas Comunidades Autónomas de España. Se explorarán los siguientes puntos:
 
-1.  Afectación de la calidad del agua en la Esperanza de Vida: Investigar cómo la calidad del agua puede tener repercusiones directas en la esperanza de vida de la población española por Comunidades Autónomas.
-2.  Afectación de la cantidad de agua consumida en la Esperanza de Vida: Analizar de manera detallada cómo la cantidad de agua consumida puede influir en la esperanza de vida de la población española por Comunidades Autónomas.
-3.  Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida: Evaluar la relación entre el presupuesto destinado a la potabilización del agua y la cantidad de agua consumida, explorando posibles implicaciones para la esperanza de vida.
+1.  Afección de la calidad del agua en la Esperanza de Vida: Investigar cómo la calidad del agua puede tener repercusiones directas en la esperanza de vida de la población española por Comunidades Autónomas.
+2.  Afección de la cantidad de agua consumida en la Esperanza de Vida: Analizar de manera detallada cómo la cantidad de agua consumida puede influir en la esperanza de vida de la población española por Comunidades Autónomas.
+3.  Afección del presupuesto para potabilizar agua con la cantidad de agua consumida: Evaluar la relación entre el presupuesto destinado a la potabilización del agua y la cantidad de agua consumida, explorando posibles implicaciones para la esperanza de vida.
 4.  Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida: Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto significativo en la esperanza de vida de la población española por Comunidades Autónomas.
 
 ```{r setup, include=FALSE}
@@ -433,10 +433,9 @@ tablaend
 En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCantidad" y "CantidadyPresupuesto" teniendo como clave común las columnas "ComunidadAutonoma", "Cantidad" y "Anio". Posteriormente, realizamos otro *letf_join( )* combinando las tablas "EsperanzayCantidad" junto con "EsperanzayCalidadFinal", las cuales se unen gracias a la columna "ComunidadAutonoma" . A partir del reesultado anterior, eliminaremos las columnas no deseadas ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") con la función *select( ).* Por otro lado, modificaremos las columnas que aparecen con ".x", recuperando su nombre original seleccionando el primer valor no nulo.
 
 ```{r grafTablaFinal}
-grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CaidadAgua)) +
+grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
   geom_point() +
-  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",
-       x = "Cantidad",
+  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",      x = "Cantidad",
        y = "Esperanza de Vida",
        size = "Presupuesto",
        color = "CalidadAgua")+
@@ -445,6 +444,8 @@ grafTablaFinal
 ```
 
 En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadass a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) . En* este, el ejes de las abscisas se representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los circulos mientras que su tamaño estga determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
+
+Como coclusión final, podemos ver que la relación entre presupuesto y cantidad de agua consumida si que es notoria pero como vemos la esperanza de vida no se ve afectada por el presupuesto. Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida, ya que los que consumen mucha agua o muy poca tienen una esperanza de vida relativament peor a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, vemos que realmente no es una variable que afecte directamente a nuestro estudio. Es por todo lo anterior, que la esperanza de vida va a ser mayor si nuestra consumo de agua no excede ningun limite, lo que ademas permite que aquellas comunidades autonomas que iniverten mucho capital en el consumo de agua, puedan reducirlo.
 
 # Anexo {#anexo}
 
@@ -479,7 +480,7 @@ CantidadyPresupuestos
 
 ```{r calidadconporcentaje}
 
-tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
+tablaCalidadDeAguaFinalnueva <- tablaCalidadDeAgua %>%
   mutate_at(vars(colNumericas), as.integer) %>%
   select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0) %>%  
   mutate(total_aguas=(Aguas2+Aguas1+Aguas0)) %>% 
@@ -487,5 +488,5 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
   mutate(Agua1_porcentaje=(Aguas1/total_aguas)*100) %>% 
   mutate(Agua0_porcentaje=(Aguas0/total_aguas)*100)  
 
-tablaCalidadDeAguaFinal
+tablaCalidadDeAguaFinalnueva
 ```
