@@ -288,13 +288,15 @@ En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y A
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
 
 Para obtener esta tabla se ha importado un archivo CSV utilizando la función *read_csv* y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
+![](images/PresupuestoCSV.png)
+Esto es una porción de todo el archivo CSV, del cual se tiene que seleccionar los datos deseados.
+
+Una vez cargados los datos, se renombran las columnas para poder tener unificados todos los nombres.
 
 ```{r cargaPresupuesto}
 summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
 ```
-
-Se realizan una serie de modificaciones para poder obtener la tabla deseada.
 
 Se seleccionan las filas donde la columna "GruposDeUsuarioEImporte" es igual a "Importe total de la inversión en los servicios de suministro" y la columna "Anio" es igual a "2020".
 
