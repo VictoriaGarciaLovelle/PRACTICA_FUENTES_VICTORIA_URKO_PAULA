@@ -35,7 +35,7 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
       Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto         significativo en la esperanza de vida de la población española por Comunidades Autónomas.
 
 
-```{r EliminarWarnings}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
 ```
 
