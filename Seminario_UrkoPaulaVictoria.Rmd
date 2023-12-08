@@ -271,15 +271,16 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 
 ```
 
+::: {#VariableAgua}
+:::
+
 ```{r tablafinalCalidad}
 tablaCalidadDeAguaFinal
 ```
 
 En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y Aguas0, vamos a ver a qué se refieren:
 
--   ::: {#VariableAgua}
-    Aguas2: Aguas aptas, de muy buena calidad.
-    :::
+-   Aguas2: Aguas aptas, de muy buena calidad.
 
 -   Aguas1: Aguas aptas, de buena calidad.
 
