@@ -313,7 +313,7 @@ EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
 EsperanzayCantidad
 ```
 
-En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCantidadDeAguaFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las Comunidades Autónomas.
+En el fragmento de código anterior, combinamos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCantidadDeAguaFinal" usando sus claves comunes las columnas "Anio" y "ComunidadAutonoma" ordenado en función de las Comunidades Autónomas.
 
 ```{r grafEsperanzaCantidad}
 grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
@@ -340,7 +340,7 @@ CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>%
 CantidadyPresupuesto
 ```
 
-En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante las columnas "Anio" y "ComunidadAutonoma", ordenadas en función de las del presupuesto de manera descendente.
+En el fragmento de código anterior, combinamos a través de un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" gracias a sus claves comunes "Anio" y "ComunidadAutonoma", ordenadas en función de las del presupuesto de manera descendente.
 
 ```{r grafCantidadPresupuesto}
 grafCantidadPresupuesto <- ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
@@ -370,7 +370,7 @@ EsperanzayCalidadFinal
 
 ```
 
-En este código, unimos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las culumnas "Aguas2", "Aguas1", "Aguas0",\
+En este código, ccombinamos con un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante su clave común la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las culumnas "Aguas2", "Aguas1", "Aguas0",\
 "AguasSCF", las cuales son relevantes en nuestro estudio. Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
 
 ```{r grafEsperanzaCalidad}
@@ -403,6 +403,8 @@ tablaend<- EsperanzayCantidad %>%
   drop_na()
 tablaend
 ```
+
+En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCantidad" y "CantidadyPresupuesto" teniendo como clave común las columnas "ComunidadAutonoma", "Cantidad" y "Anio". Posteriormente, realizamos otro *letf_join( )* combinando las tablas "EsperanzayCantidad" junto con "EsperanzayCalidadFinal", las cuales se unen gracias a la columna "ComunidadAutonoma" . A partir del reesultado anterior, eliminaremos las columnas no deseadas ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") con la función *select( ).* Por otro lado, modificaremos las columnas que aparecen con ".x", recuperando su nombre original seleccionando el primer valor no nulo.
 
 ```{r grafTablaFinal}
 grafTablaFinal <- ggplot(tablaFinal, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
