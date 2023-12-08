@@ -12,9 +12,6 @@ output:
     toc: yes
     toc_depth: '6'
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
----
-
----
 <style>
   body {
     text-align: justify;
