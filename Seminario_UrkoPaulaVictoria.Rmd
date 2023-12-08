@@ -14,9 +14,7 @@ output:
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
 
-```{r echo=FALSE, purl=FALSE, out.width='100px'}
-knitr::include_graphics("EscudoUBU.png")
-```
+![](EscudoUBU.png)
 
 
 # Introducción
