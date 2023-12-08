@@ -23,12 +23,17 @@ Exploraremos detalladamente cómo la calidad del agua, medida a través de difer
 
 # Objetivos
 
-Este estudio tiene como objetivo examinar a fondo las conexiones entre los factores medioambientales y la salud humana, centrándonos específicamente en el papel crucial del agua como recurso esencial.
+El objetivo principal de este seminario es analizar de manera formal cómo diversos aspectos relacionados con la calidad y la cantidad de agua consumida pueden afectar en la esperanza de vida en las distintas Comunidades Autónomas de España. Se explorarán los siguientes puntos:
 
-1.  Afectación de la calidad del agua en la Esperanza de Vida
-2.  Afectación de la cantidad de agua consumida en la Esperanza de Vida
-3.  Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
-4.  Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
+1. Afectación de la calidad del agua en la Esperanza de Vida:
+      Investigar cómo la calidad del agua puede tener repercusiones directas en la esperanza de vida de la         población española por Comunidades Autónomas.
+2. Afectación de la cantidad de agua consumida en la Esperanza de Vida:
+      Analizar de manera detallada cómo la cantidad de agua consumida puede influir en la esperanza de vida        de la población española por Comunidades Autónomas.
+3. Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida:
+      Evaluar la relación entre el presupuesto destinado a la potabilización del agua y la cantidad de agua        consumida, explorando posibles implicaciones para la esperanza de vida.
+4. Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida:
+      Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto         significativo en la esperanza de vida de la población española por Comunidades Autónomas.
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
