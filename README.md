@@ -12,12 +12,19 @@
 
 ## Índice
 
-1.  [Objetivos](#objetivos)
-2.  [Resumen](#resumen)
-3.  [Resultados](#resultados)
-4.  [Conclusión](#conclusión)
+1.  [Introducción](#Introducción)
+2.  [Objetivos](##Objetivos)
+4.  [Resultados](#Resultados)
+5.  [Conclusión](#Conclusión)
 
-## Objetivos <a name="objetivos"></a> {#objetivos}
+
+##Introducción
+
+En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España.
+
+Exploraremos detalladamente cómo la calidad del agua, medida a través de diferentes parámetros, y la cantidad de agua, pueden ser factores determinantes para la salud y, consecuentemente, para la esperanza de vida de las Comunidades Autónomas.
+
+#Objetivos
 
 El objetivo principal de este seminario es analizar de manera formal cómo diversos aspectos relacionados con la calidad y la cantidad de agua consumida pueden afectar en la esperanza de vida en las distintas Comunidades Autónomas de España. Se explorarán los siguientes puntos:
 
@@ -30,8 +37,6 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
 4.  **Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida:**
     -   Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto significativo en la esperanza de vida de la población española por Comunidades Autónomas.
 
-## Resumen <a name="resumen"></a> {#resumen}
+##Resultados
 
-## Resultados <a name="resultados"></a> {#resultados}
-
-## Conclusión <a name="conclusión"></a> {#conclusión}
+##Conclusión
