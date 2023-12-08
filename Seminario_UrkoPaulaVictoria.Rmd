@@ -303,7 +303,7 @@ tablaPresupuestosFinal
 
 En este aparatado realizamos uan cantidad de cuatro joins, los cuaes explicaremos a continuación.
 
-### **1. Relación entre esperanza de vida y cantidad**
+### 1. Relación entre esperanza de vida y cantidad
 
 ```{r EsperanzayCantidad}
 EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
@@ -384,11 +384,11 @@ grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCal
 grafEsperanzaCalidad
 ```
 
-Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas sse encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( )* afregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
+Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
 
-En función del gráfico resultante, es necesario saber que en (referenciar pdf) nos aclara que el valor "Aguas 0" se refeiere a aguas no aptas para el baño, "Aguas 1" agas aptas para el baño de buena calidad, "Aguas 2" aguas aptas para el baño de muy buena calidad y "Aguas SFC" se asignan a los puntos del muestreo en el que se cumple que al menos un 90% del agua no sobrepasan los valores de *Estrptococos Fecales, Transparencia, Oxígeno disuelto y Materias Flotantes,* y por otro lado que no se cumpla que el muestreo es quincenal mas un muestreo previo al comienzo de la temporada. Ya aclarado cada valor, podemos apreciar como Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia(+29) y Extremadura(29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5 lo que nos indica que (...)
+En función del gráfico resultante, es necesario saber que en (referenciar pdf) nos aclara que el valor "Aguas 0" se refeiere a aguas no aptas para el baño, "Aguas 1" agas aptas para el baño de buena calidad, "Aguas 2" aguas aptas para el baño de muy buena calidad y "Aguas SFC" se asignan a los puntos del muestreo en los cuales se cumple que al menos un 90% del agua no sobrepasan los valores de Estrptococos Fecales, Transparencia, Oxígeno disuelto y Materias Flotantes*,* y por otro lado no debe cumplirse que el muestreo sea quincenal más un muestreo previo al comienzo de la temporada. Ya aclarado cada valor, podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que (...)
 
-### 4. Relación entre esperanza de vida, calidad del agua y presupuesto
+### 4. Relación entre esperanza de vida, calidad del agua, presupuesto  y cantidad.
 
 ```{r tablaend}
 tablaend<- EsperanzayCantidad %>% 

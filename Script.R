@@ -254,22 +254,22 @@ grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadA
   theme_minimal()
 
 # Tabla final
-grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
-  geom_point(aes(colour = CalidadAgua))+
-  geom_smooth()+
-  labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
-       x="Cantidad",
-       y="EsperanzaDeVida.x")+
-  theme_minimal()
+#grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
+ # geom_point(aes(colour = CalidadAgua))+
+  #geom_smooth()+
+  #labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
+   #    x="Cantidad",
+    #   y="EsperanzaDeVida.x")+
+  #theme_minimal()
 
 ggplot(tablaFinal, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
-  geom_point(alpha = 0.7) +
-  scale_size_continuous(range = c(3, 10)) +
-  labs(title = "s",
+  geom_point() +
+  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",
        x = "Cantidad",
        y = "Esperanza de Vida",
        size = "Presupuesto",
-       color = "CalidadAgua")
+       color = "CalidadAgua")+
+      theme_minimal()
 
 # Mismos valores CalidadAgua
 ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
@@ -278,7 +278,7 @@ ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
        x="Cantidad",
        y="EsperanzaDeVida")+
   theme_minimal()
-
+alpha = 0.7
 
 # EJECUCIÓN DE GRÁFICOS ----
 grafEsperanzaCantidad
