@@ -338,6 +338,12 @@ CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>%
   arrange(desc(Presupuesto)) %>%
   drop_na()
 CantidadyPresupuesto
+
+CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>% 
+  left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
+  arrange(desc(Cantidad)) %>% 
+  drop_na()
+CantidadyPresupuestos
 ```
 
 En el fragmento de código anterior, unimos mediante un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" mediante la columna "Anio" y "ComunidadAutonoma" ordenado en función de las del presupuesto de manera descendente.
@@ -351,6 +357,7 @@ grafCantidadPresupuesto <- ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto,
   geom_bar(stat= "identity", width = 5000)+
   theme_minimal()
 grafCantidadPresupuesto
+
 ```
 
 Aqui creamos la gráfica de la nueva tabla "grafCantidadPresupuesto" creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")* cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
