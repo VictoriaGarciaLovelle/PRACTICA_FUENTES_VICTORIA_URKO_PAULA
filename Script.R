@@ -262,7 +262,7 @@ grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadA
     #   y="EsperanzaDeVida.x")+
   #theme_minimal()
 
-ggplot(tablaFinal, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
+grafTablaFinal <- ggplot(tablaFinal, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
   geom_point() +
   labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",
        x = "Cantidad",
