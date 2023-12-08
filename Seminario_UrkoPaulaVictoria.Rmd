@@ -1,66 +1,69 @@
 ---
 title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
-subtitle: "Relación entre la Esperanza de Vida y el Agua"
+
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output:
   html_document:
-    toc: true
+    toc: yes
     toc_depth: 6
-    toc_float: true
----
-```{r, echo=FALSE, out.width="20%"}
-htmltools::img(src = knitr::image_uri(f = "escudo_ubu.png"), 
-               alt = 'logo', 
-               style = 'position:absolute; top:0; right:0; padding:4px;')
+    toc_float: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '6'
+subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 
-```
-
-<style>
-body {
-text-align: justify}
-</style>
+![](EscudoUBU.png){width=250px}
 
 # Introducción
-En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España. 
+
+En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España.
 
 Exploraremos detalladamente cómo la calidad del agua, medida a través de diferentes parámetros, y la cantidad de agua, pueden ser factores determinantes para la salud y, consecuentemente, para la esperanza de vida de las Comunidades Autónomas.
 
 # Objetivos
+
 Este estudio tiene como objetivo examinar a fondo las conexiones entre los factores medioambientales y la salud humana, centrándonos específicamente en el papel crucial del agua como recurso esencial.
 
-1. Afectación de la calidad del agua en la Esperanza de Vida
-2. Afectación de la cantidad de agua consumida en la Esperanza de Vida
-3. Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
-4. Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
+1.  Afectación de la calidad del agua en la Esperanza de Vida
+2.  Afectación de la cantidad de agua consumida en la Esperanza de Vida
+3.  Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
+4.  Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
 ```
+
 # Carga de librerías
-1. pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
+
+1.  pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
+
 ```{r CargaLibrerías, eval = TRUE}
 library(pdftools)
 ```
 
-2. tidyverse: Un conjunto de paquetes que facilitan la manipulación y visualización de datos en R. Incluye librerías como tidyr y dplyr, las cuales fueron esenciales para organizar y transformar datos.
+2.  tidyverse: Un conjunto de paquetes que facilitan la manipulación y visualización de datos en R. Incluye librerías como tidyr y dplyr, las cuales fueron esenciales para organizar y transformar datos.
 
 ```{r cargatidyverse}
 library(tidyverse)
 ```
 
-3. tidyjson: Esta librería fue útil para trabajar con datos en formato JSON. Fue esencial para analizar y extraer información de archivos JSON relacionados con la esperanza de vida y la cantidad de agua.
+3.  tidyjson: Esta librería fue útil para trabajar con datos en formato JSON. Fue esencial para analizar y extraer información de archivos JSON relacionados con la esperanza de vida y la cantidad de agua.
+
 ```{r cargatidyjson}
 library(tidyjson)
 ```
 
-4. rjson: Se utilizó para cargar y procesar datos almacenados en formato JSON. Facilita la manipulación de datos estructurados y su conversión a formatos compatibles con R.
+4.  rjson: Se utilizó para cargar y procesar datos almacenados en formato JSON. Facilita la manipulación de datos estructurados y su conversión a formatos compatibles con R.
+
 ```{r cargarjson}
 library(rjson) 
 ```
 
 # Obtención de tablas
+
 ### 1. Tabla de Esperanza de Vida
+
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
 
 Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
@@ -76,8 +79,8 @@ tibble1<-esperanzaVida %>%
   count(name, type)
 ```
 
-
 Para obtener la tabla final se ha accedido a aquel que era de tipo array que contiene los valores de interés y organiza estos datos en una tabla.
+
 ```{r ObtencionTablaEsperanza,  warning=FALSE}
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
@@ -86,7 +89,7 @@ arrayData<-esperanzaVida %>%
   select(Nombre, Anyo, Valor) 
 ```
 
-El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres. 
+El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres.
 
 ```{r, eval = TRUE,warning=FALSE}
 partes <- strsplit(arrayData$Nombre, "\\.")
@@ -102,6 +105,7 @@ arrayData$Nombre<-comunidadesAutonomas
 De la tabla se obtiene el año 2020 de cada Comunidad Autónoma y se obtiene como valor la media de la esperanza de vida en ese año.
 
 Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las comunidades autónomas a mayúsculas.
+
 ```{r obtenciontablaEsperanza}
 tablaComunidadesAñoValor<- as_tibble(arrayData)
 attr(tablaComunidadesAñoValor, "JSON") <- NULL
@@ -119,14 +123,17 @@ colnames(tablaEsperanzaDeVidaFinal) <- c("Anio", "ComunidadAutonoma", "Esperanza
 ```
 
 En la tabla final, se puede observar la media de la esperanza de vida de cada Comunidad Autónoma en el año 2020.
+
 ```{r tablaEsperanza}
 tablaEsperanzaDeVidaFinal
 ```
 
 ### 2. Tabla de la Cantidad de Agua
+
 Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
 
 Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
 
@@ -138,12 +145,12 @@ cantidadAgua%>%
   count(name,type)
 ```
 
-
 Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
 
 Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las Comunidades Autónomas.
 
 Esa nueva variable con las Comunidades Autónomas se añaden a la tabla final y se elimina donde ponga España.
+
 ```{r tablaCantidadAgua}
 arrayDataCantidad<-cantidadAgua%>%
   enter_object(Data)%>%
@@ -171,6 +178,7 @@ Se filtra únicamente por el año 2020, que es el año de interés, se realiza u
 Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las Comunidades Autónomas a mayúsculas y se han renombrado.
 
 Por último se ha pasado a tipo entero la columna años.
+
 ```{r, eval = TRUE,warning=FALSE }
 tablaCantidadDeAgua <- tabla %>%
   filter(NombrePeriodo  ==2020)%>%
@@ -194,24 +202,26 @@ tablaCantidadDeAguaFinal <- tablaCantidadDeAgua %>%
   mutate_at(vars(Anio), as.integer)
 
 ```
+
 En la tabla final de la cantidad de agua, se puede observar la cantidad de agua consumida por cada Comunidad Autónoma en el año 2020.
+
 ```{r tablaFinal}
 tablaCantidadDeAguaFinal
 
 ```
 
-
 ### 3. Tabla de la Calidad del Agua
-Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF. 
+
+Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF.
 
 Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
+
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 pagina <- ruta_pdf[17]
 lineas <- strsplit(pagina, "\n")[[1]]
 linea_deseada <- lineas[5:21] 
 ```
-
 
 En este código se dividen las líneas deseadas usando espacios como delimitadores. Luego, crea dos conjuntos de datos: datos_obtenidos, excluyendo las primeras tres dimensiones no necesarias, y datosDeInteres, que contiene la información esencial sobre las comunidades autónomas y los valores de la calidad del agua.
 
@@ -234,7 +244,8 @@ datosDeInteres[[13]] <- c("COMUNITAT VALENCIANA","2","2","2","0","1","1","0")
 En cada iteración del bucle, se agrega la fila representada por el elemento i al data frame tablaCalidadDeAgua utilizando la función rbind().
 
 Por último se renombra y se cambia a tipo numérico a aquellas columnas que sea necesario.
-``` {r calidad}
+
+```{r calidad}
 tablaCalidadDeAgua<-data.frame()
 for (i in datosDeInteres){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
@@ -248,13 +259,14 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 
 ```
 
-
 ```{r tablafinalCalidad}
 tablaCalidadDeAguaFinal
 ```
 
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
-Para obtener esta tabla se ha importado un archivo CSV utilizando la función read_csv y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
+
+Para obtener esta tabla se ha importado un archivo CSV utilizando la función *read_csv* y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
+
 ```{r cargaPresupuesto}
 summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
@@ -267,6 +279,7 @@ Se seleccionan las filas donde la columna "GruposDeUsuarioEImporte" es igual a "
 Delante de cada nombre de la Comunidad Autónoma existe un número por lo que se elimina y se convierten los nombres de las comunidades a mayúsculas.
 
 Se eliminan los puntos de la columna presupuesto y se pasa a tipo entero. Y por último se descarta lo que no es necesario.
+
 ```{r tablaPresupuesto}
 tablaPresupuestos <- summodificado%>%
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
@@ -278,14 +291,168 @@ tablaPresupuestos <- summodificado%>%
 tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestosFinal <- tablaPresupuestos[,-3]
-``` 
+```
+
 Asi obtenemos los datos de los presupuesto para la potabilización del agua en el año 2020 en las diferentes Comunidades Autónomas de España
+
 ```{r tablaFinalPresupuesto}
 tablaPresupuestosFinal
 ```
 
+# Joins de tablas y sus correspondientes gráficas
 
+En este aparatado realizamos uan cantidad de cuatro joins, los cuales explicaremos a continuación.
 
+### 1. Relación entre esperanza de vida y cantidad
 
+```{r EsperanzayCantidad}
+EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCantidadDeAguaFinal, by=c("Anio","ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+EsperanzayCantidad
+```
 
+En el fragmento de código anterior, combinamos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCantidadDeAguaFinal" usando sus claves comunes las columnas "Anio" y "ComunidadAutonoma" ordenado en función de las Comunidades Autónomas.
 
+```{r grafEsperanzaCantidad}
+grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
+  geom_point(aes(color=ComunidadAutonoma))+
+  geom_smooth()+
+  labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
+       x="Cantidad de agua ",
+       y="Esperanza de vida")+
+  theme_minimal()
+grafEsperanzaCantidad
+```
+
+Como podemos observar en esta caja de código, creamos la gráfica de la nueva tabla "EsperanzayCantidad" creada a partir del *left_join( )* anterior. En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular gracias a la función "*geom_point(aes(color=ComunidadAutonoma))"* . Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica.
+
+Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el Anexo 1 \\ref{Anexo I} que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua (42033.429) y en primer lugar en cuanto a la esperanza de vida (29,29776). Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen (262867.000) y en el decimotercero en lo que respecta a la esperanza de vida (28.03881). Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
+
+### 2. Relación entre cantidad y presupuesto
+
+```{r CantidadyPresupuesto}
+CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>% 
+  left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
+  arrange(desc(Presupuesto)) %>%
+  drop_na()
+CantidadyPresupuesto
+```
+
+En el fragmento de código anterior, combinamos a través de un *left_join( )* las tablas de "tablaCantidadDeAguaFinal" y "tablaPresupuestosFinal" gracias a sus claves comunes "Anio" y "ComunidadAutonoma", ordenadas en función de las del presupuesto de manera descendente.
+
+```{r grafCantidadPresupuesto}
+grafCantidadPresupuesto <- ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
+  geom_bar(stat= "identity")+
+  labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
+       x="Presupuestos",
+       y="Cantidad de agua")+
+  geom_bar(stat= "identity", width = 5000)+
+  theme_minimal()
+grafCantidadPresupuesto
+
+```
+
+Aquí creamos la gráfica de la nueva tabla "grafCantidadPresupuesto", creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")*, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
+
+De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el conusmo de agua mayor (puede comprobarese en el Anexo I \ref{Anexo I}). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podelmos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuerta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
+
+### 3. Relación entre esperanza de vida y calidad
+
+```{r EsperanzayCalidadFinal}
+EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
+  left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
+  group_by(ComunidadAutonoma) %>%
+  drop_na()
+EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+EsperanzayCalidadFinal
+
+```
+
+En este código, ccombinamos con un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante su clave común la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las culumnas "Aguas2", "Aguas1", "Aguas0",\
+"AguasSCF", las cuales son relevantes en nuestro estudio. Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
+
+```{r grafEsperanzaCalidad}
+grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
+  geom_point(aes(colour = ComunidadAutonoma)) +
+  facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
+  labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
+       x="Calidad",
+       y="Esperanza de vida")+
+  theme_minimal()
+grafEsperanzaCalidad
+```
+
+Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
+
+En función del gráfico resultante, es necesario saber que en (referenciar pdf) nos aclara que el valor "Aguas 0" se refeiere a aguas no aptas para el baño, "Aguas 1" agas aptas para el baño de buena calidad, "Aguas 2" aguas aptas para el baño de muy buena calidad y "Aguas SFC" se asignan a los puntos del muestreo en los cuales se cumple que al menos un 90% del agua no sobrepasan los valores de Estrptococos Fecales, Transparencia, Oxígeno disuelto y Materias Flotantes*,* y por otro lado no debe cumplirse que el muestreo sea quincenal más un muestreo previo al comienzo de la temporada. Ya aclarado cada valor, podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que (...)
+
+### 4. Relación entre esperanza de vida, calidad del agua, presupuesto  y cantidad.
+
+```{r tablaend}
+tablaend<- EsperanzayCantidad %>% 
+  left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
+  left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
+  mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
+  select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
+  mutate(Anio = coalesce(Anio.x, Anio.y))%>%
+  select(-Anio.x, -Anio.y)%>%
+  select(Anio, ComunidadAutonoma, everything())%>%
+  drop_na()
+tablaend
+```
+
+En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCantidad" y "CantidadyPresupuesto" teniendo como clave común las columnas "ComunidadAutonoma", "Cantidad" y "Anio". Posteriormente, realizamos otro *letf_join( )* combinando las tablas "EsperanzayCantidad" junto con "EsperanzayCalidadFinal", las cuales se unen gracias a la columna "ComunidadAutonoma" . A partir del reesultado anterior, eliminaremos las columnas no deseadas ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") con la función *select( ).* Por otro lado, modificaremos las columnas que aparecen con ".x", recuperando su nombre original seleccionando el primer valor no nulo.
+
+```{r grafTablaFinal}
+grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
+  geom_point() +
+  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",
+       x = "Cantidad",
+       y = "Esperanza de Vida",
+       size = "Presupuesto",
+       color = "CalidadAgua")+
+      theme_minimal()
+grafTablaFinal
+```
+
+En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadass a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) . En* este, el ejes de las abscisas se representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los circulos mientras que su tamaño estga determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
+
+# Anexo I
+
+``` tex
+\label{Anexo I}
+```
+
+Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
+
+-   La esperanza de vida
+
+```{r EsparanzaVidaMayorMenor}
+EsparanzaVidaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$EsperanzaDeVida), ]
+EsparanzaVidaMayorMenor
+```
+
+-   La cantidad de agua consumida
+
+```{r CantidaAguaMayorMenor}
+CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad), ]
+CantidadAguaMayorMenor
+```
+
+Oreden de la tabla Cantidad y Presupuestos en función de Cantidad:
+
+```{r CantidadyPresupuestos}
+CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>% 
+  left_join(x=., y=tablaPresupuestosFinal, by=c("Anio","ComunidadAutonoma")) %>% 
+  arrange(desc(Cantidad)) %>% 
+  drop_na()
+CantidadyPresupuestos
+
+```
+
+``` tex
+\end{justify}
+```

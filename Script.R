@@ -160,6 +160,18 @@ summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
 
 #Modificando el csv
+
+sum_ <- select(.data = summodificado, "ComunidadAutonoma":"Presupuesto") %>% 
+  drop_na()   %>% 
+  filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020")
+
+tablaNobuena <- sum_ %>%
+  mutate("ComunidadAutonoma"= gsub("^\\d+\\s*", "", "ComunidadAutonoma") )
+# Mostrar el resultado
+tablaNobuena
+colnames(tablaNobuena) <- c("ComunidadAutonoma", "GruposeImporte", "Anio", "Total")
+tablaNobuena
+
 tablaPresupuestos <- summodificado%>%
   filter(GruposDeUsuarioEImporte=="Importe total de la inversión en los servicios de suministro" & Anio== "2020") %>%
   mutate(ComunidadAutonoma = gsub("^\\d+\\s*", "", ComunidadAutonoma)) %>%
@@ -171,6 +183,7 @@ tablaPresupuestos$Presupuesto <- gsub("\\.", "", tablaPresupuestos$Presupuesto)
 tablaPresupuestos$Presupuesto <- as.integer(tablaPresupuestos$Presupuesto)
 tablaPresupuestosFinal <- tablaPresupuestos[,-3]
 tablaPresupuestosFinal
+
 
 # EJECUCIÓN DE TODAS LAS TABLAS ----
 tablaEsperanzaDeVidaFinal
@@ -195,6 +208,7 @@ CantidadyPresupuesto<- tablaCantidadDeAguaFinal%>%
 EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
+  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   drop_na()
 EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
 
@@ -202,7 +216,6 @@ EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "Cal
 tablaFinal<- EsperanzayCantidad %>% 
   left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
   left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
-  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
   select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
   mutate(Anio = coalesce(Anio.x, Anio.y))%>%
@@ -241,13 +254,22 @@ grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadA
   theme_minimal()
 
 # Tabla final
-grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
-  geom_point(aes(colour = CalidadAgua))+
-  geom_smooth()+
-  labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
-       x="Cantidad",
-       y="EsperanzaDeVida.x")+
-  theme_minimal()
+#grafTablaFinal <- ggplot(data=tablaFinal, aes(x=Cantidad, y=EsperanzaDeVida))+
+ # geom_point(aes(colour = CalidadAgua))+
+  #geom_smooth()+
+  #labs(title="Presupuesto junto esperanza de vida por Comunidades Autonomas",
+   #    x="Cantidad",
+    #   y="EsperanzaDeVida.x")+
+  #theme_minimal()
+
+grafTablaFinal <- ggplot(tablaFinal, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
+  geom_point() +
+  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",
+       x = "Cantidad",
+       y = "Esperanza de Vida",
+       size = "Presupuesto",
+       color = "CalidadAgua")+
+      theme_minimal()
 
 # Mismos valores CalidadAgua
 ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
@@ -256,10 +278,11 @@ ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
        x="Cantidad",
        y="EsperanzaDeVida")+
   theme_minimal()
-
+alpha = 0.7
 
 # EJECUCIÓN DE GRÁFICOS ----
 grafEsperanzaCantidad
 grafCantidadPresupuesto
 grafEsperanzaCalidad
 grafTablaFinal
+
