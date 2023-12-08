@@ -220,9 +220,11 @@ tablaCantidadDeAguaFinal
 
 Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF.
 El PDF tiene 217 páginas de las cuales la página deseada es la 17 que contiene la tabla que queremos obtener.
-![](images/imagenPDFTabla){width=250px}
+La tabla en el PDF se muestra asi:
 
-Para poder obtener esta tabla y poder utilizarla para le estudio, primero se convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento (página 17), con el objetivo de obtener datos clave relacionados con la calidad del agua.
+![](images/imagenPDFTabla.png){width=500px}
+
+Para poder obtener esta tabla y poder utilizarla para el estudio, primero se convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento (página 17), con el objetivo de obtener datos clave relacionados con la calidad del agua.
 
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
@@ -267,9 +269,15 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 
 ```
 
+
 ```{r tablafinalCalidad}
 tablaCalidadDeAguaFinal
 ```
+En esta tabla final se pueden observar unas columnas llamas Aguas1, Aguas2, Aguas0... Vamos a ver a qué se refieren:
+
+- Aguas2: Aguas aptas, de muy buena calidad.
+- Aguas1: Aguas aptas, de buena calidad.
+- Aguas0: Aguas no aptas, mala calidad.
 
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
 
