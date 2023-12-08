@@ -476,7 +476,7 @@ CantidadyPresupuestos
 
 Porcentajes de cada tipo de agua por Comunidades Autónomas:
 
-```{r calidad}
+```{r calidadconporcentaje}
 tablaCalidadDeAgua<-data.frame()
 for (i in datosDeInteres){
   tablaCalidadDeAgua<-rbind(tablaCalidadDeAgua,i)
