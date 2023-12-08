@@ -10,9 +10,10 @@ output:
     toc_float: true
 ---
 ```{r, echo=FALSE, out.width="20%"}
-htmltools::img(src = knitr::image_uri(f = "escudo_ubu.jpg"), 
+htmltools::img(src = knitr::image_uri(f = "escudo_ubu.png"), 
                alt = 'logo', 
-               style = 'position:absolute; top:0; right:0; padding:10px;')
+               style = 'position:absolute; top:0; right:0; padding:4px;')
+
 ```
 
 <style>
