@@ -425,7 +425,7 @@ En relación con el último gráfico, se puede observar la combinación de las c
 
 # Anexo I
 
-```         
+``` tex
 \label{Anexo I}
 ```
 
@@ -456,6 +456,6 @@ CantidadyPresupuestos
 
 ```
 
-```         
+``` tex
 \end{justify}
 ```
