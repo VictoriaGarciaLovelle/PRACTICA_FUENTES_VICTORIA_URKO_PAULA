@@ -502,5 +502,3 @@ tablaCalidadDeAguaFinalnueva <- tablaCalidadDeAgua %>%
 
 tablaCalidadDeAguaFinalnueva
 ```
-
-\\end{center}
