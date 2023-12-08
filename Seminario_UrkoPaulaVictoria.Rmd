@@ -14,7 +14,7 @@ subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
 
 ```{r echo=FALSE, purl=FALSE}
-htmltools::img(src = knitr::image_uri("EscudoUBU.png"), alt = "logo", style = 'position:absolute; top:0; right:0; padding:10px;')
+htmltools::img(src = knitr::image_uri("EscudoUBU.png"), alt = "logo", style = 'position:absolute; top:10px; right:10px; width:100px;')
 ```
 
 # Introducción
