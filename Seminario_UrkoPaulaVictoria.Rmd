@@ -1,5 +1,6 @@
 ---
 title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
+
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output:
@@ -12,12 +13,8 @@ output:
     toc_depth: '6'
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
+![](images/EscudoUBU.png){width=250px}
 
-![](escudo_ubu.jpg)
-
-```{=tex}
-\begin{justify}
-```
 # Introducción
 
 En el desarrollo de este seminario, analizaremos cómo diversos aspectos relacionados con la calidad y cantidad de agua consumida pueden influir en la esperanza de vida en las diferentes Comunidades Autónomas de España.
@@ -26,12 +23,17 @@ Exploraremos detalladamente cómo la calidad del agua, medida a través de difer
 
 # Objetivos
 
-Este estudio tiene como objetivo examinar a fondo las conexiones entre los factores medioambientales y la salud humana, centrándonos específicamente en el papel crucial del agua como recurso esencial.
+El objetivo principal de este seminario es analizar de manera formal cómo diversos aspectos relacionados con la calidad y la cantidad de agua consumida pueden afectar en la esperanza de vida en las distintas Comunidades Autónomas de España. Se explorarán los siguientes puntos:
 
-1.  Afectación de la calidad del agua en la Esperanza de Vida
-2.  Afectación de la cantidad de agua consumida en la Esperanza de Vida
-3.  Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida
-4.  Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida
+1. Afectación de la calidad del agua en la Esperanza de Vida:
+      Investigar cómo la calidad del agua puede tener repercusiones directas en la esperanza de vida de la         población española por Comunidades Autónomas.
+2. Afectación de la cantidad de agua consumida en la Esperanza de Vida:
+      Analizar de manera detallada cómo la cantidad de agua consumida puede influir en la esperanza de vida        de la población española por Comunidades Autónomas.
+3. Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida:
+      Evaluar la relación entre el presupuesto destinado a la potabilización del agua y la cantidad de agua        consumida, explorando posibles implicaciones para la esperanza de vida.
+4. Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida:
+      Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto         significativo en la esperanza de vida de la población española por Comunidades Autónomas.
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
@@ -41,7 +43,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 1.  pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
 
-```{r CargaLibrerías, eval = TRUE}
+```{r CargaPDF}
 library(pdftools)
 ```
 
@@ -69,7 +71,12 @@ library(rjson)
 
 Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo Json.
 
-Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+![](images/EsperanzadeVidaJson.png)
+
+Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar los datos deseados.
+
+Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+
 
 ```{r cargaDeDatosJson}
 archivoJson <- fromJSON(file = "EsperanzaVida.json")
@@ -84,7 +91,7 @@ tibble1<-esperanzaVida %>%
 
 Para obtener la tabla final se ha accedido a aquel que era de tipo array que contiene los valores de interés y organiza estos datos en una tabla.
 
-```{r ObtencionTablaEsperanza,  warning=FALSE}
+```{r ObtencionTablaEsperanza}
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
@@ -94,7 +101,7 @@ arrayData<-esperanzaVida %>%
 
 El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres.
 
-```{r, eval = TRUE,warning=FALSE}
+```{r Obtenciontabla}
 partes <- strsplit(arrayData$Nombre, "\\.")
 
 comunidadesAutonomas<-c()
@@ -135,7 +142,11 @@ tablaEsperanzaDeVidaFinal
 
 Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
 
-Después organizan esos datos en un formato de tabla y realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+![](images/CantidadAguaJSON.png)
+
+Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar los datos deseados.
+
+Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable cantidadAgua.
 
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
@@ -148,7 +159,7 @@ cantidadAgua%>%
   count(name,type)
 ```
 
-Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
+Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad Autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
 
 Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las Comunidades Autónomas.
 
@@ -216,8 +227,12 @@ tablaCantidadDeAguaFinal
 ### 3. Tabla de la Calidad del Agua
 
 Este código extrae y procesa información relevante sobre la calidad del agua de un informe en PDF.
+El PDF tiene 217 páginas de las cuales la página deseada es la 17 que contiene la tabla que queremos obtener.
+La tabla en el PDF se muestra asi:
 
-Primero, convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento, con el objetivo de obtener datos clave relacionados con la calidad del agua.
+![](images/imagenPDFTabla.png){width=600px}
+
+Para poder obtener esta tabla y poder utilizarla para el estudio, primero se convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento (página 17), con el objetivo de obtener datos clave relacionados con la calidad del agua.
 
 ```{r cargaDatosCalidadDeAgua}
 ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
@@ -258,24 +273,36 @@ colnames(tablaCalidadDeAgua) <- c("ComunidadAutonoma", "NumdeMunicipios", "Zonas
 
 colNumericas <- c("NumdeMunicipios", "ZonasdeBaño","PuntosdeMuestreo","Aguas2", "Aguas1","Aguas0", "AguasSCF")
 tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
-  mutate_at(vars(colNumericas), as.integer)
+  mutate_at(vars(colNumericas), as.integer) %>%
+  select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0)
 
 ```
+
 
 ```{r tablafinalCalidad}
 tablaCalidadDeAguaFinal
 ```
+En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y Aguas0, vamos a ver a qué se refieren:
+
+- Aguas2: Aguas aptas, de muy buena calidad.
+- Aguas1: Aguas aptas, de buena calidad.
+- Aguas0: Aguas no aptas, mala calidad.
 
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
 
 Para obtener esta tabla se ha importado un archivo CSV utilizando la función *read_csv* y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
 
+![](images/PresupuestoCSV.png){width=500px}
+
+
+Esto es una porción de todo el archivo CSV, del cual se tiene que seleccionar los datos deseados.
+
+Una vez cargados los datos, se renombran las columnas para poder tener unificados todos los nombres.
+
 ```{r cargaPresupuesto}
 summodificado <- read_csv("summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
 ```
-
-Se realizan una serie de modificaciones para poder obtener la tabla deseada.
 
 Se seleccionan las filas donde la columna "GruposDeUsuarioEImporte" es igual a "Importe total de la inversión en los servicios de suministro" y la columna "Anio" es igual a "2020".
 
@@ -304,7 +331,7 @@ tablaPresupuestosFinal
 
 # Joins de tablas y sus correspondientes gráficas
 
-En este aparatado realizamos uan cantidad de cuatro joins, los cuaes explicaremos a continuación.
+En este aparatado realizamos uan cantidad de cuatro joins, los cuales explicaremos a continuación.
 
 ### 1. Relación entre esperanza de vida y cantidad
 
@@ -359,7 +386,7 @@ grafCantidadPresupuesto
 
 Aquí creamos la gráfica de la nueva tabla "grafCantidadPresupuesto", creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")*, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
-De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el conusmo de agua mayor (puede comprobarese en el Anexo I \ref{Anexo I}). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podelmos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuerta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
+De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el Anexo I \ref{Anexo I}). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
 ### 3. Relación entre esperanza de vida y calidad
 
@@ -368,7 +395,7 @@ EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
-EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0))
 EsperanzayCalidadFinal
 
 ```
@@ -397,7 +424,6 @@ En función del gráfico resultante, es necesario saber que en (referenciar pdf)
 tablaend<- EsperanzayCantidad %>% 
   left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
   left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
-  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
   select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
   mutate(Anio = coalesce(Anio.x, Anio.y))%>%
