@@ -1790,7 +1790,6 @@ for (i in datosDeInteres){
 
 colnames(tablaCalidadDeAgua) &lt;- c(&quot;ComunidadAutonoma&quot;, &quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
 
-<p id="VariableAgua"></p>
 colNumericas &lt;- c(&quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
 tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
   mutate_at(vars(colNumericas), as.integer) %&gt;%
@@ -1933,17 +1932,16 @@ que estamos estudiando con esta gráfica.</p>
 esta tabla relacionamos la esperanza de vida con la cantidad de agua que
 se consume en cada Comunidad Autónoma. Podemos observar que no hay una
 relación directamente proporcional entre la cantidad de agua consumida y
-la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el Anexo
-1 \ref{Anexo I} que las Islas Baleares se encuentra en la undécima
-posición en cuanto al consumo de agua (42033.429) y en primer lugar en
-cuanto a la esperanza de vida (29,29776). Por otro lado, Andalucía está
-situada en el primer puesto en cuanto a la cantidad de agua que consumen
-(262867.000) y en el decimotercero en lo que respecta a la esperanza de
-vida (28.03881). Sin embargo, al observar la línea de tendencia de
-nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto,
-la tendencia nos sugiere que aquellos ciudadanos con una esperanza de
-vida potencialmente alta son aquellos que consumen una cantidad
-intermedia de agua.</p>
+la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el <a href="#Anexo%20I">Anexo I</a> que las Islas Baleares se encuentra en la
+undécima posición en cuanto al consumo de agua (42033.429) y en primer
+lugar en cuanto a la esperanza de vida (29,29776). Por otro lado,
+Andalucía está situada en el primer puesto en cuanto a la cantidad de
+agua que consumen (262867.000) y en el decimotercero en lo que respecta
+a la esperanza de vida (28.03881). Sin embargo, al observar la línea de
+tendencia de nuestro gráfico, notamos que los extremos no son lo ideal.
+Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una
+esperanza de vida potencialmente alta son aquellos que consumen una
+cantidad intermedia de agua.</p>
 </div>
 <div id="relación-entre-cantidad-y-presupuesto" class="section level3">
 <h3>2. Relación entre cantidad y presupuesto</h3>
@@ -2057,7 +2055,7 @@ variable “EsperanzaDeVida”. Por medio de la funcion <em>geom_point(
 Comunidad Autónoma que represente. Al tener varios datos de la calidad
 del agua, dividimos e facetas con la ayuda de la función <em>facet_wrap(
 )</em> organizando estas facetas en una sola fila.</p>
-<p>Como se explica en el <a href="#VariableAgua">Apartado 3 de las obtenciones de tablas</a> (, podemos apreciar cómo Castilla-La
+<p>Como se explica en el \@ref (, podemos apreciar cómo Castilla-La
 Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a
 diferencia de Galicia (+29) y Extremadura (29) que es el que más alto
 los tiene. El resto de Comunidades Autónomas, oscilan entre los valores
@@ -2207,6 +2205,7 @@ CantidadyPresupuestos</code></pre>
 ## 14  2020 NAVARRA, COMUNIDAD FORAL DE   22551.        5704
 ## 15  2020 CANTABRIA                     20367.         223
 ## 16  2020 RIOJA, LA                      9448.         304</code></pre>
+<p>asdfghuji</p>
 </div>
 
 
