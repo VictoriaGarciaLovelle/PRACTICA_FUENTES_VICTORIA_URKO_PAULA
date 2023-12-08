@@ -35,7 +35,7 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
       Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto         significativo en la esperanza de vida de la población española por Comunidades Autónomas.
 
 
-```{r setup, include=FALSE}
+```{r EliminarWarnings}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
 ```
 
@@ -43,7 +43,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 1.  pdftools: Esta librería se utilizó para extraer datos de archivos PDF. En particular, se empleó para obtener información relevante sobre la calidad del agua de un informe en formato PDF.
 
-```{r CargaLibrerías, eval = TRUE}
+```{r CargaPDF}
 library(pdftools)
 ```
 
@@ -89,7 +89,7 @@ tibble1<-esperanzaVida %>%
 
 Para obtener la tabla final se ha accedido a aquel que era de tipo array que contiene los valores de interés y organiza estos datos en una tabla.
 
-```{r ObtencionTablaEsperanza,  warning=FALSE}
+```{r ObtencionTablaEsperanza}
 arrayData<-esperanzaVida %>%
   enter_object(Data) %>% 
   gather_array %>% 
@@ -99,7 +99,7 @@ arrayData<-esperanzaVida %>%
 
 El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres.
 
-```{r, eval = TRUE,warning=FALSE}
+```{r Obtenciontabla}
 partes <- strsplit(arrayData$Nombre, "\\.")
 
 comunidadesAutonomas<-c()
@@ -389,7 +389,7 @@ EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   left_join(x=., y=tablaCalidadDeAguaFinal, by=c("ComunidadAutonoma"))%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
-EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0,AguasSCF))
+EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0))
 EsperanzayCalidadFinal
 
 ```
@@ -418,7 +418,6 @@ En función del gráfico resultante, es necesario saber que en (referenciar pdf)
 tablaend<- EsperanzayCantidad %>% 
   left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
   left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
-  select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
   mutate(EsperanzaDeVida = coalesce(EsperanzaDeVida.x, EsperanzaDeVida.y)) %>%
   select(-EsperanzaDeVida.x, -EsperanzaDeVida.y)%>%
   mutate(Anio = coalesce(Anio.x, Anio.y))%>%
