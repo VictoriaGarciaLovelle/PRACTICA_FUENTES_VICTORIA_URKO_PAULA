@@ -393,6 +393,7 @@ EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
 EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0))
+
 EsperanzayCalidadFinal
 
 ```
@@ -491,7 +492,8 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
   mutate(total_aguas=(Aguas2+Aguas1+Aguas0)) %>% 
   mutate(Agua2_porcentaje=(Aguas2/total_aguas)*100) %>% 
   mutate(Agua1_porcentaje=(Aguas1/total_aguas)*100) %>% 
-  mutate(Agua0_porcentaje=(Aguas0/total_aguas)*100)
+  mutate(Agua0_porcentaje=(Aguas0/total_aguas)*100) %>% 
+  mutate(Porcentaje_Maximo=pmax(Agua2_porcentaje,Agua1_porcentaje,Agua0_porcentaje))
 tablaCalidadDeAguaFinal
 
 ```
