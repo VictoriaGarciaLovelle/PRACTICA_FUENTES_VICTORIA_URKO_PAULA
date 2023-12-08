@@ -386,7 +386,7 @@ grafEsperanzaCalidad
 ### 4. Relación entre esperanza de vida, calidad del agua y presupuesto
 
 ```{r tablaFinal}
-tablaFinal<- EsperanzayCantidad %>% 
+tablaFinal1<- EsperanzayCantidad %>% 
   left_join(x=., y=CantidadyPresupuesto, by=c("Cantidad","ComunidadAutonoma","Anio")) %>%
   left_join(x=., y=EsperanzayCalidadFinal, by=c("ComunidadAutonoma")) %>% 
   select(-"NumdeMunicipios",- "ZonasdeBaño",-"PuntosdeMuestreo") %>% 
@@ -396,7 +396,7 @@ tablaFinal<- EsperanzayCantidad %>%
   select(-Anio.x, -Anio.y)%>%
   select(Anio, ComunidadAutonoma, everything())%>%
   drop_na()
-tablaFinal
+tablaFinal1
 ```
 
 ```{r grafTablaFinal}
