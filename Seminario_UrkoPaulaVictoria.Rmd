@@ -373,7 +373,7 @@ EsperanzayCalidadFinal
 En este código, unimos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, eliminamos tres columnas que pertenecen a "tablaCalidadDeAguaFinal" ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") a través de un *select( )* ya que no son relevantes en nuestro estudio. Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
 
 ```{r grafEsperanzaCalidad}
-grafEsperanzaCalidad <- ggplot(data = CalidadyEsperanza, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
+grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
   facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
   labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
