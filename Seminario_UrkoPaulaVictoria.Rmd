@@ -288,7 +288,10 @@ En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y A
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
 
 Para obtener esta tabla se ha importado un archivo CSV utilizando la función *read_csv* y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
-![](images/PresupuestoCSV.png)
+
+![](images/PresupuestoCSV.png){width=500px}
+
+
 Esto es una porción de todo el archivo CSV, del cual se tiene que seleccionar los datos deseados.
 
 Una vez cargados los datos, se renombran las columnas para poder tener unificados todos los nombres.
