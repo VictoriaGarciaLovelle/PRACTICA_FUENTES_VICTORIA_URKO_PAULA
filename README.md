@@ -59,3 +59,5 @@ De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una ci
 ![image](https://github.com/VictoriaGarciaLovelle/PRACTICA_FUENTES_VICTORIA_URKO_PAULA/assets/126605718/957eb330-7ef1-4f80-b8fa-53ec6dd499f3)
 
 # Conclusión
+
+ghjklñ´lkjhgfdsdfghjkl
