@@ -415,7 +415,7 @@ Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", a
 grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
   geom_point(aes(colour = ComunidadAutonoma)) +
   facet_wrap(facets = vars(CalidadAgua), nrow = 1)+
-  labs(title="Calidad de agua junto Esperanza de Vida por Comunidades Autonomas",
+  labs(title="Relación entre Esperanza de Vida y Calidad",
        x="Calidad",
        y="Esperanza de vida")+
   theme_minimal()
