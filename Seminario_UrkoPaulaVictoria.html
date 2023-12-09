@@ -1790,7 +1790,6 @@ for (i in datosDeInteres){
 
 colnames(tablaCalidadDeAgua) &lt;- c(&quot;ComunidadAutonoma&quot;, &quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
 
-<p id="VariableAgua"></p>
 colNumericas &lt;- c(&quot;NumdeMunicipios&quot;, &quot;ZonasdeBaño&quot;,&quot;PuntosdeMuestreo&quot;,&quot;Aguas2&quot;, &quot;Aguas1&quot;,&quot;Aguas0&quot;, &quot;AguasSCF&quot;)
 tablaCalidadDeAguaFinal &lt;- tablaCalidadDeAgua %&gt;%
   mutate_at(vars(colNumericas), as.integer) %&gt;%
@@ -2057,7 +2056,7 @@ variable “EsperanzaDeVida”. Por medio de la funcion <em>geom_point(
 Comunidad Autónoma que represente. Al tener varios datos de la calidad
 del agua, dividimos e facetas con la ayuda de la función <em>facet_wrap(
 )</em> organizando estas facetas en una sola fila.</p>
-<p>Como se explica en el <a href="#VariableAgua">Apartado 3 de las obtenciones de tablas</a> (, podemos apreciar cómo Castilla-La
+<p>Como se explica en el \@ref (, podemos apreciar cómo Castilla-La
 Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a
 diferencia de Galicia (+29) y Extremadura (29) que es el que más alto
 los tiene. El resto de Comunidades Autónomas, oscilan entre los valores
