@@ -4,9 +4,9 @@
 
 ## Autores
 
--   Urko Alli Barrena
--   Paula Gregorio Losada
--   Victoria Garcia Lovelle
+-  Victoria Garcia Lovelle 
+-  Paula Gregorio Losada
+-  Urko Alli Barrena
 
 ## Fecha
 
