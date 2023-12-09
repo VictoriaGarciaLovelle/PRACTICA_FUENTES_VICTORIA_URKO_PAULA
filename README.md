@@ -15,7 +15,7 @@
 ## Índice
 
 1.  [Introducción](#Introducción)
-2.  [Objetivos](##Objetivos)
+2.  [Objetivos](#Objetivos)
 3.  [Resultados](##Resultados)
 4.  [Conclusión](##Conclusión)
 
