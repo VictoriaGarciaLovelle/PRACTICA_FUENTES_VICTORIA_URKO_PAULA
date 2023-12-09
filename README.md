@@ -46,17 +46,17 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
 
 En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular. Finalmente, creamos un gráfico de dispersión y para poder entender mejor el patrón que estamos estudiando con esta gráfica. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
 
-### \* Cantidad de agua junto Presupuestos por Comunidades Autónomas
+### \* Relación entre cantidad y presupuesto
 
-![image](https://github.com/VictoriaGarciaLovelle/PRACTICA_FUENTES_VICTORIA_URKO_PAULA/assets/126605718/2d604207-8bbd-4df5-a069-ad6d0ea77299)
+![image](images/graf2.png)
 
 En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
 De este gráfico podemos notar una correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor. Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
-### \* Calidad de agua junto Esperanza de Vida por Comunidades Autónomas
+### \* Relación entre esperanza de vida y calidad
 
-![](https://github.com/VictoriaGarciaLovelle/PRACTICA_FUENTES_VICTORIA_URKO_PAULA/assets/126605718/957eb330-7ef1-4f80-b8fa-53ec6dd499f3)
+![](images/graf3.png)
 
 Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de ordenadas usamos la esperanza de vida. Agregamos puntos al gráfico asignando colores que representaran a cada Comunidad Autónoma. Al tener varios datos de la calidad del agua, dividimos las facetas organizándolas en una sola fila.
 
