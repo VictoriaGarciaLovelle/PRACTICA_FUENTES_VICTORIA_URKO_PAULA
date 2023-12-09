@@ -40,7 +40,7 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
 
 # Resultados
 
-### \* Relación entre esperanza de vida y cantidad
+### ** Relación entre esperanza de vida y cantidad**
 
 ![image](images/graf1.png)
 
