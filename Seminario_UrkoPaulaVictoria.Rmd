@@ -407,7 +407,7 @@ EsperanzayCalidadFinal
 
 ```
 
-En este código, combinamos con un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante su clave común, la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las columnas "Aguas2", "Aguas1", "Aguas 0", las cuales son relevantes en nuestro estudio. 
+En este código, combinamos con un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante su clave común, la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las columnas "Aguas2", "Aguas1", "Aguas 0", las cuales son relevantes en nuestro estudio.
 
 Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
 
@@ -454,27 +454,24 @@ grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size =
 grafTablaFinal
 ```
 
-En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadas a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) *. El eje de las abscisas representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los círculos mientras que su tamaño esta determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
+En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadas a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( )* . El eje de las abscisas representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los círculos mientras que su tamaño esta determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
 
-Como conclusión final, podemos ver que la relación entre presupuesto y la cantidad de agua consumida si que es notoria. No obstante, se observa que la esperanza de vida no se ve afectada por el presupuesto. 
+Como conclusión final, podemos ver que la relación entre presupuesto y la cantidad de agua consumida si que es notoria. No obstante, se observa que la esperanza de vida no se ve afectada por el presupuesto.
 
-Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida; aquellos que consumen mucha agua o muy poca tienen una esperanza de vida relativamente inferior a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, se evidencia que realmente no es una variable que afecte directamente a nuestro estudio. 
+Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida; aquellos que consumen mucha agua o muy poca tienen una esperanza de vida relativamente inferior a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, se evidencia que realmente no es una variable que afecte directamente a nuestro estudio. Como conclusión, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten mucho en el consumo de agua puedan reducir dicha inversión.
 
-# 6. Conclusión
-Como conclusión, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten mucho en el consumo de agua puedan reducir dicha inversión.
-
-# 7. Anexo {#anexo}
+# Anexo {#anexo}
 
 -   Orden de la tabla EsperanzayCantidad de mayor a menor en función de:
 
-  La esperanza de vida
+La esperanza de vida
 
 ```{r EsparanzaVidaMayorMenor}
 EsparanzaVidaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$EsperanzaDeVida), ]
 EsparanzaVidaMayorMenor
 ```
 
-  La cantidad de agua consumida
+La cantidad de agua consumida
 
 ```{r CantidaAguaMayorMenor}
 CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad), ]
@@ -515,17 +512,8 @@ tablaCalidadDeAguaFinalnueva
 
 # Referencias
 
-datos.gob.es. (2023, 22 noviembre). Esperanza de vida por comunidad autónoma, según sexo, edad y nivel educativo. IDB (Identificador API: 37664) - Conjunto de datos. https://datos.gob.es/es/catalogo/ea0010587-esperanza-de-vida-por-comunidad-autonoma-segun-sexo-edad-y-nivel-educativo-idb-identificador-api-37664
+datos.gob.es. (2023, 22 noviembre). Esperanza de vida por comunidad autónoma, según sexo, edad y nivel educativo. IDB (Identificador API: 37664) - Conjunto de datos. <https://datos.gob.es/es/catalogo/ea0010587-esperanza-de-vida-por-comunidad-autonoma-segun-sexo-edad-y-nivel-educativo-idb-identificador-api-37664>
 
-datos.gob.es. (2022, 6 julio). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. (Identificador API: /T26/P067/P01/serie/L0/01004.Px) - Conjunto de datos. https://datos.gob.es/es/catalogo/ea0010587-distribucion-de-agua-registrada-por-comunidades-y-ciudades-autonomas-grupos-de-usuarios-e-importe-y-periodo-identificador-api-t26-p067-p01-serie-l0-01004-px
+datos.gob.es. (2022, 6 julio). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. (Identificador API: /T26/P067/P01/serie/L0/01004.Px) - Conjunto de datos. <https://datos.gob.es/es/catalogo/ea0010587-distribucion-de-agua-registrada-por-comunidades-y-ciudades-autonomas-grupos-de-usuarios-e-importe-y-periodo-identificador-api-t26-p067-p01-serie-l0-01004-px>
 
-INE - Instituto Nacional de Estadística. (s. f.). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. INE. https://www.ine.es/jaxi/Tabla.htm?tpx=53448&L=0
-
-
-
-
-
-
-
-
-
+INE - Instituto Nacional de Estadística. (s. f.). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. INE. <https://www.ine.es/jaxi/Tabla.htm?tpx=53448&L=0>
