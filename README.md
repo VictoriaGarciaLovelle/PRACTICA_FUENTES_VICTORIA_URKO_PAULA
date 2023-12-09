@@ -64,9 +64,4 @@ Las tres clases de agua nos indican el grado de calidad de estas siendo las "Agu
 
 ![](images/descarga.png)
 
-Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de ordenadas usamos la esperanza de vida. Agregamos puntos al gráfico asignando colores que representaran a cada Comunidad Autónoma. Al tener varios datos de la calidad del agua, dividimos las facetas organizándolas en una sola fila.
-
-Las tres clases de agua nos indican el grado de calidad de estas siendo las "Aguas 2" las de mejor calidad y las "Aguas 0" las de peor calida. Estuadiando el porcentaje de uso de cada clase de agua por comunidad llegamos a la conclusion de que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida, porque comunidades con alto uso de "Aguas 2" como Castilla-La Mancha tienen una esperanza de vida baja y comunidades que usan en su mayoria "Aguas 0" como Murcia y Asturias tienen una esperanza de vida en la medida de lo normal.
-
-
 # Conclusión
