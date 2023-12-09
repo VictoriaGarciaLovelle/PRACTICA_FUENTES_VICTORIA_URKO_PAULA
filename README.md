@@ -64,14 +64,14 @@ Las tres clases de agua nos indican el grado de calidad de estas siendo las "Agu
 
 ###  **Relación entre cantidad, esperanza de vida, presupuesto y calidad**
 
-![](images/descarga.png)
+![](images/graf4.png)
 
 Este último gráfico es la relación entre las cuatro variables deestudio. Se trata de un gráfico de dispersión en donde en el eje de abscisas se representa la cantidad de agua consumida y en el eje de las ordenadas se reprsenta la esperanza de vida. La calidad del agua le dará el color a los puntos y su tamaño será en función del presupuesto.
 
 Podemos ver que la relación entre presupuesto y la cantidad de agua consumida si que es notoria. No obstante, se observa que la esperanza de vida no se ve afectada por el presupuesto. Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida; aquellos que consumen mucha agua o muy poca tienen una esperanza de vida relativamente inferior a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, se evidencia que realmente no es una variable que afecte directamente a nuestro estudio. Como conclusión, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten mucho en el consumo de agua puedan reducir dicha inversión.
 # Conclusión
 
-A lo largo de este estudio, hemos relacionado las distintas variables con el fin de comprobar si realmente afectan o no a la esperanza de vida. Como conclusión, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten una gran cantidad en el consumo de agua puedan reducir dicha inversión.
+A lo largo de este seminario, hemos relacionado las distintas variables con el fin de comprobar si realmente afectan o no a la esperanza de vida. Como conclusión, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten una gran cantidad en el consumo de agua puedan reducir dicha inversión.
 
 
 
