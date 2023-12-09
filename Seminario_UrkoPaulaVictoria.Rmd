@@ -293,7 +293,7 @@ En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y A
 
 -   Aguas0: Aguas no aptas, mala calidad.
 
-Están evaluados diferentes puntos de muestreo en cada comunidad autónoma, de los cuales se puede observar la calidad general de esa comunidad.
+Están evaluados diferentes puntos de muestreo en cada Comunidad Autónoma, de los cuales se puede observar la calidad general de cada comunidad en concreto.
 
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
 
