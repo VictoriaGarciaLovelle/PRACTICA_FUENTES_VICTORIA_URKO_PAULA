@@ -337,7 +337,7 @@ tablaPresupuestosFinal
 
 # Joins de tablas y sus correspondientes gráficas
 
-En este aparatado realizamos uan cantidad de cuatro joins, los cuales explicaremos a continuación.
+En este aparatado realizamos una cantidad de cuatro joins, los cuales explicaremos a continuación.
 
 ### 1. Relación entre esperanza de vida y cantidad
 
@@ -349,7 +349,7 @@ EsperanzayCantidad<- tablaEsperanzaDeVidaFinal%>%
 EsperanzayCantidad
 ```
 
-En el fragmento de código anterior, combinamos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCantidadDeAguaFinal" usando sus claves comunes las columnas "Anio" y "ComunidadAutonoma" ordenado en función de las Comunidades Autónomas.
+En el fragmento de código anterior, combinamos mediante un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCantidadDeAguaFinal" usando sus claves comunes, las columnas "Anio" y "ComunidadAutonoma" ordenado en función de las Comunidades Autónomas.
 
 ```{r grafEsperanzaCantidad}
 grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
@@ -362,7 +362,7 @@ grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=Esper
 grafEsperanzaCantidad
 ```
 
-Como podemos observar en esta caja de código, creamos la gráfica de la nueva tabla "EsperanzayCantidad" creada a partir del *left_join( )* anterior. En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular gracias a la función "*geom_point(aes(color=ComunidadAutonoma))"* . Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica.
+Como podemos observar en esta caja de código, creamos la gráfica de la nueva tabla "EsperanzayCantidad", creada a partir del *left_join( )* anterior. En el eje de las abscisas se representa la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular gracias a la función "*geom_point(aes(color=ComunidadAutonoma))"*. Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica.
 
 Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el [Anexo I](#anexo) que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua (42033.429) y en primer lugar en cuanto a la esperanza de vida (29,29776). Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen (262867.000) y en el decimotercero en lo que respecta a la esperanza de vida (28.03881). Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
 
@@ -392,7 +392,7 @@ grafCantidadPresupuesto
 
 Aquí creamos la gráfica de la nueva tabla "grafCantidadPresupuesto", creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")*, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
-De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el [Anexo I](#CantidadPresupuesto) ). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
+Al observar la tabla y el gráfico, es evidente que en este caso sí podemos apreciar una correlación significativa entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el [Anexo I](#CantidadPresupuesto) ). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
 ### 3. Relación entre esperanza de vida y calidad
 
@@ -407,7 +407,9 @@ EsperanzayCalidadFinal
 
 ```
 
-En este código, ccombinamos con un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante su clave común la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las culumnas "Aguas2", "Aguas1", "Aguas 0", las cuales son relevantes en nuestro estudio. Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
+En este código, combinamos con un *left_join( )* las tablas de "tablaEsperanzaDeVidaFinal" y "tablaCalidadDeAguaFinal" mediante su clave común, la columna "ComunidadAutonoma", ordenado en función de la Comunidad Autónoma . De esta tabla, consideraremos las columnas "Aguas2", "Aguas1", "Aguas 0", las cuales son relevantes en nuestro estudio. 
+
+Gracias a un *pivot_longer( ),* podemos crear una nueva columna "CalidadAgua", agrupando las tres últimas columnas en distintas filas, y otra columna "ValoresCalidadAgua" con los valores correspondientes a esas variables, haciendo más fácil su posterior estudio en la gráfica.
 
 ```{r grafEsperanzaCalidad}
 grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCalidadAgua, y = EsperanzaDeVida)) +
@@ -420,9 +422,9 @@ grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCal
 grafEsperanzaCalidad
 ```
 
-Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos las facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
+Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignando colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos las facetas con la ayuda de la función *facet_wrap( )* organizándolas en una sola fila.
 
-Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua), los tres tipos de agua nos indicarán el grado de calidad de estas. Según los porcentajes obtenidos en el [Anexo](#tablaPorcentaje)[I](#anexo), la Comunidad Autónoma que utiliza como fuente principial las aguas de tipo "Aguas 2" es Castilla La Mancha, pero su esperaza de vida es baja. Luego, Comunidades Autónomas como Murcia y Astruias utilizan el 100% de "Aguas 0" y aun así tienen una esperanza de vida en la media de lo normal. Por último, Galicia, líder en esperanza de vida, usa en su mayoría aguas de tipo "Aguas 1". Concluyendo así que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida.
+Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua), los tres tipos de agua nos indicarán el grado de calidad de estas. Según los porcentajes obtenidos en el [Anexo](#tablaPorcentaje)[I](#anexo), la Comunidad Autónoma que utiliza como fuente principial las aguas de tipo "Aguas 2" es Castilla La Mancha, pero su esperaza de vida es baja. Luego, Comunidades Autónomas como Murcia y Asturias utilizan el 100% de "Aguas 0" y aun así tienen una esperanza de vida en la media de lo normal. Por último, Galicia, líder en esperanza de vida, usa en su mayoría aguas de tipo "Aguas 1". Concluyendo así que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida.
 
 ### 4. Relación entre esperanza de vida, calidad del agua, presupuesto y cantidad.
 
@@ -439,7 +441,7 @@ tablaend<- EsperanzayCantidad %>%
 tablaend
 ```
 
-En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCantidad" y "CantidadyPresupuesto" teniendo como clave común las columnas "ComunidadAutonoma", "Cantidad" y "Anio". Posteriormente, realizamos otro *letf_join( )* combinando las tablas "EsperanzayCantidad" junto con "EsperanzayCalidadFinal", las cuales se unen gracias a la columna "ComunidadAutonoma" . A partir del reesultado anterior, eliminaremos las columnas no deseadas ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") con la función *select( ).* Por otro lado, modificaremos las columnas que aparecen con ".x", recuperando su nombre original seleccionando el primer valor no nulo.
+En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCantidad" y "CantidadyPresupuesto" teniendo como clave común las columnas "ComunidadAutonoma", "Cantidad" y "Anio". Posteriormente, realizamos otro *letf_join( )* combinando las tablas "EsperanzayCantidad" junto con "EsperanzayCalidadFinal", las cuales se unen gracias a la columna "ComunidadAutonoma" . A partir del resultado anterior, eliminaremos las columnas no deseadas ("NumdeMunicipios","ZonasdeBaño","PuntosdeMuestreo") con la función *select( ).* Por otro lado, modificaremos las columnas que aparecen con ".x", recuperando su nombre original seleccionando el primer valor no nulo.
 
 ```{r grafTablaFinal}
 grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
@@ -452,22 +454,26 @@ grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size =
 grafTablaFinal
 ```
 
-En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadass a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) . En* este, el ejes de las abscisas se representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los circulos mientras que su tamaño estga determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
+En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadas a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) *. El eje de las abscisas representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los círculos mientras que su tamaño esta determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
 
-Como coclusión final, podemos ver que la relación entre presupuesto y la cantidad de agua consumida si que es notoria. No obstante, se observa que la esperanza de vida no se ve afectada por el presupuesto. Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida; aquellos que consumen mucha agua o muy poca tienen una esperanza de vida relativamente inferiror a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, se evidencia que realmente no es una variable que afecte directamente a nuestro estudio. En resumen, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun limite, permitiendo asi que aquellas Comunidades Autónomas que invierten mucho en el consumo de agua puedan reducir dicha inversión.
+Como conclusión final, podemos ver que la relación entre presupuesto y la cantidad de agua consumida si que es notoria. No obstante, se observa que la esperanza de vida no se ve afectada por el presupuesto. 
+
+Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida; aquellos que consumen mucha agua o muy poca tienen una esperanza de vida relativamente inferior a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, se evidencia que realmente no es una variable que afecte directamente a nuestro estudio. 
+
+En resumen, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten mucho en el consumo de agua puedan reducir dicha inversión.
 
 # Anexo {#anexo}
 
--   Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
+-   Orden de la tabla EsperanzayCantidad de mayor a menor en función de:
 
-    La esperanza de vida
+  La esperanza de vida
 
 ```{r EsparanzaVidaMayorMenor}
 EsparanzaVidaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$EsperanzaDeVida), ]
 EsparanzaVidaMayorMenor
 ```
 
-La caentidad de agua consumida
+  La cantidad de agua consumida
 
 ```{r CantidaAguaMayorMenor}
 CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad), ]
@@ -477,7 +483,7 @@ CantidadAguaMayorMenor
 ::: {#CantidadPresupuesto}
 :::
 
--   Oreden de la tabla Cantidad y Presupuestos en función de Cantidad:
+-   Orden de la tabla Cantidad y Presupuestos en función de Cantidad:
 
 ```{r CantidadyPresupuestos}
 CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>% 
@@ -508,14 +514,10 @@ tablaCalidadDeAguaFinalnueva
 
 # Referencias
 
-Esperanza de vida:
 datos.gob.es. (2023, 22 noviembre). Esperanza de vida por comunidad autónoma, según sexo, edad y nivel educativo. IDB (Identificador API: 37664) - Conjunto de datos. https://datos.gob.es/es/catalogo/ea0010587-esperanza-de-vida-por-comunidad-autonoma-segun-sexo-edad-y-nivel-educativo-idb-identificador-api-37664
 
-
-Cantidad de agua:
 datos.gob.es. (2022, 6 julio). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. (Identificador API: /T26/P067/P01/serie/L0/01004.Px) - Conjunto de datos. https://datos.gob.es/es/catalogo/ea0010587-distribucion-de-agua-registrada-por-comunidades-y-ciudades-autonomas-grupos-de-usuarios-e-importe-y-periodo-identificador-api-t26-p067-p01-serie-l0-01004-px
 
-Presupuesto para la potabilización del agua:
 INE - Instituto Nacional de Estadística. (s. f.). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. INE. https://www.ine.es/jaxi/Tabla.htm?tpx=53448&L=0
 
 
