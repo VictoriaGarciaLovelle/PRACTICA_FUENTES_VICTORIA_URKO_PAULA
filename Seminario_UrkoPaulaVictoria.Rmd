@@ -460,6 +460,8 @@ Como conclusión final, podemos ver que la relación entre presupuesto y la cant
 
 # 6. Conclusión
 
+A lo largo de este, hemos relacionado las distintas variables con el fin de comprobar si realmente afectan o no a la esperanza de vida. Como conclusión, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten una gran cantidad en el consumo de agua puedan reducir dicha inversión.
+
 # Anexo {#anexo}
 
 -   Orden de la tabla EsperanzayCantidad de mayor a menor en función de:
