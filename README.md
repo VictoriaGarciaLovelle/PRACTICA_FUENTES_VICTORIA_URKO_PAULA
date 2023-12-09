@@ -4,9 +4,9 @@
 
 ## Autores
 
--   Urko Alli Barrena
--   Paula Gregorio Losada
--   Victoria Garcia Lovelle
+-  Victoria Garcia Lovelle 
+-  Paula Gregorio Losada
+-  Urko Alli Barrena
 
 ## Fecha
 
@@ -40,13 +40,13 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
 
 # Resultados
 
-### ** Relación entre esperanza de vida y cantidad**
+### **Relación entre esperanza de vida y cantidad**
 
 ![image](images/graf1.png)
 
 En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular. Finalmente, creamos un gráfico de dispersión y para poder entender mejor el patrón que estamos estudiando con esta gráfica. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
 
-### ** Relación entre cantidad y presupuesto **
+### **Relación entre cantidad y presupuesto**
 
 ![image](images/graf2.png)
 
@@ -54,7 +54,7 @@ En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el ej
 
 De este gráfico podemos notar una correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor. Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
-### ** Relación entre esperanza de vida y calidad**
+### **Relación entre esperanza de vida y calidad**
 
 ![](images/graf3.png)
 
@@ -66,6 +66,9 @@ Las tres clases de agua nos indican el grado de calidad de estas siendo las "Agu
 
 ![](images/descarga.png)
 
+Este último gráfico es la relación entre las cuatro variables deestudio. Se trata de un gráfico de dispersión en donde en el eje de abscisas se representa la cantidad de agua consumida y en el eje de las ordenadas se reprsenta la esperanza de vida. La calidad del agua le dará el color a los puntos y su tamaño será en función del presupuesto.
+
+Podemos ver que la relación entre presupuesto y la cantidad de agua consumida si que es notoria. No obstante, se observa que la esperanza de vida no se ve afectada por el presupuesto. Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida; aquellos que consumen mucha agua o muy poca tienen una esperanza de vida relativamente inferior a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, se evidencia que realmente no es una variable que afecte directamente a nuestro estudio. Como conclusión, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun límite, permitiendo asi que aquellas Comunidades Autónomas que invierten mucho en el consumo de agua puedan reducir dicha inversión.
 # Conclusión
 
 
