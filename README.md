@@ -66,4 +66,5 @@ Las tres clases de agua nos indican el grado de calidad de estas siendo las "Agu
 
 ![](images/descarga.png)
 
+Este último gráfico es la relación entre las cuatro variables deestudio. Se trata de un gráfico de dispersión en donde en el eje de abscisas se representa la cantidad de agua consumida y en el eje de las ordenadas se reprsenta la esperanza de vida.
 # Conclusión
