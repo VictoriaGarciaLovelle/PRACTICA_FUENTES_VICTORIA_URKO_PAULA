@@ -14,7 +14,14 @@ output:
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
 
-![](images/EscudoUBU.png){width="250px"}
+```{=html}
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
+```
+![](images/EscudoUBU.png){width="250" height="90"}
 
 # Introducción
 
@@ -26,9 +33,9 @@ Exploraremos detalladamente cómo la calidad del agua, medida a través de difer
 
 El objetivo principal de este seminario es analizar de manera formal cómo diversos aspectos relacionados con la calidad y la cantidad de agua consumida pueden afectar en la esperanza de vida en las distintas Comunidades Autónomas de España. Se explorarán los siguientes puntos:
 
-1.  Afectación de la calidad del agua en la Esperanza de Vida: Investigar cómo la calidad del agua puede tener repercusiones directas en la esperanza de vida de la población española por Comunidades Autónomas.
-2.  Afectación de la cantidad de agua consumida en la Esperanza de Vida: Analizar de manera detallada cómo la cantidad de agua consumida puede influir en la esperanza de vida de la población española por Comunidades Autónomas.
-3.  Afectación del presupuesto para potabilizar agua con la cantidad de agua consumida: Evaluar la relación entre el presupuesto destinado a la potabilización del agua y la cantidad de agua consumida, explorando posibles implicaciones para la esperanza de vida.
+1.  Afección de la calidad del agua en la Esperanza de Vida: Investigar cómo la calidad del agua puede tener repercusiones directas en la esperanza de vida de la población española por Comunidades Autónomas.
+2.  Afección de la cantidad de agua consumida en la Esperanza de Vida: Analizar de manera detallada cómo la cantidad de agua consumida puede influir en la esperanza de vida de la población española por Comunidades Autónomas.
+3.  Afección del presupuesto para potabilizar agua con la cantidad de agua consumida: Evaluar la relación entre el presupuesto destinado a la potabilización del agua y la cantidad de agua consumida, explorando posibles implicaciones para la esperanza de vida.
 4.  Impacto combinado de la calidad y cantidad de agua en la Esperanza de Vida: Estudiar cómo la interacción entre la calidad y la cantidad de agua consumida puede tener un impacto significativo en la esperanza de vida de la población española por Comunidades Autónomas.
 
 ```{r setup, include=FALSE}
@@ -271,6 +278,9 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 
 ```
 
+::: {#VariableAgua}
+:::
+
 ```{r tablafinalCalidad}
 tablaCalidadDeAguaFinal
 ```
@@ -278,7 +288,9 @@ tablaCalidadDeAguaFinal
 En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y Aguas0, vamos a ver a qué se refieren:
 
 -   Aguas2: Aguas aptas, de muy buena calidad.
+
 -   Aguas1: Aguas aptas, de buena calidad.
+
 -   Aguas0: Aguas no aptas, mala calidad.
 
 ### 4. Tabla de Presupuesto para la Potabilización del Agua
@@ -350,7 +362,7 @@ grafEsperanzaCantidad
 
 Como podemos observar en esta caja de código, creamos la gráfica de la nueva tabla "EsperanzayCantidad" creada a partir del *left_join( )* anterior. En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular gracias a la función "*geom_point(aes(color=ComunidadAutonoma))"* . Con la funcion *geom_smooth()* creamos la línea de tendencia, ya que tenemos un gráfico de dispersión y así podemos entender el patrón que estamos estudiando con esta gráfica.
 
-Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el Anexo 1 \\ref{Anexo I} que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua (42033.429) y en primer lugar en cuanto a la esperanza de vida (29,29776). Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen (262867.000) y en el decimotercero en lo que respecta a la esperanza de vida (28.03881). Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
+Nuestro principal objetivo es determinar la esperanza de vida. En esta tabla relacionamos la esperanza de vida con la cantidad de agua que se consume en cada Comunidad Autónoma. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Comprobamos en el [Anexo I](#anexo) que las Islas Baleares se encuentra en la undécima posición en cuanto al consumo de agua (42033.429) y en primer lugar en cuanto a la esperanza de vida (29,29776). Por otro lado, Andalucía está situada en el primer puesto en cuanto a la cantidad de agua que consumen (262867.000) y en el decimotercero en lo que respecta a la esperanza de vida (28.03881). Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
 
 ### 2. Relación entre cantidad y presupuesto
 
@@ -378,7 +390,7 @@ grafCantidadPresupuesto
 
 Aquí creamos la gráfica de la nueva tabla "grafCantidadPresupuesto", creada a partir del *left_join( )* anterior. En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, gracias a la función *(...)fill=ComunidadAutonoma))+ geom_bar(stat= "identity")*, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
-De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el Anexo I \ref{Anexo I}). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
+De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor (puede comprobarese en el [Anexo I](#CantidadPresupuesto) ). Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
 ### 3. Relación entre esperanza de vida y calidad
 
@@ -388,6 +400,7 @@ EsperanzayCalidad<- tablaEsperanzaDeVidaFinal%>%
   group_by(ComunidadAutonoma) %>%
   drop_na()
 EsperanzayCalidadFinal <- pivot_longer(data = EsperanzayCalidad, names_to = "CalidadAgua", values_to = "ValoresCalidadAgua", cols = c(Aguas2,Aguas1,Aguas0))
+
 EsperanzayCalidadFinal
 
 ```
@@ -405,9 +418,9 @@ grafEsperanzaCalidad <- ggplot(data = EsperanzayCalidadFinal, aes(x = ValoresCal
 grafEsperanzaCalidad
 ```
 
-Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos e facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
+Para crear este gráfico a partir de la nueva tabla "CalidadyEsperanza", utilizamos como eje de abscisas la variable "ValoresCalidadAgua", mientras que de eje de ordenadas se encuetra la variable "EsperanzaDeVida". Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignado colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos las facetas con la ayuda de la función *facet_wrap( )* organizando estas facetas en una sola fila.
 
-Como se explica en el \\\@ref (, podemos apreciar cómo Castilla-La Mancha (27.5)tiene los vlores más bajos en el muestro de sus aguas a diferencia de Galicia (+29) y Extremadura (29) que es el que más alto los tiene. El resto de Comunidades Autónomas, oscilan entre los valores 28.0-28.5, lo que nos indica que (...)
+Como se explica en el [Apartado 3 de la obtención de tablas](#VariableAgua), los tres tipos de agua nos indicarán el grado de calidad de estas. Según los porcentajes obtenidos en el [Anexo](#tablaPorcentaje)[I](#anexo), la Comunidad Autónoma que utiliza como fuente principial las aguas de tipo "Aguas 2" es Castilla La Mancha, pero su esperaza de vida es baja. Luego, Comunidades Autónomas como Murcia y Astruias utilizan el 100% de "Aguas 0" y aun así tienen una esperanza de vida en la media de lo normal. Por último, Galicia, líder en esperanza de vida, usa en su mayoría aguas de tipo "Aguas 1". Concluyendo así que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida.
 
 ### 4. Relación entre esperanza de vida, calidad del agua, presupuesto y cantidad.
 
@@ -429,8 +442,7 @@ En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCant
 ```{r grafTablaFinal}
 grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
   geom_point() +
-  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",
-       x = "Cantidad",
+  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",      x = "Cantidad",
        y = "Esperanza de Vida",
        size = "Presupuesto",
        color = "CalidadAgua")+
@@ -440,29 +452,30 @@ grafTablaFinal
 
 En relación con el último gráfico, se puede observar la combinación de las cuatro variables tratadass a lo largo de este seminario. Para poder relacionarlas entre ellas, creamos un gráfico de dispersión mediante la función *geom_point( ) . En* este, el ejes de las abscisas se representa la Cantidad de agua consumida, el eje de las ordenadas representa la Esperanza de vida, y la Calidad del Agua se encarga de proporcionar el color a los circulos mientras que su tamaño estga determinado por el Presupuesto. Cabe destacar que el único color visible es el morado; esto no quiere decir que el resto de valores no esten representados, sino que se encuentran superpuestos.
 
-# Anexo I
+Como coclusión final, podemos ver que la relación entre presupuesto y la cantidad de agua consumida si que es notoria. No obstante, se observa que la esperanza de vida no se ve afectada por el presupuesto. Podemos comprobar que los extremos en la variable de la cantidad de agua si que perjudican a la esperanza de vida; aquellos que consumen mucha agua o muy poca tienen una esperanza de vida relativamente inferiror a los que consumen una cantidad intermedia. Por otro lado, al superponerse los puntos de calidad de agua, se evidencia que realmente no es una variable que afecte directamente a nuestro estudio. En resumen, la esperanza de vida tiende a ser mayor si nuestro consumo de agua no excede ningun limite, permitiendo asi que aquellas Comunidades Autónomas que invierten mucho en el consumo de agua puedan reducir dicha inversión.
 
-``` tex
-\label{Anexo I}
-```
+# Anexo {#anexo}
 
-Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
+-   Orden de la tabla EsperanzayCantidad de mayor a menor en funcion a:
 
--   La esperanza de vida
+    La esperanza de vida
 
 ```{r EsparanzaVidaMayorMenor}
 EsparanzaVidaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$EsperanzaDeVida), ]
 EsparanzaVidaMayorMenor
 ```
 
--   La cantidad de agua consumida
+La caentidad de agua consumida
 
 ```{r CantidaAguaMayorMenor}
 CantidadAguaMayorMenor <- EsperanzayCantidad[order(-EsperanzayCantidad$Cantidad), ]
 CantidadAguaMayorMenor
 ```
 
-Oreden de la tabla Cantidad y Presupuestos en función de Cantidad:
+::: {#CantidadPresupuesto}
+:::
+
+-   Oreden de la tabla Cantidad y Presupuestos en función de Cantidad:
 
 ```{r CantidadyPresupuestos}
 CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>% 
@@ -472,3 +485,23 @@ CantidadyPresupuestos<- tablaCantidadDeAguaFinal %>%
 CantidadyPresupuestos
 
 ```
+
+::: {#tablaPorcentaje}
+:::
+
+-   Porcentajes de cada tipo de agua por Comunidades Autónomas:
+
+```{r calidadconporcentaje}
+
+tablaCalidadDeAguaFinalnueva <- tablaCalidadDeAgua %>%
+  mutate_at(vars(colNumericas), as.integer) %>%
+  select(ComunidadAutonoma, Aguas2, Aguas1, Aguas0) %>%  
+  mutate(total_aguas=(Aguas2+Aguas1+Aguas0)) %>% 
+  mutate(Agua2_porcentaje=(Aguas2/total_aguas)*100) %>% 
+  mutate(Agua1_porcentaje=(Aguas1/total_aguas)*100) %>% 
+  mutate(Agua0_porcentaje=(Aguas0/total_aguas)*100)  
+
+tablaCalidadDeAguaFinalnueva
+```
+
+# Bibliografía 
