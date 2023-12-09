@@ -64,5 +64,7 @@ Las tres clases de agua nos indican el grado de calidad de estas siendo las "Agu
 
 ![](images/descarga.png)
 
+Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de ordenadas usamos la esperanza de vida. Agregamos puntos al gráfico asignando colores que representaran a cada Comunidad Autónoma. Al tener varios datos de la calidad del agua, dividimos las facetas organizándolas en una sola fila.
+
 
 # Conclusión
