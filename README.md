@@ -64,7 +64,7 @@ Las tres clases de agua nos indican el grado de calidad de estas siendo las "Agu
 
 ###  **Relación entre cantidad, esperanza de vida, presupuesto y calidad**
 
-![](images/descarga.png)
+![](images/graf4.png)
 
 Este último gráfico es la relación entre las cuatro variables deestudio. Se trata de un gráfico de dispersión en donde en el eje de abscisas se representa la cantidad de agua consumida y en el eje de las ordenadas se reprsenta la esperanza de vida. La calidad del agua le dará el color a los puntos y su tamaño será en función del presupuesto.
 
