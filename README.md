@@ -60,6 +60,8 @@ De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una ci
 
 Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de ordenadas usamos la esperanza de vida. Agregamos puntos al gráfico asignando colores que representaran a cada Comunidad Autónoma. Al tener varios datos de la calidad del agua, dividimos las facetas organizándolas en una sola fila.
 
+Las tres clases de agua nos indican el grado de calidad de estas. Estuadiando el porcentaje de uso de cada clase de agua por comunidad llegamos a la conclusion de que no hay
+
 ![](images/descarga.png)
 
 # Conclusión
