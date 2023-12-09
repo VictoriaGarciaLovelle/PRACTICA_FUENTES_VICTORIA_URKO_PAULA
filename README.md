@@ -62,7 +62,7 @@ Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de orde
 
 Las tres clases de agua nos indican el grado de calidad de estas siendo las "Aguas 2" las de mejor calidad y las "Aguas 0" las de peor calida. Estuadiando el porcentaje de uso de cada clase de agua por comunidad llegamos a la conclusion de que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida, porque comunidades con alto uso de "Aguas 2" como Castilla-La Mancha tienen una esperanza de vida baja y comunidades que usan en su mayoria "Aguas 0" como Murcia y Asturias tienen una esperanza de vida en la medida de lo normal.
 
-### \* **Relación entre cantidad, esperanza de vida, presupuesto y calidad**
+###  **Relación entre cantidad, esperanza de vida, presupuesto y calidad**
 
 ![](images/descarga.png)
 
