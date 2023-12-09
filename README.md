@@ -56,7 +56,9 @@ De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una ci
 
 ### \* Calidad de agua junto Esperanza de Vida por Comunidades Autónomas
 
-![image](https://github.com/VictoriaGarciaLovelle/PRACTICA_FUENTES_VICTORIA_URKO_PAULA/assets/126605718/957eb330-7ef1-4f80-b8fa-53ec6dd499f3)
+![](https://github.com/VictoriaGarciaLovelle/PRACTICA_FUENTES_VICTORIA_URKO_PAULA/assets/126605718/957eb330-7ef1-4f80-b8fa-53ec6dd499f3)
+
+Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de ordenadas usamos la esperanza de vida. Por medio de la funcion *geom_point( ),* agregamos puntos al gráfico asignando colores en función de la Comunidad Autónoma que represente. Al tener varios datos de la calidad del agua, dividimos las facetas con la ayuda de la función *facet_wrap( )* organizándolas en una sola fila.
 
 ![](images/descarga.png)
 
