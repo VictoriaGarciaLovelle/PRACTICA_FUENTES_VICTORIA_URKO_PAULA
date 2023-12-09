@@ -52,7 +52,7 @@ En el eje de las abscisas se represemta la cantidad de agua consumida, mientras 
 
 En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
-De esta tabla y gráfico, es notorio cómo en este caso, si podemos notar una cierta correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor. Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
+De este gráfico podemos notar una correlación entre el prespuesto invertido en agua y su consumo. Lugares como la Comunidad de Madrid, Andalucía o la Comunidad Valenciana encabezan los presupuestos más altos y el consumo de agua mayor. Por otro lado, La Rioja , Cantabria, Extremadura y Aragón, rondan los últimos puestos tanto en presupuesto como en cantidad. Podemos destacar Castilla-La Mancha, que con un gasto relativamente bajo en agua, tienen un consumo considerable, justo lo contrario de la Comunidad Foral de Navarra. Aun teniendo en cuenta las pocas comunidades que no se rigen por la normalidad de este gráfico, podemos afirmar que una mayor inversión por parte de las Comunidades Autónomas fomentan un mayor consumo de agua en sus habitantes.
 
 ### \* Calidad de agua junto Esperanza de Vida por Comunidades Autónomas
 
@@ -63,5 +63,9 @@ Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de orde
 Las tres clases de agua nos indican el grado de calidad de estas siendo las "Aguas 2" las de mejor calidad y las "Aguas 0" las de peor calida. Estuadiando el porcentaje de uso de cada clase de agua por comunidad llegamos a la conclusion de que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida, porque comunidades con alto uso de "Aguas 2" como Castilla-La Mancha tienen una esperanza de vida baja y comunidades que usan en su mayoria "Aguas 0" como Murcia y Asturias tienen una esperanza de vida en la medida de lo normal.
 
 ![](images/descarga.png)
+
+Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de ordenadas usamos la esperanza de vida. Agregamos puntos al gráfico asignando colores que representaran a cada Comunidad Autónoma. Al tener varios datos de la calidad del agua, dividimos las facetas organizándolas en una sola fila.
+
+Las tres clases de agua nos indican el grado de calidad de estas siendo las "Aguas 2" las de mejor calidad y las "Aguas 0" las de peor calida. Estuadiando el porcentaje de uso de cada clase de agua por comunidad llegamos a la conclusion de que no hay ninguna relación a primera vista sobre la calidad de agua utilizada y la esperanza de vida, porque comunidades con alto uso de "Aguas 2" como Castilla-La Mancha tienen una esperanza de vida baja y comunidades que usan en su mayoria "Aguas 0" como Murcia y Asturias tienen una esperanza de vida en la medida de lo normal.
 
 # Conclusión
