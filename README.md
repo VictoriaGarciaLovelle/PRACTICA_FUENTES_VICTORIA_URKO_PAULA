@@ -42,13 +42,13 @@ El objetivo principal de este seminario es analizar de manera formal cómo diver
 
 ### **Relación entre esperanza de vida y cantidad**
 
-![image](images/graf1.png)
+![image](INPUT/images/graf1.png)
 
 En el eje de las abscisas se represemta la cantidad de agua consumida, mientras que en el eje de las ordenadas encontramos la esperanza de vida. La leyenda muestra que cada comunidad es representada en la gráfica mediante un color del gradiente y en forma circular. Finalmente, creamos un gráfico de dispersión y para poder entender mejor el patrón que estamos estudiando con esta gráfica. Podemos observar que no hay una relación directamente proporcional entre la cantidad de agua consumida y la esperanza de vida de cada Comunidad Autónoma. Sin embargo, al observar la línea de tendencia de nuestro gráfico, notamos que los extremos no son lo ideal. Por lo tanto, la tendencia nos sugiere que aquellos ciudadanos con una esperanza de vida potencialmente alta son aquellos que consumen una cantidad intermedia de agua.
 
 ### **Relación entre cantidad y presupuesto**
 
-![image](images/graf2.png)
+![image](INPUT/images/graf2.png)
 
 En el eje de las ordenadas encontramos la cantidad de agua consumida, y en el eje de las abscisas encontramos los presupuestos. Como podemos comprobar en la leyenda, cada comunidad será representada en la gráfica por un color perteneciente al gradiente y en forma de barra.
 
@@ -56,7 +56,7 @@ De este gráfico podemos notar una correlación entre el prespuesto invertido en
 
 ### **Relación entre esperanza de vida y calidad**
 
-![](images/graf3.png)
+![](INPUT/images/graf3.png)
 
 Utilizamos como eje de abscisas la calidad del agua, mientras que de eje de ordenadas usamos la esperanza de vida. Agregamos puntos al gráfico asignando colores que representaran a cada Comunidad Autónoma. Al tener varios datos de la calidad del agua, dividimos las facetas organizándolas en una sola fila.
 
@@ -64,7 +64,7 @@ Las tres clases de agua nos indican el grado de calidad de estas siendo las "Agu
 
 ###  **Relación entre cantidad, esperanza de vida, presupuesto y calidad**
 
-![](images/graf4.png)
+![](INPUT/images/graf4.png)
 
 Este último gráfico es la relación entre las cuatro variables deestudio. Se trata de un gráfico de dispersión en donde en el eje de abscisas se representa la cantidad de agua consumida y en el eje de las ordenadas se reprsenta la esperanza de vida. La calidad del agua le dará el color a los puntos y su tamaño será en función del presupuesto.
 
