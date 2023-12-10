@@ -299,7 +299,7 @@ Están evaluados diferentes puntos de muestreo en cada Comunidad Autónoma, de l
 
 ### 4.4. Tabla de Presupuesto para la Potabilización del Agua
 
-Para obtener esta tabla se ha importado un archivo CSV utilizando la función *read_csv* y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
+Para obtener esta tabla se ha importado un archivo CSV utilizando la función *read_csv( )* y después se renombran las columnas para tener unificados todos los nombres de las diferentes tablas.
 
 ![](INPUT/images/PresupuestoCSV.png){width="500px"}
 
