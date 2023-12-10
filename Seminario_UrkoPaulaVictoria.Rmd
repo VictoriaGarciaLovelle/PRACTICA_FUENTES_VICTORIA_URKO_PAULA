@@ -80,7 +80,7 @@ Para obtener la tabla de esperanza de vida se cargan los datos desde un archivo 
 
 Esto es una porción de todo el archivo *Json*, del cual se tiene que seleccionar los datos deseados.
 
-Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
+Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable "EsperanzaVida".
 
 ```{r cargaDeDatosJson}
 archivoJson <- fromJSON(file = "INPUT/data/EsperanzaVida.json")
@@ -93,7 +93,7 @@ tibble1<-esperanzaVida %>%
   count(name, type)
 ```
 
-Para obtener la tabla final se ha accedido a aquel que era de tipo array que contiene los valores de interés y organiza estos datos en una tabla.
+Para obtener la tabla final se ha accedido a aquel que era de tipo *array* que contiene los valores de interés y organiza estos datos en una tabla.
 
 ```{r ObtencionTablaEsperanza}
 arrayData<-esperanzaVida %>%
@@ -103,7 +103,7 @@ arrayData<-esperanzaVida %>%
   select(Nombre, Anyo, Valor) 
 ```
 
-El atributo Nombre contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres.
+El atributo "Nombre" contiene una cadena de caracteres muy larga separada por puntos. Entre toda la información estan los nombres de las diferentes Comunidades Autónomas, por lo que se separa la cadena de texto y se obtienen únicamente estos nombres.
 
 ```{r Obtenciontabla}
 partes <- strsplit(arrayData$Nombre, "\\.")
@@ -118,7 +118,7 @@ arrayData$Nombre<-comunidadesAutonomas
 
 De la tabla se obtiene el año 2020 de cada Comunidad Autónoma y se obtiene como valor la media de la esperanza de vida en ese año.
 
-Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las comunidades autónomas a mayúsculas.
+Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las Comunidades Autónomas a mayúsculas.
 
 ```{r obtenciontablaEsperanza}
 tablaComunidadesAñoValor<- as_tibble(arrayData)
