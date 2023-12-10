@@ -80,7 +80,7 @@ Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar 
 Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable EsperanzaVida.
 
 ```{r cargaDeDatosJson}
-archivoJson <- fromJSON(file = "EsperanzaVida.json")
+archivoJson <- fromJSON(file = "INPUT/data/EsperanzaVida.json")
 
 esperanzaVida <- spread_all(archivoJson)
 
@@ -150,7 +150,7 @@ Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar 
 Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable cantidadAgua.
 
 ```{r CargaDatosCantidad}
-archivoJsonCantidad <- fromJSON(file = "CantidadAgua.json")
+archivoJsonCantidad <- fromJSON(file = "INPUT/data/CantidadAgua.json")
 
 cantidadAgua <- spread_all(archivoJsonCantidad)
 
@@ -234,7 +234,7 @@ Este código extrae y procesa información relevante sobre la calidad del agua d
 Para poder obtener esta tabla y poder utilizarla para el estudio, primero se convierte el contenido del PDF a texto y luego selecciona un rango específico de líneas en una página particular del documento (página 17), con el objetivo de obtener datos clave relacionados con la calidad del agua.
 
 ```{r cargaDatosCalidadDeAgua}
-ruta_pdf <- pdf_text("report_Cap.3_part2._Libro_blanco_del_agua.pdf")
+ruta_pdf <- pdf_text("INPUT/data/report_Cap.3_part2._Libro_blanco_del_agua.pdf")
 pagina <- ruta_pdf[17]
 lineas <- strsplit(pagina, "\n")[[1]]
 linea_deseada <- lineas[5:21] 
@@ -305,7 +305,7 @@ Esto es una porción de todo el archivo CSV, del cual se tiene que seleccionar l
 Una vez cargados los datos, se renombran las columnas para poder tener unificados todos los nombres.
 
 ```{r cargaPresupuesto}
-summodificado <- read_csv("summodificado.csv")
+summodificado <- read_csv("INPUT/data/summodificado.csv")
 colnames(summodificado) <- c("TotalNacional", "ComunidadAutonoma", "GruposDeUsuarioEImporte","Anio", "Presupuesto")
 ```
 
