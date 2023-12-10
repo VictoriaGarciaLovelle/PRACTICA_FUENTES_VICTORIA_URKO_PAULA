@@ -144,13 +144,13 @@ tablaEsperanzaDeVidaFinal
 
 ### 4.2. Tabla de la Cantidad de Agua
 
-Para obtener la tabla de cantidad de agua se cargan los datos desde un archivo Json.
+Para obtener la tabla de Cantidad de Agua se cargan los datos desde un archivo *Json*.
 
 ![](INPUT/images/CantidadAguaJSON.png)
 
-Esto es una porción de todo el archivo JSON, del cual se tiene que seleccionar los datos deseados.
+Esto es una porción de todo el archivo *Json*, del cual se tiene que seleccionar los datos deseados.
 
-Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable cantidadAgua.
+Una vez cargados los datos, se organizan en un formato de tabla y se realiza un análisis para saber qué tipos contiene la variable "cantidadAgua".
 
 ```{r CargaDatosCantidad}
 archivoJsonCantidad <- fromJSON(file = "INPUT/data/CantidadAgua.json")
