@@ -58,13 +58,13 @@ library(pdftools)
 library(tidyverse)
 ```
 
-3.  tidyjson: Esta librería fue útil para trabajar con datos en formato JSON. Fue esencial para analizar y extraer información de archivos JSON relacionados con la esperanza de vida y la cantidad de agua.
+3.  *tidyjson*: Esta librería fue útil para trabajar con datos en formato JSON. Fue esencial para analizar y extraer información de archivos JSON relacionados con la esperanza de vida y la cantidad de agua.
 
 ```{r cargatidyjson}
 library(tidyjson)
 ```
 
-4.  rjson: Se utilizó para cargar y procesar datos almacenados en formato JSON. Facilita la manipulación de datos estructurados y su conversión a formatos compatibles con R.
+4.  *rjson*: Se utilizó para cargar y procesar datos almacenados en formato JSON. Facilita la manipulación de datos estructurados y su conversión a formatos compatibles con R.
 
 ```{r cargarjson}
 library(rjson) 
