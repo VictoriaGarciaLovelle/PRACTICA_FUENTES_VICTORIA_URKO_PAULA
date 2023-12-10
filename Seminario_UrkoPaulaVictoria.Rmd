@@ -521,3 +521,5 @@ datos.gob.es. (2023, 22 noviembre). Esperanza de vida por comunidad autónoma, s
 datos.gob.es. (2022, 6 julio). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. (Identificador API: /T26/P067/P01/serie/L0/01004.Px) - Conjunto de datos. <https://datos.gob.es/es/catalogo/ea0010587-distribucion-de-agua-registrada-por-comunidades-y-ciudades-autonomas-grupos-de-usuarios-e-importe-y-periodo-identificador-api-t26-p067-p01-serie-l0-01004-px>
 
 INE - Instituto Nacional de Estadística. (s. f.). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. INE. <https://www.ine.es/jaxi/Tabla.htm?tpx=53448&L=0>
+
+Libro blanco del agua. (s. f.). Ministerio para la Transición Ecológica y el Reto Demográfico. https://www.miteco.gob.es/es/agua/temas/planificacion-hidrologica/libro-blanco-del-agua.html
