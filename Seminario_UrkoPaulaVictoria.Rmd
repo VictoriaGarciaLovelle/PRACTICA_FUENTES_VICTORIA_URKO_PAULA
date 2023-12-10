@@ -522,4 +522,4 @@ datos.gob.es. (2022, 6 julio). Distribución de agua registrada por comunidades 
 
 INE - Instituto Nacional de Estadística. (s. f.). Distribución de agua registrada por comunidades y ciudades autónomas, grupos de usuarios e importe y periodo. INE. <https://www.ine.es/jaxi/Tabla.htm?tpx=53448&L=0>
 
-Libro blanco del agua. (s. f.). Ministerio para la Transición Ecológica y el Reto Demográfico. https://www.miteco.gob.es/es/agua/temas/planificacion-hidrologica/libro-blanco-del-agua.html
+Libro blanco del agua. (s. f.-c). https://www.chsegura.es/es/cuenca/planificacion/libro-blanco-agua/
