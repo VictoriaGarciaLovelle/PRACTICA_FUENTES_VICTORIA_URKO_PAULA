@@ -238,7 +238,7 @@ grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=Esper
 # Cantidad y presupuesto
 grafCantidadPresupuesto <- ggplot(data=CantidadyPresupuesto, aes(x= Presupuesto, y= Cantidad, fill=ComunidadAutonoma))+
   geom_bar(stat= "identity")+
-  labs(title="Cantidad de agua junto presupuestos por Comunidades Autonomas",
+  labs(title="Relación entre Cantidad y Presupuesto",
        x="Presupuestos",
        y="Cantidad de agua")+
   geom_bar(stat= "identity", width = 5000)+
