@@ -448,7 +448,7 @@ En este código, unimos mediante un *left_join( )* las tablas de "EsperanzayCant
 ```{r grafTablaFinal}
 grafTablaFinal <- ggplot(tablaend, aes(x = Cantidad, y = EsperanzaDeVida, size = Presupuesto, color = CalidadAgua)) +
   geom_point() +
-  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad ",      x = "Cantidad",
+  labs(title = "Relación entre Cantidad, Esperanza de Vida, Presupuesto y Calidad",      x = "Cantidad",
        y = "Esperanza de Vida",
        size = "Presupuesto",
        color = "CalidadAgua")+
