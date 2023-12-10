@@ -230,7 +230,7 @@ tablaFinal<- EsperanzayCantidad %>%
 grafEsperanzaCantidad <- ggplot(data=EsperanzayCantidad, aes(x=Cantidad, y=EsperanzaDeVida))+
   geom_point(aes(color=ComunidadAutonoma))+
   geom_smooth()+
-  labs(title="Cantidad de agua junto esperanza de vida por Comunidades Autonomas",
+  labs(title="Relación entre Esperanza de Vida y Cantidad",
        x="Cantidad de agua ",
        y="Esperanza de vida")+
   theme_minimal()
