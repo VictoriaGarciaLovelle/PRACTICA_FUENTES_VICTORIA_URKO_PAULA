@@ -283,8 +283,5 @@ ggplot(data=tablaFinal, aes(x= Cantidad, y= EsperanzaDeVida, fill=CalidadAgua))+
 alpha = 0.7
 
 # EJECUCIÓN DE GRÁFICOS ----
-grafEsperanzaCantidad
-grafCantidadPresupuesto
-grafEsperanzaCalidad
-grafTablaFinal
+
 
