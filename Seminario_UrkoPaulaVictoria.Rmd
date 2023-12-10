@@ -3,13 +3,13 @@ title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '6'
   html_document:
     toc: yes
     toc_depth: 6
     toc_float: yes
-  pdf_document:
-    toc: yes
-    toc_depth: '6'
 subtitle: Relación entre la Esperanza de Vida y el  consumo de Agua
 ---
 
