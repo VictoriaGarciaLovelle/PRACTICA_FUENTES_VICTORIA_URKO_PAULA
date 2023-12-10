@@ -163,9 +163,9 @@ cantidadAgua%>%
   count(name,type)
 ```
 
-Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad Autónoma, se ha accedido al atributo de tipo array que contiene la información de interés que es Data y organiza estos datos en una tabla.
+Para poder obtener la tabla final de la cantidad de agua consumida en cada Comunidad Autónoma, se ha accedido al atributo de tipo *array* que contiene la información de interés que es Data y organiza estos datos en una tabla.
 
-Seguidamente, como únicamente necesitamos las comunidades autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las Comunidades Autónomas.
+Seguidamente, como únicamente necesitamos las Comunidades Autónomas y están escritas en una larga cadena de texto, dividimos la cadena de texto y obtenemos de ella el nombre de las Comunidades Autónomas.
 
 Esa nueva variable con las Comunidades Autónomas se añaden a la tabla final y se elimina donde ponga España.
 
@@ -191,7 +191,7 @@ tabla <- arrayDataCantidad %>%
 
 ```
 
-Se filtra únicamente por el año 2020, que es el año de interés, se realiza una media de los valores obtenidos en el año 2020 de cada comunicad autónoma.
+Se filtra únicamente por el año 2020, que es el año de interés, se realiza una media de los valores obtenidos en el año 2020 de cada Comuniad Autónoma.
 
 Para tener todas las tablas con el mismo estilo, se han pasado los nombres de las Comunidades Autónomas a mayúsculas y se han renombrado.
 
