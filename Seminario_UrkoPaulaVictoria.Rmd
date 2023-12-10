@@ -1,6 +1,5 @@
 ---
 title: "Seminario Fuentes de datos Biómédicas y Web Semántica"
-
 author: "Urko Alli Barrena, Paula Gregorio Losada, Victoria Garcia Lovelle"
 date: "`r Sys.Date()`"
 output:
