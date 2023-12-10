@@ -243,7 +243,7 @@ lineas <- strsplit(pagina, "\n")[[1]]
 linea_deseada <- lineas[5:21] 
 ```
 
-En este código se dividen las líneas deseadas usando espacios como delimitadores. Luego, crea dos conjuntos de datos: datos_obtenidos, excluyendo las primeras tres dimensiones no necesarias, y datosDeInteres, que contiene la información esencial sobre las comunidades autónomas y los valores de la calidad del agua.
+En este código se dividen las líneas deseadas usando espacios como delimitadores. Luego, crea dos conjuntos de datos: "datos_obtenidos", excluyendo las primeras tres dimensiones no necesarias, y "datosDeInteres", que contiene la información esencial sobre las comunidades autónomas y los valores de la calidad del agua.
 
 Además, se añaden manualmente filas específicas que no se extrajeron correctamente del informe.
 
@@ -261,7 +261,7 @@ datosDeInteres[[12]] <- c("RIOJA, LA","1","1","1","0","1","0","0")
 datosDeInteres[[13]] <- c("COMUNITAT VALENCIANA","2","2","2","0","1","1","0")
 ```
 
-En cada iteración del bucle, se agrega la fila representada por el elemento i al data frame tablaCalidadDeAgua utilizando la función rbind().
+En cada iteración del bucle, se agrega la fila representada por el elemento i al data frame "tablaCalidadDeAgua" utilizando la función *rbind*( ).
 
 Por último se renombra y se cambia a tipo numérico a aquellas columnas que sea necesario.
 
@@ -287,7 +287,7 @@ tablaCalidadDeAguaFinal <- tablaCalidadDeAgua %>%
 tablaCalidadDeAguaFinal
 ```
 
-En esta tabla final se pueden observar unas columnas llamadas Aguas1, Aguas2 y Aguas0, vamos a ver a qué se refieren:
+En esta tabla final se pueden observar unas columnas llamadas "Aguas1", "Aguas2" y "Aguas0", vamos a ver a qué se refieren:
 
 -   Aguas2: Aguas aptas, de muy buena calidad.
 
